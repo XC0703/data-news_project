@@ -11,8 +11,9 @@
               section{{index}}
               <div 
                 class="section1"
-                v-if="index === 1"
-              >		
+                v-if="index === 2"
+              >	
+                <mapChart />
               </div>
           </div>
         </full-page>
@@ -20,9 +21,13 @@
 </template>
 
 <script>
+import mapChart from './components/mapChart.vue'
 
 export default {
   name: 'App',
+  components: {
+    mapChart
+  },
   data () {
     return {
         options:{
