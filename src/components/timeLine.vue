@@ -298,20 +298,36 @@ export default {
         var boxs=slideshow.getElementsByClassName("box"); //获得三个盒子
         var current=0; //current为当前活跃的盒子编号
         function slideOff() {
-            boxs[current].className="box"; //盒子淡出
+            var boxAfter = document.querySelectorAll("#outerBox .activeBox .boxAfter");  
+            var eventBoxs = document.querySelectorAll("#outerBox .activeBox .content .eventBox");         
+            for(let i = 0;i<eventBoxs.length;i++){
+                eventBoxs[i].classList.remove('eventBoxActive');
+            }
+            for(let j = 0;j<boxAfter.length;j++){
+                boxAfter[j].classList.remove('boxAfterActive');
+            }
+            boxs[current].className="box"; //盒子淡出  
         }
         function slideOn() {
             boxs[current].className="box activeBox"; //盒子淡入
-            var boxAfter = document.querySelectorAll("#outerBox .activeBox .content .boxAfter");
-            var eventBoxs = document.querySelectorAll("#outerBox .activeBox .content .eventBox");
-            var delayTime = 0;
-            for(let i = 0;i<eventBoxs.length;i++){
-                delayTime+=0.5;
-                eventBoxs[i].style.animationDuration=delayTime+'s';
-            }
-            for(let i = 0;i<boxAfter.length;i++){
-                boxAfter[i].style.animationDuration=0.5*eventBoxs.length+'s';
-            }  
+            var boxAfter = document.querySelectorAll("#outerBox .activeBox .boxAfter");  
+            var eventBoxs = document.querySelectorAll("#outerBox .activeBox .content .eventBox");         
+            let i =0;
+            const  interval1 = setInterval(()=>{
+                eventBoxs[i].classList.add('eventBoxActive');
+                i++;
+                if(i>=eventBoxs.length){
+                    clearInterval(interval1);
+                }
+            },500)
+            let j =0;
+            const  interval2 = setInterval(()=>{
+                boxAfter[j].classList.add('boxAfterActive');
+                j++;
+                if(j>=boxAfter.length){
+                    clearInterval(interval2);
+                }
+            },(eventBoxs.length+1)*500)              
         }
         function changeSlide() { //切换盒子的函数
             slideOff(); //盒子淡出
@@ -319,21 +335,24 @@ export default {
             if(current>2) current=0;
             if(current==0){
                 slideshow.style.height = '5rem'
+                clearInterval(slideon);
+                slideon=setInterval(changeSlide,3000);
+                console.log(slideon)
             }else if(current==1){
                 slideshow.style.height = '12rem'
+                clearInterval(slideon);
+                slideon=setInterval(changeSlide,6000);
+                console.log(slideon)
             }else{
                 slideshow.style.height = '15rem'
+                clearInterval(slideon);
+                slideon=setInterval(changeSlide,7000);   
+                console.log(slideon)        
             }
             slideOn(); //盒子淡入
         }
-        slideshow.onmouseover=function () {
-            clearInterval(slideon); //当鼠标移入时清除轮播事件
-        }
-        slideshow.onmouseout=function () {
-            slideon=setInterval(changeSlide,6000); //当鼠标移出时从新开始轮播事件
-        }
-        //调用changeSlide函数进行盒子轮播
-        var slideon=setInterval(changeSlide,6000);
+        slideOn()
+        var slideon=setInterval(changeSlide,3000);
     }
   }
 };
@@ -364,7 +383,11 @@ export default {
             margin-left: -47px;
             text-align: center;
             bottom: -30px;
-            animation: showIn ease;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        .boxAfterActive{
+            opacity: 1;
         }
     }
     .activeBox{
@@ -382,8 +405,8 @@ export default {
     border-radius: 50%;
     border: 4px solid rgb(221, 221, 221);
     background: rgb(31, 122, 252);
+    opacity: 0;
     transition: all 0.5s;
-    animation: showIn ease;
     h2{
         /* 日期的样式 */
         position: absolute;
@@ -433,20 +456,11 @@ export default {
         border: 7px solid transparent;
         border-right: 7px solid rgb(84, 84, 85);
         z-index: -1;
-        animation: showIn ease;
     }
 }
-@keyframes showIn {
-    /* 球球、竖线、左右的模块的动画 */
-    0%{
-        opacity: 0;
-    }
-    70% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+// 需要出现的事件盒子样式
+.eventBoxActive{
+    opacity: 1;
 }
 // 触摸事件后球球的样式 
 .eventBox:hover {

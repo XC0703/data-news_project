@@ -1,8 +1,8 @@
 <template>
     <div>
-        <full-page :options="options">
+        <!-- <full-page :options="options"> -->
           <!-- 每个需要全屏滚动的页面都需要包在<div class="section"></div>中 -->
-          <div 
+          <!-- <div 
             class="section" 
             v-for="index in 10" 
             :class="[
@@ -32,7 +32,8 @@
                 <timeLine />
               </div>
           </div>
-        </full-page>
+        </full-page> -->
+      <timeLine />
     </div>
 </template>
 
@@ -43,7 +44,7 @@ export default {
   name: 'App',
   components: {
     timeLine: defineAsyncComponent(() => import('./components/timeLine')),
-    mapChart: defineAsyncComponent(() => import('./components/mapChart')),
+    // mapChart: defineAsyncComponent(() => import('./components/mapChart')),
   },
   data () {
     return {
