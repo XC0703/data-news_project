@@ -24,7 +24,7 @@
               <div 
                 v-if="index === 2"
               >	
-                <mapChart />
+                <chinaMap />
               </div>
               <div 
                 v-if="index === 3"
@@ -33,7 +33,7 @@
               </div>
           </div>
         </full-page> -->
-      <timeLine />
+      <worldMap />
     </div>
 </template>
 
@@ -43,8 +43,9 @@ import { defineAsyncComponent } from 'vue';
 export default {
   name: 'App',
   components: {
-    timeLine: defineAsyncComponent(() => import('./components/timeLine')),
-    // mapChart: defineAsyncComponent(() => import('./components/mapChart')),
+    // timeLine: defineAsyncComponent(() => import('./components/timeLine')),
+    // chinaMap: defineAsyncComponent(() => import('./components/chinaMap')),
+    worldMap: defineAsyncComponent(() => import('./components/worldMap')),
   },
   data () {
     return {

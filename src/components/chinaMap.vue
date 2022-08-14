@@ -9,7 +9,7 @@ require("../utils/china");
 import $ from "jquery";
 
 export default {
-  name: "mapChart",
+  name: "chinaMap",
   data() {
     return {};
   },
@@ -100,7 +100,7 @@ export default {
                 geo: {
                     map: 'china',
                     show: true,
-                    roam: false,
+                    roam: true,
                     emphasis: {
                         label:{
                             show: false
@@ -116,6 +116,7 @@ export default {
                 series: [{
                     type: 'map',
                     map: 'china',
+                    geoIndex:0,
                     aspectScale: 0.75,
                     //zoom:1.1,
                     label: {

@@ -15,7 +15,7 @@ require("../utils/china");
 
 
 export default {
-  name: "mapChart",
+  name: "chinaMap_abandoned",
   data() {
     return {};
   },
