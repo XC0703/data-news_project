@@ -158,7 +158,7 @@ export default {
         }
         //展示地图
         function showMap() {
-            $.getJSON(`/static/map/mapData/mapData.json`, data=>{
+            $.getJSON(`/static/map/mapData/chinaMapData.json`, data=>{
                 initEcharts(data);
             })
         }
