@@ -33,7 +33,7 @@
               </div>
           </div>
         </full-page> -->
-      <cloudEffect />
+      <shipEffect />
     </div>
 </template>
 
@@ -46,7 +46,8 @@ export default {
     // timeLine: defineAsyncComponent(() => import('./components/timeLine')),
     // chinaMap: defineAsyncComponent(() => import('./components/chinaMap')),
     // worldMap: defineAsyncComponent(() => import('./components/worldMap')),
-    cloudEffect: defineAsyncComponent(() => import('./components/cloudEffect')),
+    // cloudEffect: defineAsyncComponent(() => import('./components/cloudEffect')),
+    shipEffect: defineAsyncComponent(() => import('./components/shipEffect')),
   },
   data () {
     return {
