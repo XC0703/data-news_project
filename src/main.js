@@ -2,10 +2,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 const app = createApp(App)
 
-// 引入vue-fullpage
-import 'vue-fullpage.js/dist/style.css'
-import VueFullPage from 'vue-fullpage.js'
-
 // 引入normalize.css
 import 'normalize.css'
 
@@ -22,7 +18,7 @@ app.config.globalProperties.$echarts = echarts
 
 
 
-app.use(VueFullPage).use(ElementPlus).mount('#app')
+app.use(ElementPlus).mount('#app')
 
 
 

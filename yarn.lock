@@ -1139,16 +1139,6 @@
   "resolved" "https://registry.npmjs.org/@pixi/app/-/app-6.5.1.tgz"
   "version" "6.5.1"
 
-"@pixi/assets@^6.5.1":
-  "integrity" "sha512-vTN2i68CbSabCuYzXK0Hv34vZdzdb4hPPPkdC3S+BsOr0CSuYv/3M8/p/a1ekqAxF2leO8XEWmHEISEmSIghbA=="
-  "resolved" "https://registry.npmjs.org/@pixi/assets/-/assets-6.5.1.tgz"
-  "version" "6.5.1"
-
-"@pixi/basis@6.5.1":
-  "integrity" "sha512-afecmtiGf0/ESqc0sMP4Pbd1jlHmu/3IVrkB2mCfG3UtLbTLUYNLw3Aj1D5/OYDm0ANA7Sxzwwzg7+/bPfqhkw=="
-  "resolved" "https://registry.npmjs.org/@pixi/basis/-/basis-6.5.1.tgz"
-  "version" "6.5.1"
-
 "@pixi/compressed-textures@6.5.1":
   "integrity" "sha512-6KO2r7HwrOyseQnYsflm1oACmn6O/EOMb4/VREvPaXZA51YUMY5gnGwXR2VXV3W1Y75YfktjOm/FWlrTLlmszQ=="
   "resolved" "https://registry.npmjs.org/@pixi/compressed-textures/-/compressed-textures-6.5.1.tgz"
@@ -3918,11 +3908,6 @@
   "integrity" "sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw=="
   "resolved" "https://registry.npmmirror.com/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
-
-"fullpage.js@^4.0.10":
-  "integrity" "sha512-x76Q+lzhghCou9B+cs6UzZkUHQNxmQ/zJFgWYcjBcTAmRgxnMpDyFLgMhLAsO1+6LakkKuDfBVy8H84u299c1Q=="
-  "resolved" "https://registry.npmjs.org/fullpage.js/-/fullpage.js-4.0.10.tgz"
-  "version" "4.0.10"
 
 "function-bind@^1.1.1":
   "integrity" "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A=="
@@ -7245,13 +7230,6 @@
     "lodash" "^4.17.21"
     "semver" "^7.3.5"
 
-"vue-fullpage.js@^0.2.6":
-  "integrity" "sha512-dcfMEy1Y05kzb0E9/UHSQnDnk+8hzSL97uXs6AtPvxwXAkAvYVVu9b1JuId2ZvC+hTcx0vOYdtezQtRszXWW5g=="
-  "resolved" "https://registry.npmjs.org/vue-fullpage.js/-/vue-fullpage.js-0.2.6.tgz"
-  "version" "0.2.6"
-  dependencies:
-    "fullpage.js" "^4.0.10"
-
 "vue-hot-reload-api@^2.3.0":
   "integrity" "sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog=="
   "resolved" "https://registry.npmmirror.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz"
@@ -7279,7 +7257,7 @@
   "resolved" "https://registry.npmmirror.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   "version" "1.9.1"
 
-"vue@*", "vue@^2 || ^3.2.13", "vue@^2.6.0 || ^3.2.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.2.0", "vue@^3.2.13", "vue@^3.2.26", "vue@3.2.37":
+"vue@*", "vue@^2 || ^3.2.13", "vue@^2.6.0 || ^3.2.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.2.0", "vue@^3.2.13", "vue@3.2.37":
   "integrity" "sha512-bOKEZxrm8Eh+fveCqS1/NkG/n6aMidsI6hahas7pa0w/l7jkbssJVsRhVDs07IdDq7h9KHswZOgItnwJAgtVtQ=="
   "resolved" "https://registry.npmmirror.com/vue/-/vue-3.2.37.tgz"
   "version" "3.2.37"
