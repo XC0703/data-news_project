@@ -18,7 +18,7 @@
                 {'section10':index % 10===10},
             ]"
             :key="index"
-            :style="'background-image'+':'+'url(/static/images/bg' + index + '.jpg)'"
+            :style="'background-image'+':'+'url(/static/images/bgs/bg' + index + '.jpg)'"
           >
               section{{index}}
               <div 
@@ -33,7 +33,7 @@
               </div>
           </div>
         </full-page> -->
-      <worldMap />
+      <cloudEffect />
     </div>
 </template>
 
@@ -45,7 +45,8 @@ export default {
   components: {
     // timeLine: defineAsyncComponent(() => import('./components/timeLine')),
     // chinaMap: defineAsyncComponent(() => import('./components/chinaMap')),
-    worldMap: defineAsyncComponent(() => import('./components/worldMap')),
+    // worldMap: defineAsyncComponent(() => import('./components/worldMap')),
+    cloudEffect: defineAsyncComponent(() => import('./components/cloudEffect')),
   },
   data () {
     return {
