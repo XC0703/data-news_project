@@ -21,6 +21,7 @@
     <!-- <FirstChart /> -->
     <!-- <SecondChart /> -->
     <!-- <ThirdChart /> -->
+    <!-- <FourthChart /> -->
     <FifthChart />
 </template>
 
