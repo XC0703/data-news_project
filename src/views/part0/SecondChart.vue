@@ -103,8 +103,8 @@ export default {
                         type: 'value',
                         min:6,
                         max:7.5,
-                        name:'百分比',
                         axisLabel: {
+                            formatter:'{value}%',
                             textStyle: {
                                 color: '#7ec7ff',
                             },

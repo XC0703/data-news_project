@@ -97,7 +97,7 @@ export default {
                 min: 0,
                 max: 150000,
                 interval:30000,
-                name:'(单位：万人)',
+                name:'单位(万人)',
                 nameTextStyle:{
                     color: '#4c9bfd', // 文字颜色
                     fontSize:10
@@ -122,12 +122,12 @@ export default {
                 min: 0,
                 max: 20,
                 interval: 5,
-                name:'(百分比)',
                 nameTextStyle:{
                     color: '#4c9bfd', // 文字颜色
                     fontSize:10
                 },
                 axisLabel: {
+                    formatter:'{value}%',
                     color: '#4c9bfd', // 文字颜色
                     fontSize:10
                 },

@@ -19,15 +19,19 @@
 
     </div>
     <!-- <FirstChart /> -->
-    <SecondChart />
+    <!-- <SecondChart /> -->
+    <!-- <ThirdChart /> -->
+    <FourthChart />
 </template>
 
 <script>
 // import FirstChart from './FirstChart.vue';
-import SecondChart from './SecondChart.vue';
+// import SecondChart from './SecondChart.vue';
+// import ThirdChart from './ThirdChart.vue';
+import FourthChart from './FourthChart.vue';
 export default {
     name:'MainPage',
-    components:{SecondChart}
+    components:{FourthChart}
 }
 </script>
 
