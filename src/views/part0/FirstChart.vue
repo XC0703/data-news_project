@@ -32,7 +32,7 @@ export default {
         function initEcharts(){
             let option = {
                 // 通过这里直接设置颜色
-                color: ['#00f2f1', '#ed3f35',"#0E7CE2","#ffc72b"],
+                // color: ['#00f2f1', '#ed3f35',"#0E7CE2","#ffc72b"],
                 emphasis: {
                 itemStyle: {
                     color: "white",//柱条颜色，设置为柱图颜色则取消高亮

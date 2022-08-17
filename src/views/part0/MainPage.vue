@@ -18,14 +18,16 @@
 当死亡不可避免，当痛苦被迫延续，安宁疗护拓展了生命的厚度，呵护生命的最后一程。
 
     </div>
-    <FirstChartVue />
+    <!-- <FirstChart /> -->
+    <SecondChart />
 </template>
 
 <script>
-import FirstChartVue from './FirstChart.vue';
+// import FirstChart from './FirstChart.vue';
+import SecondChart from './SecondChart.vue';
 export default {
     name:'MainPage',
-    components:{FirstChartVue}
+    components:{SecondChart}
 }
 </script>
 

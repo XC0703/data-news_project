@@ -1,0 +1,187 @@
+<template>
+    <div id="container"></div>
+</template>
+
+<script>
+
+let echarts = require("echarts/lib/echarts");
+
+export default {
+  name: "SecondChart",
+  data() {
+    return {};
+  },
+
+  mounted() {
+    // 初始化加载
+    this.mapChart();
+  },
+
+   methods: {
+    // 配置渲染map
+    mapChart() {
+        var data_line = [
+        6.45, 6.43, 6.41,6.40,6.42,6.51,6.81,6.93,7.06,7.08,7.11,7.14,7.13,7.13,7.12,7.07,7.04,7.06,7.08,7.09,7.07,7.18
+        ];
+        let myChart = echarts.init(document.getElementById("container"));
+        window.addEventListener("resize", ()=>{
+            myChart.resize();
+        });
+        function initEcharts(){
+            let option = {
+                // backgroundColor: '#101e44',
+                title:{
+                    text:'死亡率折线图',
+                    left:"center",
+                    textStyle:{
+                        fontSize:10
+                    }
+                },
+                grid: {
+                    top: '15%',
+                    left: '3%',
+                    right: '3%',
+                    bottom: '3%',
+                    containLabel: true,
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    formatter:'{b}年{a}：'+'{c}%',
+                    axisPointer: {
+                        lineStyle: {
+                            color: {
+                                type: 'linear',
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [
+                                    {
+                                        offset: 0,
+                                        color: 'rgba(255,255,255,0)', // 0% 处的颜色
+                                    },
+                                    {
+                                        offset: 0.5,
+                                        color: 'rgba(255,255,255,1)', // 100% 处的颜色
+                                    },
+                                    {
+                                        offset: 1,
+                                        color: 'rgba(255,255,255,0)', // 100% 处的颜色
+                                    },
+                                ],
+                                global: false, // 缺省为 false
+                            },
+                        },
+                    },
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        boundaryGap: true,
+                        axisLabel: {
+                            formatter: '{value}',
+                            // fontSize: 14,
+                            // margin: 20,
+                            textStyle: {
+                                color: '#7ec7ff',
+                            },
+                        },
+                        axisLine: {
+                            lineStyle: {
+                                color: '#243753',
+                            },
+                        },
+                        axisTick: {
+                            show: false,
+                        },
+                        data: ['2000', '2001', '2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016', '2017', '2018','2019','2020','2021'],
+                    },
+                ],
+                yAxis: [
+                    {
+                        boundaryGap: false,
+                        type: 'value',
+                        min:6,
+                        max:7.5,
+                        name:'百分比',
+                        axisLabel: {
+                            textStyle: {
+                                color: '#7ec7ff',
+                            },
+                        },
+                        nameTextStyle: {
+                            color: '#fff',
+                            fontSize: 12,
+                            lineHeight: 40,
+                        },
+                        axisLine: {
+                            show: true,
+                            lineStyle: {
+                                color: '#283352',
+                            },
+                        },
+                        axisTick: {
+                            show: false,
+                        },
+                    },
+                ],
+                series: [
+                    {
+                        name: '死亡率',
+                        type: 'line',
+                        smooth: true,
+                        showSymbol: true,
+                        symbolSize: 3,
+                        zlevel: 3,
+                        itemStyle: {
+                            color: '#19a3df',
+                            borderColor: '#a3c8d8',
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 1,
+                                color: '#19a3df',
+                            },
+                        },
+                        areaStyle: {
+                            normal: {
+                                color: new echarts.graphic.LinearGradient(
+                                    0,
+                                    0,
+                                    0,
+                                    1,
+                                    [
+                                        {
+                                            offset: 0,
+                                            color: 'rgba(88,255,255,0.2)',
+                                        },
+                                        {
+                                            offset: 0.8,
+                                            color: 'rgba(88,255,255,0)',
+                                        },
+                                    ],
+                                    false
+                                ),
+                            },
+                        },
+                        data: data_line,
+                    },
+                ],
+            };
+            myChart.setOption(option);
+        }
+        initEcharts()
+    }
+    }
+};
+</script>
+
+<style lang="scss" scoped>
+#container {
+  width: 4rem;
+  height: 2rem;
+  margin: 0px auto 0;
+}
+</style>
+
+
