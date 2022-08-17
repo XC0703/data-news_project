@@ -21,17 +21,18 @@
     <!-- <FirstChart /> -->
     <!-- <SecondChart /> -->
     <!-- <ThirdChart /> -->
-    <FourthChart />
+    <FifthChart />
 </template>
 
 <script>
 // import FirstChart from './FirstChart.vue';
 // import SecondChart from './SecondChart.vue';
 // import ThirdChart from './ThirdChart.vue';
-import FourthChart from './FourthChart.vue';
+// import FourthChart from './FourthChart.vue';
+import FifthChart from './FifthChart.vue';
 export default {
     name:'MainPage',
-    components:{FourthChart}
+    components:{FifthChart}
 }
 </script>
 

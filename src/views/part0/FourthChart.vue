@@ -86,5 +86,3 @@ export default {
   margin: 0px auto 0;
 }
 </style>
-
-
