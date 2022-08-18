@@ -1,5 +1,5 @@
 <template>
-    <div id="container"></div>
+    <div id="container1"></div>
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
         [126743,127627,128453,129227,129988,130756,131448,132129,132802,133450,134091,134916,135922,136726,137646,138326,139232,140011,140541,141008,141212,141260],
         [7.00,7.10,7.30,7.50,7.60,7.70,7.90,8.10,8.30,8.50,8.90,9.10,9.40,9.70,10.10,10.50,10.80,11.40,11.90,12.60,13.50,14.20],
         ];
-        let myChart = echarts.init(document.getElementById("container"));
+        let myChart = echarts.init(document.getElementById("container1"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
@@ -85,7 +85,7 @@ export default {
                 },
                 axisLabel: {
                     color: '#4c9bfd',
-                    interval:1//使横坐标显示完全
+                    interval:2//使横坐标显示完全
                 },
                 axisLine: {
                     show: false // 去除轴线
@@ -174,9 +174,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container {
-  width: 6rem;
-  height: 4rem;
+#container1 {
+  width: 4rem;
+  height: 2.2rem;
   margin: 0px auto 0;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div id="container"></div>
+    <div id="container5"></div>
 </template>
 
 <script>
@@ -20,13 +20,21 @@ export default {
    methods: {
     // 配置渲染map
     mapChart() {
-        let myChart = echarts.init(document.getElementById("container"));
+        let myChart = echarts.init(document.getElementById("container5"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
         function initEcharts(){
             let option = {
                 backgroundColor: 'transparent',
+                tooltip:{
+                        trigger: 'item',
+                        formatter: function(params){
+                            if(params.dataType==="edge"){
+                                return params.data.source+'中'+params.data.target+'的比例为'+params.data.value+'%'
+                            }
+                        }
+                },
                 series: {
                     type: 'sankey',
                     layout: 'none',
@@ -236,7 +244,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container {
+#container5 {
   width: 5rem;
   height: 4rem;
   margin: 0px auto 0;

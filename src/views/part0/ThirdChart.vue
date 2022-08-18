@@ -1,5 +1,5 @@
 <template>
-    <div id="container"></div>
+    <div id="container3"></div>
 </template>
 
 <script>
@@ -23,7 +23,7 @@ export default {
         var data_line = [
         37.1,0.42,0.01,31.48
         ];
-        let myChart = echarts.init(document.getElementById("container"));
+        let myChart = echarts.init(document.getElementById("container3"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
@@ -34,7 +34,7 @@ export default {
                     text:'中国不同年龄段人口死亡率折线图',
                     left:"center",
                     textStyle:{
-                        fontSize:10
+                        fontSize:11
                     }
                 },
                 grid: {
@@ -82,10 +82,8 @@ export default {
                             formatter: '{value}',
                             // fontSize: 14,
                             // margin: 20,
-                            textStyle: {
-                                color: '#7ec7ff',
-                                fontSize:7
-                            },
+                            color: '#7ec7ff',
+                            fontSize:7
                         },
                         axisLine: {
                             lineStyle: {
@@ -106,9 +104,7 @@ export default {
                         max:40,
                         axisLabel: {
                             formatter:'{value}‰',
-                            textStyle: {
-                                color: '#7ec7ff',
-                            },
+                            color: '#7ec7ff',
                         },
                         nameTextStyle: {
                             color: '#fff',
@@ -139,13 +135,10 @@ export default {
                             borderColor: '#a3c8d8',
                         },
                         lineStyle: {
-                            normal: {
                                 width: 1,
                                 color: '#19a3df',
-                            },
                         },
                         areaStyle: {
-                            normal: {
                                 color: new echarts.graphic.LinearGradient(
                                     0,
                                     0,
@@ -163,7 +156,6 @@ export default {
                                     ],
                                     false
                                 ),
-                            },
                         },
                         data: data_line,
                     },
@@ -178,7 +170,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container {
+#container3 {
   width: 5rem;
   height: 2rem;
   margin: 0px auto 0;

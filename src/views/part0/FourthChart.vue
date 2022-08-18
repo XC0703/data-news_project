@@ -1,5 +1,5 @@
 <template>
-    <div id="container"></div>
+    <div id="container4"></div>
 </template>
 
 <script>
@@ -38,7 +38,7 @@ export default {
             {name:'先天异常',value:0.01,mortality:0.46},
             {name:'寄生虫病',value:0.01,mortality:0.37},
         ]
-        let myChart = echarts.init(document.getElementById("container"));
+        let myChart = echarts.init(document.getElementById("container4"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container {
+#container4 {
   width: 5rem;
   height: 3.2rem;
   margin: 0px auto 0;

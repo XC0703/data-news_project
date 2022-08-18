@@ -1,5 +1,5 @@
 <template>
-    <div id="container"></div>
+    <div id="container2"></div>
 </template>
 
 <script>
@@ -23,22 +23,14 @@ export default {
         var data_line = [
         6.45, 6.43, 6.41,6.40,6.42,6.51,6.81,6.93,7.06,7.08,7.11,7.14,7.13,7.13,7.12,7.07,7.04,7.06,7.08,7.09,7.07,7.18
         ];
-        let myChart = echarts.init(document.getElementById("container"));
+        let myChart = echarts.init(document.getElementById("container2"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
         function initEcharts(){
             let option = {
-                // backgroundColor: '#101e44',
-                title:{
-                    text:'死亡率折线图',
-                    left:"center",
-                    textStyle:{
-                        fontSize:10
-                    }
-                },
                 grid: {
-                    top: '15%',
+                    top: '10%',
                     left: '3%',
                     right: '3%',
                     bottom: '3%',
@@ -177,9 +169,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container {
+#container2 {
   width: 4rem;
-  height: 2rem;
+  height: 2.2rem;
   margin: 0px auto 0;
 }
 </style>
