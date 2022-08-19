@@ -1,5 +1,5 @@
 <template>
-    <div class="content" :style="{background: 'url(/static/images/bgs/bg1.png)'}">
+    <div class="content" :style="{background: 'url(/static/images/bgs/bg0.png)'}">
         <div class="content__topBox">Hospice Care</div>
         <div class="content__middleBox">
             温和地<br/>走进那个良夜

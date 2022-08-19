@@ -8,6 +8,9 @@ import 'normalize.css'
 // 引入base.scss
 import './style/base.scss'
 
+// 引入iconfont.css
+import './style/iconfont.css'
+
 // 引入ElementPlus
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
