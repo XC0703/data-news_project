@@ -1,0 +1,235 @@
+<template>
+    <div class="container">
+        <div id="container6"></div>
+        <div class="handleBtn iconfont" @click="handleClick()">{{flag?"&#xe87a;":"&#xe87c;"}}</div>
+    </div>
+</template>
+
+<script>
+import $ from "jquery";
+let echarts = require("echarts/lib/echarts");
+
+export default {
+    name: "SecondChart",
+    data() {
+        return {
+            flag:false,
+        };
+    },
+    mounted() {
+    // 初始化加载
+    this.mapChart();
+    },
+
+    methods: {
+    // 配置渲染map
+    mapChart() {
+        let myChart = echarts.init(document.getElementById("container6"));
+        window.addEventListener("resize", ()=>{
+            myChart.resize();
+        });
+        function initEcharts(newArr){
+            var updateFrequency = 1000;
+            var startIndex = 0;
+            var score = [];
+            for(let index = 0;index<newArr[startIndex].score.length;index++){
+                if(index!=70){
+                score.push(newArr[startIndex].score[index])
+                }else{
+                    score[index] = {
+                        value:newArr[startIndex].score[index],
+                        itemStyle: {
+                            color: '#fc8452',
+                        }
+                    }
+                }
+            }
+            var option = {
+                title:{
+                    text:'部分国家死亡质量指数排名动态变化图',
+                    left:"center",
+                    textStyle:{
+                        fontSize:11
+                    },
+                    subtext:"数据来源：Economist Intelligence Unit. The 2015 Quality of Death Index., 2021年全球死亡质量专家评估的跨国比较",
+                    subtextStyle: {
+                        fontSize: 7
+                    }
+                },
+                tooltip:{
+                    trigger: 'axis',
+                    formatter: function (params) {
+                        return params[0].name+"<br/>分数："+params[0].value+"<br/>排名："+(params[0].dataIndex+1)
+                    }
+                },
+                grid: {
+                    top: '4%',
+                    left: '3%',
+                    right: '3%',
+                    bottom: '3%',
+                    containLabel: true,
+                },
+                xAxis: {
+                    max: 100,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: 'rgba(19,229,227, 0.4)',
+                            type: 'dashed'
+                        }
+                    }
+                },
+                yAxis: {
+                    type: 'category',
+                    inverse: true,
+                    max: 80,
+                    data: newArr[startIndex].country,
+                    axisLabel: {
+                        show: true,
+                        fontSize: 6,
+                    },
+                    animationDuration: 300,
+                    animationDurationUpdate: 300
+                },
+                series: [{
+                    realtimeSort: true,
+                    seriesLayoutBy: 'column',
+                    type: 'bar',
+                    barWidth:6,
+                    itemStyle: {
+                        color: 'rgb(13,208,229)'
+                    },
+                    label: {
+                        show: true,
+                        precision: 1,
+                        position: 'right',
+                        valueAnimation: true,
+                        fontFamily: 'monospace',
+                    },
+                    data: score
+                }],
+                animationDuration: 1000,
+                animationDurationUpdate: 1000,
+                animationEasing: 'linear',
+                animationEasingUpdate: 'linear',
+                // 右下角年份显示
+                graphic: {
+                    elements: [{
+                        type: 'text',
+                        right: 30,
+                        bottom: 60,
+                        style: {
+                            text: newArr[startIndex].year,
+                            font: 'bolder 40px monospace',
+                            fill: 'rgba(19,229,227, 0.4)'
+                        },
+                        z: 100
+                    }]
+                }
+            };
+            // 循环数据
+            for (let i = startIndex; i < newArr.length - 1; ++i) {
+                (function (i) {
+                    setTimeout(function () {
+                        updateYear(newArr[i + 1]);
+                    }, (i + 1) * updateFrequency);
+                })(i);
+            }
+            // 更新年份
+            function updateYear(year) {
+                var score = [];
+                for(let index = 0;index<year.score.length;index++){
+                    if(index!=52){
+                    score.push(year.score[index])
+                    }else{
+                        score[index] = {
+                            value:year.score[index],
+                            itemStyle: {
+                                color: '#fc8452',
+                            }
+                        }
+                    }
+                }
+                option.yAxis.data = year.country;
+                option.series[0].data = score;
+                option.graphic.elements[0].style.text = year.year;
+                myChart.setOption(option);
+                window.addEventListener("resize", ()=>{
+                    myChart.resize();
+                });
+            }
+            myChart.setOption(option);
+        }
+        //展示
+        function showMap() {
+            // myChart.clear();
+            $.getJSON(`/static/data/rankingData.json`, data=>{
+                var newArr=[{
+                    year:"2015",
+                    country:[],
+                    score:[]
+                },{
+                    year:"2021",
+                    country:[],
+                    score:[]
+                }]
+                for(let i = 0;i<data.length;i++){
+                    for(let j = 0;j<data[0].content.length;j++){
+                        newArr[i].country.push((data[i].content)[j].name)
+                        newArr[i].score.push((data[i].content)[j].value)
+                    }
+                }
+                initEcharts(newArr)
+            })
+        }
+        this.showMap=showMap;
+        showMap()
+    },
+    handleClick(){
+        this.flag=!this.flag
+        if(this.flag){
+            // 记得每次调用之前先清除上一次的定时器
+            this.showMap();
+            clearInterval(this.timer);
+            this.timer = setInterval(this.showMap,4000);
+        }else{
+            clearInterval(this.timer);
+        }
+    }
+    }
+};
+</script>
+
+<style lang="scss" scoped>
+.container{
+    width: 4rem;
+    height: 9rem;
+    margin: 0px auto 0;
+    position: relative;
+    #container6 {
+        width: 4rem;
+        height: 9rem;
+        margin: 0px auto 0;
+    }
+    .handleBtn{
+        position: absolute;
+        top:-.01rem;
+        right:.8rem;
+        width:.2rem;
+        height: .2rem;
+        border-radius: 50%;
+        background-color: #fff;
+        color:#999;
+        text-align: center;
+        line-height: .2rem;
+        font-size: .1rem;
+        cursor: pointer;
+    }
+    .handleBtn:hover{
+        background-color: #666;
+    }
+}
+
+</style>
+
+

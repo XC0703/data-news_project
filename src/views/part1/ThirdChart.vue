@@ -287,7 +287,7 @@
 <script>
 
 export default {
-  name: "timeLine",
+  name: "ThirdChart",
   mounted(){
     this.slideshow();
   },
@@ -363,7 +363,7 @@ export default {
     /* 竖线样式 高度根据事件的多少调整*/
     width: .05rem;
     height: 5rem;
-    background: rgb(221, 221, 221);
+    background: rgb(236, 225, 98);
     margin: .4rem auto;
     position: relative;
     .box{
@@ -403,7 +403,7 @@ export default {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    border: 4px solid rgb(221, 221, 221);
+    border: 4px solid #fff;
     background: rgb(31, 122, 252);
     opacity: 0;
     transition: all 0.5s;

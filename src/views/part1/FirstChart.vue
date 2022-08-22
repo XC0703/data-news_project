@@ -3,8 +3,8 @@
     <div class="timeLine" style="overflow: hidden;">
         <div class="timeLine__contents">
             <div class="timeLine__contents__content">
-                <p>{{timeLineList[timeIndex].year}}</p>
-                <p>{{timeLineList[timeIndex].info}}</p>
+                <p id="content1">{{timeLineList[0].year}}</p>
+                <p id="content2">{{timeLineList[0].info}}</p>
             </div>
         </div>
         <div class="timeLine__line">
@@ -14,11 +14,14 @@
             </div>
             <div class="ul_box">
                 <ul class="my_timeline" ref="mytimeline">
-                    <li class="my_timeline_item" v-for="(item,index) in timeLineList" :key="index">
+                    <li class="my_timeline_item" 
+                        v-for="(item,index) in timeLineList" 
+                        :class="{active: index == timeIndex}"
+                        :key="index"
+                    >
                         <!--圈圈节点-->
                         <div 
                             class="my_timeline_node"
-                            :class="{active: index == timeIndex}"
                             @click="changeActive(index)"
                         ></div>
                         <!--线-->
@@ -35,6 +38,8 @@
 </template>
 
 <script>
+// import $ from "jquery";
+
 export default {
     name: 'FirstChart',
     data() {
@@ -76,19 +81,50 @@ export default {
         }
     },
     methods: {
+        getContent(){
+            var contents = document.querySelectorAll('.timeLine .timeLine__contents .timeLine__contents__content p')
+            return contents;
+        },
         changeActive(index) {
+            this.getContent()[0].style.opacity = 0;
+            this.getContent()[1].style.opacity = 0;
             this.timeIndex = index;
+            var that = this;
+            setTimeout(function(){
+            that.getContent()[0].innerHTML=that.timeLineList[that.timeIndex].year
+            that.getContent()[1].innerHTML=that.timeLineList[that.timeIndex].info
+            that.getContent()[0].style.opacity = 1;
+            that.getContent()[1].style.opacity = 1;
+            },500);
         },
         moveLeft()  {
+            this.getContent()[0].style.opacity = 0;
+            this.getContent()[1].style.opacity = 0;
             if(this.timeIndex!=0){
                 this.timeIndex--;
             }
+            var that = this;
+            setTimeout(function(){
+            that.getContent()[0].innerHTML=that.timeLineList[that.timeIndex].year
+            that.getContent()[1].innerHTML=that.timeLineList[that.timeIndex].info
+            that.getContent()[0].style.opacity = 1;
+            that.getContent()[1].style.opacity = 1;
+            },500);
         },
         moveRight() {
+            this.getContent()[0].style.opacity = 0;
+            this.getContent()[1].style.opacity = 0;
             if(this.timeIndex!=7){
                 this.timeIndex++;
             }
-        }
+            var that = this;
+            setTimeout(function(){
+            that.getContent()[0].innerHTML=that.timeLineList[that.timeIndex].year
+            that.getContent()[1].innerHTML=that.timeLineList[that.timeIndex].info
+            that.getContent()[0].style.opacity = 1;
+            that.getContent()[1].style.opacity = 1;
+            },300);
+        },
     }
 }
 </script>
@@ -96,7 +132,7 @@ export default {
 <style lang="scss" scoped>
 .timeLine{
     width: 100%;
-    height: 5rem;
+    height: 4rem;
     position: relative;
     &__contents{
         width: 100%;
@@ -117,10 +153,13 @@ export default {
             width: 3rem;
             height: .4rem;
             margin-top: .4rem;
-            margin-left: .1rem;
+            position: absolute;
+            left:50%;
+            margin-left: -1.5rem;
             text-align: center;
             line-height: .4rem;
             color:#f68720;
+            transition: all 0.5s ease;
         }
         p:nth-child(2){
             width: 100%;
@@ -128,9 +167,12 @@ export default {
             padding:.1rem;
             position: absolute;
             right: 0;
+            bottom: 0;
             text-align: center;
             font-size: .18rem;
-            color:#666
+            color:#666;
+            animation: showIn 1s ease;
+            transition: all 0.2s ease;
         }
         }
         &__content:hover{
@@ -188,6 +230,7 @@ export default {
 .my_timeline_item {
     width: 2.5rem;
     flex: left;
+    position: relative;
 }
 .my_timeline_node {
     box-sizing: border-box;
@@ -196,10 +239,7 @@ export default {
     width: .28rem; 
     height: .28rem;
     cursor: pointer;
-}
-.my_timeline_node.active {
-    background-color: #fff !important;
-    border: .06rem solid #f68720;
+    transition:all .5s ease;
 }
 .my_timeline_item_line {
     width: 100%;
@@ -216,8 +256,42 @@ export default {
 .my_timeline_item:nth-child(8){
     .my_timeline_item_content{
     position: absolute;
-    top:.6rem;
-    left:9.4rem;
+    top:.24rem;
+    left:-.2rem;
+    }
+}
+.my_timeline_item.active{
+    .my_timeline_node{
+        background-color: #fff !important;
+        border: .06rem solid #f68720;
+        width: .38rem; 
+        height: .38rem;
+        position: absolute;
+        top:-.04rem
+    }
+    .my_timeline_item_line{
+        margin: .14rem 0 0 .28rem;
+    }
+    .my_timeline_item_content{
+        position: absolute;
+        top:-.4rem;
+        left:0rem;
+    }
+}
+.my_timeline_item:nth-child(8).active{
+    .my_timeline_item_content{
+    left:-.2rem;
+    }
+}
+@keyframes showIn{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    100%{
+    opacity: 1;
     }
 }
 </style>

@@ -49,7 +49,11 @@ export default {
                     x:'center',
                     textStyle:{
                         fontSize:12
-                    }
+                    },
+                    subtext:"数据来源：中国缓和医疗发展蓝皮书（2019-2020）",
+                    subtextStyle: {
+                        fontSize: 7
+                    },
                 },
                 tooltip : {
                     trigger: 'item',
@@ -62,7 +66,7 @@ export default {
                     {
                         type:'pie',
                         radius : [30, 110],
-                        center : ['50%', '50%'],
+                        center : ['50%', '55%'],
                         roseType : 'area',
                         data:data_pie,
                         label:{

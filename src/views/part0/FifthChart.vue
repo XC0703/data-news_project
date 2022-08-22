@@ -27,6 +27,18 @@ export default {
         function initEcharts(){
             let option = {
                 backgroundColor: 'transparent',
+                title : {
+                    text: '最后疾病期间症状和疼痛比例',
+                    x:'center',
+                    top:-3,
+                    textStyle:{
+                        fontSize:12
+                    },
+                    subtext:"数据来源：中国缓和医疗发展蓝皮书（2019-2020）",
+                    subtextStyle: {
+                        fontSize: 7
+                    },
+                },
                 tooltip:{
                         trigger: 'item',
                         formatter: function(params){
@@ -39,6 +51,7 @@ export default {
                     type: 'sankey',
                     layout: 'none',
                     layoutIterations: 0,
+                    top:40,
                     emphasis: {
                         focus: 'adjacency',
                     },

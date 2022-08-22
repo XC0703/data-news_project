@@ -29,6 +29,14 @@ export default {
         });
         function initEcharts(){
             let option = {
+                title:{
+                    top:-13,
+                    left:'center',
+                    subtext:"数据来源：中国缓和医疗发展蓝皮书（2019-2020）",
+                    subtextStyle: {
+                        fontSize: 7
+                    },
+                },
                 grid: {
                     top: '10%',
                     left: '3%',
@@ -74,9 +82,7 @@ export default {
                             formatter: '{value}',
                             // fontSize: 14,
                             // margin: 20,
-                            textStyle: {
-                                color: '#7ec7ff',
-                            },
+                            color: '#7ec7ff',
                         },
                         axisLine: {
                             lineStyle: {
@@ -97,9 +103,7 @@ export default {
                         max:7.5,
                         axisLabel: {
                             formatter:'{value}%',
-                            textStyle: {
-                                color: '#7ec7ff',
-                            },
+                            color: '#7ec7ff',
                         },
                         nameTextStyle: {
                             color: '#fff',
@@ -130,31 +134,27 @@ export default {
                             borderColor: '#a3c8d8',
                         },
                         lineStyle: {
-                            normal: {
-                                width: 1,
-                                color: '#19a3df',
-                            },
+                            width: 1,
+                            color: '#19a3df',
                         },
                         areaStyle: {
-                            normal: {
-                                color: new echarts.graphic.LinearGradient(
-                                    0,
-                                    0,
-                                    0,
-                                    1,
-                                    [
-                                        {
-                                            offset: 0,
-                                            color: 'rgba(88,255,255,0.2)',
-                                        },
-                                        {
-                                            offset: 0.8,
-                                            color: 'rgba(88,255,255,0)',
-                                        },
-                                    ],
-                                    false
-                                ),
-                            },
+                            color: new echarts.graphic.LinearGradient(
+                                0,
+                                0,
+                                0,
+                                1,
+                                [
+                                    {
+                                        offset: 0,
+                                        color: 'rgba(88,255,255,0.2)',
+                                    },
+                                    {
+                                        offset: 0.8,
+                                        color: 'rgba(88,255,255,0)',
+                                    },
+                                ],
+                                false
+                            ),
                         },
                         data: data_line,
                     },

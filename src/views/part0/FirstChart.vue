@@ -31,6 +31,14 @@ export default {
         });
         function initEcharts(){
             let option = {
+                title:{
+                    top:-13,
+                    left:'center',
+                    subtext:"数据来源：国家统计局 http://www.stats.gov.cn/",
+                    subtextStyle: {
+                        fontSize: 7
+                    },
+                },
                 // 通过这里直接设置颜色
                 // color: ['#00f2f1', '#ed3f35',"#0E7CE2","#ffc72b"],
                 emphasis: {
@@ -63,11 +71,12 @@ export default {
                     fontSize: 8,
                     },
                     itemHeight: 8,//图例大小
+                    top:10,
                     right: '10%' // 距离右边10%
                 },
                 // 设置网格样式
                 grid: { 
-                    top: '15%',
+                    top: '20%',
                     left: '3%',
                     right: '3%',
                     bottom: '3%',

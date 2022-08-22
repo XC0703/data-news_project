@@ -33,12 +33,16 @@ export default {
                 title:{
                     text:'中国不同年龄段人口死亡率折线图',
                     left:"center",
+                    subtext:"数据来源：中国缓和医疗发展蓝皮书（2019-2020）",
+                    subtextStyle: {
+                        fontSize: 7
+                    },
                     textStyle:{
                         fontSize:11
                     }
                 },
                 grid: {
-                    top: '15%',
+                    top: '20%',
                     left: '3%',
                     right: '3%',
                     bottom: '3%',
