@@ -1,11 +1,17 @@
 <template>
-    Part4View
+    <FirstPage />
+    <MainPage />
 </template>
 
 <script>
+import FirstPage from './FirstPage.vue'
+import MainPage from './MainPage.vue'
 
 export default{
-    name:'Part4View'
+    name:'Part2View',
+    components: {
+		FirstPage,MainPage
+	},
 }
 </script>
 

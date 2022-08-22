@@ -337,17 +337,17 @@ export default {
                 slideshow.style.height = '5rem'
                 clearInterval(slideon);
                 slideon=setInterval(changeSlide,3000);
-                console.log(slideon)
+                // console.log(slideon)
             }else if(current==1){
                 slideshow.style.height = '12rem'
                 clearInterval(slideon);
                 slideon=setInterval(changeSlide,6000);
-                console.log(slideon)
+                // console.log(slideon)
             }else{
                 slideshow.style.height = '15rem'
                 clearInterval(slideon);
                 slideon=setInterval(changeSlide,7000);   
-                console.log(slideon)        
+                // console.log(slideon)        
             }
             slideOn(); //盒子淡入
         }
