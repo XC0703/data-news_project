@@ -377,12 +377,12 @@ export default {
             font-size: .28rem;
         }
         .boxAfter{
-            width: 100px;
+            width: 1rem;
             color: rgb(84, 84, 85);
             position: absolute;
-            margin-left: -47px;
+            margin-left: -.47rem;
             text-align: center;
-            bottom: -30px;
+            bottom: -.3rem;
             opacity: 0;
             transition: all 0.5s;
         }
@@ -398,22 +398,22 @@ export default {
 .eventBox {
     /* 球球的样式 */
     position: absolute;
-    margin-left: -4px;
-    margin-top: -10px;
-    width: 12px;
-    height: 12px;
+    margin-left: -.04rem;
+    margin-top: -.1rem;
+    width: .12rem;
+    height: .12rem;
     border-radius: 50%;
-    border: 4px solid #fff;
+    border: .04rem solid #fff;
     background: rgb(31, 122, 252);
     opacity: 0;
     transition: all 0.5s;
     h2{
         /* 日期的样式 */
         position: absolute;
-        margin-left: -120px;
-        margin-top: 3px;
+        margin-left: -1.2rem;
+        margin-top: .03rem;
         color: rgb(84, 84, 85);
-        font-size: 14px;
+        font-size: .14rem;
         cursor: pointer;
     }
     div{
@@ -424,7 +424,7 @@ export default {
         left: .5rem;
         width: 3rem;
         display: inline-block;
-        border: 2px solid rgb(84, 84, 85);
+        border: .02rem solid rgb(84, 84, 85);
         border-radius: .06rem;
         z-index: 2;
         overflow: hidden;
@@ -433,11 +433,11 @@ export default {
         ul {
             /* 左右事件触摸展开后内容的样式 */
             list-style: none;
-            width: 300px;
-            padding: 4px;
-            border-top: 2px solid rgb(84, 84, 85);
+            width: 3rem;
+            padding: .04rem;
+            border-top: .02rem solid rgb(84, 84, 85);
             color: rgb(84, 84, 85);
-            font-size: 14px;
+            font-size: .14rem;
         }
         p{
             /* 左右事件的字体样式 */
@@ -449,12 +449,12 @@ export default {
     span{
         content: '';
         position: absolute;
-        top: -3px;
+        top: -.03rem;
         left: .34rem;
-        width: 0px;
-        height: 0px;
-        border: 7px solid transparent;
-        border-right: 7px solid rgb(84, 84, 85);
+        width: 0rem;
+        height: 0rem;
+        border: .07rem solid transparent;
+        border-right: .07rem solid rgb(84, 84, 85);
         z-index: -1;
     }
 }
@@ -464,24 +464,24 @@ export default {
 }
 // 触摸事件后球球的样式 
 .eventBox:hover {
-    border: 4px solid rgb(195, 195, 195);
+    border: .04rem solid rgb(195, 195, 195);
     background: rgb(143, 189, 253);
-    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 .02rem .02rem rgba(255, 255, 255, 0.4);
 }
 /* 右边日期的样式 */
 .leftBox h2 {
-    margin-left: 60px;
-    width: 100px;
+    margin-left: .6rem;
+    width: 1rem;
 }
 /* 左边事件的样式 */
 .leftBox div {
-    left: -337px;
+    left: -3.37rem;
 }
 /* 左边事件的角标样式 */
 .leftBox span {
-    left: -34px;
-    border: 7px solid transparent;
-    border-left: 7px solid rgb(84, 84, 85);
+    left: -.34rem;
+    border: .07rem solid transparent;
+    border-left: .07rem solid rgb(84, 84, 85);
 }
 </style>
 

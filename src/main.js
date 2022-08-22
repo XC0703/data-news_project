@@ -19,9 +19,10 @@ import 'element-plus/dist/index.css'
 import * as echarts from 'echarts'
 app.config.globalProperties.$echarts = echarts
 
+// 引入vue-srcollto
+var VueScrollTo = require('vue-scrollto');
 
-
-app.use(ElementPlus).mount('#app')
+app.use(ElementPlus).use(VueScrollTo).mount('#app')
 
 
 
