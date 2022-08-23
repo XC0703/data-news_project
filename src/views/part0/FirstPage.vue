@@ -1,5 +1,6 @@
 <template>
-    <div class="content" :style="{background: 'url(/static/images/bgs/bg0.png)'}">
+    <div id="part0" class="content" :style="{background: 'url(/static/images/bgs/bg0.png)'}">
+        <ScrollTo />
         <div class="content__topBox">Hospice Care</div>
         <div class="content__middleBox">
             温和地<br/>走进那个良夜
@@ -10,7 +11,6 @@
             <div class="content__bottomBox__word">当生命之船无奈鸣笛，即将伴着暮色驶出人间</div>
             <div class="content__bottomBox__word">人们或许可以选择，更加温和地走进那个良夜……</div>
         </div>
-        <ScrollTo />
     </div>
 </template>
 

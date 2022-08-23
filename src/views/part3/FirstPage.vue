@@ -1,5 +1,6 @@
 <template>
-    <div class="content" :style="{background: 'url(/static/images/bgs/bg2.png)'}">
+    <div id="part3" class="content" :style="{background: 'url(/static/images/bgs/bg2.png)'}">
+        <ScrollTo />
         <div class="content__leftBox">
             <img src="../../../public/static/images/bgs/bg2_element0.png" alt="白云">
         </div>
@@ -10,9 +11,10 @@
 </template>
 
 <script>
-
+import ScrollTo from '@/components/ScrollTo.vue';
 export default {
     name:'FirstPage',
+    components:{ScrollTo}
 }
 </script>
 
