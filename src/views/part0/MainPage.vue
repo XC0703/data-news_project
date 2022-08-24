@@ -9,7 +9,7 @@
             <p>其中65岁以上老年人口数量约为20059万，占总人口数的14.20%</p>
             <p> 二十年间，我国人口死亡率从2001年的6.43‰，上升至2021年的7.18‰</p>
             <div class="chartBoxs">
-                <div class="chartBox">
+                <div class="chartBox" style="margin-left: -2.5rem !important;">
                     <div class="chartBox__chartBtns">
                         <div
                             :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn': currentIndex === item.index}"
@@ -30,7 +30,7 @@
             </div>
             <p>尤其是在65岁以后，死亡率增速明显加大，60岁及以上年龄段的老年人群死亡率高达31.83‰。</p>
             <div class="chartBoxs" style="height:2.3rem">
-                <div class="chartBox" style="height:2.3rem" >
+                <div class="chartBox" style="height:2.3rem;margin-left: -2.5rem !important;" >
                     <div class="chartBox__chart" style="height:2.3rem">
                         <ThirdChart />
                     </div>
@@ -38,7 +38,7 @@
             </div>
             <p>其中，很多老年人在临终前都会受到疾病折磨</p>
             <div class="chartBoxs" style="height:3.2rem">
-                <div class="chartBox" style="height:3.2rem">
+                <div class="chartBox" style="height:3.2rem;margin-left: -2.5rem !important;">
                     <div class="chartBox__chart" style="height:3.2rem">
                         <FourthChart />
                     </div>
@@ -47,9 +47,14 @@
             <p>根据2002至2018年中国老年健康影响因素跟踪调查（CLHLS）中对1998至2018年间去世老年人亲属的调查（有效样本为12429人）,</p>
             <p>有高达82.34%的老年人在临终前生活不能完全自理，37.29%的老年人在痛苦状态下离世，在65至79岁和80至89岁中高龄老年群体中，痛苦离世的老年人均多于安详离世的老年人。</p>
             <div class="chartBoxs" style="height:4rem">
-                <div class="chartBox" style="height:4rem">
+                <div class="chartBox circlePacking" style="height:4rem;left:0">
                     <div class="chartBox__chart" style="height:4rem">
                         <FifthChart />
+                    </div>
+                </div> 
+                <div class="chartBox circlePacking" style="height:4rem;right:0rem">
+                    <div class="chartBox__chart" style="height:4rem">
+                        <SixthChart />
                     </div>
                 </div> 
             </div>
@@ -65,6 +70,7 @@ import SecondChart from './SecondChart.vue';
 import ThirdChart from './ThirdChart.vue';
 import FourthChart from './FourthChart.vue';
 import FifthChart from './FifthChart.vue';
+import SixthChart from './SixthChart.vue';
 
 const categories = [
     { name: '人口老龄化折线图',index:0},
@@ -81,7 +87,7 @@ const useTabEffect = () => {
 }
 export default {
     name:'MainPage',
-    components:{FirstChart,SecondChart,ThirdChart,FourthChart,FifthChart},
+    components:{FirstChart,SecondChart,ThirdChart,FourthChart,FifthChart,SixthChart},
     setup(){
         const { currentIndex, handleIndexClick } = useTabEffect()
         return {categories,currentIndex, handleIndexClick}
@@ -131,7 +137,6 @@ export default {
     height: 2.5rem;
     position: absolute;
     left:50%;
-    margin-left: -2.5rem !important;
     margin: 0 auto;
     &__chartBtns{
         position: absolute;
@@ -185,5 +190,10 @@ export default {
         position: absolute;
         bottom: 0;
     }
+}
+.circlePacking{
+    width: 50%;
+    height: 2.5rem;
+    position: absolute;
 }
 </style>

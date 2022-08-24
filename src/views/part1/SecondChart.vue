@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div id="container6"></div>
+        <div id="container7"></div>
         <div class="handleBtn iconfont" @click="handleClick()">{{flag?"&#xe87a;":"&#xe87c;"}}</div>
     </div>
 </template>
@@ -24,7 +24,7 @@ export default {
     methods: {
     // 配置渲染map
     mapChart() {
-        let myChart = echarts.init(document.getElementById("container6"));
+        let myChart = echarts.init(document.getElementById("container7"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
@@ -206,7 +206,7 @@ export default {
     height: 9rem;
     margin: 0px auto 0;
     position: relative;
-    #container6 {
+    #container7 {
         width: 4rem;
         height: 9rem;
         margin: 0px auto 0;
