@@ -82,11 +82,11 @@ export default {
                             formatter: '{value}',
                             // fontSize: 14,
                             // margin: 20,
-                            color: '#7ec7ff',
+                            color: '#0F2650',
                         },
                         axisLine: {
                             lineStyle: {
-                                color: '#243753',
+                                color: '#0F2650',
                             },
                         },
                         axisTick: {
@@ -103,7 +103,7 @@ export default {
                         max:7.5,
                         axisLabel: {
                             formatter:'{value}%',
-                            color: '#7ec7ff',
+                            color: '#0F2650',
                         },
                         nameTextStyle: {
                             color: '#fff',
@@ -113,7 +113,7 @@ export default {
                         axisLine: {
                             show: true,
                             lineStyle: {
-                                color: '#283352',
+                                color: '#0F2650',
                             },
                         },
                         axisTick: {
@@ -130,12 +130,12 @@ export default {
                         symbolSize: 3,
                         zlevel: 3,
                         itemStyle: {
-                            color: '#19a3df',
+                            color: '#0F2650',
                             borderColor: '#a3c8d8',
                         },
                         lineStyle: {
                             width: 1,
-                            color: '#19a3df',
+                            color: '#0F2650',
                         },
                         areaStyle: {
                             color: new echarts.graphic.LinearGradient(

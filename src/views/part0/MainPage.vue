@@ -11,14 +11,22 @@
             <div class="chartBoxs">
                 <div class="chartBox" style="margin-left: -2.5rem !important;">
                     <div class="chartBox__chartBtns">
-                        <div
+                        <div 
+                            :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn1': currentIndex === 0}"
+                            @click="() => handleIndexClick(0)"
+                        >人口老龄化折线图</div>
+                        <div 
+                            :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn2': currentIndex === 1}"
+                            @click="() => handleIndexClick(1)"
+                        >死亡率折线图</div>
+                        <!-- <div
                             :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn': currentIndex === item.index}"
                             v-for="item in categories"
                             :key="item.name"
                             @click="() => handleIndexClick(item.index)"
                         >
                             {{item.name}}
-                        </div>
+                        </div> -->
                     </div>
                         <div class="chartBox__chart" v-if="currentIndex==0">
                             <FirstChart />
@@ -169,19 +177,33 @@ export default {
             left:-.1rem;
             top:.08rem
         }
-        .activeBtn{
-            color: #02a6b5;
+        .activeBtn1{
+            color:  #60A5F0;
         }
-        .activeBtn::before{
-            background-color: #02a6b5;
-            border: .015rem solid #02a6b5;
+        .activeBtn1::before{
+            background-color:  #60A5F0;
+            border: .015rem solid  #60A5F0;
         }
-        &__chartBtn:hover{
-            color: #02a6b5;
+        .activeBtn2{
+            color:  #0F2650;
         }
-        &__chartBtn:hover::before{
-            background-color: #02a6b5;
-            border: .015rem solid #02a6b5;
+        .activeBtn2::before{
+            background-color:  #0F2650;
+            border: .015rem solid  #0F2650;
+        }
+        &__chartBtn:nth-child(1):hover{
+            color:#60A5F0;
+        }
+        &__chartBtn:nth-child(1):hover::before{
+            background-color:  #60A5F0;
+            border: .015rem solid  #60A5F0;
+        }
+        &__chartBtn:nth-child(2):hover{
+            color:#0F2650;
+        }
+        &__chartBtn:nth-child(2):hover::before{
+            background-color:  #0F2650;
+            border: .015rem solid  #0F2650;
         }
     }
     &__chart{

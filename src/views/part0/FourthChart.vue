@@ -55,6 +55,7 @@ export default {
                         fontSize: 7
                     },
                 },
+                color:['#0F2650','#063F76','#246EAB',' #5095CE',' #73C0DE','#F3C450','#5095CE','#F1C27F','#FF9500'],
                 tooltip : {
                     trigger: 'item',
                     formatter: function(params){

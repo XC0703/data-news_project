@@ -39,7 +39,7 @@ export default {
                     score[index] = {
                         value:newArr[startIndex].score[index],
                         itemStyle: {
-                            color: '#fc8452',
+                            color: '#F0CC79',
                         }
                     }
                 }
@@ -97,7 +97,7 @@ export default {
                     type: 'bar',
                     barWidth:6,
                     itemStyle: {
-                        color: 'rgb(13,208,229)'
+                        color: '#0F2650'
                     },
                     label: {
                         show: true,
@@ -145,7 +145,7 @@ export default {
                         score[index] = {
                             value:year.score[index],
                             itemStyle: {
-                                color: '#fc8452',
+                                color: '#F0CC79',
                             }
                         }
                     }

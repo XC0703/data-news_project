@@ -158,7 +158,7 @@ export default {
             margin-left: -1.5rem;
             text-align: center;
             line-height: .4rem;
-            color:#f68720;
+            color:#F0CC79;
             transition: all 0.5s ease;
         }
         p:nth-child(2){
@@ -189,8 +189,8 @@ export default {
                 width: .4rem;
                 height: .4rem;
                 font-size: .4rem;
-                border: .01rem solid #f68720;
-                color:#f68720;
+                border: .01rem solid #F0CC79;
+                color:#F0CC79;
                 border-radius: 50%;
                 text-align: center;
                 line-height: .4rem;
@@ -200,7 +200,7 @@ export default {
                 z-index: 99999;
             }
             .btn:hover{
-                background-color: #f68720;
+                background-color: #F0CC79;
                 cursor: pointer;
             }
             &__leftBtn{
@@ -235,7 +235,7 @@ export default {
 .my_timeline_node {
     box-sizing: border-box;
     border-radius: 50%;
-    background-color:#e4e7ed,;
+    background-color:#0F2650,;
     width: .28rem; 
     height: .28rem;
     cursor: pointer;
@@ -245,7 +245,7 @@ export default {
     width: 100%;
     height: .1rem;
     margin: -.14rem 0 0 .28rem;
-    border-top: .02rem solid #E4E7ED;
+    border-top: .02rem solid #0F2650;
     border-left: none;
 }
 .my_timeline_item_content {
@@ -263,7 +263,7 @@ export default {
 .my_timeline_item.active{
     .my_timeline_node{
         background-color: #fff !important;
-        border: .06rem solid #f68720;
+        border: .06rem solid #F0CC79;
         width: .38rem; 
         height: .38rem;
         position: absolute;
