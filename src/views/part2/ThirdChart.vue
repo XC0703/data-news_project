@@ -1,15 +1,15 @@
 <template>
-    <div id="container"></div>
+    <div id="container10"></div>
 </template>
 
 <script>
 let echarts = require("echarts/lib/echarts");
 require("echarts/lib/chart/map");
-require("../utils/china");
+require("../../utils/china");
 import $ from "jquery";
 
 export default {
-  name: "chinaMap",
+  name: "ThirdChart",
   data() {
     return {};
   },
@@ -22,7 +22,7 @@ export default {
    methods: {
     // 配置渲染map
     mapChart() {
-        let myChart = echarts.init(document.getElementById("container"));
+        let myChart = echarts.init(document.getElementById("container10"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
@@ -31,7 +31,7 @@ export default {
             let option = {
                 title:{
                     x:'center',
-                    y:'bottom'
+                    y:'top'
                 },
                 timeline: {   // 时间轴样式
                     axisType: 'category',
@@ -139,14 +139,14 @@ export default {
                 }],
                 options:[{
                     title:{
-                        text:'2017年统计值'
+                        text:'2017年安宁疗护试点分布地图'
                     },
                     series:[{
                         data:mapData[0].data
                     }]
                 },{
                     title:{
-                        text:'2019年统计值'
+                        text:'2019年安宁疗护试点分布地图'
                     },
                     series:[{
                         data:mapData[1].data
@@ -169,10 +169,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container {
-  width: 600px;
-  height: 600px;
-  margin: 0px auto 0;
+#container10 {
+  width: 4.5rem;
+  height: 4rem;
+  margin: 0rem auto 0;
 }
 .btn {
   position: absolute;

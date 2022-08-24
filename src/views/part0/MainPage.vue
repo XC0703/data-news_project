@@ -55,7 +55,7 @@
             <p>根据2002至2018年中国老年健康影响因素跟踪调查（CLHLS）中对1998至2018年间去世老年人亲属的调查（有效样本为12429人）,</p>
             <p>有高达82.34%的老年人在临终前生活不能完全自理，37.29%的老年人在痛苦状态下离世，在65至79岁和80至89岁中高龄老年群体中，痛苦离世的老年人均多于安详离世的老年人。</p>
             <div class="chartBoxs" style="height:4rem">
-                <div class="chartBox circlePacking" style="height:4rem;left:0">
+                <div class="chartBox circlePacking" style="height:4rem;left:0rem">
                     <div class="chartBox__chart" style="height:4rem">
                         <FifthChart />
                     </div>

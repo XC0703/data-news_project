@@ -1,5 +1,5 @@
 <template>
-    <div id="container3"></div>
+    <div id="container8"></div>
 </template>
 
 <script>
@@ -7,7 +7,7 @@
 let echarts = require("echarts/lib/echarts");
 
 export default {
-  name: "ThirdChart",
+  name: "FirstChart",
   data() {
     return {};
   },
@@ -21,28 +21,29 @@ export default {
     // 配置渲染map
     mapChart() {
         var data_line = [
-        37.1,0.42,0.01,31.48
+        2,2,23,12,1,40,57,12,22,32,22,27,39,31,66,28,15,28  
         ];
-        let myChart = echarts.init(document.getElementById("container3"));
+        let myChart = echarts.init(document.getElementById("container8"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
         function initEcharts(){
             let option = {
-                // backgroundColor: '#101e44',
                 title:{
-                    text:'中国不同年龄段人口死亡率折线图',
-                    left:"center",
-                    subtext:"数据来源：中国缓和医疗发展蓝皮书（2019-2020）",
+                    text: '国家卫健委官网安宁疗护相关词条数量变化图',
+                    x:'center',
+                    textStyle:{
+                        fontSize:12
+                    },
+                    top:-3,
+                    left:'center',
+                    subtext:"数据来源：国家卫健委",
                     subtextStyle: {
                         fontSize: 7
                     },
-                    textStyle:{
-                        fontSize:11
-                    }
                 },
                 grid: {
-                    top: '20%',
+                    top: '15%',
                     left: '3%',
                     right: '3%',
                     bottom: '3%',
@@ -50,7 +51,7 @@ export default {
                 },
                 tooltip: {
                     trigger: 'axis',
-                    formatter:'{b}年{a}：'+'{c}‰',
+                    formatter:'{b}年{a}：'+'{c}',
                     axisPointer: {
                         lineStyle: {
                             color: {
@@ -83,11 +84,11 @@ export default {
                         type: 'category',
                         boundaryGap: true,
                         axisLabel: {
+                            interval:0,
                             formatter: '{value}',
-                            // fontSize: 14,
+                            fontSize: 10,
                             // margin: 20,
                             color: '#0F2650',
-                            fontSize:7
                         },
                         axisLine: {
                             lineStyle: {
@@ -95,9 +96,10 @@ export default {
                             },
                         },
                         axisTick: {
-                            show: false,
+                            show: true,
+                            alignWithLabel:true
                         },
-                        data: ['1岁以内婴儿', '1-4岁儿童', '5~39岁青少年和壮年','60岁以上老人'],
+                        data: ['1994', '2000', '2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020', '2021'],
                     },
                 ],
                 yAxis: [
@@ -105,16 +107,21 @@ export default {
                         boundaryGap: false,
                         type: 'value',
                         min:0,
-                        max:40,
+                        max:70,
+                        name:'单位(条)',
+                        nameTextStyle:{
+                            color: '#0F2650', // 文字颜色
+                            fontSize:10
+                        },                      
                         axisLabel: {
-                            formatter:'{value}‰',
+                            formatter:'{value}',
                             color: '#0F2650',
                         },
-                        nameTextStyle: {
-                            color: '#fff',
-                            fontSize: 12,
-                            lineHeight: 40,
-                        },
+                        // nameTextStyle: {
+                        //     color: '#fff',
+                        //     fontSize: 12,
+                        //     lineHeight: 40,
+                        // },
                         axisLine: {
                             show: true,
                             lineStyle: {
@@ -128,7 +135,7 @@ export default {
                 ],
                 series: [
                     {
-                        name: '死亡率',
+                        name: '安宁疗护相关词条数量',
                         type: 'line',
                         smooth: true,
                         showSymbol: true,
@@ -139,27 +146,27 @@ export default {
                             borderColor: '#0F2650',
                         },
                         lineStyle: {
-                                width: 1,
-                                color: '#0F2650',
+                            width: 1,
+                            color: '#0F2650',
                         },
                         areaStyle: {
-                                color: new echarts.graphic.LinearGradient(
-                                    0,
-                                    0,
-                                    0,
-                                    1,
-                                    [
-                                        {
-                                            offset: 0,
-                                            color: 'rgba(15,38,80,0.2)',
-                                        },
-                                        {
-                                            offset: 0.8,
-                                            color: 'rgba(15,38,80,0)',
-                                        },
-                                    ],
-                                    false
-                                ),
+                            color: new echarts.graphic.LinearGradient(
+                                0,
+                                0,
+                                0,
+                                1,
+                                [
+                                    {
+                                        offset: 0,
+                                        color: 'rgba(15,38,80,0.2)',
+                                    },
+                                    {
+                                        offset: 0.8,
+                                        color: 'rgba(15,38,80,0)',
+                                    },
+                                ],
+                                false
+                            ),
                         },
                         data: data_line,
                     },
@@ -174,9 +181,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container3 {
-  width: 5rem;
-  height: 2rem;
+#container8 {
+  width: 6rem;
+  height: 2.5rem;
   margin: 0px auto 0;
 }
 </style>

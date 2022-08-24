@@ -1,5 +1,5 @@
 <template>
-    <div id="container2"></div>
+    <div id="container9"></div>
 </template>
 
 <script>
@@ -21,24 +21,45 @@ export default {
     // 配置渲染map
     mapChart() {
         var data_line = [
-        6.45, 6.43, 6.41,6.40,6.42,6.51,6.81,6.93,7.06,7.08,7.11,7.14,7.13,7.13,7.12,7.07,7.04,7.06,7.08,7.09,7.07,7.18
+            [1519,2175,2642,4685],
+            [276,354,510,1027]
         ];
-        let myChart = echarts.init(document.getElementById("container2"));
+        let myChart = echarts.init(document.getElementById("container9"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
         function initEcharts(){
             let option = {
                 title:{
-                    top:-13,
+                    text: '老年医学、临终关怀机构数量变化图',
+                    x:'center',
+                    textStyle:{
+                        fontSize:12
+                    },
+                    top:-3,
                     left:'center',
-                    subtext:"数据来源：中国缓和医疗发展蓝皮书（2019-2020）",
+                    subtext:"数据来源：2018-2021卫生事业发展统计公报",
                     subtextStyle: {
                         fontSize: 7
                     },
                 },
+                legend: {
+                    // 如果series有name属性，则legend可以不用写data值
+                    // data:['新增粉丝','新增游客'],
+                    textStyle:{
+                        fontSize: 8,
+                        color:'#0F2650'
+                    },
+                    itemHeight: 8,//图例大小
+                    top:'13%',
+                    right: '10%', // 距离右边10%
+                    // data:[
+                    //     {name:'设老年医学科的二级以上综合医院数量',textStyle:{color:'#00f2f1'}},
+                    //     {name:'设临终关怀科的医疗卫生机构数量',textStyle:{color:'#0E7CE2'}}
+                    // ]
+                },
                 grid: {
-                    top: '10%',
+                    top: '30%',
                     left: '3%',
                     right: '3%',
                     bottom: '3%',
@@ -46,7 +67,15 @@ export default {
                 },
                 tooltip: {
                     trigger: 'axis',
-                    formatter:'{b}年{a}：'+'{c}%',
+                    // formatter:'{b}年{a}：'+'{c}',
+                    formatter: function (params) {
+                        let html=params[0].name+"年<br>";
+                        for(let i=0;i<params.length;i++){
+                        html+='<span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:'+params[i].color+';"></span>'
+                            html+=params[i].seriesName+":"+params[i].value+"<br>";
+                        }
+                        return html;
+                    },
                     axisPointer: {
                         lineStyle: {
                             color: {
@@ -80,7 +109,7 @@ export default {
                         boundaryGap: true,
                         axisLabel: {
                             formatter: '{value}',
-                            // fontSize: 14,
+                            fontSize: 10,
                             // margin: 20,
                             color: '#0F2650',
                         },
@@ -92,24 +121,24 @@ export default {
                         axisTick: {
                             show: false,
                         },
-                        data: ['2000', '2001', '2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016', '2017', '2018','2019','2020','2021'],
+                        data: ['2018','2019','2020','2021'],
                     },
                 ],
                 yAxis: [
                     {
                         boundaryGap: false,
                         type: 'value',
-                        min:6,
-                        max:7.5,
+                        min:200,
+                        max:4800,
                         axisLabel: {
-                            formatter:'{value}%',
+                            formatter:'{value}',
                             color: '#0F2650',
                         },
-                        nameTextStyle: {
-                            color: '#fff',
-                            fontSize: 12,
-                            lineHeight: 40,
-                        },
+                        name:'单位(所)',
+                        nameTextStyle:{
+                            color: '#0F2650', // 文字颜色
+                            fontSize:10
+                        },   
                         axisLine: {
                             show: true,
                             lineStyle: {
@@ -123,19 +152,19 @@ export default {
                 ],
                 series: [
                     {
-                        name: '死亡率',
+                        name: '设老年医学科的二级以上综合医院数量',
                         type: 'line',
                         smooth: true,
                         showSymbol: true,
                         symbolSize: 3,
                         zlevel: 3,
                         itemStyle: {
-                            color: '#0F2650',
-                            borderColor: '#a3c8d8',
+                            color: '#00f2f1',
+                            borderColor: '#00f2f1',
                         },
                         lineStyle: {
                             width: 1,
-                            color: '#0F2650',
+                            color: '#00f2f1',
                         },
                         areaStyle: {
                             color: new echarts.graphic.LinearGradient(
@@ -146,17 +175,53 @@ export default {
                                 [
                                     {
                                         offset: 0,
-                                        color: 'rgba(15,38,80,0.2)',
+                                        color: 'rgba(88,255,255,0.2)',
                                     },
                                     {
                                         offset: 0.8,
-                                        color: 'rgba(15,38,80,0)',
+                                        color: 'rgba(88,255,255,0)',
                                     },
                                 ],
                                 false
                             ),
                         },
-                        data: data_line,
+                        data: data_line[0],
+                    },
+                    {
+                        name: '设临终关怀科的医疗卫生机构数量',
+                        type: 'line',
+                        smooth: true,
+                        showSymbol: true,
+                        symbolSize: 3,
+                        zlevel: 3,
+                        itemStyle: {
+                            color: '#0E7CE2',
+                            borderColor: '#0E7CE2',
+                        },
+                        lineStyle: {
+                            width: 1,
+                            color: '#0E7CE2',
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(
+                                0,
+                                0,
+                                0,
+                                1,
+                                [
+                                    {
+                                        offset: 0,
+                                        color: 'rgba(14,124,226,0.2)',
+                                    },
+                                    {
+                                        offset: 0.8,
+                                        color: 'rgba(14,124,226,0)',
+                                    },
+                                ],
+                                false
+                            ),
+                        },
+                        data: data_line[1],
                     },
                 ],
             };
@@ -169,9 +234,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container2 {
-  width: 4rem;
-  height: 2.2rem;
+#container9 {
+  width: 5rem;
+  height: 2.5rem;
   margin: 0px auto 0;
 }
 </style>

@@ -26,10 +26,29 @@
             <p>近年来国家卫健委官网上与安宁疗护、缓和医疗相关的词条数量整体增多。</p>
             <p>据国家卫健委卫生事业发展统计公报显示，</p>
             <p>近年来设老年医学科的二级以上综合医院、设临终关怀科的医疗卫生机构数量程逐年上涨趋势且2020-2021年增长趋势显著。</p>
-        
+            <div class="chartBoxs">
+                <div class="chartBox lineChart" style="left:0rem">
+                    <div class="chartBox__chart">
+                        <FirstChart />
+                    </div>
+                </div> 
+                <div class="chartBox lineChart" style="right:0rem">
+                    <div class="chartBox__chart">
+                        <SecondChart />
+                    </div>
+                </div> 
+            </div>
+
             <p>国家卫健委还于2017年、2019年颁布两批国家级安宁疗护试点地区，</p>
             <p>第一批安宁疗护试点仅在5个地区开展，</p>
             <p>第二批安宁疗护试点覆盖了上海全市及北京市西城区等71市（区）。</p>
+            <div class="chartBoxs" style="height:4rem">
+                <div class="chartBox" style="height:4rem;margin-left: -2.5rem !important;">
+                    <div class="chartBox__chart" style="height:4rem">
+                        <ThirdChart />
+                    </div>
+                </div> 
+            </div>
 
             <p>为进一步推进、规范安宁疗护发展，</p>
             <p>国家卫健委还于2017年颁布了《安宁疗护中心基本标准（试行）》为各地安宁疗护中心的发展提供了标准。</p>
@@ -76,8 +95,12 @@
 </template>
 
 <script>
+import FirstChart from './FirstChart.vue';
+import SecondChart from './SecondChart.vue';
+import ThirdChart from './ThirdChart.vue';
 export default {
     name:'MainPage',
+    components:{FirstChart,SecondChart,ThirdChart}
 }
 </script>
 
@@ -85,7 +108,7 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: cover !important;
-    height: 300vh;
+    height: 600vh;
     background-color: rgb(220, 220, 220);
     position: relative;
     &__word{
@@ -101,7 +124,7 @@ export default {
             font-size: .15rem;
         }
         p:nth-child(3),p:nth-child(7),p:nth-child(11),p:nth-child(14),
-        p:nth-child(16),p:nth-child(20),p:nth-child(23),p:nth-child(25),
+        p:nth-child(16),p:nth-child(20),p:nth-child(25),
         p:nth-child(27),p:nth-child(30),p:nth-child(34),p:nth-child(37),
         p:nth-child(40),p:nth-child(43),p:nth-child(46),p:nth-child(52){
             margin-bottom: .3rem;
@@ -115,20 +138,24 @@ export default {
 }
 .chartBoxs{
     width: 100%;
-    height: 4em;
+    height: 2.5rem;
     position: relative;
 }
 .chartBox{
-    width: 100%;
-    height: 4rem;
+    width: 5rem;
+    height: 2.5rem;
     position: absolute;
-    // left:50%;
-    // margin-left: -2.5rem !important;
+    left:50%;
     margin: 0 auto;
     &__chart{
-        height: 9rem;
+        width:100%;
+        height: 2.5rem;
         position: absolute;
-        left: 1.5rem;
     }
+}
+.lineChart{
+    width: 50%;
+    height: 2.5rem;
+    position: absolute;
 }
 </style>
