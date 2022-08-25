@@ -175,10 +175,8 @@ export default {
                     label: {
                             show: true, //开启显示
                             position: 'top', //在上方显示
-                            textStyle: { //数值样式
-                                color: 'black',
-                                fontSize: 10
-                            }
+                            color: 'black',
+                            fontSize: 10
                     },
                     data: [1,1,2,2,1,1,1,3,2,5,5,6,33,58,30,23,9],
                     z: 10,
