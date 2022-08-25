@@ -26,7 +26,7 @@
             <p>近年来国家卫健委官网上与安宁疗护、缓和医疗相关的词条数量整体增多。</p>
             <p>据国家卫健委卫生事业发展统计公报显示，</p>
             <p>近年来设老年医学科的二级以上综合医院、设临终关怀科的医疗卫生机构数量程逐年上涨趋势且2020-2021年增长趋势显著。</p>
-            <div class="chartBoxs">
+            <div class="chartBoxs" style="margin-bottom: .3rem;">
                 <div class="chartBox lineChart" style="left:0rem">
                     <div class="chartBox__chart">
                         <FirstChart />
@@ -42,7 +42,7 @@
             <p>国家卫健委还于2017年、2019年颁布两批国家级安宁疗护试点地区，</p>
             <p>第一批安宁疗护试点仅在5个地区开展，</p>
             <p>第二批安宁疗护试点覆盖了上海全市及北京市西城区等71市（区）。</p>
-            <div class="chartBoxs" style="height:4rem">
+            <div class="chartBoxs" style="height:4rem;margin-bottom: .3rem;">
                 <div class="chartBox" style="height:4rem;margin-left: -2.5rem !important;">
                     <div class="chartBox__chart" style="height:4rem">
                         <ThirdChart />
@@ -52,6 +52,24 @@
 
             <p>为进一步推进、规范安宁疗护发展，</p>
             <p>国家卫健委还于2017年颁布了《安宁疗护中心基本标准（试行）》为各地安宁疗护中心的发展提供了标准。</p>
+            <div class="imgBox" style="height:fit-content;">
+                <div class="chartBoxs" style="height:2.5rem;margin-bottom:.3rem">
+                    <div class="chartBox" style="height:2.5rem;width:3.6rem;left:1.8rem;">
+                        <img src="../../../public/static/images/contents/part2_element0.jpg"/>
+                    </div> 
+                    <div class="chartBox" style="height:2.5rem;width:3.6rem;right:1.8rem;">
+                        <img src="../../../public/static/images/contents/part2_element1.jpg"/>
+                    </div> 
+                </div>
+                <div class="chartBoxs" style="height:2.5rem;margin-bottom:.3rem">
+                    <div class="chartBox" style="height:2.5rem;width:3.6rem;left:1.8rem;">
+                        <img src="../../../public/static/images/contents/part2_element2.jpg">
+                    </div> 
+                    <div class="chartBox" style="height:2.5rem;width:3.6rem;right:1.8rem;">
+                        <img src="../../../public/static/images/contents/part2_element3.jpg" />
+                    </div> 
+                </div>
+            </div>
 
             <p>《“十四五”健康老龄化规划》（下称《规划》）提出要完善安宁疗护服务模式，建立安宁疗护服务制度体系，提高老年人和疾病终末期患者生命质量。</p>
             <p>除了医院的安宁疗护外，社区安宁疗护、医养结合安宁疗护、居家安宁疗护、远程安宁疗护也是安宁疗护的重要类型。</p>
@@ -64,6 +82,13 @@
             <p>同年11月，“安宁疗护社区卫生服务基本项目”获国家卫生健康委“优质服务基层行”最佳案例。</p>
             <p>2020年上海实现了安宁疗护服务覆盖全市所有社区卫生服务中心，</p>
             <p>上海在社区安宁疗护方面一直走在前列。</p>
+            <div class="chartBoxs" style="height:2.2rem;margin-bottom: .3rem;">
+                <div class="chartBox" style="height:2.2rem;margin-left: -2.5rem !important;">
+                    <div class="chartBox__chart" style="height:2.2rem">
+                        <FourthChart />
+                    </div>
+                </div> 
+            </div>
 
             <p>胡予嘉是清华大学社会实践成都分队队员，2022年暑假在成都华西第四医院宁养院做安宁疗护走访义工。</p>
             <p>胡予嘉觉得居家安宁疗护，相比于在病房更有烟火气——刚使用过的工夫茶具、洗干净的葡萄和橘子、吃了一半的油条、锅里炖着的汤，</p>
@@ -76,10 +101,28 @@
             <p>在胡予嘉看来“安宁疗护团队在定期的上门服务过程中，能起到很多作用。</p>
             <p>“作为定期来访的人员，既是临时的家人，也是缓解病痛战线共同的战友，</p>
             <p>这样模糊而令人有安全感的角色，非常艰辛，要求很高，但是又非常重要”。</p>
+            <div class="chartBoxs" style="height:3rem;margin-bottom: .3rem;">
+                <div class="chartBox" style="height:3rem;margin-left: -2.5rem !important;">
+                    <img src="../../../public/static/images/contents/part2_element5.jpg" />
+                    <span>（居家安宁疗护服务就基本流程）</span>
+                </div> 
+            </div>
 
             <p>民办安宁疗护机构也是提供安宁疗护服务的主体之一，</p>
             <p>许多民办养老院在国家医养结合政策的支持下拓展了安宁疗护服务，</p>
             <p>安宁疗护企业数量近年来呈增长趋势。</p>
+            <div class="chartBoxs" style="height: 4rem; margin-bottom: .3rem;">
+                <div class="chartBox lineChart" style="height: 4rem;width: 4.5rem;left:1.2rem">
+                    <div class="chartBox__chart" style="height: 4rem;">
+                        <FifthChart />
+                    </div>
+                </div> 
+                <div class="chartBox lineChart" style="right:0rem">
+                    <div class="chartBox__chart">
+                        <SixthChart />
+                    </div>
+                </div> 
+            </div>
 
             <p>世界安宁缓和医疗联盟在2017年发布了一项调查报告，</p>
             <p>该报告自2006年起监测国家层面的安宁缓和医疗发展情况，持续跟进十年。</p>
@@ -90,6 +133,13 @@
 
             <p>我国目前处于4A等级，</p>
             <p>这表明我国安宁疗护发展成果显著，但仍然存在一定问题。</p>
+            <div class="chartBoxs" style="height:5rem;margin-bottom: .3rem;">
+                <div class="chartBox" style="height:5rem;width:7rem;margin-left: -3.5rem !important;">
+                    <div class="chartBox__chart" style="height:5rem;width:7rem;">
+                        <SeventhChart />
+                    </div>
+                </div> 
+            </div>
         </div>
     </div>
 </template>
@@ -98,9 +148,13 @@
 import FirstChart from './FirstChart.vue';
 import SecondChart from './SecondChart.vue';
 import ThirdChart from './ThirdChart.vue';
+import FourthChart from './FourthChart.vue';
+import FifthChart from './FifthChart.vue';
+import SixthChart from './SixthChart.vue';
+import SeventhChart from './SeventhChart.vue';
 export default {
     name:'MainPage',
-    components:{FirstChart,SecondChart,ThirdChart}
+    components:{FirstChart,SecondChart,ThirdChart,FourthChart,FifthChart,SixthChart,SeventhChart}
 }
 </script>
 
@@ -108,7 +162,7 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: cover !important;
-    height: 600vh;
+    height: 920vh;
     background-color: rgb(220, 220, 220);
     position: relative;
     &__word{
@@ -125,8 +179,8 @@ export default {
         }
         p:nth-child(3),p:nth-child(7),p:nth-child(11),p:nth-child(14),
         p:nth-child(16),p:nth-child(20),p:nth-child(25),
-        p:nth-child(27),p:nth-child(30),p:nth-child(34),p:nth-child(37),
-        p:nth-child(40),p:nth-child(43),p:nth-child(46),p:nth-child(52){
+        p:nth-child(30),p:nth-child(34),
+        p:nth-child(40),p:nth-child(44),p:nth-child(47),p:nth-child(51){
             margin-bottom: .3rem;
         }
         p:nth-child(1)::first-letter{
@@ -151,6 +205,14 @@ export default {
         width:100%;
         height: 2.5rem;
         position: absolute;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    span{
+        margin-left:1.5rem;
+        color: #666;
     }
 }
 .lineChart{

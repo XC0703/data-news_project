@@ -85,6 +85,7 @@ export default {
                         boundaryGap: true,
                         axisLabel: {
                             interval:0,
+                            rotate:45,
                             formatter: '{value}',
                             fontSize: 10,
                             // margin: 20,

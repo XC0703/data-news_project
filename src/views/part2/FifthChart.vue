@@ -1,5 +1,5 @@
 <template>
-    <div id="container10"></div>
+    <div id="container12"></div>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ require("../../utils/china");
 import $ from "jquery";
 
 export default {
-  name: "ThirdChart",
+  name: "FifthChart",
   data() {
     return {};
   },
@@ -22,47 +22,29 @@ export default {
    methods: {
     // 配置渲染map
     mapChart() {
-        let myChart = echarts.init(document.getElementById("container10"));
+        let myChart = echarts.init(document.getElementById("container12"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
         function initEcharts(mapData){
-            let yearArray=[2017,2019];
             let option = {
                 title : {
+                    text:'各省份安宁疗护企业数量',
                     x:'center',
                     top:-3,
                     textStyle:{
                         fontSize:12
                     },
-                    subtext:"数据来源：国家卫健委",
+                    subtext:"数据来源：企查查",
                     subtextStyle: {
                         fontSize: 7
-                    },
-                },
-                timeline: {   // 时间轴样式
-                    axisType: 'category',
-                    data: yearArray,
-                    playInterval: 1500,
-                    bottom: '0',
-                    symbolSize: 10,
-                    autoPlay: true,
-                    loop: true,
-                    realtime: true,
-                    lineStyle: {
-                        color: '#466872',
-                        width: 2,
-                    },
-                    label: {
-                        color: '#5cc5da',
-                        fontSize: 14,
                     },
                 },
                 tooltip: {
                     show: true,
                     formatter: function (params) { 
                         if(params.value){ 
-                        return params.name + ' : ' + params.value+'<br />'+params.data.content; 
+                        return params.name + ' : ' + params.value; 
                         }else{ 
                         return params.name + ' : 0'; 
                         } 
@@ -72,31 +54,43 @@ export default {
                     type: 'piecewise',
                     left: '15',
                     bottom: '15',
-                    itemWidth: 27,
-                    itemHeight: 15,
+                    itemWidth: 15,
+                    itemHeight: 10,
                     textStyle: {
                         color: '#333333',
-                        fontSize: 14,
+                        fontSize: 8,
                     },
                     pieces: [{
+                        min:64,
+                        label: '>64',
+                    },{
+                        min:50,
+                        max:64,
+                        label: '50~64',
+                    },{
+                        min:40,
+                        max:50,
+                        label: '40~50',
+                    }, {
+                        min:30,
+                        max:40,
+                        label: '30~40',
+                    }, {
+                        min:10,
+                        max:30,
+                        label: '10~30',
+                    }, {
                         min:5,
-                        label: '>4',
-                    },{
-                        value: 4,
-                        label: '4',
-                    },{
-                        value: 3,
-                        label: '3',
+                        max:10,
+                        label: '5~10',
                     }, {
-                        value: 2,
-                        label: '2',
+                        min:3,
+                        max:5,
+                        label: '3~5',
                     }, {
-                        value: 1,
-                        label: '1',
-                    }, {
-                        value: 0,
-                        label: '0',
-                    }, ],
+                        max:3,
+                        label: '≤3',
+                    }],
                     inRange: {
                         color: ['#B2CAE0', '#D2EAFF', '#8AC6FD', '#45A5F8']
                     },
@@ -143,35 +137,14 @@ export default {
                         borderColor: '#fff',
                         borderWidth: 1,
                     },
-                }],
-                options:[{
-                    title:{
-                        text:'2017年安宁疗护试点分布地图',
-                        textStyle:{
-                            fontSize:13
-                        }
-                    },
-                    series:[{
-                        data:mapData[0].data
-                    }]
-                },{
-                    title:{
-                        text:'2019年安宁疗护试点分布地图',
-                        textStyle:{
-                            fontSize:13
-                        }
-                    },
-                    series:[{
-                        data:mapData[1].data
-                    }]
-                }
-                ]
+                    data:mapData
+                }]
             };
             myChart.setOption(option);
         }
         //展示地图
         function showMap() {
-            $.getJSON(`/static/data/chinaMapData1.json`, data=>{
+            $.getJSON(`/static/data/chinaMapData2.json`, data=>{
                 initEcharts(data);
             })
         }
@@ -182,15 +155,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container10 {
+#container12 {
   width: 4.5rem;
   height: 4rem;
   margin: 0rem auto 0;
-}
-.btn {
-  position: absolute;
-  right: 10%;
-  z-index: 999;
 }
 </style>
 

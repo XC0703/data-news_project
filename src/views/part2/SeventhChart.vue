@@ -1,11 +1,11 @@
 <template>
-    <div id="container"></div>
+    <div id="container14"></div>
 </template>
 
 <script>
 let echarts = require("echarts/lib/echarts");
 require("echarts/lib/chart/map");
-require("../utils/worldZH");
+require("../../utils/worldZH");
 import $ from "jquery";
 
 export default {
@@ -22,21 +22,29 @@ export default {
    methods: {
     // 配置渲染map
     mapChart() {
-        let myChart = echarts.init(document.getElementById("container"));
+        let myChart = echarts.init(document.getElementById("container14"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
         function initEcharts(mapData){
             let option = {
-                backgroundColor: '#ccd6d7',
                 title:{
+                    text: '各国安宁缓和医疗发展情况',
                     x:'center',
-                    y:'bottom'
+                    textStyle:{
+                        fontSize:12
+                    },
+                    top:5,
+                    left:'center',
+                    subtext:"数据来源：世界安宁缓和医疗联盟",
+                    subtextStyle: {
+                        fontSize: 7
+                    },
                 },
                 tooltip: {
                     show: true,
                     formatter: function (params) { 
-                        console.log(params)
+                        // console.log(params)
                         if(params.value){ 
                         return params.name + ' : ' + params.data.level; 
                         }else{ 
@@ -44,15 +52,22 @@ export default {
                         } 
                     } 
                 },
+                grid: {
+                    top: '10%',
+                    left: '3%',
+                    right: '3%',
+                    bottom: '3%',
+                    containLabel: true,
+                },
                 visualMap: {
                     type: 'piecewise',
-                    left: '15',
-                    bottom: '15',
-                    itemWidth: 27,
-                    itemHeight: 15,
+                    left: '-5',
+                    bottom: '50',
+                    itemWidth: 15,
+                    itemHeight: 10,
                     textStyle: {
                         color: '#333333',
-                        fontSize: 14,
+                        fontSize: 10,
                     },
                     pieces: [{
                         value:5,
@@ -82,8 +97,9 @@ export default {
                 },
                 geo: {
                     map: 'world',
+                    top:60,
                     show: true,
-                    roam: true,
+                    roam: false,
                     emphasis: {
                         label:{
                             show: false
@@ -149,15 +165,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container {
-  width: 600px;
-  height: 600px;
-  margin: 0px auto 0;
-}
-.btn {
-  position: absolute;
-  right: 10%;
-  z-index: 999;
+#container14 {
+  width: 7rem;
+  height: 5rem;
+  margin: 0rem auto 0;
 }
 </style>
 
