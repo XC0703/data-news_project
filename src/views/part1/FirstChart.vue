@@ -176,7 +176,7 @@ export default {
         }
         }
         &__content:hover{
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.20);
+            box-shadow: 0 .08rem .16rem 0 rgba(0,0,0,0.20);
         }
     }
     &__line{
@@ -189,7 +189,7 @@ export default {
                 width: .4rem;
                 height: .4rem;
                 font-size: .4rem;
-                border: .01rem solid #F0CC79;
+                border: .02rem solid #F0CC79;
                 color:#F0CC79;
                 border-radius: 50%;
                 text-align: center;

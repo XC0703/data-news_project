@@ -52,7 +52,7 @@ export default {
                 formatter: function (params) {
                     let html=params[0].name+"<br>";
                     for(let i=0;i<params.length;i++){
-                    html+='<span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:'+params[i].color+';"></span>'
+                    html+='<span style="display:inline-block;margin-right:.05rem;border-radius:0.1rem;width:0.1rem;height:0.1rem;background-color:'+params[i].color+';"></span>'
                     if(params[i].seriesName=="老年人口占比"){
                         html+=params[i].seriesName+":"+params[i].value+"%<br>";
                     }else{
@@ -186,7 +186,7 @@ export default {
 #container1 {
   width: 4rem;
   height: 2.2rem;
-  margin: 0px auto 0;
+  margin: 0rem auto 0;
 }
 </style>
 

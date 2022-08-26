@@ -185,7 +185,7 @@ export default {
 #container8 {
   width: 6rem;
   height: 2.5rem;
-  margin: 0px auto 0;
+  margin: 0rem auto 0;
 }
 </style>
 

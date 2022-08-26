@@ -71,7 +71,7 @@ export default {
                     formatter: function (params) {
                         let html=params[0].name+"年<br>";
                         for(let i=0;i<params.length;i++){
-                        html+='<span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:'+params[i].color+';"></span>'
+                        html+='<span style="display:inline-block;margin-right:0.05rem;border-radius:0.1rem;width:0.1rem;height:0.1rem;background-color:'+params[i].color+';"></span>'
                             html+=params[i].seriesName+":"+params[i].value+"<br>";
                         }
                         return html;
@@ -237,7 +237,7 @@ export default {
 #container9 {
   width: 5rem;
   height: 2.5rem;
-  margin: 0px auto 0;
+  margin: 0rem auto 0;
 }
 </style>
 

@@ -49,11 +49,13 @@ export default {
                     text:'部分国家死亡质量指数排名动态变化图',
                     left:"center",
                     textStyle:{
-                        fontSize:11
+                        fontSize:11,
+                        color:'#000'
                     },
                     subtext:"数据来源：Economist Intelligence Unit. The 2015 Quality of Death Index., 2021年全球死亡质量专家评估的跨国比较",
                     subtextStyle: {
-                        fontSize: 7
+                        fontSize: 7,
+                        color:'#333'
                     }
                 },
                 tooltip:{
@@ -74,19 +76,38 @@ export default {
                     splitLine: {
                         show: true,
                         lineStyle: {
-                            color: 'rgba(19,229,227, 0.4)',
+                            color: 'rgba(21,26,56, 0.4)',
                             type: 'dashed'
                         }
-                    }
+                    },
+                    axisLabel: {
+                        show: true,
+                        fontSize: 6,
+                        color:'#000'
+                    },
                 },
                 yAxis: {
                     type: 'category',
                     inverse: true,
                     max: 80,
+                    boundaryGap: true,
                     data: newArr[startIndex].country,
                     axisLabel: {
                         show: true,
                         fontSize: 6,
+                        color:'#000'
+                    },
+                    axisTick:{
+                        show:true,
+                        alignWithLabel:true,
+                        lineStyle:{
+                            color:'#000'
+                        }
+                    },
+                    axisLine:{
+                        lineStyle:{
+                            color:'rgba(21,26,56, 0.4)'
+                        }
                     },
                     animationDuration: 300,
                     animationDurationUpdate: 300
@@ -103,6 +124,7 @@ export default {
                         show: true,
                         precision: 1,
                         position: 'right',
+                        color:'#0F2650',
                         valueAnimation: true,
                         fontFamily: 'monospace',
                     },
@@ -120,8 +142,8 @@ export default {
                         bottom: 60,
                         style: {
                             text: newArr[startIndex].year,
-                            font: 'bolder 40px monospace',
-                            fill: 'rgba(19,229,227, 0.4)'
+                            font: 'bolder .4rem monospace',
+                            fill: 'rgba(21,26,56, 0.4)'
                         },
                         z: 100
                     }]
@@ -204,12 +226,12 @@ export default {
 .container{
     width: 4rem;
     height: 9rem;
-    margin: 0px auto 0;
+    margin: 0rem auto 0;
     position: relative;
     #container7 {
         width: 4rem;
         height: 9rem;
-        margin: 0px auto 0;
+        margin: 0rem auto 0;
     }
     .handleBtn{
         position: absolute;

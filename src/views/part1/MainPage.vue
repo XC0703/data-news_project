@@ -24,7 +24,7 @@
                         </span>
                     </div>
                     <div class="chartBox__img">
-                        <img src="../../../public/static/images/contents/part1_element0.jpg">
+                        <img src="../../../public/static/images/contents/part1_element0.png">
                     </div>
                 </div> 
             </div>
@@ -120,7 +120,7 @@ export default {
             position: absolute;
             right: 0;
             bottom: 0;
-            color:#666;
+            color:#333;
             animation: showIn 1s ease;
             transition: all 0.2s ease;
             height:1.5rem;

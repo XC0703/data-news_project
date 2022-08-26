@@ -1,9 +1,13 @@
 <template>
     <div class="content">
         <div class="content__word">
-            <p>当前我国关于安宁疗护服务建设的关注度在不断提升，</p>
-            <p>但在实际运行与推广过程中，</p>
-            <p>其发展还面临着诸多痛点与难点。</p>
+            <div class="part3_element0">
+                <div class="part3_element0__word">
+                    <p>当前我国关于安宁疗护服务建设的关注度在不断提升，</p>
+                    <p>但在实际运行与推广过程中，</p>
+                    <p>其发展还面临着诸多痛点与难点。</p>
+                </div>
+            </div>
 
             <p>【入不敷出】</p>
             <p>据医学界报道，2021年11月30日，</p>
@@ -20,6 +24,17 @@
             <p>现今，各大安宁疗护相关试点城市虽已制定了安宁疗护费用结算办法，</p>
             <p>部分城市也将安宁疗护纳入医保范畴。</p>
             <p>但各地标准并不统一，呈现碎片化发展，部分运营的医疗机构也依旧处于艰难发展状态。</p>
+            <div class="part3_element1">
+                <div class="part3_element1__title">
+                    部分试点城市安宁疗护服务按床日费用结算标准（单位：元/床日）
+                </div>
+                <div class="part3_element1__subTitle">
+                    数据来源：聊聊安宁疗护那点事.健康界.
+                </div>
+                <div class="part3_element1__img">
+                    <img src="../../../public/static/images/contents/part3_element1.jpg" alt="">
+                </div>
+            </div>
             <p>具体而言，首先是临床日常的大量工作尚无收费标准。</p>
             <p>与常规安宁疗护项目相比，</p>
             <p>患者及其家属对心理关怀、哀伤辅导等精神照护服务项目同样有较大需求，</p>
@@ -93,16 +108,78 @@ export default {
             text-align: center;
             font-size: .15rem;
         }
-        p:nth-child(1){
+        p:nth-child(2){
             margin-top: .3rem;
         }
-        p:nth-child(3),p:nth-child(28),p:nth-child(46),p:nth-child(60){
+        p:nth-child(27),p:nth-child(45){
             margin-bottom: .3rem;
         }
         p:nth-child(1)::first-letter{
             font-size: .5rem;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             font-style: italic;
+        }
+    }
+}
+.part3_element0{
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat !important;
+	background-size: cover !important;
+    background:url('../../../public/static/images/contents/part3_element0.jpg');
+    &__word{
+        width: 4.5rem;
+        height: 1.5rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -2.25rem;
+        top:.4rem;
+        // background-color: #fff;
+        box-shadow: 0 .04rem .08rem 0 rgba(0,0,0,0.20);
+    }
+}
+.part3_element1{
+    height: 3rem;
+    width: 100%;
+    position: relative;
+    &__title{
+        width: 4.5rem;
+        height: .2rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -2.25rem;
+        top:.2rem;
+        text-align: center;
+        line-height: .2rem;
+        font-family: serif;
+        color:#000;
+        font-weight: bolder;
+    }
+    &__subTitle{
+        width: 4.5rem;
+        height: .2rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -2.25rem;
+        top:.4rem;
+        text-align: center;
+        line-height: .2rem;
+        font-family: serif;
+        font-family: .12rem;
+        scale: (.7);
+        color:#666
+    }
+    &__img{
+        width: 4.5rem;
+        height: 2rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -2.25rem;
+        top:.6rem;
+        box-shadow: 0 .04rem .08rem 0 rgba(0,0,0,0.20);
+        img{
+            width: 100%;
+            height: 100%;
         }
     }
 }
