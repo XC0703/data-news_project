@@ -63,9 +63,9 @@ export default {
             font-size: .15rem;
         }
         p:nth-child(1){
-            margin-bottom: .3rem;
+            margin-top: .3rem;
         }
-        p:nth-child(4){
+        p:nth-child(1),p:nth-child(4),p:nth-child(5){
             margin-bottom: .3rem;
         }
         p:nth-child(1)::first-letter{

@@ -154,7 +154,7 @@ methods: {
                 return {
                 type: 'circle',
                 focus: focus,
-                y:20,
+                y:0,
                 shape: {
                     cx: node.x,
                     cy: node.y,
@@ -200,18 +200,6 @@ methods: {
             option = {
                 dataset: {
                     source: seriesData
-                },
-                title : {
-                    text: '最后疾病期间症状和疼痛比例(所有离世者)',
-                    x:'center',
-                    top:-3,
-                    textStyle:{
-                        fontSize:12
-                    },
-                    subtext:"数据来源：中国缓和医疗发展蓝皮书（2019-2020）",
-                    subtextStyle: {
-                        fontSize: 7
-                    },
                 },
                 tooltip: {
                     formatter:function(params){

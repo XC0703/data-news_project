@@ -12,26 +12,26 @@
                 <div class="chartBox" style="margin-left: -2.5rem !important;">
                     <div class="chartBox__chartBtns">
                         <div 
-                            :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn1': currentIndex === 0}"
-                            @click="() => handleIndexClick(0)"
+                            :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn1': currentIndex1 === 0}"
+                            @click="() => handleIndexClick1(0)"
                         >人口老龄化折线图</div>
                         <div 
-                            :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn2': currentIndex === 1}"
-                            @click="() => handleIndexClick(1)"
+                            :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn2': currentIndex1 === 1}"
+                            @click="() => handleIndexClick1(1)"
                         >死亡率折线图</div>
                         <!-- <div
-                            :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn': currentIndex === item.index}"
-                            v-for="item in categories"
+                            :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn': currentIndex1 === item.index}"
+                            v-for="item in categories1"
                             :key="item.name"
-                            @click="() => handleIndexClick(item.index)"
+                            @click="() => handleIndexClick1(item.index)"
                         >
                             {{item.name}}
                         </div> -->
                     </div>
-                        <div class="chartBox__chart" v-if="currentIndex==0">
+                        <div class="chartBox__chart" v-if="currentIndex1==0">
                             <FirstChart />
                         </div>
-                        <div class="chartBox__chart" v-else-if="currentIndex==1">
+                        <div class="chartBox__chart" v-else-if="currentIndex1==1">
                             <SecondChart />
                         </div>
                 </div> 
@@ -52,18 +52,40 @@
                     </div>
                 </div> 
             </div>
-            <p>根据2002至2018年中国老年健康影响因素跟踪调查（CLHLS）中对1998至2018年间去世老年人亲属的调查（有效样本为12429人）,</p>
-            <p>有高达82.34%的老年人在临终前生活不能完全自理，37.29%的老年人在痛苦状态下离世，在65至79岁和80至89岁中高龄老年群体中，痛苦离世的老年人均多于安详离世的老年人。</p>
-            <div class="chartBoxs" style="height:4rem">
-                <div class="chartBox circlePacking" style="height:4rem;left:0rem">
-                    <div class="chartBox__chart" style="height:4rem">
-                        <FifthChart />
+            <p>根据2002至2018年中国老年健康影响因素跟踪调查（CLHLS）中</p>
+            <p>对1998至2018年间去世老年人亲属的调查（有效样本为12429人）,</p>
+            <p>有高达82.34%的老年人在临终前生活不能完全自理，</p>
+            <p>37.29%的老年人在痛苦状态下离世，</p>
+            <p>在65至79岁和80至89岁中高龄老年群体中，</p>
+            <p>痛苦离世的老年人均多于安详离世的老年人。</p>
+            <div class="chartBoxs" style="height: 4.7rem;">
+                <div class="chartBox" style="height: 4.7rem; margin-left: -2.5rem !important;">
+                    <div class="chartBox__chartTitle">最后疾病期间症状和疼痛比例图</div>
+                    <div class="chartBox__chartSubtitle">数据来源：中国缓和医疗发展蓝皮书（2019-2020）</div>
+                    <div class="chartBox__chartBtns" style="top:.5rem">
+                        <div 
+                            :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn1': currentIndex2 === 0}"
+                            @click="() => handleIndexClick2(0)"
+                        >所有离世者</div>
+                        <div 
+                            :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn2': currentIndex2 === 1}"
+                            @click="() => handleIndexClick2(1)"
+                        >排除意外和事故的离世者</div>
+                        <!-- <div
+                            :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn': currentIndex1 === item.index}"
+                            v-for="item in categories1"
+                            :key="item.name"
+                            @click="() => handleIndexClick1(item.index)"
+                        >
+                            {{item.name}}
+                        </div> -->
                     </div>
-                </div> 
-                <div class="chartBox circlePacking" style="height:4rem;right:0rem">
-                    <div class="chartBox__chart" style="height:4rem">
-                        <SixthChart />
-                    </div>
+                        <div class="chartBox__chart" style="height: 4rem;" v-if="currentIndex2==0">
+                            <FifthChart />
+                        </div>
+                        <div class="chartBox__chart" style="height: 4rem;" v-else-if="currentIndex2==1">
+                            <SixthChart />
+                        </div>
                 </div> 
             </div>
             <p>当死亡不可避免，当痛苦被迫延续，安宁疗护拓展了生命的厚度，呵护生命的最后一程。</p>
@@ -80,25 +102,33 @@ import FourthChart from './FourthChart.vue';
 import FifthChart from './FifthChart.vue';
 import SixthChart from './SixthChart.vue';
 
-const categories = [
+const categories1 = [
     { name: '人口老龄化折线图',index:0},
     { name:'死亡率折线图',index:1},
+]
+const categories2 = [
+    { name: '所有离世者',index:0},
+    { name:'排除意外和事故的离世者',index:1},
 ]
 
 // Index 切换相关的逻辑
 const useTabEffect = () => {
-  const currentIndex = ref(categories[0].index)
-  const handleIndexClick = (index) => {
-    currentIndex.value = index
+  const currentIndex1 = ref(categories1[0].index)
+  const currentIndex2 = ref(categories2[0].index)
+  const handleIndexClick1 = (index) => {
+    currentIndex1.value = index
   }
-  return { currentIndex, handleIndexClick}
+  const handleIndexClick2 = (index) => {
+    currentIndex2.value = index
+  }
+  return { currentIndex1, handleIndexClick1,currentIndex2, handleIndexClick2}
 }
 export default {
     name:'MainPage',
     components:{FirstChart,SecondChart,ThirdChart,FourthChart,FifthChart,SixthChart},
     setup(){
-        const { currentIndex, handleIndexClick } = useTabEffect()
-        return {categories,currentIndex, handleIndexClick}
+        const { currentIndex1, handleIndexClick1, currentIndex2, handleIndexClick2 } = useTabEffect()
+        return {categories1,currentIndex1, handleIndexClick1, categories2,currentIndex2, handleIndexClick2}
     }
 }
 </script>
@@ -107,7 +137,7 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: cover !important;
-    height: 300vh;
+    height: 390vh;
     background-color: rgb(220, 220, 220);
     position: relative;
     &__word{
@@ -122,11 +152,11 @@ export default {
             text-align: center;
             font-size: .15rem;
         }
-        p:nth-child(3){
-            margin-bottom: .2rem;
+        p:nth-child(1),p:nth-child(9),p:nth-child(13),p:nth-child(20){
+            margin-top: .3rem;
         }
-        p:nth-child(4){
-            margin-bottom: .2rem;
+        p:nth-child(3),p:nth-child(4),p:nth-child(7),p:nth-child(9),p:nth-child(11),p:nth-child(18){
+            margin-bottom: .3rem;
         }
         p:nth-child(1)::first-letter{
             font-size: .5rem;
@@ -146,12 +176,37 @@ export default {
     position: absolute;
     left:50%;
     margin: 0 auto;
+    &__chartTitle{
+        position: absolute;
+        left:.8rem;
+        top:0rem;
+        width:3.4rem;
+        height: .2rem;
+        text-align: center;
+        line-height: .2rem;
+        color:#333;
+        font-weight: bolder;
+    }
+    &__chartSubtitle{
+        position: absolute;
+        left:1.65rem;
+        top:.2rem;
+        width:3.4rem;
+        height: .2rem;
+        text-align: center;
+        line-height: .2rem;
+        color:#999;
+        font-weight: bolder;
+        font-size: .14rem;
+        -webkit-transform-origin-x: 0;
+        transform: scale(0.50);
+    }
     &__chartBtns{
         position: absolute;
-        left:1.5rem;
+        left:1.3rem;
         top:0;
         display: flex;
-        width:2.6rem;
+        width:3.4rem;
         height: .3rem;
         &__chartBtn{
             position: relative;
