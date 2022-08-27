@@ -16,12 +16,17 @@
             <p>但也还存在诸如供需矛盾、医护人员数量不足、价格标准不统一、法律法规有待完善等问题。</p>
             <p>期待在不久的将来，有更多的临终患者可以温和地走进良夜。</p>
         </div>
+        <div class="content__footer">
+            <FooterView />
+        </div>
     </div>
 </template>
 
 <script>
+import FooterView from './FooterView.vue'
 export default {
     name:'MainPage',
+    components:{FooterView}
 }
 </script>
 
@@ -29,7 +34,7 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: cover !important;
-    height: 200vh;
+    height: 300vh;
     background-color: rgb(220, 220, 220);
     position: relative;
     &__word{
@@ -52,6 +57,12 @@ export default {
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             font-style: italic;
         }
+    }
+    &__footer{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        bottom: 0;
     }
 }
 .chartBoxs{
