@@ -16,6 +16,8 @@
             <p>但也还存在诸如供需矛盾、医护人员数量不足、价格标准不统一、法律法规有待完善等问题。</p>
             <p>期待在不久的将来，有更多的临终患者可以温和地走进良夜。</p>
         </div>
+        <div class="content__mask">
+        </div>
         <div class="content__footer">
             <FooterView />
         </div>
@@ -35,12 +37,12 @@ export default {
     background-repeat: no-repeat !important;
 	background-size: cover !important;
     height: 300vh;
-    background-color: rgb(220, 220, 220);
     position: relative;
     &__word{
+        background-color: rgb(220, 220, 220);
         position: absolute;
         width:100%;
-        height: 100%;
+        height: 200vh;
         left:50%;
         margin-left: -50%;
         p{
@@ -58,11 +60,19 @@ export default {
             font-style: italic;
         }
     }
-    &__footer{
+    &__mask{
         width: 100%;
         height: 100vh;
         position: absolute;
         bottom: 0;
+		background: rgba(0, 0, 0, .1);
+    }
+    &__footer{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        bottom: 0;
+        z-index: -1;
     }
 }
 .chartBoxs{

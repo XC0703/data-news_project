@@ -1,5 +1,5 @@
 <template>
-  <div id="page">
+  <div id="page" style="width:100%; height: 100%;">
     <canvas ref="myCanvas" style="width:100%; height: 100%;"></canvas>
   </div>
 </template>
