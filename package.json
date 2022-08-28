@@ -13,7 +13,6 @@
     "element-plus": "^2.2.12",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
-    "pixi.js": "^6.5.1",
     "vue": "^3.2.13",
     "vue-scrollto": "^2.20.0"
   },
@@ -40,7 +39,9 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "globals": { "d3": true },
+    "globals": {
+      "d3": true
+    },
     "rules": {}
   },
   "browserslist": [
