@@ -60,23 +60,26 @@
 
             <p>为进一步推进、规范安宁疗护发展，</p>
             <p>国家卫健委还于2017年颁布了《安宁疗护中心基本标准（试行）》为各地安宁疗护中心的发展提供了标准。</p>
-            <div class="imgBox" style="height:fit-content;">
-                <div class="chartBoxs" style="height:2.5rem;margin-bottom:.3rem">
-                    <div class="chartBox" style="height:2.5rem;width:3.6rem;left:1.8rem;">
-                        <img src="../../../public/static/images/contents/part2_element0.jpg"/>
-                    </div> 
-                    <div class="chartBox" style="height:2.5rem;width:3.6rem;right:1.8rem;">
-                        <img src="../../../public/static/images/contents/part2_element1.jpg"/>
-                    </div> 
-                </div>
-                <div class="chartBoxs" style="height:2.5rem;margin-bottom:.3rem">
-                    <div class="chartBox" style="height:2.5rem;width:3.6rem;left:1.8rem;">
-                        <img src="../../../public/static/images/contents/part2_element2.jpg">
-                    </div> 
-                    <div class="chartBox" style="height:2.5rem;width:3.6rem;right:1.8rem;">
-                        <img src="../../../public/static/images/contents/part2_element3.jpg" />
-                    </div> 
-                </div>
+            <div class="chartBoxs" style="height:3.5rem;">
+                <div class="chartBox" style="height:3.5rem;width: 6rem; margin-left: -3rem !important;">
+                    <div class="chartBox__chart" style="height:3.5rem;width: 6rem;">
+                        <FourthChart />
+                    </div>
+                </div> 
+            </div>
+            <div class="chartBoxs" style="height:3.5rem;margin-bottom: .3rem;">
+                <div class="chartBox" style="height:3.5rem;margin-left: -2.5rem !important;">
+                    <div class="chartBox__chart" style="height:3.5rem">
+                        <FifthChart />
+                    </div>
+                </div> 
+            </div>
+            <div class="chartBoxs" style="height:2.5rem;margin-bottom: .3rem;">
+                <div class="chartBox" style="height:2.5rem;margin-left: -3rem !important;">
+                    <div class="chartBox__chart" style="height:2.5rem">
+                        <SixthChart />
+                    </div>
+                </div> 
             </div>
 
             <p>《“十四五”健康老龄化规划》（下称《规划》）提出要完善安宁疗护服务模式，</p>
@@ -98,7 +101,7 @@
             <div class="chartBoxs" style="height:2.2rem;margin-bottom: .3rem;">
                 <div class="chartBox" style="height:2.2rem;margin-left: -2.5rem !important;">
                     <div class="chartBox__chart" style="height:2.2rem">
-                        <FourthChart />
+                        <SeventhChart />
                     </div>
                 </div> 
             </div>
@@ -118,7 +121,7 @@
             <p>这样模糊而令人有安全感的角色，非常艰辛，要求很高，但是又非常重要”。</p>
             <div class="chartBoxs" style="height:3rem;margin-bottom: .3rem;">
                 <div class="chartBox" style="height:3rem;margin-left: -2.5rem !important;">
-                    <img src="../../../public/static/images/contents/part2_element5.jpg" />
+                    <img src="../../../public/static/images/contents/part2_element0.jpg" />
                     <span>（居家安宁疗护服务就基本流程）</span>
                 </div> 
             </div>
@@ -129,14 +132,14 @@
             <div class="chartBoxs" style="height: 4rem; margin-bottom: .3rem;">
                 <div class="chartBox" style="height: 4rem;width: 4.5rem;margin-left: -2.25rem !important;">
                     <div class="chartBox__chart" style="height: 4rem;">
-                        <FifthChart />
+                        <EighthChart />
                     </div>
                 </div> 
             </div>
             <div class="chartBoxs" style="height: 4rem; margin-bottom: .3rem;">
                 <div class="chartBox" style="right:0rem;margin-left: -2.5rem !important;">
                     <div class="chartBox__chart">
-                        <SixthChart />
+                        <NinthChart />
                     </div>
                 </div> 
             </div>
@@ -153,7 +156,7 @@
             <div class="chartBoxs" style="height:5rem;margin-bottom: .3rem;">
                 <div class="chartBox" style="height:5rem;width:7rem;margin-left: -3.5rem !important;">
                     <div class="chartBox__chart" style="height:5rem;width:7rem;">
-                        <SeventhChart />
+                        <TenthChart />
                     </div>
                 </div> 
             </div>
@@ -169,9 +172,12 @@ import FourthChart from './FourthChart.vue';
 import FifthChart from './FifthChart.vue';
 import SixthChart from './SixthChart.vue';
 import SeventhChart from './SeventhChart.vue';
+import EighthChart from './EighthChart.vue';
+import NinthChart from './NinthChart.vue';
+import TenthChart from './TenthChart.vue';
 export default {
     name:'MainPage',
-    components:{FirstChart,SecondChart,ThirdChart,FourthChart,FifthChart,SixthChart,SeventhChart}
+    components:{FirstChart,SecondChart,ThirdChart,FourthChart,FifthChart,SixthChart,SeventhChart,EighthChart,NinthChart,TenthChart}
 }
 </script>
 
@@ -179,7 +185,7 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: cover !important;
-    height: 1170vh;
+    height: 1250vh;
     background-color: rgb(220, 220, 220);
     position: relative;
     &__word{

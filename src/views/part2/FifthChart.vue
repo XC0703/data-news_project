@@ -1,164 +1,124 @@
 <template>
-    <div id="container12"></div>
+    <div class="container12">
+        <div class="container12__topBox">
+            <div class="container12__rowBox">
+                <div class="container12__rowBox__left iconfont">
+                    &#xe99b;&#xe99b;&#xe99b;&#xe99b;&#xe99b;&#xe99b;&#xe99b;&#xe99b;&#xe99b;&#xe99b;
+                </div>
+                <div class="container12__rowBox__right iconfont">&#xe71b;</div>
+            </div>
+        </div>
+        <div class="container12__midBox">
+            <div class="container12__rowBox">
+                <div class="container12__rowBox__left iconfont">
+                    &#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;
+                </div>
+                <div class="container12__rowBox__right iconfont">&#xe99c;</div>
+            </div>
+            <div class="container12__rowBox">
+                <div class="container12__rowBox__left iconfont">
+                    &#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;
+                </div>
+                <div class="container12__rowBox__right iconfont">&#xe99c;</div>
+            </div>
+            <div class="container12__rowBox">
+                <div class="container12__rowBox__left iconfont">
+                    &#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;
+                </div>
+                <div class="container12__rowBox__right iconfont">&#xe99c;</div>
+            </div>
+            <div class="container12__rowBox">
+                <div class="container12__rowBox__left iconfont">
+                    &#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;&#xe8ff;
+                </div>
+                <div class="container12__rowBox__right iconfont">&#xe99c;</div>
+            </div>
+        </div>
+        <div class="container12__bottomBox">
+            应根据当地实际需求和资金情况，兼顾发展设置床位数，床位总数应在五十张以上，每10张床位至少配备1名职业医师。
+        </div>
+    </div>
 </template>
 
 <script>
-let echarts = require("echarts/lib/echarts");
-require("echarts/lib/chart/map");
-require("../../utils/china");
 import $ from "jquery";
-
 export default {
   name: "FifthChart",
   data() {
     return {};
   },
-
   mounted() {
-    // 初始化加载
-    this.mapChart();
+    this.handleHover();
   },
-
-   methods: {
-    // 配置渲染map
-    mapChart() {
-        let myChart = echarts.init(document.getElementById("container12"));
-        window.addEventListener("resize", ()=>{
-            myChart.resize();
-        });
-        function initEcharts(mapData){
-            let option = {
-                title : {
-                    text:'各省份安宁疗护企业数量',
-                    x:'center',
-                    top:-3,
-                    textStyle:{
-                        fontSize:12
-                    },
-                    subtext:"数据来源：企查查",
-                    subtextStyle: {
-                        fontSize: 7
-                    },
-                },
-                tooltip: {
-                    show: true,
-                    formatter: function (params) { 
-                        if(params.value){ 
-                        return params.name + ' : ' + params.value; 
-                        }else{ 
-                        return params.name + ' : 0'; 
-                        } 
-                    } 
-                },
-                visualMap: {
-                    type: 'piecewise',
-                    left: '15',
-                    bottom: '15',
-                    itemWidth: 15,
-                    itemHeight: 10,
-                    textStyle: {
-                        color: '#333333',
-                        fontSize: 8,
-                    },
-                    pieces: [{
-                        min:64,
-                        label: '>64',
-                    },{
-                        min:50,
-                        max:64,
-                        label: '50~64',
-                    },{
-                        min:40,
-                        max:50,
-                        label: '40~50',
-                    }, {
-                        min:30,
-                        max:40,
-                        label: '30~40',
-                    }, {
-                        min:10,
-                        max:30,
-                        label: '10~30',
-                    }, {
-                        min:5,
-                        max:10,
-                        label: '5~10',
-                    }, {
-                        min:3,
-                        max:5,
-                        label: '3~5',
-                    }, {
-                        max:3,
-                        label: '≤3',
-                    }],
-                    inRange: {
-                        color: ['#B2CAE0', '#D2EAFF', '#8AC6FD', '#45A5F8']
-                    },
-                    outOfRange: {
-                        color: ['#999999']
-                    }
-                },
-                geo: {
-                    map: 'china',
-                    show: true,
-                    roam: false,
-                    emphasis: {
-                        label:{
-                            show: false
-                        }
-                    },
-                    itemStyle: {
-                        borderColor: 'rgba(0,63,140,0.2)',
-                        shadowColor: 'rgba(0,63,140,0.2)',
-                        shadowOffsetY: 20,
-                        shadowBlur: 30
-                    }
-                },
-                series: [{
-                    type: 'map',
-                    map: 'china',
-                    geoIndex:0,
-                    aspectScale: 0.75,
-                    //zoom:1.1,
-                    label: {
-                        show: true,
-                    },
-                    labelLayout:{
-                        show:false,
-                        fontSize:10,
-                    },
-                    emphasis: {
-                        itemStyle:{
-                            areaColor: '#FFAE00',
-                        }
-                    },
-                    itemStyle: {
-                        areaColor: '#B2CAE0',
-                        borderColor: '#fff',
-                        borderWidth: 1,
-                    },
-                    data:mapData
-                }]
-            };
-            myChart.setOption(option);
-        }
-        //展示地图
-        function showMap() {
-            $.getJSON(`/static/data/chinaMapData2.json`, data=>{
-                initEcharts(data);
-            })
-        }
-        showMap()
+  methods:{
+    handleHover(){
+        var topBox = document.querySelectorAll(".container12 .container12__topBox");
+        var midBox = document.querySelectorAll(".container12 .container12__midBox");
+        $(".container12__topBox").hover(function(){
+                topBox[0].style.opacity = 1;
+                midBox[0].style.opacity = 0.2;
+            },function(){
+                topBox[0].style.opacity = 0.8;
+                midBox[0].style.opacity = 0.8;
+        })
+        $(".container12__midBox").hover(function(){
+                midBox[0].style.opacity = 1;
+                topBox[0].style.opacity = 0.2;
+            },function(){
+                topBox[0].style.opacity = 0.8;
+                midBox[0].style.opacity = 0.8;
+        })
     }
-    }
+}
 };
 </script>
 
 <style lang="scss" scoped>
-#container12 {
-  width: 4.5rem;
-  height: 4rem;
+.container12 {
+  width: 4.7rem;
+  height: 3.1rem;
   margin: 0rem auto 0;
+  box-shadow: 0 .04rem .08rem 0 rgba(0,0,0,0.20);
+//   background-color: #fff;
+  &__rowBox{
+    width: 100%;
+    height: 0.5rem;
+    display: float;
+    cursor: pointer;
+    &__left{
+        font-size: .4rem;
+        line-height: .5rem;
+        margin-right: .1rem;
+        float: left;
+    }
+    &__right{
+        font-size: .4rem;
+        line-height: .5rem;
+        float: right;
+    }
+  }
+  &__topBox{
+    width: 100%;
+    height: 0.5rem;
+    opacity: 0.8;
+    .container12__rowBox{
+        color:rgb(21, 169, 206)
+    }
+  }
+  &__midBox{
+    width: 100%;
+    height: 2.1rem;
+    opacity: 0.8;
+    .container12__rowBox{
+        color:rgb(84, 86, 87)
+    }
+  }
+  &__bottomBox{
+    width: 100%;
+    height: 0.5rem;
+    font-size: .15rem;
+    line-height: 0.25rem;
+  }
 }
 </style>
 

@@ -3,7 +3,6 @@
 </template>
 
 <script>
-
 let echarts = require("echarts/lib/echarts");
 
 export default {
@@ -20,78 +19,208 @@ export default {
    methods: {
     // 配置渲染map
     mapChart() {
+        var obj = [{
+            name: "安宁疗护中心科室设置",
+            img: "path://M960 42.666667H64c-12.8 0-21.333333 8.533333-21.333333 21.333333v896c0 12.8 8.533333 21.333333 21.333333 21.333333h896c12.8 0 21.333333-8.533333 21.333333-21.333333V64c0-12.8-8.533333-21.333333-21.333333-21.333333z m-21.333333 896H85.333333V682.666667h853.333334v256z m0-298.666667H85.333333V384h853.333334v256z m0-298.666667H85.333333V85.333333h853.333334v256zM298.666667 768h-42.666667v85.333333h42.666667v-85.333333z m-85.333334 0H170.666667v85.333333h42.666666v-85.333333z m661.333334 21.333333h-170.666667v42.666667h170.666667v-42.666667zM298.666667 469.333333h-42.666667v85.333334h42.666667v-85.333334z m-85.333334 0H170.666667v85.333334h42.666666v-85.333334z m661.333334 21.333334h-170.666667v42.666666h170.666667v-42.666666zM298.666667 170.666667h-42.666667v85.333333h42.666667V170.666667z m-85.333334 0H170.666667v85.333333h42.666666V170.666667z m661.333334 21.333333h-170.666667v42.666667h170.666667V192z",
+            value: [0, 300],
+            offset: [0, '-100%']
+        }, {
+            name: "医技和相关职能科室",
+            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
+            value: [230, 200],
+            offset: [0, '0%']
+        }, {
+            name: "临床科室",
+            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
+            value: [-230, 200],
+            offset: [0, '0%']
+        }, {
+            name: "病案管理\n部门",
+            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
+            value: [380, 100],
+            offset: [0, '0%']
+        }, {
+            name: "护理管理",
+            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
+            value: [280, 100],
+            offset: [0, '0%']
+        }, {
+            name: "医疗感染\n管理",
+            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
+            value: [180, 100],
+            offset: [0, '0%']
+        }, {
+            name: "医疗质量\n管理",
+            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
+            value: [80, 100],
+            offset: [0, '0%']
+        },{
+            name: "临终关怀科",
+            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
+            value: [-130, 100],
+            offset: [0, '0%']
+        }, {
+            name: "疼痛科",
+            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
+            value: [-230, 100],
+            offset: [0, '0%']
+        }, {
+            name: "内科",
+            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
+            value: [-330, 100],
+            offset: [0, '0%']
+        }];
+        var seriesData = function(data) {
+            var res = [];
+            for (var i = 0; i < data.length; i++) {
+                res.push({
+                    name: data[i].name,
+                    symbol: 'path://' + data[i].img,
+                    symbolSize: 28, //图标大小
+                    symbolOffset: data[i].offset,
+                    draggable: false,
+                    fixed: true,
+                    value: data[i].value,
+                    label: {
+                        position: data[i].direction ? data[i].direction : "bottom",
+                        distance: 10, //离图标多远					
+                        show: true,
+                        fontSize: 12,
+                        color: "#3e86dd",
+                        fontWeight: 500,
+                    },
+                    itemStyle: {
+                        color: "#3e86dd"
+                    }
+                })
+            }
+            return res;
+        }
         let myChart = echarts.init(document.getElementById("container11"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
         function initEcharts(){
             let option = {
-                title : {
-                    text: '上海社区卫生服务中心提供的安宁疗护服务种类',
-                    x:'center',
-                    top:-3,
-                    textStyle:{
-                        fontSize:12
-                    },
-                    subtext:"数据来源：上海市卫健委官网",
-                    subtextStyle: {
-                        fontSize: 7
-                    },
+                grid: {
+                    top: '20%',
+                    left: '3%',
+                    right: '3%',
+                    bottom: '3%',
                 },
-                tooltip:{
-                    trigger: 'item',
-                    formatter:function(params){
-                        return params.data.name+'：'+params.data.value[1]+ '个'
-                    }
+                xAxis: {
+                    show: false,
+                    type: "value"
+                },
+                yAxis: {
+                    show: false,
+                    type: "value"
                 },
                 series: [{
-                    type: 'treemap',
-                    roam:false,
-                    nodeClick:false,
-                    bottom:0,
-                    breadcrumb:{
-                        show:false
-                    },
-                    label: {
-                        fontSize: 16,
-                        color: '#fff',
-                        show: true,
-                        position: [5, 5],
-                        formatter: function(params) {
-                            var arr = [
-                                '{association|' + params.data.name + '}',
-                                '{peoNum|' + params.data.value[1] + '}'
-                            ];
-                            return arr.join('\n\n');
+                        type: "graph",
+                        coordinateSystem: "cartesian2d",
+                        legendHoverLink: false,
+                        emphasis:{
+                            scale:true
                         },
-                        rich: {
-                            association: {
-                                fontSize: 16,
-                                color: '#fff',
-                            },
-                            peoNum: {
-                                fontSize: 25,
-                                color: '#fff',
-                                fontFamily: 'liquidCrystal',
-                            },
-                        }
+                        nodeScaleRatio: false,
+                        roam: false,
+                        lineStyle: {
+                            width: 0,
+                            shadowColor: "none",
+                            color: "transparent"
+                        },
+                        data: seriesData(obj)
                     },
-                    // leafDepth: 1,
-                    data: [{
-                        name: '门诊服务',
-                        value: [10,79],
-                    }, {
-                        name: '居家上门',
-                        value: [40,251],
-                    }, {
-                        name: '提供病房',
-                        value: [15,108],
-                    }]
-                }]
-            };
+                    {
+                        type: "lines",
+                        coordinateSystem: "cartesian2d",
+                        z: 1,
+                        animationEasing: "linear",
+                        clip: false,
+                        effect: {
+                            show: true,
+                            smooth: true,
+                            trailLength: 0,
+                            symbol: "arrow",
+                            color: "#3e86dd",
+                            symbolSize: 12,
+                            period: 4, //特效动画的时间
+                            loop: true
+                        },
+                        lineStyle: {
+                            curveness: 0,
+                            color: '#3e86dd',
+                            opacity: 0.6,
+                            width: 1,
+                            type: "dashed"
+                        },
+                        data: [
+                            {
+                                coords: [
+                                    [0, 300],
+                                    [230, 200]
+                                ]
+                            },
+                            {
+                                coords: [
+                                    [0, 300],
+                                    [-230, 200]
+                                ]
+                            },
+                            {
+                                coords: [
+                                    [230, 200],
+                                    [380, 100]
+                                ]
+                            },
+                            {
+                                coords: [
+                                    [230, 200],
+                                    [280, 100]
+                                ]
+                            },
+                            {
+                                coords: [
+                                    [230, 200],
+                                    [180, 100]
+                                ]
+                            },
+                            {
+                                coords: [
+                                    [230, 200],
+                                    [80, 100]
+                                ]
+                            },
+                            {
+                                coords: [
+                                    [-230, 200],
+                                    [-130, 100]
+                                ]
+                            },
+                            {
+                                coords: [
+                                    [-230, 200],
+                                    [-230, 100]
+                                ]
+                            },
+                            {
+                                coords: [
+                                    [-230, 200],
+                                    [-330, 100]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
             myChart.setOption(option);
         }
-        initEcharts()
+        //展示地图
+        function showMap() {
+            initEcharts();
+        }
+        showMap()
     }
     }
 };
@@ -99,8 +228,8 @@ export default {
 
 <style lang="scss" scoped>
 #container11 {
-  width: 4rem;
-  height: 2.2rem;
+  width: 6rem;
+  height: 3.5rem;
   margin: 0rem auto 0;
 }
 </style>
