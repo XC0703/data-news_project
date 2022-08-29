@@ -585,9 +585,9 @@ export default {
 
 <style lang="scss" scoped>
 #container {
-  width: 600px;
-  height: 600px;
-  margin: 0px auto 0;
+  width: 6rem;
+  height: 6rem;
+  margin: 0rem auto 0;
 }
 .btn {
   position: absolute;
