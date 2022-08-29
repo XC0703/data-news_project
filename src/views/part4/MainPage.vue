@@ -36,13 +36,14 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: cover !important;
-    height: 300vh;
+    height: 250vh;
     position: relative;
+    width: 100%;
     &__word{
         background-color: rgb(220, 220, 220);
         position: absolute;
         width:100%;
-        height: 200vh;
+        height: 150vh;
         left:50%;
         margin-left: -50%;
         p{

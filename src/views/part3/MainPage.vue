@@ -35,6 +35,13 @@
                     <img src="../../../public/static/images/contents/part3_element1.jpg" alt="">
                 </div>
             </div>
+            <div class="chartBoxs" style="height:3rem;">
+                <div class="chartBox" style="height:3rem;width:5rem;margin-left: -2.5rem !important;">
+                    <div class="chartBox__chart" style="height:3rem">
+                        <FirstChart />
+                    </div>
+                </div> 
+            </div>
             <p>具体而言，首先是临床日常的大量工作尚无收费标准。</p>
             <p>与常规安宁疗护项目相比，</p>
             <p>患者及其家属对心理关怀、哀伤辅导等精神照护服务项目同样有较大需求，</p>
@@ -53,6 +60,13 @@
             <p>家属说：“我们收到转院的消息后心里很不是滋味，</p>
             <p>老人在这里住了这么长时间，工作人员就像对自己家亲人一样照顾他，后面只能转去养老院，</p>
             <p>但那里没有专业的医疗人员，只能在生活上管一下他，医疗方面还得再想办法。”</p>
+            <div class="chartBoxs" style="height:4.5rem;margin-top:.3rem">
+                <div class="chartBox" style="height:5.5rem;width:4.5rem;margin-left: -2.75rem !important;">
+                    <div class="chartBox__chart" style="height:4.5rem">
+                        <SecondChart />
+                    </div>
+                </div> 
+            </div>
             <p>据计算，截至2021年底，</p>
             <p>我国每10万人口拥有的安宁疗护床位为19.96张；</p>
             <p> 每1万常住人口拥有的安宁执业医师仅0.18人，安宁护士仅0.17人，</p>
@@ -84,8 +98,11 @@
 </template>
 
 <script>
+import FirstChart from './FirstChart.vue';
+import SecondChart from './SecondChart.vue';
 export default {
     name: "MainPage",
+    components:{FirstChart,SecondChart},
 }
 </script>
 
@@ -93,7 +110,7 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: cover !important;
-    height: 600vh;
+    height: 750vh;
     background-color: rgb(220, 220, 220);
     position: relative;
     &__word{
@@ -111,7 +128,7 @@ export default {
         p:nth-child(2){
             margin-top: .3rem;
         }
-        p:nth-child(27),p:nth-child(45){
+        p:nth-child(28),p:nth-child(47){
             margin-bottom: .3rem;
         }
         p:nth-child(1)::first-letter{
@@ -189,16 +206,15 @@ export default {
     position: relative;
 }
 .chartBox{
-    width: 100%;
+    width: 5rem;
     height: 4rem;
     position: absolute;
-    // left:50%;
-    // margin-left: -2.5rem !important;
+    left:50%;
     margin: 0 auto;
     &__chart{
-        height: 9rem;
+        width:5rem;
+        height: 4rem;
         position: absolute;
-        left: 1.5rem;
     }
 }
 </style>

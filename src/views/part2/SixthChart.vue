@@ -13,6 +13,7 @@
                     </div>
                 </div>
                 <div class="container13__topBox__right">每10张床至少配备4名护士</div>
+                <div v-show="popUpShow1" class="toolTip" :style="positionStyle1">每10张床至少配备4名护士</div>
         </div>
         <div class="container13__bottomBox">
             <div class="container13__bottomBox__left iconfont">
@@ -22,6 +23,7 @@
                 <div class="container13__bottomBox__left__icon">&#xe613;</div>
             </div>
             <div class="container13__bottomBox__right iconfont">按照与护士1:3的比例配备护理员</div>
+            <div v-show="popUpShow2" class="toolTip" :style="positionStyle2">按照与护士1:3的比例配备护理员</div>
         </div>
     </div>
 </template>
@@ -31,28 +33,50 @@ import $ from "jquery";
 export default {
   name: "SixthChart",
   data() {
-    return {};
+    return {
+        popUpShow1:false,
+        popUpShow2:false,
+        positionStyle1:{top:'0px',left:'0px'},
+        positionStyle2:{top:'0px',left:'0px'},
+    };
   },
   mounted() {
     this.handleHover();
   },
   methods:{
     handleHover(){
+        var that = this;
         var topBox = document.querySelectorAll(".container13 .container13__topBox");
         var botBox = document.querySelectorAll(".container13 .container13__bottomBox");
-        $(".container13__topBox").hover(function(){
+        $(".container13__topBox").hover(function(event){
                 topBox[0].style.opacity = 1;
                 botBox[0].style.opacity = 0.2;
-            },function(){
+                that.popUpShow1=true;
+                const x = event.clientX + 15 + 'px'
+                const y = event.clientY + 5 + 'px'
+                that.positionStyle1 = { top: y, left: x } 
+            },function(event){
                 topBox[0].style.opacity = 0.8;
                 botBox[0].style.opacity = 0.8;
+                that.popUpShow1=false;
+                const x = event.pageX + 15 + 'px'
+                const y = event.pageY + 5 + 'px'
+                that.positionStyle1 = { top: y, left: x } 
         })
-        $(".container13__bottomBox").hover(function(){
+        $(".container13__bottomBox").hover(function(event){
                 botBox[0].style.opacity = 1;
                 topBox[0].style.opacity = 0.2;
-            },function(){
+                that.popUpShow2=true;
+                const x = event.clientX + 15 + 'px'
+                const y = event.clientY + 5 + 'px'
+                that.positionStyle2 = { top: y, left: x } 
+            },function(event){
                 topBox[0].style.opacity = 0.8;
                 botBox[0].style.opacity = 0.8;
+                that.popUpShow2=false;
+                const x = event.pageX + 15 + 'px'
+                const y = event.pageY + 5 + 'px'
+                that.positionStyle2 = { top: y, left: x } 
         })
     }
 }
@@ -132,6 +156,14 @@ export default {
         padding-top:.5rem
     }
   }
+}
+.toolTip{
+  position: fixed;
+  max-width: 2.2rem;
+  padding: .1rem;
+  border: .01rem solid #666;
+  background: #fff;
+  border-radius: .03rem;
 }
 </style>
 
