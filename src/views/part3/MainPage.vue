@@ -110,7 +110,7 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: cover !important;
-    height: 750vh;
+    height: 43rem;
     background-color: rgb(220, 220, 220);
     position: relative;
     &__word{
@@ -140,6 +140,11 @@ export default {
 }
 .part3_element0{
     height: 100vh;
+    @media
+    screen and (orientation:portrait) and (max-device-width:768px) and (max-device-height:1024px),
+    screen and (orientation:landscape) and (max-device-width:1024px) and (max-device-height:768px) {
+        height:7rem
+    }
     width: 100%;
     background-repeat: no-repeat !important;
 	background-size: cover !important;

@@ -36,14 +36,14 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: cover !important;
-    height: 250vh;
+    height: 15rem;
     position: relative;
     width: 100%;
     &__word{
         background-color: rgb(220, 220, 220);
         position: absolute;
         width:100%;
-        height: 150vh;
+        height: 8rem;
         left:50%;
         margin-left: -50%;
         p{
@@ -64,6 +64,11 @@ export default {
     &__mask{
         width: 100%;
         height: 100vh;
+        @media
+        screen and (orientation:portrait) and (max-device-width:768px) and (max-device-height:1024px),
+        screen and (orientation:landscape) and (max-device-width:1024px) and (max-device-height:768px) {
+            height:7rem
+        }
         position: absolute;
         bottom: 0;
 		background: rgba(0, 0, 0, .1);
@@ -71,6 +76,11 @@ export default {
     &__footer{
         width: 100%;
         height: 100vh;
+        @media
+        screen and (orientation:portrait) and (max-device-width:768px) and (max-device-height:1024px),
+        screen and (orientation:landscape) and (max-device-width:1024px) and (max-device-height:768px) {
+            height:7rem
+        }
         position: fixed;
         bottom: 0;
         z-index: -1;

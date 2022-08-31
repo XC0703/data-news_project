@@ -137,7 +137,7 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: cover !important;
-    height: 390vh;
+    height: 24rem;
     background-color: rgb(220, 220, 220);
     position: relative;
     &__word{

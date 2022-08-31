@@ -47,7 +47,7 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: cover !important;
-    height: 480vh;
+    height: 28rem;
     background-color: rgb(220, 220, 220);
     position: relative;
     &__word{

@@ -4,7 +4,7 @@
     <div class="outerBox">
         <div id="eventBoxs">
             <div 
-                :class="{'eventBox': true, 'leftBox': index%2===0,'lastBox':index%listCount==0}"
+                :class="{'eventBox': true, 'leftBox': index%2===0,'lastBox':index%listCount==0,'rightBox': index%2===1}"
                 v-for="index in listCount"
                 :key="index"
             >
@@ -184,7 +184,7 @@ export default {
             var interval = null;
             window.clearInterval(interval); 
             interval = window.setInterval(fun,1000)
-            $('.handleBtn').click(function() { 
+            $('.handleBtn').unbind('click').click(function() { 
                 that.flag=!that.flag
                 if(that.flag){
                     window.clearInterval(interval);
@@ -269,7 +269,6 @@ export default {
             width: 1rem;
             height: .3rem;
             position: absolute;
-            margin-left: 5rem;
             margin-top: 0rem;
             color: rgb(84, 84, 85);
             text-align: center;
@@ -354,7 +353,8 @@ export default {
     // 左边的事件盒子
     .leftBox{
         .time{
-            margin-left: 6.6rem;
+            right:0;
+            margin-right: 5rem;
         }
         .content{
             left: 2rem;
@@ -362,6 +362,12 @@ export default {
         .triangle{
             left: 5rem;
             transform: rotate(180deg);
+        }
+    }
+    // 右边事件盒子
+    .rightBox{
+        .time{
+            margin-left: 5rem;
         }
     }
     // 加载到的事件盒子

@@ -12,11 +12,6 @@ import { defineAsyncComponent } from 'vue';
 export default {
   name: 'App',
   components: {
-    // timeLine: defineAsyncComponent(() => import('./components/timeLine')),
-    // chinaMap: defineAsyncComponent(() => import('./components/chinaMap')),
-    // worldMap: defineAsyncComponent(() => import('./components/worldMap')),
-    // cloudEffect: defineAsyncComponent(() => import('./components/cloudEffect')),
-    // shipEffect: defineAsyncComponent(() => import('./components/shipEffect')),
     Part0View: defineAsyncComponent(() => import('./views/part0/Part0View')),
     Part1View: defineAsyncComponent(() => import('./views/part1/Part1View')),
     Part2View: defineAsyncComponent(() => import('./views/part2/Part2View')),
