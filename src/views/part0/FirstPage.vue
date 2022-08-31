@@ -1,5 +1,5 @@
 <template>
-    <div id="part0" class="content" :style="{background: 'url(../../../static/images/bgs/bg0.png)'}">
+    <div id="part0" class="content">
         <ScrollTo />
         <div class="content__topBox">Hospice Care</div>
         <!-- <div class="content__middleBox">
@@ -18,7 +18,7 @@
 import ScrollTo from '@/components/ScrollTo.vue';
 export default {
     name:'FirstPage',
-    components:{ScrollTo}
+    components:{ScrollTo},
 }
 </script>
 
@@ -26,6 +26,7 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: 100% 100% !important;
+    background:url('/public/static/images/bgs/bg0.png');
     height: 100vh;
     @media
     screen and (orientation:portrait) and (max-device-width:768px) and (max-device-height:1024px),
