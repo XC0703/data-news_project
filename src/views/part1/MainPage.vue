@@ -24,7 +24,7 @@
                         </span>
                     </div>
                     <div class="chartBox__img">
-                        <img src="../../../public/static/images/contents/part1_element0.png">
+                        <img :src="imgUrl" alt="">
                     </div>
                 </div> 
             </div>
@@ -40,6 +40,12 @@ import ThirdChart from './ThirdChart';
 export default {
     name:'MainPage',
     components:{FirstChart,SecondChart,ThirdChart},
+    data(){
+        return{
+            imgUrl:require("../../../public/static/images/contents/part1_element0.png"),
+        }
+    }
+
 }
 </script>
 

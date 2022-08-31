@@ -1,5 +1,5 @@
 <template>
-    <div id="part2" class="content" :style="{background: 'url(/static/images/bgs/bg2.png)'}">
+    <div id="part2" class="content" :style="{background: 'url(../../../static/images/bgs/bg2.png)'}">
         <ScrollTo />
     </div>
 </template>

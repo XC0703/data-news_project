@@ -1,5 +1,5 @@
 <template>
-    <div id="part0" class="content" :style="{background: 'url(/static/images/bgs/bg0.png)'}">
+    <div id="part0" class="content" :style="{background: 'url(../../../static/images/bgs/bg0.png)'}">
         <ScrollTo />
         <div class="content__topBox">Hospice Care</div>
         <!-- <div class="content__middleBox">
