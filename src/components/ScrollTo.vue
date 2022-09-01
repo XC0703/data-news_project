@@ -42,7 +42,7 @@ export default {
   overflow: hidden;
 }
 #menu.close li {
-  width: .4rem;
+  width: .5rem;
   transition: width 500ms ease-in-out;
 }
 #menu.close li:nth-of-type(2) {
@@ -87,23 +87,23 @@ export default {
 }
 #menu nav ul li{
   position: relative;
-  width: .4rem;
-  height: .25rem;
+  width: .5rem;
+  height: .35rem;
   border-bottom: .01rem solid #bdbdbd;
   // text-align: right;
   background: #ffffff;
   transition: width 500ms ease-in-out;
   cursor: pointer;
   a{
-    width:.4rem;
+    width:.5rem;
     height: 100%;
     position: absolute;
     right: 0;
-    font-size: .1rem;
+    font-size: .2rem;
     font-family: "Josefin Sans", sans-serif;
     text-transform: uppercase;
     color: #000000;
-    line-height: .25rem;
+    line-height: .35rem;
     text-align: center;
     vertical-align: middle;
     display: table-cell;

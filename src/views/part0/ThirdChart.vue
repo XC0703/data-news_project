@@ -29,20 +29,19 @@ export default {
         });
         function initEcharts(){
             let option = {
-                // backgroundColor: '#101e44',
                 title:{
                     text:'中国不同年龄段人口死亡率折线图',
                     left:"center",
                     subtext:"数据来源：中国缓和医疗发展蓝皮书（2019-2020）",
                     subtextStyle: {
-                        fontSize: 7
+                        fontSize: 10
                     },
                     textStyle:{
-                        fontSize:11
+                        fontSize:15
                     }
                 },
                 grid: {
-                    top: '20%',
+                    top: '15%',
                     left: '3%',
                     right: '3%',
                     bottom: '3%',
@@ -87,7 +86,7 @@ export default {
                             // fontSize: 14,
                             // margin: 20,
                             color: '#0F2650',
-                            fontSize:7
+                            fontSize:10
                         },
                         axisLine: {
                             lineStyle: {
@@ -95,7 +94,8 @@ export default {
                             },
                         },
                         axisTick: {
-                            show: false,
+                            show: true,
+                            alignWithLabel:true
                         },
                         data: ['1岁以内婴儿', '1-4岁儿童', '5~39岁青少年和壮年','60岁以上老人'],
                     },
@@ -175,8 +175,8 @@ export default {
 
 <style lang="scss" scoped>
 #container3 {
-  width: 5rem;
-  height: 2rem;
+  width: 7rem;
+  height: 4rem;
   margin: 0rem auto 0;
 }
 </style>

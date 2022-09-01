@@ -32,11 +32,11 @@ export default {
         function initEcharts(){
             let option = {
                 title:{
-                    top:-13,
+                    top:-10,
                     left:'center',
                     subtext:"数据来源：国家统计局 http://www.stats.gov.cn/",
                     subtextStyle: {
-                        fontSize: 7
+                        fontSize: 10
                     },
                 },
                 // 通过这里直接设置颜色
@@ -71,15 +71,15 @@ export default {
                     fontSize: 8,
                     },
                     itemHeight: 8,//图例大小
-                    top:10,
+                    top:15,
                     right: '10%' // 距离右边10%
                 },
                 // 设置网格样式
                 grid: { 
-                    top: '20%',
+                    top: '10%',
                     left: '3%',
                     right: '3%',
-                    bottom: '3%',
+                    bottom: '2%',
                     show: true,// 显示边框
                     borderColor: '#012f4a',// 边框颜色
                     containLabel: true // 包含刻度文字在内
@@ -90,11 +90,14 @@ export default {
                 triggerEvent: true,
                 data: ['2000', '2001', '2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016', '2017', '2018','2019','2020','2021'],
                 axisTick: {
-                    show: false // 去除刻度线
+                    show: false, // 去除刻度线
+                    alignWithLabel:true
                 },
                 axisLabel: {
                     color: '#4c9bfd',
-                    interval:2//使横坐标显示完全
+                    interval:0,
+                    rotate:45,
+                    fontSize: 10,
                 },
                 axisLine: {
                     show: false // 去除轴线
@@ -152,13 +155,13 @@ export default {
                 {
                     name: '老年人口人数',
                     type: 'bar',
-                    barWidth:5,
+                    barWidth:8,
                     data: data_line[0]
                 },
                 {
                     name: '年末总人数',
                     type: 'bar',
-                    barWidth:5,
+                    barWidth:8,
                     data: data_line[1]
                 },
                 {
@@ -184,8 +187,8 @@ export default {
 
 <style lang="scss" scoped>
 #container1 {
-  width: 4rem;
-  height: 2.2rem;
+  width: 7rem;
+  height: 4rem;
   margin: 0rem auto 0;
 }
 </style>

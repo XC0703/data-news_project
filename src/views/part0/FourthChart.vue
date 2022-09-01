@@ -48,11 +48,11 @@ export default {
                     text: '各类疾病在死亡原因中的构成比',
                     x:'center',
                     textStyle:{
-                        fontSize:12
+                        fontSize:15
                     },
                     subtext:"数据来源：中国缓和医疗发展蓝皮书（2019-2020）",
                     subtextStyle: {
-                        fontSize: 7
+                        fontSize: 10
                     },
                 },
                 color:['#0F2650','#063F76','#246EAB',' #5095CE',' #73C0DE','#F3C450','#5095CE','#F1C27F','#FF9500'],
@@ -66,12 +66,13 @@ export default {
                 series : [
                     {
                         type:'pie',
-                        radius : [30, 110],
+                        radius : [30, 180],
                         center : ['50%', '55%'],
                         roseType : 'area',
                         data:data_pie,
                         label:{
-                            fontSize:10
+                            fontSize:10,
+                            color:'#333'
                         }
                     }
                 ]
@@ -86,8 +87,8 @@ export default {
 
 <style lang="scss" scoped>
 #container4 {
-  width: 5rem;
-  height: 3.2rem;
+  width: 7rem;
+  height: 5rem;
   margin: 0rem auto 0;
 }
 </style>

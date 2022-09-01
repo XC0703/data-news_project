@@ -1,16 +1,26 @@
 <template>
     <div class="content">
         <div class="content__word">
-            <p>2019年11月，感到身体不适的马阿姨到当地医院就诊，检查结果是直肠癌全身多发转移。</p>
-            <p>肿瘤晚期，没有手术、化疗机会，马阿姨的生命已然进入倒计时。</p>
-            <p>这样的故事，几乎每天都在中国上演</p>
-            <p>随着中国进入人口老龄化时代，人口死亡率也呈现上升趋势</p>
-            <p>2021年，中国年末人口总数约为14.126亿，</p>
-            <p>其中65岁以上老年人口数量约为20059万，占总人口数的14.20%</p>
-            <p> 二十年间，我国人口死亡率从2001年的6.43‰，上升至2021年的7.18‰</p>
-            <div class="chartBoxs">
-                <div class="chartBox" style="margin-left: -2.5rem !important;">
-                    <div class="chartBox__chartBtns">
+            <div class="content__word__special">
+                <span>安宁疗护，是生死之间供生命之船停泊的港湾</span>
+                <span>当太阳的火焰熄灭，每个人终将迎来自己的“良夜”</span>
+                <span>当生命之船无奈鸣笛，即将伴着暮色驶出人间</span>
+                <span>人们或许可以选择，更加温和地走进那个良夜……</span>
+            </div>
+            <div class="content__word__leftAlign">
+                <p class="firstLine">2019年11月，感到身体不适的马阿姨到当地医院就诊，检查结果是直肠癌全身多发转移。
+                肿瘤晚期，没有手术、化疗机会，马阿姨的生命</p>
+                <p>已然进入倒计时。这样的故事，几乎每天都在中国上演——</p>
+            </div>
+            <div class="content__word__centerAlign">
+                <p>随着中国进入人口老龄化时代，人口死亡率也呈现上升趋势</p>
+                <p>2021年，中国年末人口总数约为14.126亿，</p>
+                <p>其中65岁以上老年人口数量约为20059万，占总人口数的14.20%</p>
+                <p> 二十年间，我国人口死亡率从2001年的6.43‰，上升至2021年的7.18‰</p>
+            </div>
+            <div class="chartBoxs" style="height: 4.5rem;">
+                <div class="chartBox" style="height: 4.5rem;width: 7rem;margin-left: -3.5rem !important;">
+                    <div class="chartBox__chartBtns" style="left:2.3rem;">
                         <div 
                             :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn1': currentIndex1 === 0}"
                             @click="() => handleIndexClick1(0)"
@@ -28,41 +38,45 @@
                             {{item.name}}
                         </div> -->
                     </div>
-                        <div class="chartBox__chart" v-if="currentIndex1==0">
+                    <div class="chartBox__chart" style="height: 4rem;margin-top: .4rem;" v-if="currentIndex1==0">
                             <FirstChart />
-                        </div>
-                        <div class="chartBox__chart" v-else-if="currentIndex1==1">
+                    </div>
+                    <div class="chartBox__chart" style="height: 4rem;margin-top: .4rem;" v-else-if="currentIndex1==1">
                             <SecondChart />
-                        </div>
+                    </div>
+                    <div class="chartBox__chartTips iconfont">&#xe601;点击圆环按钮可进行两图切换显示</div>
                 </div> 
             </div>
-            <p>尤其是在65岁以后，死亡率增速明显加大，60岁及以上年龄段的老年人群死亡率高达31.83‰。</p>
-            <div class="chartBoxs" style="height:2.3rem">
-                <div class="chartBox" style="height:2.3rem;margin-left: -2.5rem !important;" >
-                    <div class="chartBox__chart" style="height:2.3rem">
+            <div class="content__word__centerAlign">
+                <p>尤其是在65岁以后，死亡率增速明显加大，60岁及以上年龄段的老年人群死亡率高达31.83‰。</p>
+            </div>
+            <div class="chartBoxs" style="height: 4rem;">
+                <div class="chartBox" style="height: 4rem;width: 7rem;margin-left: -3.5rem !important;">
+                    <div class="chartBox__chart" style="height:4rem">
                         <ThirdChart />
                     </div>
                 </div> 
             </div>
-            <p>其中，很多老年人在临终前都会受到疾病折磨</p>
-            <div class="chartBoxs" style="height:3.2rem">
-                <div class="chartBox" style="height:3.2rem;margin-left: -2.5rem !important;">
-                    <div class="chartBox__chart" style="height:3.2rem">
+            <div class="content__word__centerAlign">
+                <p>其中，很多老年人在临终前都会受到疾病折磨</p>
+            </div>
+            <div class="chartBoxs" style="height:5rem">
+                <div class="chartBox" style="height:5rem;width: 7rem;margin-left: -3.5rem !important;">
+                    <div class="chartBox__chart" style="height:5rem">
                         <FourthChart />
                     </div>
                 </div> 
             </div>
-            <p>根据2002至2018年中国老年健康影响因素跟踪调查（CLHLS）中</p>
-            <p>对1998至2018年间去世老年人亲属的调查（有效样本为12429人）,</p>
-            <p>有高达82.34%的老年人在临终前生活不能完全自理，</p>
-            <p>37.29%的老年人在痛苦状态下离世，</p>
-            <p>在65至79岁和80至89岁中高龄老年群体中，</p>
-            <p>痛苦离世的老年人均多于安详离世的老年人。</p>
-            <div class="chartBoxs" style="height: 4.7rem;">
-                <div class="chartBox" style="height: 4.7rem; margin-left: -2.5rem !important;">
+            <div class="content__word__leftAlign">
+                <p>根据2002至2018年中国老年健康影响因素跟踪调查（CLHLS）中对1998至2018年间去世老年人亲属的调查（有效样本为12429人）,</p>
+                <p>有高达82.34%的老年人在临终前生活不能完全自理，37.29%的老年人在痛苦状态下离世，在65至79岁和80至89岁中高龄老年群体中，</p>
+                <p>痛苦离世的老年人均多于安详离世的老年人。</p>
+            </div>
+            <div class="chartBoxs" style="height: 5.9rem;">
+                <div class="chartBox" style="height: 5.9rem;width:5rem;margin-left: -2.5rem !important;">
                     <div class="chartBox__chartTitle">最后疾病期间症状和疼痛比例图</div>
                     <div class="chartBox__chartSubtitle">数据来源：中国缓和医疗发展蓝皮书（2019-2020）</div>
-                    <div class="chartBox__chartBtns" style="top:.5rem">
+                    <div class="chartBox__chartBtns" style="top:0.5rem;left:1.2rem;">
                         <div 
                             :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn1': currentIndex2 === 0}"
                             @click="() => handleIndexClick2(0)"
@@ -71,24 +85,22 @@
                             :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn2': currentIndex2 === 1}"
                             @click="() => handleIndexClick2(1)"
                         >排除意外和事故的离世者</div>
-                        <!-- <div
-                            :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn': currentIndex1 === item.index}"
-                            v-for="item in categories1"
-                            :key="item.name"
-                            @click="() => handleIndexClick1(item.index)"
-                        >
-                            {{item.name}}
-                        </div> -->
                     </div>
-                        <div class="chartBox__chart" style="height: 4rem;" v-if="currentIndex2==0">
+                    <div class="chartBox__chart" style="height: 5rem;bottom:0.1rem" v-if="currentIndex2==0">
                             <FifthChart />
-                        </div>
-                        <div class="chartBox__chart" style="height: 4rem;" v-else-if="currentIndex2==1">
+                    </div>
+                    <div class="chartBox__chart" style="height: 5rem;bottom:0.1rem" v-else-if="currentIndex2==1">
                             <SixthChart />
-                        </div>
+                    </div>
+                    <div class="chartBox__chartTips iconfont" style="bottom:.3rem;">&#xe601;点击圆环按钮可进行两图切换显示</div>
                 </div> 
             </div>
-            <p>当死亡不可避免，当痛苦被迫延续，安宁疗护拓展了生命的厚度，呵护生命的最后一程。</p>
+            <div class="content__word__special">
+                <span>当死亡不可避免</span>
+                <span>当痛苦被迫延续</span>
+                <span>当安宁疗护拓展了生命的厚度</span>
+                <span>呵护生命的最后一程</span>
+            </div>
         </div>
     </div>
 </template>
@@ -137,7 +149,7 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: cover !important;
-    height: 24rem;
+    height: 32rem;
     background-color: rgb(220, 220, 220);
     position: relative;
     &__word{
@@ -146,33 +158,60 @@ export default {
         height: 100%;
         left:50%;
         margin-left: -50%;
-        p{
-            height:.4rem;
-            line-height: .4rem;
-            text-align: center;
-            font-size: .15rem;
+        &__special{
+            width:100%;
+            margin-bottom: .6rem;
+            color:#333;
+            margin-top:.4rem;
+            span{
+                display: inline-block;
+                font-family: "STKaiti";
+                height:.4rem;
+                width: 100%;
+                line-height: .4rem;
+                text-align: center;
+                font-size: .15rem;
+                font-weight:bold;
+            }
         }
-        p:nth-child(1),p:nth-child(9),p:nth-child(13),p:nth-child(20){
-            margin-top: .3rem;
+        &__leftAlign{
+            width: 100%;
+            margin-bottom: .4rem;
+            p{
+                width: 10rem;
+                height:.4rem;
+                margin: 0 auto;
+                text-align: left;
+                font-size: .16rem;
+                font-family: "STHeiti";
+                line-height: .4rem;
+            }
+            .firstLine{
+                height:.8rem;
+                line-height: .8rem;
+            }
+            .firstLine::first-letter{
+                font-size: .5rem;
+                font-style: italic;
+            }
         }
-        p:nth-child(3),p:nth-child(4),p:nth-child(7),p:nth-child(9),p:nth-child(11),p:nth-child(18){
-            margin-bottom: .3rem;
-        }
-        p:nth-child(1)::first-letter{
-            font-size: .5rem;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-style: italic;
+        &__centerAlign{
+            p{
+                height:.4rem;
+                line-height: .4rem;
+                text-align: center;
+                font-size: .16rem;
+            }
         }
     }
 }
 .chartBoxs{
     width: 100%;
-    height: 2.5rem;
     position: relative;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
 }
 .chartBox{
-    width: 5rem;
-    height: 2.5rem;
     position: absolute;
     left:50%;
     margin: 0 auto;
@@ -184,26 +223,26 @@ export default {
         height: .2rem;
         text-align: center;
         line-height: .2rem;
+        font-size: .16rem;
         color:#333;
         font-weight: bolder;
     }
     &__chartSubtitle{
         position: absolute;
-        left:1.65rem;
+        left:1.3rem;
         top:.2rem;
-        width:3.4rem;
+        width:5rem;
         height: .2rem;
         text-align: center;
         line-height: .2rem;
         color:#999;
         font-weight: bolder;
-        font-size: .14rem;
+        font-size: .18rem;
         -webkit-transform-origin-x: 0;
         transform: scale(0.50);
     }
     &__chartBtns{
         position: absolute;
-        left:1.3rem;
         top:0;
         display: flex;
         width:3.4rem;
@@ -263,9 +302,14 @@ export default {
     }
     &__chart{
         width:100%;
-        height: 2.2rem;
         position: absolute;
+    }
+    &__chartTips{
+        position:absolute;
+        left: 0;
         bottom: 0;
+        color:#666;
+        font-size: .12rem;
     }
 }
 .circlePacking{

@@ -34,7 +34,7 @@ export default {
                     left:'center',
                     subtext:"数据来源：中国缓和医疗发展蓝皮书（2019-2020）",
                     subtextStyle: {
-                        fontSize: 7
+                        fontSize: 10
                     },
                 },
                 grid: {
@@ -80,9 +80,10 @@ export default {
                         boundaryGap: true,
                         axisLabel: {
                             formatter: '{value}',
-                            // fontSize: 14,
-                            // margin: 20,
+                            fontSize: 10,
                             color: '#0F2650',
+                            interval:0,
+                            rotate:45,
                         },
                         axisLine: {
                             lineStyle: {
@@ -90,7 +91,8 @@ export default {
                             },
                         },
                         axisTick: {
-                            show: false,
+                            show: true,
+                            alignWithLabel:true
                         },
                         data: ['2000', '2001', '2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016', '2017', '2018','2019','2020','2021'],
                     },
@@ -170,8 +172,8 @@ export default {
 
 <style lang="scss" scoped>
 #container2 {
-  width: 4rem;
-  height: 2.2rem;
+  width: 7rem;
+  height: 4rem;
   margin: 0rem auto 0;
 }
 </style>
