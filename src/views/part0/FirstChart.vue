@@ -8,15 +8,49 @@ let echarts = require("echarts/lib/echarts");
 export default {
   name: "FirstChart",
   data() {
-    return {};
+    return {
+        isPC:true,
+        isRender:false,
+    };
   },
-
   mounted() {
     // 初始化加载
-    this.mapChart();
+    this.createListener();
   },
 
    methods: {
+    //监听窗口滚动
+    windowScrollListener() {
+        // 判断屏幕类型
+        if(window.screen.width>window.screen.height){
+            this.isPC = true;
+        }else{
+            this.isPC = false;
+        }
+        //获取操作元素最顶端到页面顶端的垂直距离
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        if(scrollTop<650){
+            this.isRender=false;
+        }else if(this.isPC==true&&scrollTop>650&&scrollTop<=1650&&this.isRender==false){
+            // this.$nextTick(()=>{ }) 将回调函数中的操作放到下一次DOM更新之后执行
+            this.$nextTick(()=>{
+                this.mapChart();
+            })
+            this.isRender=true;
+        }else if(scrollTop>1650){
+            this.isRender=false;
+        }
+    },
+    createListener() {
+        this.mapChart();
+        //添加滚动监听事件
+        //在窗口滚动时调用监听窗口滚动方法
+        window.addEventListener('scroll', this.windowScrollListener);
+    },
+    // destroyed() {
+    //     //离开页面时删除该监听
+    //     window.removeEventListener('scroll', this.windowScrollListener)
+    // },
     // 配置渲染map
     mapChart() {
         var data_line = [
@@ -25,12 +59,9 @@ export default {
         [126743,127627,128453,129227,129988,130756,131448,132129,132802,133450,134091,134916,135922,136726,137646,138326,139232,140011,140541,141008,141212,141260],
         [7.00,7.10,7.30,7.50,7.60,7.70,7.90,8.10,8.30,8.50,8.90,9.10,9.40,9.70,10.10,10.50,10.80,11.40,11.90,12.60,13.50,14.20],
         ];
-        let myChart = echarts.init(document.getElementById("container1"));
-        window.addEventListener("resize", ()=>{
-            myChart.resize();
-        });
-        function initEcharts(){
-            let option = {
+        var chartDom = document.getElementById("container1");
+        let myChart;
+        let option = {
                 title:{
                     top:-10,
                     left:'center',
@@ -175,11 +206,20 @@ export default {
                     data: data_line[2]
                 }
                 ]
-            };
+        };
+        if(chartDom!=null){
+            myChart = echarts.getInstanceByDom(chartDom)
+            if(myChart!=null){
+                myChart.dispose();
+                myChart = echarts.init(chartDom);
+                window.addEventListener("resize", ()=>{
+                    myChart.resize();
+                });
+            }else{
+                myChart = echarts.init(chartDom);
+            }
             myChart.setOption(option);
         }
-            
-        initEcharts()
     }
     }
 };

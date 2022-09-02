@@ -38,11 +38,9 @@
                             {{item.name}}
                         </div> -->
                     </div>
-                    <div class="chartBox__chart" style="height: 4rem;margin-top: .4rem;" v-if="currentIndex1==0">
-                            <FirstChart />
-                    </div>
-                    <div class="chartBox__chart" style="height: 4rem;margin-top: .4rem;" v-else-if="currentIndex1==1">
-                            <SecondChart />
+                    <div class="chartBox__chart" style="height: 4rem;margin-top: .4rem;">
+                        <FirstChart v-if="currentIndex1==0"></FirstChart>
+                        <SecondChart v-else-if="currentIndex1==1"></SecondChart>
                     </div>
                     <div class="chartBox__chartTips iconfont">&#xe601;点击圆环按钮可进行两图切换显示</div>
                 </div> 
@@ -69,8 +67,8 @@
             </div>
             <div class="content__word__leftAlign">
                 <p>根据2002至2018年中国老年健康影响因素跟踪调查（CLHLS）中对1998至2018年间去世老年人亲属的调查（有效样本为12429人）,</p>
-                <p>有高达82.34%的老年人在临终前生活不能完全自理，37.29%的老年人在痛苦状态下离世，在65至79岁和80至89岁中高龄老年群体中，</p>
-                <p>痛苦离世的老年人均多于安详离世的老年人。</p>
+                <p>有高达<b>82.34%</b>的老年人在临终前生活不能完全自理，<b>37.29%</b>的老年人在痛苦状态下离世，<b>在65至79岁和80至89岁中高龄老年群体中，</b></p>
+                <p><b>痛苦离世的老年人均多于安详离世的老年人。</b></p>
             </div>
             <div class="chartBoxs" style="height: 5.9rem;">
                 <div class="chartBox" style="height: 5.9rem;width:5rem;margin-left: -2.5rem !important;">
@@ -86,11 +84,9 @@
                             @click="() => handleIndexClick2(1)"
                         >排除意外和事故的离世者</div>
                     </div>
-                    <div class="chartBox__chart" style="height: 5rem;bottom:0.1rem" v-if="currentIndex2==0">
-                            <FifthChart />
-                    </div>
-                    <div class="chartBox__chart" style="height: 5rem;bottom:0.1rem" v-else-if="currentIndex2==1">
-                            <SixthChart />
+                    <div class="chartBox__chart" style="height: 5rem;bottom:0.1rem">
+                        <FifthChart v-if="currentIndex2==0"></FifthChart>
+                        <SixthChart v-else-if="currentIndex2==1"></SixthChart>
                     </div>
                     <div class="chartBox__chartTips iconfont" style="bottom:.3rem;">&#xe601;点击圆环按钮可进行两图切换显示</div>
                 </div> 
