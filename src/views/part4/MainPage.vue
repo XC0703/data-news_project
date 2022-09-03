@@ -43,7 +43,7 @@ export default {
     &__word{
         position: absolute;
         width:100%;
-        height: 9.1rem;
+        height: 8rem;
         left:50%;
         margin-left: -50%;
         background-color: rgb(220, 220, 220);
