@@ -31,11 +31,11 @@ export default {
                     x:'center',
                     top:-3,
                     textStyle:{
-                        fontSize:12
+                        fontSize:15
                     },
                     subtext:"数据来源：上海市卫健委官网",
                     subtextStyle: {
-                        fontSize: 7
+                        fontSize: 10
                     },
                 },
                 tooltip:{
@@ -80,12 +80,21 @@ export default {
                     data: [{
                         name: '门诊服务',
                         value: [10,79],
+                        itemStyle:{
+                            color:'rgb(65,85,199)'
+                        }
                     }, {
                         name: '居家上门',
                         value: [40,251],
+                        itemStyle:{
+                            color:'rgb(15,38,80)'
+                        }
                     }, {
                         name: '提供病房',
                         value: [15,108],
+                        itemStyle:{
+                            color:'rgb(113,161,219)'
+                        }
                     }]
                 }]
             };
@@ -99,8 +108,8 @@ export default {
 
 <style lang="scss" scoped>
 #container14 {
-  width: 4rem;
-  height: 2.2rem;
+  width: 6rem;
+  height: 3.5rem;
   margin: 0rem auto 0;
 }
 </style>

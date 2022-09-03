@@ -9,37 +9,75 @@ let echarts = require("echarts/lib/echarts");
 export default {
   name: "FirstChart",
   data() {
-    return {};
+    return {
+        isPC:true,
+        isRender:false,
+    };
   },
 
   mounted() {
     // 初始化加载
-    this.mapChart();
+    this.createListener();
   },
 
    methods: {
+    //监听窗口滚动
+    windowScrollListener() {
+        // 判断屏幕类型
+        if(window.screen.width>window.screen.height){
+            this.isPC = true;
+        }else{
+            this.isPC = false;
+        }
+        //获取操作元素最顶端到页面顶端的垂直距离
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        // console.log(scrollTop)
+        if(scrollTop<8460){
+            this.isRender=false;
+        }else if(this.isPC==true&&scrollTop>8460&&scrollTop<=9420&&this.isRender==false){
+            this.$nextTick(()=>{
+                this.mapChart();
+            })
+            this.isRender=true;
+        }else if(scrollTop>9420){
+            this.isRender=false;
+        }
+    },
+    createListener() {
+        this.mapChart();
+        //添加滚动监听事件
+        //在窗口滚动时调用监听窗口滚动方法
+        window.addEventListener('scroll', this.windowScrollListener);
+    },
     // 配置渲染map
     mapChart() {
         var data_line = [
         2,2,23,12,1,40,57,12,22,32,22,27,39,31,66,28,15,28  
         ];
-        let myChart = echarts.init(document.getElementById("container8"));
-        window.addEventListener("resize", ()=>{
-            myChart.resize();
-        });
+        var chartDom = document.getElementById("container8");
+        let myChart = echarts.getInstanceByDom(chartDom)
+        if(myChart!=null){
+            myChart.dispose();
+            myChart = echarts.init(chartDom);
+            window.addEventListener("resize", ()=>{
+                myChart.resize();
+            });
+        }else{
+            myChart = echarts.init(chartDom);
+        }
         function initEcharts(){
             let option = {
                 title:{
                     text: '国家卫健委官网安宁疗护相关词条数量变化图',
                     x:'center',
                     textStyle:{
-                        fontSize:12
+                        fontSize:15
                     },
                     top:-3,
                     left:'center',
                     subtext:"数据来源：国家卫健委",
                     subtextStyle: {
-                        fontSize: 7
+                        fontSize: 10
                     },
                 },
                 grid: {
@@ -183,8 +221,8 @@ export default {
 
 <style lang="scss" scoped>
 #container8 {
-  width: 6rem;
-  height: 2.5rem;
+  width: 7rem;
+  height: 4rem;
   margin: 0rem auto 0;
 }
 </style>

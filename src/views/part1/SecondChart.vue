@@ -14,17 +14,56 @@ export default {
     data() {
         return {
             flag:false,
+            isPC:true,
+            isRender:false,
         };
     },
     mounted() {
     // 初始化加载
-    this.mapChart();
+    this.createListener();
     },
 
     methods: {
+    //监听窗口滚动
+    windowScrollListener() {
+        // 判断屏幕类型
+        if(window.screen.width>window.screen.height){
+            this.isPC = true;
+        }else{
+            this.isPC = false;
+        }
+        //获取操作元素最顶端到页面顶端的垂直距离
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        if(scrollTop<6000){
+            this.isRender=false;
+        }else if(this.isPC==true&&scrollTop>6000&&scrollTop<=7400&&this.isRender==false){
+            this.$nextTick(()=>{
+                this.mapChart();
+            })
+            this.isRender=true;
+        }else if(scrollTop>7400){
+            this.isRender=false;
+        }
+    },
+    createListener() {
+        this.mapChart();
+        //添加滚动监听事件
+        //在窗口滚动时调用监听窗口滚动方法
+        window.addEventListener('scroll', this.windowScrollListener);
+    },
     // 配置渲染map
     mapChart() {
-        let myChart = echarts.init(document.getElementById("container7"));
+        var chartDom = document.getElementById("container7");
+        let myChart = echarts.getInstanceByDom(chartDom)
+        if(myChart!=null){
+            myChart.dispose();
+            myChart = echarts.init(chartDom);
+            window.addEventListener("resize", ()=>{
+                myChart.resize();
+            });
+        }else{
+            myChart = echarts.init(chartDom);
+        }
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
@@ -49,12 +88,12 @@ export default {
                     text:'部分国家死亡质量指数排名动态变化图',
                     left:"center",
                     textStyle:{
-                        fontSize:11,
+                        fontSize:15,
                         color:'#000'
                     },
                     subtext:"数据来源：Economist Intelligence Unit. The 2015 Quality of Death Index., 2021年全球死亡质量专家评估的跨国比较",
                     subtextStyle: {
-                        fontSize: 7,
+                        fontSize: 8,
                         color:'#333'
                     }
                 },
@@ -65,7 +104,7 @@ export default {
                     }
                 },
                 grid: {
-                    top: '4%',
+                    top: '6%',
                     left: '3%',
                     right: '3%',
                     bottom: '3%',
@@ -224,19 +263,19 @@ export default {
 
 <style lang="scss" scoped>
 .container{
-    width: 4rem;
+    width: 4.5rem;
     height: 9rem;
     margin: 0rem auto 0;
     position: relative;
     #container7 {
-        width: 4rem;
+        width: 4.5rem;
         height: 9rem;
         margin: 0rem auto 0;
     }
     .handleBtn{
         position: absolute;
-        top:-.01rem;
-        right:.8rem;
+        top:.01rem;
+        right:.7rem;
         width:.2rem;
         height: .2rem;
         border-radius: 50%;

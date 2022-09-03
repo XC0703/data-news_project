@@ -14,10 +14,38 @@ export default {
 
   mounted() {
     // 初始化加载
-    this.mapChart();
+    this.createListener();
   },
 
    methods: {
+    //监听窗口滚动
+    windowScrollListener() {
+        // 判断屏幕类型
+        if(window.screen.width>window.screen.height){
+            this.isPC = true;
+        }else{
+            this.isPC = false;
+        }
+        //获取操作元素最顶端到页面顶端的垂直距离
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        // console.log(scrollTop)
+        if(scrollTop<18340){
+            this.isRender=false;
+        }else if(this.isPC==true&&scrollTop>18340&&scrollTop<=19380&&this.isRender==false){
+            this.$nextTick(()=>{
+                this.mapChart();
+            })
+            this.isRender=true;
+        }else if(scrollTop>19380){
+            this.isRender=false;
+        }
+    },
+    createListener() {
+        this.mapChart();
+        //添加滚动监听事件
+        //在窗口滚动时调用监听窗口滚动方法
+        window.addEventListener('scroll', this.windowScrollListener);
+    },
     // 配置渲染map
     mapChart() {
         var uploadedDataURL1 = "/static/images/contents/part3_element2.png";
@@ -30,10 +58,17 @@ export default {
             c: uploadedDataURL3,
             d: uploadedDataURL4,
         }
-        let myChart = echarts.init(document.getElementById("container19"));
-        window.addEventListener("resize", ()=>{
-            myChart.resize();
-        });
+        var chartDom = document.getElementById("container19");
+        let myChart = echarts.getInstanceByDom(chartDom)
+        if(myChart!=null){
+            myChart.dispose();
+            myChart = echarts.init(chartDom);
+            window.addEventListener("resize", ()=>{
+                myChart.resize();
+            });
+        }else{
+            myChart = echarts.init(chartDom);
+        }
         function initEcharts(){
             let option = {
                 title:{
@@ -41,10 +76,10 @@ export default {
                     left:"center",
                     subtext:"数据来源：中国生命关怀协会调研部",
                     subtextStyle: {
-                        fontSize: 7
+                        fontSize: 10
                     },
                     textStyle:{
-                        fontSize:11
+                        fontSize:15
                     }
                 },
                 tooltip:{
@@ -114,26 +149,30 @@ export default {
                     indicator: [{
                             name: '安宁疗护机构',
                             max:70000,
+                            color:'rgb(240,204,121)',
                             axisLabel:{show:false}
                         },
                         {
                             name: '注册护士',
                             max:70000,
+                            color:'rgb(240,204,121)',
                             axisLabel:{show:false}
                         },
                         {
                             name: '核定床位',
                             max:70000,
+                            color:'rgb(240,204,121)',
                             axisLabel:{show:false}
                         },
                         {
                             name: '安宁疗护职业医师',
                             max:70000,
+                            color:'rgb(240,204,121)',
                         }
                     ],
                     shape:'circle',
                     center: ['50%', '52%'],
-                    radius: 120,
+                    radius: 180,
                     startAngle:180,
                     splitNumber: 7,
                     splitArea: {
@@ -194,8 +233,8 @@ export default {
 
 <style lang="scss" scoped>
 #container19 {
-  width: 5.5rem;
-  height: 4.5rem;
+  width: 7rem;
+  height: 6rem;
   margin: 0rem auto 0;
 }
 </style>

@@ -86,11 +86,11 @@ export default {
                         distance: 10, //离图标多远					
                         show: true,
                         fontSize: 12,
-                        color: "#3e86dd",
+                        color: " #15A9CE",
                         fontWeight: 500,
                     },
                     itemStyle: {
-                        color: "#3e86dd"
+                        color: " #15A9CE"
                     }
                 })
             }
@@ -143,14 +143,14 @@ export default {
                             smooth: true,
                             trailLength: 0,
                             symbol: "arrow",
-                            color: "#3e86dd",
+                            color: " #15A9CE",
                             symbolSize: 12,
                             period: 4, //特效动画的时间
                             loop: true
                         },
                         lineStyle: {
                             curveness: 0,
-                            color: '#3e86dd',
+                            color: ' #15A9CE',
                             opacity: 0.6,
                             width: 1,
                             type: "dashed"
@@ -228,8 +228,8 @@ export default {
 
 <style lang="scss" scoped>
 #container11 {
-  width: 6rem;
-  height: 3.5rem;
+  width: 6.5rem;
+  height: 4rem;
   margin: 0rem auto 0;
 }
 </style>

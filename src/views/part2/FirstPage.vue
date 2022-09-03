@@ -15,7 +15,7 @@ export default {
 <style lang="scss" scoped>
 .content{
     background-repeat: no-repeat !important;
-	background-size: cover !important;
+	background-size: 100% 100% !important;
     background:url('/public/static/images/bgs/bg2.png');
     height: 100vh;
     @media

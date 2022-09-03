@@ -33,20 +33,22 @@ export default {
                     x:'center',
                     top:-3,
                     textStyle:{
-                        fontSize:12
+                        fontSize:15
                     },
                     subtext:"数据来源：企查查",
                     subtextStyle: {
-                        fontSize: 7
+                        fontSize: 10
                     },
                 },
                 tooltip: {
                     show: true,
-                    formatter: function (params) { 
-                        if(params.value){ 
-                        return params.name + ' : ' + params.value; 
+                    formatter: function (params) {
+                        if(params.name==='台湾'){
+                            return params.name + ' : 暂无数据'; 
+                        } else if(params.value){ 
+                            return params.name + ' : ' + params.value; 
                         }else{ 
-                        return params.name + ' : 0'; 
+                            return params.name + ' : 0'; 
                         } 
                     } 
                 },
@@ -156,8 +158,8 @@ export default {
 
 <style lang="scss" scoped>
 #container15 {
-  width: 4.5rem;
-  height: 4rem;
+  width: 6.5rem;
+  height: 5rem;
   margin: 0rem auto 0;
 }
 </style>

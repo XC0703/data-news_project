@@ -144,7 +144,7 @@ export default {
 <style lang="scss" scoped>
 .content{
     background-repeat: no-repeat !important;
-	background-size: cover !important;
+	background-size: 100% 100% !important;
     height: 32rem;
     background-color: rgb(220, 220, 220);
     position: relative;

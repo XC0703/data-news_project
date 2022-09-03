@@ -8,34 +8,73 @@ let echarts = require("echarts/lib/echarts");
 export default {
   name: "NinthChart",
   data() {
-    return {};
+    return {
+        isPC:true,
+        isRender:false,
+    };
   },
+
 
   mounted() {
     // 初始化加载
-    this.mapChart();
+    this.createListener();
   },
 
    methods: {
+    //监听窗口滚动
+    windowScrollListener() {
+        // 判断屏幕类型
+        if(window.screen.width>window.screen.height){
+            this.isPC = true;
+        }else{
+            this.isPC = false;
+        }
+        //获取操作元素最顶端到页面顶端的垂直距离
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        // console.log(scrollTop)
+        if(scrollTop<13400){
+            this.isRender=false;
+        }else if(this.isPC==true&&scrollTop>13400&&scrollTop<=14350&&this.isRender==false){
+            this.$nextTick(()=>{
+                this.mapChart();
+            })
+            this.isRender=true;
+        }else if(scrollTop>14350){
+            this.isRender=false;
+        }
+    },
+    createListener() {
+        this.mapChart();
+        //添加滚动监听事件
+        //在窗口滚动时调用监听窗口滚动方法
+        window.addEventListener('scroll', this.windowScrollListener);
+    },
     // 配置渲染map
     mapChart() {
-        let myChart = echarts.init(document.getElementById("container16"));
-        window.addEventListener("resize", ()=>{
-            myChart.resize();
-        });
+        var chartDom = document.getElementById("container16");
+        let myChart = echarts.getInstanceByDom(chartDom)
+        if(myChart!=null){
+            myChart.dispose();
+            myChart = echarts.init(chartDom);
+            window.addEventListener("resize", ()=>{
+                myChart.resize();
+            });
+        }else{
+            myChart = echarts.init(chartDom);
+        }
         function initEcharts(){
             let option={
                 title:{
                     text: '各年份安宁疗护企业成立数量',
                     x:'center',
                     textStyle:{
-                        fontSize:12
+                        fontSize:15
                     },
                     top:-3,
                     left:'center',
                     subtext:"数据来源：企查查",
                     subtextStyle: {
-                        fontSize: 7
+                        fontSize: 10
                     },
                 },
                 tooltip: {
@@ -206,8 +245,8 @@ export default {
 
 <style lang="scss" scoped>
 #container16 {
-  width: 5rem;
-  height: 3.5rem;
+  width: 7rem;
+  height: 4rem;
   margin: 0rem auto 0;
 }
 </style>

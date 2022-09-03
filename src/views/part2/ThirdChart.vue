@@ -33,17 +33,17 @@ export default {
                     x:'center',
                     top:-3,
                     textStyle:{
-                        fontSize:12
+                        fontSize:15
                     },
                     subtext:"数据来源：国家卫健委",
                     subtextStyle: {
-                        fontSize: 7
+                        fontSize: 10
                     },
                 },
                 timeline: {   // 时间轴样式
                     axisType: 'category',
                     data: yearArray,
-                    playInterval: 1500,
+                    playInterval: 3000,
                     bottom: '0',
                     symbolSize: 10,
                     autoPlay: true,
@@ -148,7 +148,7 @@ export default {
                     title:{
                         text:'2017年安宁疗护试点分布地图',
                         textStyle:{
-                            fontSize:13
+                            fontSize:15
                         }
                     },
                     series:[{
@@ -158,7 +158,7 @@ export default {
                     title:{
                         text:'2019年安宁疗护试点分布地图',
                         textStyle:{
-                            fontSize:13
+                            fontSize:15
                         }
                     },
                     series:[{
@@ -183,8 +183,8 @@ export default {
 
 <style lang="scss" scoped>
 #container10 {
-  width: 4.5rem;
-  height: 4rem;
+  width: 6.5rem;
+  height: 5rem;
   margin: 0rem auto 0;
 }
 .btn {

@@ -32,13 +32,13 @@ export default {
                     text: '各国安宁缓和医疗发展情况',
                     x:'center',
                     textStyle:{
-                        fontSize:12
+                        fontSize:15
                     },
                     top:5,
                     left:'center',
                     subtext:"数据来源：世界安宁缓和医疗联盟",
                     subtextStyle: {
-                        fontSize: 7
+                        fontSize: 10
                     },
                 },
                 tooltip: {
@@ -53,7 +53,7 @@ export default {
                     } 
                 },
                 grid: {
-                    top: '10%',
+                    top: '15%',
                     left: '3%',
                     right: '3%',
                     bottom: '3%',
@@ -61,8 +61,8 @@ export default {
                 },
                 visualMap: {
                     type: 'piecewise',
-                    left: '-5',
-                    bottom: '50',
+                    left: '5',
+                    bottom: '150',
                     itemWidth: 15,
                     itemHeight: 10,
                     textStyle: {
@@ -166,8 +166,8 @@ export default {
 
 <style lang="scss" scoped>
 #container17 {
-  width: 7rem;
-  height: 5rem;
+  width: 10rem;
+  height: 7rem;
   margin: 0rem auto 0;
 }
 </style>

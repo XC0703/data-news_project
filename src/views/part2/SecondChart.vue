@@ -9,38 +9,76 @@ let echarts = require("echarts/lib/echarts");
 export default {
   name: "SecondChart",
   data() {
-    return {};
+    return {
+        isPC:true,
+        isRender:false,
+    };
   },
 
   mounted() {
     // 初始化加载
-    this.mapChart();
+    this.createListener();
   },
 
    methods: {
+    //监听窗口滚动
+    windowScrollListener() {
+        // 判断屏幕类型
+        if(window.screen.width>window.screen.height){
+            this.isPC = true;
+        }else{
+            this.isPC = false;
+        }
+        //获取操作元素最顶端到页面顶端的垂直距离
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        // console.log(scrollTop)
+        if(scrollTop<8980){
+            this.isRender=false;
+        }else if(this.isPC==true&&scrollTop>8980&&scrollTop<=10020&&this.isRender==false){
+            this.$nextTick(()=>{
+                this.mapChart();
+            })
+            this.isRender=true;
+        }else if(scrollTop>10020){
+            this.isRender=false;
+        }
+    },
+    createListener() {
+        this.mapChart();
+        //添加滚动监听事件
+        //在窗口滚动时调用监听窗口滚动方法
+        window.addEventListener('scroll', this.windowScrollListener);
+    },
     // 配置渲染map
     mapChart() {
         var data_line = [
             [1519,2175,2642,4685],
             [276,354,510,1027]
         ];
-        let myChart = echarts.init(document.getElementById("container9"));
-        window.addEventListener("resize", ()=>{
-            myChart.resize();
-        });
+        var chartDom = document.getElementById("container9");
+        let myChart = echarts.getInstanceByDom(chartDom)
+        if(myChart!=null){
+            myChart.dispose();
+            myChart = echarts.init(chartDom);
+            window.addEventListener("resize", ()=>{
+                myChart.resize();
+            });
+        }else{
+            myChart = echarts.init(chartDom);
+        }
         function initEcharts(){
             let option = {
                 title:{
                     text: '老年医学、临终关怀机构数量变化图',
                     x:'center',
                     textStyle:{
-                        fontSize:12
+                        fontSize:15
                     },
                     top:-3,
                     left:'center',
                     subtext:"数据来源：2018-2021卫生事业发展统计公报",
                     subtextStyle: {
-                        fontSize: 7
+                        fontSize: 10
                     },
                 },
                 legend: {
@@ -54,7 +92,7 @@ export default {
                     top:'13%',
                     right: '10%', // 距离右边10%
                     // data:[
-                    //     {name:'设老年医学科的二级以上综合医院数量',textStyle:{color:'#00f2f1'}},
+                    //     {name:'设老年医学科的二级以上综合医院数量',textStyle:{color:' #0F2650'}},
                     //     {name:'设临终关怀科的医疗卫生机构数量',textStyle:{color:'#0E7CE2'}}
                     // ]
                 },
@@ -159,12 +197,12 @@ export default {
                         symbolSize: 3,
                         zlevel: 3,
                         itemStyle: {
-                            color: '#00f2f1',
-                            borderColor: '#00f2f1',
+                            color: ' #0F2650',
+                            borderColor: ' #0F2650',
                         },
                         lineStyle: {
                             width: 1,
-                            color: '#00f2f1',
+                            color: ' #0F2650',
                         },
                         areaStyle: {
                             color: new echarts.graphic.LinearGradient(
@@ -175,11 +213,11 @@ export default {
                                 [
                                     {
                                         offset: 0,
-                                        color: 'rgba(88,255,255,0.2)',
+                                        color: 'rgba(15,38,80,0.2)',
                                     },
                                     {
                                         offset: 0.8,
-                                        color: 'rgba(88,255,255,0)',
+                                        color: 'rgba(15,38,80,0)',
                                     },
                                 ],
                                 false
@@ -235,8 +273,8 @@ export default {
 
 <style lang="scss" scoped>
 #container9 {
-  width: 5rem;
-  height: 2.5rem;
+  width: 7rem;
+  height: 4rem;
   margin: 0rem auto 0;
 }
 </style>

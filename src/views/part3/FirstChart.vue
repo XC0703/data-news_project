@@ -9,34 +9,72 @@ let echarts = require("echarts/lib/echarts");
 export default {
   name: "FirstChart",
   data() {
-    return {};
+    return {
+        isPC:true,
+        isRender:false,
+    };
   },
 
   mounted() {
     // 初始化加载
-    this.mapChart();
+    this.createListener();
   },
 
    methods: {
+    //监听窗口滚动
+    windowScrollListener() {
+        // 判断屏幕类型
+        if(window.screen.width>window.screen.height){
+            this.isPC = true;
+        }else{
+            this.isPC = false;
+        }
+        //获取操作元素最顶端到页面顶端的垂直距离
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        // console.log(scrollTop)
+        if(scrollTop<17300){
+            this.isRender=false;
+        }else if(this.isPC==true&&scrollTop>17300&&scrollTop<=18260&&this.isRender==false){
+            this.$nextTick(()=>{
+                this.mapChart();
+            })
+            this.isRender=true;
+        }else if(scrollTop>18260){
+            this.isRender=false;
+        }
+    },
+    createListener() {
+        this.mapChart();
+        //添加滚动监听事件
+        //在窗口滚动时调用监听窗口滚动方法
+        window.addEventListener('scroll', this.windowScrollListener);
+    },
     // 配置渲染map
     mapChart() {
         var getxb1 = 2000; //市场上泰康的安宁疗护病房收费标准为：2000元/天/间。
         var getxb2 = 156.06; //安宁患者人均住院费用仅156.06元.
-        let myChart = echarts.init(document.getElementById("container18"));
-        window.addEventListener("resize", ()=>{
-            myChart.resize();
-        });
+        var chartDom = document.getElementById("container18");
+        let myChart = echarts.getInstanceByDom(chartDom)
+        if(myChart!=null){
+            myChart.dispose();
+            myChart = echarts.init(chartDom);
+            window.addEventListener("resize", ()=>{
+                myChart.resize();
+            });
+        }else{
+            myChart = echarts.init(chartDom);
+        }
         function initEcharts(){
             let option = {
                 title:{
-                    text:'医院安宁疗护病房平均价格及代表企业病房价格一览',
+                    text:'医院安宁疗护病房平均价格及部分企业病房价格一览',
                     left:"center",
                     subtext:"数据来源：上海市安宁疗护发展研究联盟",
                     subtextStyle: {
-                        fontSize: 7
+                        fontSize: 10
                     },
                     textStyle:{
-                        fontSize:11
+                        fontSize:15
                     }
                 },
                 tooltip: {
@@ -51,11 +89,11 @@ export default {
                 },
                 series: [
                     {
-                        name: '医院安宁疗护病房平均价格及代表企业病房价格一览',
+                        name: '医院安宁疗护病房平均价格及部分企业病房价格一览',
                         type: 'pie',
                         radius: ['45%', '95%'],
                         startAngle: 180,
-                        center: ['50%', '80%'],
+                        center: ['50%', '75%'],
                         roseType: 'radius',
                         label: {
                             show: true,
@@ -63,14 +101,14 @@ export default {
                             alignTo:'none',
                             bleedMargin:0,
                             overflow:'break',
-                            fontSize: '8',
+                            fontSize: '10',
                             color:'#333',
                             distanceToLabelLine:4,
                         },
                         labelLine:{
                             show:true,
-                            length:25,
-                            length2:10,
+                            length:40,
+                            length2:20,
                         },
                         data: [
                             {
@@ -143,7 +181,7 @@ export default {
                         emphasis:{
                             scale:false
                         },
-                        center: ['50%', '80%'],
+                        center: ['50%', '75%'],
                         roseType: 'radius',
                         data: [
                             {
@@ -234,8 +272,8 @@ export default {
 
 <style lang="scss" scoped>
 #container18 {
-  width: 5rem;
-  height: 3rem;
+  width: 7rem;
+  height: 5rem;
   margin: 0rem auto 0;
 }
 </style>
