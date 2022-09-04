@@ -24,9 +24,8 @@
                 <p>起步及探索（1987-1994）、进入政策视野（1994-2016）、
                     全国安宁疗护试点持续发展（2017-今）三个阶段。</p>
             </div>
-            <div class="chartBoxs" style="height: 10rem;width:100%;position: relative;">
-                <ThirdChart />
-                <div class="chartBox__chartTips iconfont" style="top:.3rem;left:2rem;height:.2rem;">&#xe601;点击按钮可进行播放与暂停</div>
+            <div class="chartBoxs" style="height: 10rem;width:100%;position: relative;margin-top: .5rem;">
+                <SecondChart />
             </div>
             <div class="content__word__leftAlign" style="margin-top:.5rem">
                 <p>我国安宁疗护事业历经了数十年的艰难发展，取得了进步。中国死亡质量指数排名由2015年的71名
@@ -35,7 +34,7 @@
             <div class="chartBoxs" style="height: 9rem;margin-top: .8rem;">
                 <div class="chartBox" style="height: 9rem;width: 4.5rem;margin-left: -2.25rem !important;">
                     <div class="chartBox__chart" style="height:9rem">
-                        <SecondChart />
+                        <ThirdChart />
                     </div>
                     <div class="chartBox__chartTips iconfont" style="top:-.2rem;left:-1.2rem;height:.2rem;">&#xe601;点击按钮可进行播放与暂停</div>
                 </div> 
