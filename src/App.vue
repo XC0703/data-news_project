@@ -4,6 +4,7 @@
     <Part2View />
     <Part3View />
     <Part4View />
+    <PartInner />
 </template>
 
 <script>
@@ -17,6 +18,7 @@ export default {
     Part2View: defineAsyncComponent(() => import('./views/part2/Part2View')),
     Part3View: defineAsyncComponent(() => import('./views/part3/Part3View')),
     Part4View: defineAsyncComponent(() => import('./views/part4/Part4View')),
+    PartInner: defineAsyncComponent(() => import('./views/partInner/PartInner')),
   },
 }
 </script>

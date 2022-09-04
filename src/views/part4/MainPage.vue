@@ -20,17 +20,12 @@
         </div>
         <div class="content__mask">
         </div>
-        <div class="content__footer">
-            <FooterView />
-        </div>
     </div>
 </template>
 
 <script>
-import FooterView from './FooterView.vue'
 export default {
     name:'MainPage',
-    components:{FooterView}
 }
 </script>
 
@@ -104,18 +99,6 @@ export default {
         position: absolute;
         bottom: 0;
 		background: rgba(0, 0, 0, .1);
-    }
-    &__footer{
-        width: 100%;
-        height: 100vh;
-        @media
-        screen and (orientation:portrait) and (max-device-width:768px) and (max-device-height:1024px),
-        screen and (orientation:landscape) and (max-device-width:1024px) and (max-device-height:768px) {
-            height:7rem
-        }
-        position: fixed;
-        bottom: 0;
-        z-index: -1;
     }
 }
 .chartBoxs{

@@ -1,6 +1,7 @@
 <template>
     <div id="part3" class="content">
         <ScrollTo />
+        <img src="../../../public/static/images/bgs/bg3_element0.png" />
     </div>
 </template>
 
@@ -14,15 +15,13 @@ export default {
 
 <style lang="scss" scoped>
 .content{
-    background-repeat: no-repeat !important;
-	background-size: 100% 100% !important;
-    background:url('/public/static/images/bgs/bg3.png');
-    height: 100vh;
-    @media
-    screen and (orientation:portrait) and (max-device-width:768px) and (max-device-height:1024px),
-    screen and (orientation:landscape) and (max-device-width:1024px) and (max-device-height:768px) {
-        height:7rem
-    }
+    width:100%;
+    height: 9rem;
+    background-color: rgba(0,0,0,0.1);
     position: relative;
+    text-align: center;
+    img{
+        margin-top: 4rem;
+    }
 }
 </style>

@@ -32,9 +32,9 @@ export default {
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(scrollTop)
-        if(scrollTop<1900){
+        if(scrollTop<1600){
             this.isRender=false;
-        }else if(this.isPC==true&&scrollTop>1900&&scrollTop<=2680&&this.isRender==false){
+        }else if(this.isPC==true&&scrollTop>1600&&scrollTop<=2680&&this.isRender==false){
             this.$nextTick(()=>{
                 this.mapChart();
             })
