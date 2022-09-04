@@ -63,9 +63,11 @@
                 <p>人，对比世界卫生组织（WHO）标准还有倍数级的差距。并且，中国大部分安宁疗护从业人员未曾接受过专业培训。在兼职人文关怀服务</p>
                 <p>时，其缺乏必备的伦理、心理、社会等方面专业知识，导致服务开展困难。</p>
             </div>
-            <div class="chartBoxs" style="height:6rem;margin-top:.3rem">
-                <div class="chartBox" style="height:6rem;width:7rem;margin-left: -3.5rem !important;">
-                    <div class="chartBox__chart" style="height:6rem">
+            <div class="chartBoxs" style="height:5.5rem;margin-top:.3rem">
+                <div class="chartBox" style="height:5.5rem;width:5rem;margin-left: -2.5rem !important;">
+                    <div class="chartBox__chartTitle">我国安宁疗护基本医疗机械数</div>
+                    <div class="chartBox__chartSubtitle">数据来源：中国生命关怀协会调研部</div>
+                    <div class="chartBox__chart" style="height:5rem;bottom:.2rem;">
                         <SecondChart />
                     </div>
                 </div> 

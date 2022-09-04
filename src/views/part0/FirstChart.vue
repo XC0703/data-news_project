@@ -72,11 +72,11 @@ export default {
                 },
                 // 通过这里直接设置颜色
                 color: ["#0E7CE2",'#151A38',"#ffc72b"],
-                emphasis: {
-                itemStyle: {
-                    color: "white",//柱条颜色，设置为柱图颜色则取消高亮
-                }
-                },
+                // emphasis: {
+                // itemStyle: {
+                //     color: "white",//柱条颜色，设置为柱图颜色则取消高亮
+                // }
+                // },
                 tooltip: {
                 trigger: 'axis',
                 // 判断是否会显示出百分比
