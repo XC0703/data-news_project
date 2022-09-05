@@ -9,7 +9,6 @@
         <div id="meteorBox3">
             <meteorAnimation /> 
         </div>
-        <ScrollTo />
         <div class="content__topBox">Hospice Care</div>
         <div class="content__middleBox">
             <img src="../../../public/static/images/bgs/bg0_element0.png"/>
@@ -22,13 +21,12 @@
 </template>
 
 <script>
-import ScrollTo from '@/components/ScrollTo.vue';
 import meteorAnimation from '@/components/meteorAnimation.vue';
 import { StarF } from "../../utils/starrySky.js";
 const Star = StarF;
 export default {
     name:'FirstPage',
-    components:{ScrollTo,meteorAnimation},
+    components:{meteorAnimation},
     data() {
         return {
         myCanvas: {}, //画布

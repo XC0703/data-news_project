@@ -1,15 +1,12 @@
 <template>
     <div id="part3" class="content">
-        <ScrollTo />
         <img src="../../../public/static/images/bgs/bg3_element0.png" />
     </div>
 </template>
 
 <script>
-import ScrollTo from '@/components/ScrollTo.vue';
 export default {
     name:'FirstPage',
-    components:{ScrollTo},
 }
 </script>
 

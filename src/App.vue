@@ -1,4 +1,5 @@
 <template>
+    <ScrollTo />
     <Part0View />
     <Part1View />
     <Part2View />
@@ -13,6 +14,7 @@ import { defineAsyncComponent } from 'vue';
 export default {
   name: 'App',
   components: {
+    ScrollTo: defineAsyncComponent(() => import('./components/ScrollTo.vue')),
     Part0View: defineAsyncComponent(() => import('./views/part0/Part0View')),
     Part1View: defineAsyncComponent(() => import('./views/part1/Part1View')),
     Part2View: defineAsyncComponent(() => import('./views/part2/Part2View')),

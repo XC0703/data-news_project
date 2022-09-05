@@ -9,11 +9,11 @@
     <nav role='navigation'>
         <ul>
             <li id="btn-menu" @click="handleClick()"><a class="iconfont">&#xe600;</a></li>
-            <li><a href="#" v-scroll-to="'#part0'">首页</a></li>
-            <li><a href="#" v-scroll-to="'#part1'">起源</a></li>
-            <li><a href="#" v-scroll-to="'#part2'">现状</a></li>
-            <li><a href="#" v-scroll-to="'#part3'">困境</a></li>
-            <li><a href="#" v-scroll-to="'#part4'">尾声</a></li>
+            <li :class="{activePart:partIndex===0}"><a href="#" v-scroll-to="'#part0'">引入</a></li>
+            <li :class="{activePart:partIndex===1}"><a href="#" v-scroll-to="'#part1'">起源</a></li>
+            <li :class="{activePart:partIndex===2}"><a href="#" v-scroll-to="'#part2'">现状</a></li>
+            <li :class="{activePart:partIndex===3}"><a href="#" v-scroll-to="'#part3'">困境</a></li>
+            <li :class="{activePart:partIndex===4}"><a href="#" v-scroll-to="'#part4'">尾声</a></li>
         </ul>
     </nav>  
 </section>
@@ -24,13 +24,40 @@ export default {
     name:'ScrollTo',
     data(){
         return{
-            close:true
+            close:false,
+            partIndex:0,
         }
     },
+    mounted(){
+      // 初始化加载
+      this.createListener();
+    },
     methods:{
-    handleClick(){
-        this.close=!this.close
-        }
+      handleClick(){
+          this.close=!this.close
+      },
+      //监听窗口滚动
+      windowScrollListener() {
+          //获取操作元素最顶端到页面顶端的垂直距离
+          var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+          // console.log(scrollTop)
+          if(scrollTop<3560){
+            this.partIndex = 0;
+          }else if(scrollTop<7620){
+            this.partIndex = 1;
+          }else if(scrollTop<15760){
+            this.partIndex = 2;
+          }else if(scrollTop<21040){
+            this.partIndex = 3;
+          }else{
+            this.partIndex = 4;
+          }
+      },
+      createListener() {
+          //添加滚动监听事件
+          //在窗口滚动时调用监听窗口滚动方法
+          window.addEventListener('scroll', this.windowScrollListener);
+      },
     }
 }
 </script>
@@ -38,8 +65,11 @@ export default {
 
 <style lang="scss" scoped>
 #menu {
-  position: absolute;
   overflow: hidden;
+  position: fixed;
+  left:0;
+  top:0;
+  z-index:1;
 }
 #menu.close li {
   width: .5rem;
@@ -114,5 +144,8 @@ export default {
 }
 #menu nav ul li:hover a{
   color: #cccccc;
+}
+.activePart a{
+  color:  #60A5F0 !important;
 }
 </style>
