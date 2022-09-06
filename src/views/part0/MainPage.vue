@@ -88,7 +88,7 @@
                         <FifthChart v-if="currentIndex2==0"></FifthChart>
                         <SixthChart v-else-if="currentIndex2==1"></SixthChart>
                     </div>
-                    <div class="chartBox__chartTips iconfont" style="bottom:.3rem;">&#xe601;点击圆环按钮可进行两图切换显示</div>
+                    <div class="chartBox__chartTips iconfont" style="left:-0.9rem;top:.4rem;">&#xe601;点击圆环按钮可进行两图切换显示</div>
                 </div> 
             </div>
             <div class="content__word__special">
@@ -302,8 +302,8 @@ export default {
     }
     &__chartTips{
         position:absolute;
-        left: 0;
-        bottom: 0;
+        left: .2rem;
+        top: -.1rem;
         color:#666;
         font-size: .12rem;
     }

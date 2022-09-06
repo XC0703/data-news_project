@@ -63,7 +63,7 @@ export default {
         let myChart;
         let option = {
                 title:{
-                    top:-10,
+                    top:-14,
                     left:'center',
                     subtext:"数据来源：国家统计局 http://www.stats.gov.cn/",
                     subtextStyle: {
@@ -103,7 +103,7 @@ export default {
                     },
                     itemHeight: 8,//图例大小
                     top:15,
-                    right: '10%' // 距离右边10%
+                    right: '31%' // 距离右边10%
                 },
                 // 设置网格样式
                 grid: { 

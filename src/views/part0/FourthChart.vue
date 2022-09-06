@@ -52,22 +52,102 @@ export default {
     // 配置渲染map
     mapChart() {
         var data_pie = [
-            {name:'心脏病',value:26.50,mortality:1062.00},
-            {name:'脑血管疾病',value:24.41,mortality:977.99},
-            {name:'恶性肿瘤',value:20.54,mortality:823.07},
-            {name:'呼吸系统疾病',value:12.77,mortality:511.54},
-            {name:'伤害',value:4.14,mortality:165.71},
-            {name:'内分泌营养代谢疾病',value:2.95,mortality:118.26},
-            {name:'消化系统疾病',value:1.93,mortality:77.37},
-            {name:'其它疾病',value:1.51,mortality:60.64},
-            {name:'神经系统疾病',value:1.36,mortality:54.64},
-            {name:'死因不明',value:1.31,mortality:52.61},
-            {name:'泌尿生殖系统疾病',value:0.93,mortality:37.34},
-            {name:'精神障碍',value:0.46,mortality:18.40},
-            {name:'肌肉骨骼和结缔组织疾病',value:0.31,mortality:12.55},
-            {name:'血液造血免疫疾病',value:0.17,mortality:6.82},
-            {name:'先天异常',value:0.01,mortality:0.46},
-            {name:'寄生虫病',value:0.01,mortality:0.37},
+            {name:'心脏病',value:26.50,mortality:1062.00,
+                labelLine:{
+                    length:10,
+                    length2:3,
+                }
+            },
+            {name:'脑血管疾病',value:24.41,mortality:977.99,
+                labelLine:{
+                    length:-10,
+                    length2:20,
+                }
+            },
+            {name:'恶性肿瘤',value:20.54,mortality:823.07,
+                labelLine:{
+                    length:-50,
+                    length2:10,
+                }
+            },
+            {name:'呼吸系统疾病',value:12.77,mortality:511.54,
+                labelLine:{
+                    length:-100,
+                    length2:3,
+                }
+            },
+            {name:'伤害',value:4.14,mortality:165.71,
+                labelLine:{
+                    length:-160,
+                    length2:10,
+                }
+            },
+            {name:'内分泌营养代谢疾病',value:2.95,mortality:118.26,
+                labelLine:{
+                    length:-160,
+                    length2:10,
+                }
+            },
+            {name:'消化系统疾病',value:1.93,mortality:77.37,
+                labelLine:{
+                    length:-180,
+                    length2:20,
+                }
+            },
+            {name:'其它疾病',value:1.51,mortality:60.64,
+                labelLine:{
+                    length:-190,
+                    length2:10,
+                }
+            },
+            {name:'神经系统疾病',value:1.36,mortality:54.64,
+                labelLine:{
+                    length:-190,
+                    length2:10,
+                }
+            },
+            {name:'死因不明',value:1.31,mortality:52.61,
+                labelLine:{
+                    length:-190,
+                    length2:20,
+                }
+            },
+            {name:'泌尿生殖系统疾病',value:0.93,mortality:37.34,
+                labelLine:{
+                    length:-190,
+                    length2:30,
+                }
+            },
+            {name:'精神障碍',value:0.46,mortality:18.40,
+                labelLine:{
+                    length:-190,
+                    length2:70,
+                }
+            },
+            {name:'肌肉骨骼和结缔组织疾病',value:0.31,mortality:12.55,
+                labelLine:{
+                    length:-190,
+                    length2:50,
+                }
+            },
+            {name:'血液造血免疫疾病',value:0.17,mortality:6.82,
+                labelLine:{
+                    length:-190,
+                    length2:50,
+                }
+            },
+            {name:'先天异常',value:0.01,mortality:0.46,
+                labelLine:{
+                    length:-170,
+                    length2:30,
+                }
+            },
+            {name:'寄生虫病',value:0.01,mortality:0.37,
+                labelLine:{
+                    length:-150,
+                    length2:10,
+                }
+            },
         ]
         var chartDom = document.getElementById("container4");
         let myChart = echarts.getInstanceByDom(chartDom)
@@ -104,14 +184,19 @@ export default {
                 series : [
                     {
                         type:'pie',
-                        radius : [30, 180],
-                        center : ['50%', '55%'],
+                        radius : [30, 280],
+                        center : ['50%', '70%'],
                         roseType : 'area',
                         data:data_pie,
+                        // labelLayout:{
+                        //     x:1,
+                        //     y:1
+                        // },
                         label:{
-                            fontSize:10,
-                            color:'#333'
-                        }
+                            fontSize:12,
+                            color:'#333',
+                            position:'outside',
+                        },
                     }
                 ]
             };

@@ -12,7 +12,9 @@
             :class="{'selectBtns__btn': true, 'activeBtn': currentIndex === 3}"
             @click="() => handleIndexClick(3)"
         >2017-今：全国安宁疗护试点的持续发展阶段</div>
-        <div class="btnTips iconfont">&#xe601;点击上述某一行可进行阶段的切换，点击<span class="handleBtn">{{flag?"&#xe87a;":"&#xe87c;"}}</span>按钮可进行{{flag?"暂停":"播放"}}</div>
+        <div class="btnTips iconfont">&#xe601;点击上述某一行可进行阶段的切换</div>
+        <div class="btnTips btnTip2 iconfont">鼠标放入下方时间轴区域可进行滑动</div>
+        <div class="btnTips btnTip3 iconfont">点击每个事件盒子可进行展开与收起</div>
     </div>
     <div class="outerBox">
         <div id="eventBoxs">
@@ -39,7 +41,6 @@
 </template>
 
 <script>
-import $ from "jquery";
 export default {
   name: "SecondChart",
   mounted(){
@@ -194,55 +195,57 @@ export default {
     handleIndexClick(index){
         this.currentIndex = index;
         if(index==1){
+            this.sliderOff();
             this.startIndex=0;
             this.listCount=4;
+            var that = this;
+            this.$nextTick(
+                ()=>{
+                    that.sliderOn()
+                }
+            )
         }else if(index==2){
+            this.sliderOff();
             this.startIndex=4;
             this.listCount=10;
+            that = this;
+            this.$nextTick(
+                ()=>{
+                    that.sliderOn()
+                }
+            )
         }else if(index==3){
+            this.sliderOff();
             this.startIndex=14;
             this.listCount=13;
+            that = this;
+            this.$nextTick(
+                ()=>{
+                    that.sliderOn()
+                }
+            )
         }
     },
     sliderOff(){
-        var eventBoxsFather = document.getElementById("eventBoxs")
         var eventBoxs = document.querySelectorAll("#eventBoxs .eventBox"); 
         for(let i = 0;i<eventBoxs.length;i++){
             eventBoxs[i].classList.remove('eventBoxActive');
         }
-        eventBoxsFather.style.top = '0rem'
-        this.sliderOn();
     },
     sliderOn(){
-        let that = this
-        var eventBoxsFather = document.getElementById("eventBoxs")
         var eventBoxs = document.querySelectorAll("#eventBoxs .eventBox");  
         let i =0
         let fun = ()=>{
             eventBoxs[i].classList.add('eventBoxActive');
-            if(i==7){
-                eventBoxsFather.style.top = '-8.4rem'
-            }
             i++;
-            if(i>=eventBoxs.length){
-                clearInterval(interval);
-                setTimeout(this.sliderOff,1000)
+            if(i>=this.listCount){
+                window.clearInterval(interval); 
+                interval = null;
             }
         }
-        var interval = null;
+        var interval;
         window.clearInterval(interval); 
         interval = window.setInterval(fun,1000)
-        $('.handleBtn').unbind('click').click(function() { 
-            that.flag=!that.flag
-            if(that.flag){
-                window.clearInterval(interval);
-                interval = window.setInterval(fun,1000)
-            }else{
-                window.clearInterval(interval); 
-            } 
-        }); 
-    },
-    slidershow(){
     },
     handleFun(event){
         var clickNode = event.currentTarget;
@@ -252,7 +255,7 @@ export default {
         }else{
             clickNode.lastElementChild.style.maxHeight = 0+'rem';
         }
-    }
+    },
   },
 };
 </script>
@@ -260,7 +263,7 @@ export default {
 <style lang="scss" scoped>
 .selectBtns{
     width: 3.5rem;
-    height: 1.2rem;
+    height: 1.8rem;
     margin-left: 1.2rem;
     box-shadow: 0 .04rem .08rem 0 rgba(0,0,0,0.20);
     &__btn{
@@ -309,36 +312,56 @@ export default {
         line-height: .3rem;
         text-align: left;
         font-size: .12rem;
-        padding-left:.03rem;
-        span{
-            color:  rgb(15, 38, 80);
-            cursor: pointer;
-            display: inline-block;
-            width: .2rem;
-            height: .2rem;
-            text-align: center;
-            line-height: .2rem;
-            border: .001rem rgb(15, 38, 80) solid;
-            border-radius: 50%;
-            font-size: .01rem;
-        }
-        span:hover{
-            color:  #60A5F0;
-            border: .001rem #60A5F0 solid;
-        }
+        padding-left:.06rem;
+    }
+    .btnTip2{
+        padding-left:.18rem;
+    }
+    .btnTip3{
+        padding-left:.18rem;
     }
 }
 .outerBox{
-    width: 100%;
-    height: 8.4rem;
+    width: 7rem;
+    height: 6rem;
     position: relative;
-    top:0.3rem;
-    overflow: hidden;
+    top:0.4rem;
     z-index: 999;
+    margin: 0 auto;
+    overflow-y: scroll;
+    overflow: hidden;
+}
+.outerBox:hover{
+    overflow: auto;
+    box-shadow: 0 .04rem .08rem 0 rgba(0,0,0,0.20);
+}
+.outerBox::-webkit-scrollbar {
+    width: 0.1rem;
+    position: relative;   
+    right:-1rem
+}
+.outerBox::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius   : 0.05rem;
+  background-color: rgba(15, 38, 80,0.4);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.3) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.3) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+.outerBox::-webkit-scrollbar-track {
+    border-radius: 0.06rem;
+    background   :rgba(15, 38, 80,0.1);  
 }
 #eventBoxs{
-    width: 100%;
-    height: 8.4rem;
+    width: 6.8rem;
+    height: 6rem;
     position: relative;
     top:0rem;
     z-index: 999;
@@ -355,11 +378,11 @@ export default {
             width: 1rem;
             height: .3rem;
             position: absolute;
-            margin-top: 0rem;
+            margin-top: 0.04rem;
             color: rgb(84, 84, 85);
             text-align: center;
             line-height: .3rem;
-            font-size: .15rem;
+            font-size: .18rem;
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             cursor: pointer;
         }
@@ -397,7 +420,7 @@ export default {
         .content{
             position: absolute;
             top: 0rem;
-            right: 2rem;
+            right: 0rem;
             width: 3rem;
             display: inline-block;
             border: .02rem solid rgb(84, 84, 85);
@@ -411,11 +434,11 @@ export default {
                 list-style: none;
                 max-height: 0;
                 width: 3rem;
-                padding: .04rem;
+                padding: .06rem 0.06rem 0.01rem 0.06rem;
                 border-top: .02rem solid rgb(84, 84, 85);
                 color: rgb(84, 84, 85);
                 font-size: .14rem;
-                transition: max-height .5s linear;
+                transition: max-height .2s linear;
             }
             p{
                 /* 左右事件的字体样式 */
@@ -428,8 +451,8 @@ export default {
         .triangle{
             content: '';
             position: absolute;
-            top: .1rem;
-            right: 5rem;
+            top: .05rem;
+            right: 3rem;
             width: 0rem;
             height: 0rem;
             border: .09rem solid transparent;
@@ -439,21 +462,21 @@ export default {
     // 左边的事件盒子
     .leftBox{
         .time{
-            right:0;
-            margin-right: 5rem;
+            right:0rem;
+            margin-right: 2.2rem;
         }
         .content{
-            left: 2rem;
+            left: 0rem;
         }
         .triangle{
-            left: 5rem;
+            left: 3rem;
             transform: rotate(180deg);
         }
     }
     // 右边事件盒子
     .rightBox{
         .time{
-            margin-left: 5rem;
+            margin-left: 2.2rem;
         }
     }
     // 加载到的事件盒子

@@ -81,7 +81,7 @@ export default {
                 grid: {
                     top: '15%',
                     left: '3%',
-                    right: '3%',
+                    right: '5%',
                     bottom: '3%',
                     containLabel: true,
                 },
@@ -118,13 +118,14 @@ export default {
                 xAxis: [
                     {
                         type: 'category',
-                        boundaryGap: true,
+                        boundaryGap: false,
                         axisLabel: {
                             formatter: '{value}',
                             // fontSize: 14,
                             // margin: 20,
                             color: '#0F2650',
-                            fontSize:10
+                            fontSize:10,
+                            // rotate:30,
                         },
                         axisLine: {
                             lineStyle: {

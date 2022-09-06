@@ -103,7 +103,7 @@ export default {
                 xAxis: [
                     {
                         type: 'category',
-                        boundaryGap: true,
+                        boundaryGap: false,
                         axisLabel: {
                             formatter: '{value}',
                             fontSize: 10,

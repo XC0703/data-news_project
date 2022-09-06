@@ -86,7 +86,7 @@ export default {
             }
             var option = {
                 title:{
-                    text:'部分国家死亡质量指数排名动态变化图',
+                    text:'部分国家(地区)死亡质量指数排名动态变化图',
                     left:"center",
                     textStyle:{
                         fontSize:15,

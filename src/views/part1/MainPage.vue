@@ -12,10 +12,10 @@
             </div>
             <div class="chartBoxs" style="height: 4rem;margin-top: .8rem;">
                 <div class="chartBox" style="height: 4rem;width: 100%;margin-left: -50% !important;">
-                    <div class="chartBox__chart" style="height:4rem">
+                    <div class="chartBox__chart" style="height:4rem;">
                         <FirstChart />
                     </div>
-                    <div class="chartBox__chartTips iconfont" style="left:1rem;bottom:.2rem;">&#xe601;点击两侧圆环及中间实心圆按钮可进行事件切换显示</div>
+                    <div class="chartBox__chartTips iconfont" style="left:1.6rem;bottom:.2rem;">&#xe601;点击两侧圆环及中间实心圆按钮可进行事件切换显示</div>
                 </div> 
             </div>
             <div class="content__word__leftAlign" style="margin-top:.5rem">
@@ -24,7 +24,7 @@
                 <p>起步及探索（1987-1994）、进入政策视野（1994-2016）、
                     全国安宁疗护试点持续发展（2017-今）三个阶段。</p>
             </div>
-            <div class="chartBoxs" style="height: 10rem;width:100%;position: relative;margin-top: .5rem;">
+            <div class="chartBoxs" style="height: 10rem;width:100%;position: relative;margin-top:.3rem">
                 <SecondChart />
             </div>
             <div class="content__word__leftAlign" style="margin-top:.5rem">

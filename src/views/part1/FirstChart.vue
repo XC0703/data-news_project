@@ -195,8 +195,8 @@ export default {
                 text-align: center;
                 line-height: .4rem;
                 position: absolute;
-                top:50%;
-                margin-top:-.2rem;
+                // top:50%;
+                margin-top:-1.6rem;
                 z-index: 99999;
             }
             .btn:hover{
@@ -204,10 +204,10 @@ export default {
                 cursor: pointer;
             }
             &__leftBtn{
-                left: 1rem;
+                left: 3rem;
             }
             &__rightBtn{
-                right: 1.2rem;
+                right: 3rem;
             }
         }
     }
