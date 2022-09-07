@@ -1,5 +1,5 @@
 <template>
-    <div id="container14"></div>
+    <div id="part2_container6"></div>
 </template>
 
 <script>
@@ -20,20 +20,20 @@ export default {
    methods: {
     // 配置渲染map
     mapChart() {
-        let myChart = echarts.init(document.getElementById("container14"));
+        let myChart = echarts.init(document.getElementById("part2_container6"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
         function initEcharts(){
             let option = {
                 title : {
-                    text: '上海社区卫生服务中心提供的安宁疗护服务种类',
+                    text: '上海市提供不同安宁疗护服务的社区卫生服务中心',
                     x:'center',
                     top:-3,
                     textStyle:{
                         fontSize:15
                     },
-                    subtext:"数据来源：上海市卫健委官网",
+                    subtext:"数据来源：上海市卫生健康委员会《上海市安宁疗护服务机构名单》",
                     subtextStyle: {
                         fontSize: 10
                     },
@@ -41,7 +41,13 @@ export default {
                 tooltip:{
                     trigger: 'item',
                     formatter:function(params){
-                        return params.data.name+'：'+params.data.value[1]+ '个'
+                        if(params.dataIndex==1){
+                            return '79家社区卫生服务中心提供安宁疗护门诊服务'
+                        }else if(params.dataIndex==2){
+                            return '251家社区卫生服务中心为居家的患者提供安宁疗护上门服务'
+                        }else{
+                            return '108家社区卫生服务中心提供安宁疗护病房'
+                        }
                     }
                 },
                 series: [{
@@ -107,7 +113,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container14 {
+#part2_container6 {
   width: 6rem;
   height: 3.5rem;
   margin: 0rem auto 0;

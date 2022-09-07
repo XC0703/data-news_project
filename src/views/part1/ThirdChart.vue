@@ -1,7 +1,6 @@
 <template>
     <div class="container">
-        <div id="container7"></div>
-        <div class="handleBtn iconfont" @click="handleClick()">{{flag?"&#xe87a;":"&#xe87c;"}}</div>
+        <div id="part1_container0"></div>
     </div>
 </template>
 
@@ -35,14 +34,14 @@ export default {
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(scrollTop)
-        if(scrollTop<6090){
+        if(scrollTop<5880){
             this.isRender=false;
-        }else if(this.isPC==true&&scrollTop>6090&&scrollTop<=7650&&this.isRender==false){
+        }else if(this.isPC==true&&scrollTop>5880&&scrollTop<=7520&&this.isRender==false){
             this.$nextTick(()=>{
                 this.mapChart();
             })
             this.isRender=true;
-        }else if(scrollTop>7650){
+        }else if(scrollTop>7520){
             this.isRender=false;
         }
     },
@@ -54,7 +53,7 @@ export default {
     },
     // 配置渲染map
     mapChart() {
-        var chartDom = document.getElementById("container7");
+        var chartDom = document.getElementById("part1_container0");
         let myChart = echarts.getInstanceByDom(chartDom)
         if(myChart!=null){
             myChart.dispose();
@@ -69,7 +68,6 @@ export default {
             myChart.resize();
         });
         function initEcharts(newArr){
-            var updateFrequency = 1000;
             var startIndex = 0;
             var score = [];
             for(let index = 0;index<newArr[startIndex].score.length;index++){
@@ -86,17 +84,12 @@ export default {
             }
             var option = {
                 title:{
-                    text:'部分国家(地区)死亡质量指数排名动态变化图',
+                    text:'2015年',
                     left:"center",
                     textStyle:{
-                        fontSize:15,
+                        fontSize:20,
                         color:'#000'
                     },
-                    subtext:"数据来源：Economist Intelligence Unit. The 2015 Quality of Death Index., 2021年全球死亡质量专家评估的跨国比较",
-                    subtextStyle: {
-                        fontSize: 8,
-                        color:'#333'
-                    }
                 },
                 tooltip:{
                     trigger: 'axis',
@@ -189,37 +182,6 @@ export default {
                     }]
                 }
             };
-            // 循环数据
-            for (let i = startIndex; i < newArr.length - 1; ++i) {
-                (function (i) {
-                    setTimeout(function () {
-                        updateYear(newArr[i + 1]);
-                    }, (i + 1) * updateFrequency);
-                })(i);
-            }
-            // 更新年份
-            function updateYear(year) {
-                var score = [];
-                for(let index = 0;index<year.score.length;index++){
-                    if(index!=52){
-                    score.push(year.score[index])
-                    }else{
-                        score[index] = {
-                            value:year.score[index],
-                            itemStyle: {
-                                color: '#F0CC79',
-                            }
-                        }
-                    }
-                }
-                option.yAxis.data = year.country;
-                option.series[0].data = score;
-                option.graphic.elements[0].style.text = year.year;
-                myChart.setOption(option);
-                window.addEventListener("resize", ()=>{
-                    myChart.resize();
-                });
-            }
             myChart.setOption(option);
         }
         //展示
@@ -247,17 +209,6 @@ export default {
         this.showMap=showMap;
         showMap()
     },
-    handleClick(){
-        this.flag=!this.flag
-        if(this.flag){
-            // 记得每次调用之前先清除上一次的定时器
-            this.showMap();
-            clearInterval(this.timer);
-            this.timer = setInterval(this.showMap,4000);
-        }else{
-            clearInterval(this.timer);
-        }
-    }
     }
 };
 </script>
@@ -268,27 +219,10 @@ export default {
     height: 9rem;
     margin: 0rem auto 0;
     position: relative;
-    #container7 {
+    #part1_container0 {
         width: 4.5rem;
         height: 9rem;
         margin: 0rem auto 0;
-    }
-    .handleBtn{
-        position: absolute;
-        top:.01rem;
-        right:.7rem;
-        width:.2rem;
-        height: .2rem;
-        border-radius: 50%;
-        background-color: #fff;
-        color:#999;
-        text-align: center;
-        line-height: .2rem;
-        font-size: .1rem;
-        cursor: pointer;
-    }
-    .handleBtn:hover{
-        background-color: #666;
     }
 }
 

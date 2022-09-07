@@ -1,5 +1,5 @@
 <template>
-    <div id="container1"></div>
+    <div id="part0_container0"></div>
 </template>
 
 <script>
@@ -59,7 +59,7 @@ export default {
         [126743,127627,128453,129227,129988,130756,131448,132129,132802,133450,134091,134916,135922,136726,137646,138326,139232,140011,140541,141008,141212,141260],
         [7.00,7.10,7.30,7.50,7.60,7.70,7.90,8.10,8.30,8.50,8.90,9.10,9.40,9.70,10.10,10.50,10.80,11.40,11.90,12.60,13.50,14.20],
         ];
-        var chartDom = document.getElementById("container1");
+        var chartDom = document.getElementById("part0_container0");
         let myChart;
         let option = {
                 title:{
@@ -226,7 +226,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container1 {
+#part0_container0 {
   width: 7rem;
   height: 4rem;
   margin: 0rem auto 0;

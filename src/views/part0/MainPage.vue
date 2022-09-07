@@ -183,11 +183,11 @@ export default {
                 line-height: .4rem;
             }
             .firstLine{
-                height:.8rem;
-                line-height: .8rem;
+                height:.5rem;
+                line-height: .5rem;
             }
             .firstLine::first-letter{
-                font-size: .5rem;
+                font-size: .35rem;
                 font-style: italic;
             }
         }

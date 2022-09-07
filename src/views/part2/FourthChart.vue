@@ -1,9 +1,12 @@
 <template>
-    <div id="container11"></div>
+    <div id="part2_container3"></div>
 </template>
 
 <script>
 let echarts = require("echarts/lib/echarts");
+require("echarts/lib/chart/map");
+require("../../utils/china");
+import $ from "jquery";
 
 export default {
   name: "FourthChart",
@@ -19,206 +22,124 @@ export default {
    methods: {
     // 配置渲染map
     mapChart() {
-        var obj = [{
-            name: "安宁疗护中心科室设置",
-            img: "path://M960 42.666667H64c-12.8 0-21.333333 8.533333-21.333333 21.333333v896c0 12.8 8.533333 21.333333 21.333333 21.333333h896c12.8 0 21.333333-8.533333 21.333333-21.333333V64c0-12.8-8.533333-21.333333-21.333333-21.333333z m-21.333333 896H85.333333V682.666667h853.333334v256z m0-298.666667H85.333333V384h853.333334v256z m0-298.666667H85.333333V85.333333h853.333334v256zM298.666667 768h-42.666667v85.333333h42.666667v-85.333333z m-85.333334 0H170.666667v85.333333h42.666666v-85.333333z m661.333334 21.333333h-170.666667v42.666667h170.666667v-42.666667zM298.666667 469.333333h-42.666667v85.333334h42.666667v-85.333334z m-85.333334 0H170.666667v85.333334h42.666666v-85.333334z m661.333334 21.333334h-170.666667v42.666666h170.666667v-42.666666zM298.666667 170.666667h-42.666667v85.333333h42.666667V170.666667z m-85.333334 0H170.666667v85.333333h42.666666V170.666667z m661.333334 21.333333h-170.666667v42.666667h170.666667V192z",
-            value: [0, 300],
-            offset: [0, '-100%']
-        }, {
-            name: "医技和相关职能科室",
-            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
-            value: [230, 200],
-            offset: [0, '0%']
-        }, {
-            name: "临床科室",
-            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
-            value: [-230, 200],
-            offset: [0, '0%']
-        }, {
-            name: "病案管理\n部门",
-            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
-            value: [380, 100],
-            offset: [0, '0%']
-        }, {
-            name: "护理管理",
-            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
-            value: [280, 100],
-            offset: [0, '0%']
-        }, {
-            name: "医疗感染\n管理",
-            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
-            value: [180, 100],
-            offset: [0, '0%']
-        }, {
-            name: "医疗质量\n管理",
-            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
-            value: [80, 100],
-            offset: [0, '0%']
-        },{
-            name: "临终关怀科",
-            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
-            value: [-130, 100],
-            offset: [0, '0%']
-        }, {
-            name: "疼痛科",
-            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
-            value: [-230, 100],
-            offset: [0, '0%']
-        }, {
-            name: "内科",
-            img: "M544 552.325V800a32 32 0 0 1-32 32 31.375 31.375 0 0 1-32-32V552.325L256 423.037a32 32 0 0 1-11.525-43.512A31.363 31.363 0 0 1 288 368l224 128 222.075-128a31.363 31.363 0 0 1 43.525 11.525 31.988 31.988 0 0 1-11.525 43.513L544 551.038z m0 0,M64 256v512l448 256 448-256V256L512 0z m832 480L512 960 128 736V288L512 64l384 224z m0 0",
-            value: [-330, 100],
-            offset: [0, '0%']
-        }];
-        var seriesData = function(data) {
-            var res = [];
-            for (var i = 0; i < data.length; i++) {
-                res.push({
-                    name: data[i].name,
-                    symbol: 'path://' + data[i].img,
-                    symbolSize: 28, //图标大小
-                    symbolOffset: data[i].offset,
-                    draggable: false,
-                    fixed: true,
-                    value: data[i].value,
-                    label: {
-                        position: data[i].direction ? data[i].direction : "bottom",
-                        distance: 10, //离图标多远					
-                        show: true,
-                        fontSize: 12,
-                        color: " #15A9CE",
-                        fontWeight: 500,
-                    },
-                    itemStyle: {
-                        color: " #15A9CE"
-                    }
-                })
-            }
-            return res;
-        }
-        let myChart = echarts.init(document.getElementById("container11"));
+        let myChart = echarts.init(document.getElementById("part2_container3"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
-        function initEcharts(){
+        function initEcharts(mapData){
             let option = {
-                grid: {
-                    top: '20%',
-                    left: '3%',
-                    right: '3%',
-                    bottom: '3%',
+                title : {
+                    x:'center',
+                    top:-3,
+                    text:'2019年',
+                    textStyle:{
+                        fontSize:20
+                    },
                 },
-                xAxis: {
-                    show: false,
-                    type: "value"
+                tooltip: {
+                    show: true,
+                    formatter: function (params) { 
+                        if(params.value){
+                            if(params.data.content.length!=17){
+                                return params.name + ' : ' + params.value+'<br />'+params.data.content; 
+                            }else{
+                                return params.name + ' : ' + params.value
+                                +'<br />'+params.data.content[0]+','+params.data.content[1]+','+params.data.content[2]+','+params.data.content[3]+','+params.data.content[4]+','+params.data.content[5]
+                                +'<br />'+params.data.content[6]+','+params.data.content[7]+','+params.data.content[8]+','+params.data.content[9]+','+params.data.content[10]+','+params.data.content[11]
+                                +'<br />'+params.data.content[12]+','+params.data.content[13]+','+params.data.content[14]+','+params.data.content[15]+','+params.data.content[16];
+                            } 
+                        }else{ 
+                        return params.name + ' : 0'; 
+                        } 
+                    } 
                 },
-                yAxis: {
-                    show: false,
-                    type: "value"
+                visualMap: {
+                    type: 'piecewise',
+                    left: '15',
+                    bottom: '15',
+                    itemWidth: 27,
+                    itemHeight: 15,
+                    selectedMode:false,
+                    textStyle: {
+                        color: '#333333',
+                        fontSize: 14,
+                    },
+                    pieces: [{
+                        min:5,
+                        label: '>4',
+                    },{
+                        value: 4,
+                        label: '4',
+                    },{
+                        value: 3,
+                        label: '3',
+                    }, {
+                        value: 2,
+                        label: '2',
+                    }, {
+                        value: 1,
+                        label: '1',
+                    }, {
+                        value: 0,
+                        label: '0',
+                    }, ],
+                    inRange: {
+                        color: ['rgb(190,219,250)', 'rgb(82,154,232)', 'rgb(111,147,207)', 'rgb(33,105,179)','rgb(16,50,98)']
+                    },
+                    outOfRange: {
+                        color: ['#999999']
+                    }
+                },
+                geo: {
+                    map: 'china',
+                    show: true,
+                    roam: false,
+                    emphasis: {
+                        label:{
+                            show: false
+                        }
+                    },
+                    itemStyle: {
+                        areaColor: 'rgb(190,219,250)',
+                        borderColor: 'rgba(0,63,140,0.2)',
+                        shadowColor: 'rgba(0,63,140,0.2)',
+                        shadowOffsetY: 20,
+                        shadowBlur: 30
+                    }
                 },
                 series: [{
-                        type: "graph",
-                        coordinateSystem: "cartesian2d",
-                        legendHoverLink: false,
-                        emphasis:{
-                            scale:true
-                        },
-                        nodeScaleRatio: false,
-                        roam: false,
-                        lineStyle: {
-                            width: 0,
-                            shadowColor: "none",
-                            color: "transparent"
-                        },
-                        data: seriesData(obj)
+                    type: 'map',
+                    map: 'china',
+                    geoIndex:0,
+                    aspectScale: 0.75,
+                    //zoom:1.1,
+                    label: {
+                        show: true,
                     },
-                    {
-                        type: "lines",
-                        coordinateSystem: "cartesian2d",
-                        z: 1,
-                        animationEasing: "linear",
-                        clip: false,
-                        effect: {
-                            show: true,
-                            smooth: true,
-                            trailLength: 0,
-                            symbol: "arrow",
-                            color: " #15A9CE",
-                            symbolSize: 12,
-                            period: 4, //特效动画的时间
-                            loop: true
-                        },
-                        lineStyle: {
-                            curveness: 0,
-                            color: ' #15A9CE',
-                            opacity: 0.6,
-                            width: 1,
-                            type: "dashed"
-                        },
-                        data: [
-                            {
-                                coords: [
-                                    [0, 300],
-                                    [230, 200]
-                                ]
-                            },
-                            {
-                                coords: [
-                                    [0, 300],
-                                    [-230, 200]
-                                ]
-                            },
-                            {
-                                coords: [
-                                    [230, 200],
-                                    [380, 100]
-                                ]
-                            },
-                            {
-                                coords: [
-                                    [230, 200],
-                                    [280, 100]
-                                ]
-                            },
-                            {
-                                coords: [
-                                    [230, 200],
-                                    [180, 100]
-                                ]
-                            },
-                            {
-                                coords: [
-                                    [230, 200],
-                                    [80, 100]
-                                ]
-                            },
-                            {
-                                coords: [
-                                    [-230, 200],
-                                    [-130, 100]
-                                ]
-                            },
-                            {
-                                coords: [
-                                    [-230, 200],
-                                    [-230, 100]
-                                ]
-                            },
-                            {
-                                coords: [
-                                    [-230, 200],
-                                    [-330, 100]
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
+                    labelLayout:{
+                        show:false,
+                        fontSize:10,
+                    },
+                    emphasis: {
+                        itemStyle:{
+                            areaColor: '#FFAE00',
+                        }
+                    },
+                    itemStyle: {
+                        areaColor: 'rgb(190,219,250)',
+                        borderColor: '#fff',
+                        borderWidth: 1,
+                    },
+                    data:mapData[1].data
+                }],
+            };
             myChart.setOption(option);
         }
         //展示地图
         function showMap() {
-            initEcharts();
+            $.getJSON(`/static/data/chinaMapData1.json`, data=>{
+                initEcharts(data);
+            })
         }
         showMap()
     }
@@ -227,9 +148,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container11 {
-  width: 6.5rem;
-  height: 4rem;
+#part2_container3 {
+  width: 5rem;
+  height: 3.5rem;
   margin: 0rem auto 0;
 }
 </style>

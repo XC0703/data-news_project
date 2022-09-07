@@ -1,5 +1,5 @@
 <template>
-    <div id="container15"></div>
+    <div id="part2_container7"></div>
 </template>
 
 <script>
@@ -22,7 +22,7 @@ export default {
    methods: {
     // 配置渲染map
     mapChart() {
-        let myChart = echarts.init(document.getElementById("container15"));
+        let myChart = echarts.init(document.getElementById("part2_container7"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
@@ -58,6 +58,7 @@ export default {
                     bottom: '15',
                     itemWidth: 15,
                     itemHeight: 10,
+                    selectedMode:false,
                     textStyle: {
                         color: '#333333',
                         fontSize: 8,
@@ -91,10 +92,13 @@ export default {
                         label: '3~5',
                     }, {
                         max:3,
+                        min:0,
                         label: '≤3',
                     }],
                     inRange: {
-                        color: ['#B2CAE0', '#D2EAFF', '#8AC6FD', '#45A5F8']
+                        color: ['rgb(115,192,222)', 'rgb(82,154,232)', 'rgb(111,147,207)', 'rgb(57,119,163)',
+                        'rgb(33,105,179)','rgb(55,87,132)','rgb(5,28,70)'
+                        ]
                     },
                     outOfRange: {
                         color: ['#999999']
@@ -110,6 +114,7 @@ export default {
                         }
                     },
                     itemStyle: {
+                        areaColor:'rgb(115,192,222)',
                         borderColor: 'rgba(0,63,140,0.2)',
                         shadowColor: 'rgba(0,63,140,0.2)',
                         shadowOffsetY: 20,
@@ -157,7 +162,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container15 {
+#part2_container7 {
   width: 6.5rem;
   height: 5rem;
   margin: 0rem auto 0;

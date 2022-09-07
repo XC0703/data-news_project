@@ -1,5 +1,5 @@
 <template>
-    <div id="container10"></div>
+    <div id="part2_container2"></div>
 </template>
 
 <script>
@@ -22,40 +22,18 @@ export default {
    methods: {
     // 配置渲染map
     mapChart() {
-        let myChart = echarts.init(document.getElementById("container10"));
+        let myChart = echarts.init(document.getElementById("part2_container2"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
         function initEcharts(mapData){
-            let yearArray=[2017,2019];
             let option = {
                 title : {
                     x:'center',
                     top:-3,
+                    text:'2015年',
                     textStyle:{
-                        fontSize:15
-                    },
-                    subtext:"数据来源：国家卫健委",
-                    subtextStyle: {
-                        fontSize: 10
-                    },
-                },
-                timeline: {   // 时间轴样式
-                    axisType: 'category',
-                    data: yearArray,
-                    playInterval: 3000,
-                    bottom: '0',
-                    symbolSize: 10,
-                    autoPlay: true,
-                    loop: true,
-                    realtime: true,
-                    lineStyle: {
-                        color: '#466872',
-                        width: 2,
-                    },
-                    label: {
-                        color: '#5cc5da',
-                        fontSize: 14,
+                        fontSize:20
                     },
                 },
                 tooltip: {
@@ -74,6 +52,7 @@ export default {
                     bottom: '15',
                     itemWidth: 27,
                     itemHeight: 15,
+                    selectedMode:false,
                     textStyle: {
                         color: '#333333',
                         fontSize: 14,
@@ -98,11 +77,11 @@ export default {
                         label: '0',
                     }, ],
                     inRange: {
-                        color: ['#B2CAE0', '#D2EAFF', '#8AC6FD', '#45A5F8']
+                        color: ['rgb(190,219,250)', 'rgb(82,154,232)', 'rgb(111,147,207)', 'rgb(33,105,179)','rgb(16,50,98)']
                     },
                     outOfRange: {
                         color: ['#999999']
-                    }
+                    },
                 },
                 geo: {
                     map: 'china',
@@ -114,6 +93,7 @@ export default {
                         }
                     },
                     itemStyle: {
+                        areaColor: 'rgb(190,219,250)',
                         borderColor: 'rgba(0,63,140,0.2)',
                         shadowColor: 'rgba(0,63,140,0.2)',
                         shadowOffsetY: 20,
@@ -139,33 +119,12 @@ export default {
                         }
                     },
                     itemStyle: {
-                        areaColor: '#B2CAE0',
+                        areaColor: 'rgb(16,50,98)',
                         borderColor: '#fff',
                         borderWidth: 1,
                     },
+                    data:mapData[0].data
                 }],
-                options:[{
-                    title:{
-                        text:'2017年安宁疗护试点分布地图',
-                        textStyle:{
-                            fontSize:15
-                        }
-                    },
-                    series:[{
-                        data:mapData[0].data
-                    }]
-                },{
-                    title:{
-                        text:'2019年安宁疗护试点分布地图',
-                        textStyle:{
-                            fontSize:15
-                        }
-                    },
-                    series:[{
-                        data:mapData[1].data
-                    }]
-                }
-                ]
             };
             myChart.setOption(option);
         }
@@ -182,15 +141,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container10 {
-  width: 6.5rem;
-  height: 5rem;
+#part2_container2 {
+  width: 5rem;
+  height: 3.5rem;
   margin: 0rem auto 0;
-}
-.btn {
-  position: absolute;
-  right: 10%;
-  z-index: 999;
 }
 </style>
 

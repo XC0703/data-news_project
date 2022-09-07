@@ -24,19 +24,27 @@
                 <p>起步及探索（1987-1994）、进入政策视野（1994-2016）、
                     全国安宁疗护试点持续发展（2017-今）三个阶段。</p>
             </div>
-            <div class="chartBoxs" style="height: 10rem;width:100%;position: relative;margin-top:.3rem">
+            <div class="chartBoxs" style="height: 8.4rem;width:100%;position: relative;margin-top:.3rem">
                 <SecondChart />
             </div>
             <div class="content__word__leftAlign" style="margin-top:.5rem">
                 <p>我国安宁疗护事业历经了数十年的艰难发展，取得了进步。中国死亡质量指数排名由2015年的71名
                     （倒数第十名）上升至2021年的第53名。</p>
             </div>
-            <div class="chartBoxs" style="height: 9rem;margin-top: .8rem;">
-                <div class="chartBox" style="height: 9rem;width: 4.5rem;margin-left: -2.25rem !important;">
+            <div class="chartBoxs" style="height: 9rem;margin-top: .5rem;">
+                <div class="chartTitle">
+                    <div class="chartTitle__title">部分国家(地区)死亡质量指数排名图</div>
+                    <div class="chartTitle__subTitle">数据来源：Economist Intelligence Unit. The 2015 Quality of Death Index., 2021年全球死亡质量专家评估的跨国比较</div>
+                </div>
+                <div class="chartBox" style="height: 9rem;width: 4.5rem;margin-left: -5rem !important;">
                     <div class="chartBox__chart" style="height:9rem">
                         <ThirdChart />
                     </div>
-                    <div class="chartBox__chartTips iconfont" style="top:-.2rem;left:-1.2rem;height:.2rem;">&#xe601;点击按钮可进行播放与暂停</div>
+                </div> 
+                <div class="chartBox" style="height: 9rem;width: 4.5rem;margin-right: 0.6rem !important;">
+                    <div class="chartBox__chart" style="height:9rem">
+                        <FourthChart />
+                    </div>
                 </div> 
             </div>
         </div>
@@ -47,9 +55,10 @@
 import FirstChart from './FirstChart.vue';
 import SecondChart from './SecondChart.vue';
 import ThirdChart from './ThirdChart';
+import FourthChart from './FourthChart';
 export default {
     name:'MainPage',
-    components:{FirstChart,SecondChart,ThirdChart},
+    components:{FirstChart,SecondChart,ThirdChart,FourthChart},
 }
 </script>
 
@@ -57,7 +66,7 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: 100% 100% !important;
-    height: 31rem;
+    height: 30rem;
     background-color: rgb(220, 220, 220);
     position: relative;
     &__word{
@@ -95,11 +104,11 @@ export default {
                 line-height: .4rem;
             }
             .firstLine{
-                height:.8rem;
-                line-height: .8rem;
+                height:.5rem;
+                line-height: .5rem;
             }
             .firstLine::first-letter{
-                font-size: .5rem;
+                font-size: .35rem;
                 font-style: italic;
             }
         }
@@ -118,6 +127,39 @@ export default {
     position: relative;
     margin-top: .2rem;
     margin-bottom: .2rem;
+}
+.chartTitle{
+    width:100%;
+    height:.5rem;
+    position: relative;
+    &__title{
+        position: absolute;
+        left:50%;
+        margin-left: -1.7rem;
+        top:0rem;
+        width:3.4rem;
+        height: .2rem;
+        text-align: center;
+        line-height: .2rem;
+        font-size: .16rem;
+        color:#333;
+        font-weight: bolder;
+    }
+    &__subTitle{
+        position: absolute;
+        left:50%;
+        margin-left: -2.5rem;
+        top:.2rem;
+        width:10rem;
+        height: .2rem;
+        text-align: center;
+        line-height: .2rem;
+        color:#999;
+        font-weight: bolder;
+        font-size: .18rem;
+        -webkit-transform-origin-x: 0;
+        transform: scale(0.50);
+    }
 }
 .chartBox{
     position: absolute;

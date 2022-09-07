@@ -1,5 +1,5 @@
 <template>
-    <div id="container4"></div>
+    <div id="part0_container3"></div>
 </template>
 
 <script>
@@ -149,7 +149,7 @@ export default {
                 }
             },
         ]
-        var chartDom = document.getElementById("container4");
+        var chartDom = document.getElementById("part0_container3");
         let myChart = echarts.getInstanceByDom(chartDom)
         if(myChart!=null){
             myChart.dispose();
@@ -209,7 +209,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container4 {
+#part0_container3 {
   width: 7rem;
   height: 5rem;
   margin: 0rem auto 0;

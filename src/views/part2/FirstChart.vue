@@ -1,5 +1,5 @@
 <template>
-    <div id="container8"></div>
+    <div id="part2_container0"></div>
 </template>
 
 <script>
@@ -32,14 +32,14 @@ export default {
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(scrollTop)
-        if(scrollTop<8950){
+        if(scrollTop<8820){
             this.isRender=false;
-        }else if(this.isPC==true&&scrollTop>8950&&scrollTop<=9990&&this.isRender==false){
+        }else if(this.isPC==true&&scrollTop>8820&&scrollTop<=9860&&this.isRender==false){
             this.$nextTick(()=>{
                 this.mapChart();
             })
             this.isRender=true;
-        }else if(scrollTop>9990){
+        }else if(scrollTop>9860){
             this.isRender=false;
         }
     },
@@ -52,9 +52,9 @@ export default {
     // 配置渲染map
     mapChart() {
         var data_line = [
-        2,2,23,12,1,40,57,12,22,32,22,27,39,31,66,28,15,28  
+        2,2,23,12,1,0,0,12,22,32,22,27,39,84,88,104,106,71  
         ];
-        var chartDom = document.getElementById("container8");
+        var chartDom = document.getElementById("part2_container0");
         let myChart = echarts.getInstanceByDom(chartDom)
         if(myChart!=null){
             myChart.dispose();
@@ -68,14 +68,14 @@ export default {
         function initEcharts(){
             let option = {
                 title:{
-                    text: '国家卫健委官网安宁疗护相关词条数量变化图',
+                    text: '国家卫生健康委员会临终关怀、安宁疗护相关词条数量变化图',
                     x:'center',
                     textStyle:{
                         fontSize:15
                     },
                     top:-3,
                     left:'center',
-                    subtext:"数据来源：国家卫健委",
+                    subtext:"数据来源：国家卫生健康委员会",
                     subtextStyle: {
                         fontSize: 10
                     },
@@ -120,7 +120,7 @@ export default {
                 xAxis: [
                     {
                         type: 'category',
-                        boundaryGap: true,
+                        boundaryGap: false,
                         axisLabel: {
                             interval:0,
                             rotate:45,
@@ -146,7 +146,8 @@ export default {
                         boundaryGap: false,
                         type: 'value',
                         min:0,
-                        max:70,
+                        max:110,
+                        interval:22,
                         name:'单位(条)',
                         nameTextStyle:{
                             color: '#0F2650', // 文字颜色
@@ -174,7 +175,7 @@ export default {
                 ],
                 series: [
                     {
-                        name: '安宁疗护相关词条数量',
+                        name: '相关词条数量',
                         type: 'line',
                         smooth: true,
                         showSymbol: true,
@@ -207,6 +208,28 @@ export default {
                                 false
                             ),
                         },
+                        markPoint:{
+                            symbol: 'pin', //标记(气泡)的图形
+                            symbolSize: 25, //标记(气泡)的大小
+                            itemStyle: {
+                                borderColor: '#000', //图形的描边颜色。支持的颜色格式同 color，不支持回调函数。
+                                borderWidth: 0, //描边线宽。为 0 时无描边。
+                                borderType: 'solid', //柱条的描边类型，默认为实线，支持 ‘solid’, ‘dashed’, ‘dotted’。
+                            },
+                            label:{
+                                position:'top',
+                                color:'rgba(15,38,80,0.6)',
+                                fontSize:12,
+                            },
+                            data: [
+                                { name: '2006年', coord: [2, 23],value:"《城市社区卫生服务机构\n管理办法（试行）》规定：\n有条件的社区可设临终关怀科",label:{position:[-60, -40]}},
+                                { name: '2013年', coord: [9, 32],value:'国际护士节护理大会在京召开；\n上海力争3年实现医疗机构\n“临终关怀”服务全覆盖'},
+                                { name: '2017年', coord: [13, 84],value:'2017-2020期间两批安宁疗护试点开展、\n人大代表政协委员相关提案增多、\n国家相关政策增多',label:{position:[-140, -40]}},
+                                { name: '2018年', coord: [14, 88] },
+                                { name: '2019年', coord: [15, 104] },
+                                { name: '2020年', coord: [16, 106] },
+                            ],
+                        },
                         data: data_line,
                     },
                 ],
@@ -220,7 +243,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container8 {
+#part2_container0 {
   width: 7rem;
   height: 4rem;
   margin: 0rem auto 0;

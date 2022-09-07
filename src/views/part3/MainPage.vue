@@ -43,9 +43,9 @@
                     <img src="../../../public/static/images/contents/part3_element1.png" alt="">
                 </div>
             </div>
-            <div class="chartBoxs" style="height:5rem;">
-                <div class="chartBox" style="height:5rem;width:7rem;margin-left: -3.5rem !important;">
-                    <div class="chartBox__chart" style="height:5rem">
+            <div class="chartBoxs" style="height:4rem;">
+                <div class="chartBox" style="height:4rem;width:7rem;margin-left: -3.5rem !important;">
+                    <div class="chartBox__chart" style="height:4rem">
                         <FirstChart />
                     </div>
                 </div> 
@@ -110,7 +110,7 @@ export default {
 .content{
     background-repeat: no-repeat !important;
 	background-size: 100% 100% !important;
-    height: 44rem;
+    height: 42rem;
     background-color: rgb(220, 220, 220);
     position: relative;
     &__word{
@@ -177,11 +177,11 @@ export default {
                 line-height: .4rem;
             }
             .firstLine{
-                height:.8rem;
-                line-height: .8rem;
+                height:.5rem;
+                line-height: .5rem;
             }
             .firstLine::first-letter{
-                font-size: .5rem;
+                font-size: .35rem;
                 font-style: italic;
             }
         }

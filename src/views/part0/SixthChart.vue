@@ -1,5 +1,5 @@
 <template>
-    <div id="container6"></div>
+    <div id="part0_container5"></div>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ mounted() {
 methods: {
     // 配置渲染map
     mapChart() {
-        var chartDom = document.getElementById('container6');
+        var chartDom = document.getElementById('part0_container5');
         var myChart = echarts.init(chartDom);
         var option;
         var colors = {
@@ -268,7 +268,7 @@ methods: {
 </script>
 
 <style lang="scss" scoped>
-#container6 {
+#part0_container5 {
   width: 4rem;
   height: 5rem;
   margin: 0 auto;

@@ -1,5 +1,5 @@
 <template>
-    <div id="container16"></div>
+    <div id="part2_container8"></div>
 </template>
 
 <script>
@@ -32,14 +32,14 @@ export default {
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(scrollTop)
-        if(scrollTop<13940){
+        if(scrollTop<13714){
             this.isRender=false;
-        }else if(this.isPC==true&&scrollTop>13940&&scrollTop<=14980&&this.isRender==false){
+        }else if(this.isPC==true&&scrollTop>13714&&scrollTop<=14754&&this.isRender==false){
             this.$nextTick(()=>{
                 this.mapChart();
             })
             this.isRender=true;
-        }else if(scrollTop>14980){
+        }else if(scrollTop>14754){
             this.isRender=false;
         }
     },
@@ -51,7 +51,7 @@ export default {
     },
     // 配置渲染map
     mapChart() {
-        var chartDom = document.getElementById("container16");
+        var chartDom = document.getElementById("part2_container8");
         let myChart = echarts.getInstanceByDom(chartDom)
         if(myChart!=null){
             myChart.dispose();
@@ -244,7 +244,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container16 {
+#part2_container8 {
   width: 7rem;
   height: 4rem;
   margin: 0rem auto 0;

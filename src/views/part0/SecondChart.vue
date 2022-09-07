@@ -1,5 +1,5 @@
 <template>
-    <div id="container2"></div>
+    <div id="part0_container1"></div>
 </template>
 
 <script>
@@ -52,7 +52,7 @@ export default {
         var data_line = [
         6.45, 6.43, 6.41,6.40,6.42,6.51,6.81,6.93,7.06,7.08,7.11,7.14,7.13,7.13,7.12,7.07,7.04,7.06,7.08,7.09,7.07,7.18
         ];
-        var chartDom = document.getElementById("container2");
+        var chartDom = document.getElementById("part0_container1");
         let myChart;
         let option = {
                 title:{
@@ -207,7 +207,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container2 {
+#part0_container1 {
   width: 7rem;
   height: 4rem;
   margin: 0rem auto 0;

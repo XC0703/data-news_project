@@ -54,12 +54,20 @@
                 <p>国家卫健委于2017年、2019年颁布两批国家级安宁疗护试点地区，第一批安宁疗护试点仅在5个地区开展，第二批安宁疗护试点覆盖了上海</p>
                 <p>全市及北京市西城区等71市（区）。</p>
             </div>
-            <div class="chartBoxs" style="height: 5rem;">
-                <div class="chartBox" style="height: 5rem;width: 6.5rem;margin-left: -3.25rem !important;">
-                    <div class="chartBox__chart" style="height:5rem">
+            <div class="chartBoxs" style="height: 4rem;">
+                <div class="chartTitle">
+                    <div class="chartTitle__title">安宁疗护试点分布地图</div>
+                    <div class="chartTitle__subTitle">数据来源：国家卫健委</div>
+                </div>
+                <div class="chartBox" style="height: 3.5rem;width: 5rem;margin-left: -5rem !important;">
+                    <div class="chartBox__chart" style="height:3.5rem">
                         <ThirdChart />
                     </div>
-                    <div class="chartBox__chartTips iconfont" style="bottom:-.15rem;">&#xe601;点击按钮可进行播放与暂停</div>
+                </div> 
+                <div class="chartBox" style="height: 3.5rem;width: 5rem;margin-left: 0.3rem !important;">
+                    <div class="chartBox__chart" style="height:3.5rem">
+                        <FourthChart />
+                    </div>
                 </div> 
             </div>
             <div class="content__word__leftAlign" style="margin-top:.4rem">
@@ -69,18 +77,11 @@
             <div class="chartBoxs" style="height:4rem;">
                 <div class="chartBox" style="height:4rem;width: 6.5rem; margin-left: -3.25rem !important;">
                     <div class="chartBox__chart" style="height:4rem;">
-                        <FourthChart />
-                    </div>
-                </div> 
-            </div>
-            <div class="chartBoxs" style="height:3.5rem;margin-bottom: .3rem;">
-                <div class="chartBox" style="height:3.5rem;margin-left: -2.5rem !important;">
-                    <div class="chartBox__chart" style="height:3.5rem">
                         <FifthChart />
                     </div>
                 </div> 
             </div>
-            <div class="chartBoxs" style="height:2.5rem;margin-bottom: .3rem;">
+            <div class="chartBoxs" style="height:2.5rem;margin-bottom: .5rem;">
                 <div class="chartBox" style="height:2.5rem;margin-left: -3rem !important;">
                     <div class="chartBox__chart" style="height:2.5rem">
                         <SixthChart />
@@ -89,13 +90,18 @@
             </div>
             <div class="content__word__leftAlign" style="margin-top:.4rem">
                 <p>《“十四五”健康老龄化规划》（下称《规划》）提出要完善安宁疗护服务模式，建立安宁疗护服务制度体系，提高老年人和疾病终末期患者</p>
-                <p>生命质量。<b>除了医院的安宁疗护外，社区安宁疗护、医养结合安宁疗护、居家安宁疗护、远程安宁疗护也是安宁疗护的重要类型。</b></p>
+                <p>生命质量。要建立安宁疗护服务制度体系，就要丰富安宁疗护服务的提供主体——<b>除了医院的安宁疗护外，社区安宁疗护、医养结合安宁疗护</b></p>
+                <p><b>、居家安宁疗护、远程安宁疗护也是安宁疗护的重要类型。</b></p>
+            </div>
+            <div class="content__word__special">
+                <span>社区安宁疗护</span>
             </div>
             <div class="content__word__leftAlign" style="margin-top:.4rem">
                 <p>每年十月的第二个星期六是世界安宁缓和医疗日，2022年10月8日是第十八个世界安宁缓和医疗日，<b>今年的主题为“疗愈与社区”</b>，可见社区</p>
                 <p>在安宁缓和医疗中的重要地位。在社区安宁疗护方面，上海市一直走在前列。2019年，上海成为全国唯一一个整体纳入国家第二批安宁疗护试</p>
                 <p>点的省市，全面推进安宁疗护服务体系建设，同年11月，“安宁疗护社区卫生服务基本项目”获国家卫生健康委“优质服务基层行”最佳案例</p>
-                <p>，2020年上海实现了安宁疗护服务覆盖全市所有社区卫生服务中心。</p>
+                <p>，2020年上海实现了安宁疗护服务覆盖全市所有社区卫生服务中心。《上海市安宁疗护服务规范》规定“社区卫生服务中心应开展安宁疗护服</p>
+                <p>务。<b>根据区域卫生规划，由各区卫生健康行政部门确定提供住院、门诊和居家安宁疗护服务的社区卫生服务中心”。</b></p>
             </div>
             <div class="chartBoxs" style="height:3.5rem;margin-bottom: .3rem;">
                 <div class="chartBox" style="height:3.5rem;width:6rem;margin-left: -3rem !important;">
@@ -103,6 +109,9 @@
                         <SeventhChart />
                     </div>
                 </div> 
+            </div>
+            <div class="content__word__special">
+                <span>居家安宁疗护</span>
             </div>
             <div class="content__word__leftAlign" style="margin-top:.4rem">
                 <p>胡予嘉是清华大学社会实践成都分队队员，2022年暑假在成都华西第四医院宁养院做安宁疗护走访义工。<b>胡予嘉觉得居家安宁疗护，相比于在</b></p>
@@ -119,8 +128,11 @@
             <div class="chartBoxs" style="height:3.5rem;margin-bottom: .3rem;">
                 <div class="chartBox" style="height:3.5rem;width:6rem;margin-left: -3rem !important;">
                     <img src="../../../public/static/images/contents/part2_element0.jpg" />
-                    <span>（居家安宁疗护服务就基本流程）</span>
+                    <span>（李嘉诚基金会「人间有情」全国宁养医疗服务计划 居家安宁疗护服务流程图）</span>
                 </div> 
+            </div>
+            <div class="content__word__special">
+                <span class="specialSpan">民办机构安宁疗护</span>
             </div>
             <div class="content__word__leftAlign" style="margin-top:.4rem">
                 <p>民办安宁疗护机构也是提供安宁疗护服务的主体之一，许多民办养老院在国家医养结合政策的支持下拓展了安宁疗护服务，安宁疗护企业数量</p>
@@ -140,7 +152,7 @@
                     </div>
                 </div> 
             </div>
-            <div class="content__word__leftAlign" style="margin-top:.4rem">
+            <div class="content__word__leftAlign" style="margin-top:1.2rem">
                 <p>世界安宁缓和医疗联盟在2017年发布了一项调查报告，该报告自2006年起监测国家层面的安宁缓和医疗发展情况，持续跟进十年。该报告把</p>
                 <p>各国安宁缓和医疗发展情况分为六个等级：<b>1级（没有安宁缓和医疗）、2级（有一定建设努力但尚未建立服务）、3A级（提供少量安宁疗护服</b></p>
                 <p><b>务）、3B级（提供一般性安宁疗护服务）、4A级（安宁疗护纳入主流医疗服务）、4B级（提供广泛全面安宁疗护服务）。</b></p>
@@ -191,18 +203,48 @@ export default {
         margin-left: -50%;
         &__special{
             width:100%;
-            margin-bottom: .6rem;
-            color:#333;
-            margin-top:.4rem;
+            color:#0F2650;
+            margin-top:.8rem;
+            position: relative;
+            margin-bottom: 1.3rem;
             span{
                 display: inline-block;
                 font-family: "STKaiti";
                 height:.4rem;
-                width: 100%;
+                width: 2rem;
                 line-height: .4rem;
                 text-align: center;
-                font-size: .15rem;
+                font-size: .16rem;
                 font-weight:bold;
+                position: absolute;
+                left:50%;
+                margin-left: -1rem;
+            }
+            span::before{
+                content:'';
+                display: block;
+                position: absolute;
+                width:.15rem;
+                height: .02rem;
+                left:.32rem;
+                top:.18rem;
+                background: #0F2650;
+            }
+            span::after{
+                content:'';
+                display: block;
+                position: absolute;
+                width:.15rem;
+                height: .02rem;
+                right:.32rem;
+                top:.18rem;
+                background: #0F2650;
+            }
+            .specialSpan::before{
+                left:.18rem;
+            }
+            .specialSpan::after{
+                right:.18rem;
             }
         }
         &__leftAlign{
@@ -218,11 +260,11 @@ export default {
                 line-height: .4rem;
             }
             .firstLine{
-                height:.8rem;
-                line-height: .8rem;
+                height:.5rem;
+                line-height: .5rem;
             }
             .firstLine::first-letter{
-                font-size: .5rem;
+                font-size: .35rem;
                 font-style: italic;
             }
         }
@@ -240,6 +282,39 @@ export default {
     width: 100%;
     height: 2.5rem;
     position: relative;
+}
+.chartTitle{
+    width:100%;
+    height:.5rem;
+    position: relative;
+    &__title{
+        position: absolute;
+        left:50%;
+        margin-left: -1.7rem;
+        top:0rem;
+        width:3.4rem;
+        height: .2rem;
+        text-align: center;
+        line-height: .2rem;
+        font-size: .16rem;
+        color:#333;
+        font-weight: bolder;
+    }
+    &__subTitle{
+        position: absolute;
+        left:50%;
+        margin-left: -2.5rem;
+        top:.2rem;
+        width:10rem;
+        height: .2rem;
+        text-align: center;
+        line-height: .2rem;
+        color:#999;
+        font-weight: bolder;
+        font-size: .18rem;
+        -webkit-transform-origin-x: 0;
+        transform: scale(0.50);
+    }
 }
 .chartBox{
     width: 5rem;
@@ -264,7 +339,7 @@ export default {
         height: 100%;
     }
     span{
-        margin-left:2rem;
+        margin-left:.8rem;
         color: #666;
     }
 }

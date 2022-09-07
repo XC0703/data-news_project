@@ -30,7 +30,7 @@
                         class="line"
                     ></div>
                 </div>
-                <div class="content" @click="handleFun($event)">
+                <div class="content" @click.stop="handleFun($event)">
                     <p>{{events[index+startIndex-1].title}}</p>
                     <ul>{{events[index+startIndex-1].event}}</ul>
                 </div>
@@ -236,7 +236,9 @@ export default {
         var eventBoxs = document.querySelectorAll("#eventBoxs .eventBox");  
         let i =0
         let fun = ()=>{
-            eventBoxs[i].classList.add('eventBoxActive');
+            if(eventBoxs[i]!=null){
+                eventBoxs[i].classList.add('eventBoxActive');
+            }
             i++;
             if(i>=this.listCount){
                 window.clearInterval(interval); 
@@ -246,6 +248,7 @@ export default {
         var interval;
         window.clearInterval(interval); 
         interval = window.setInterval(fun,1000)
+        return eventBoxs;
     },
     handleFun(event){
         var clickNode = event.currentTarget;

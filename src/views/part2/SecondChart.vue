@@ -1,5 +1,5 @@
 <template>
-    <div id="container9"></div>
+    <div id="part2_container1"></div>
 </template>
 
 <script>
@@ -32,14 +32,14 @@ export default {
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(scrollTop)
-        if(scrollTop<9950){
+        if(scrollTop<9380){
             this.isRender=false;
-        }else if(this.isPC==true&&scrollTop>9950&&scrollTop<=10560&&this.isRender==false){
+        }else if(this.isPC==true&&scrollTop>9380&&scrollTop<=10420&&this.isRender==false){
             this.$nextTick(()=>{
                 this.mapChart();
             })
             this.isRender=true;
-        }else if(scrollTop>10560){
+        }else if(scrollTop>10420){
             this.isRender=false;
         }
     },
@@ -55,7 +55,7 @@ export default {
             [1519,2175,2642,4685],
             [276,354,510,1027]
         ];
-        var chartDom = document.getElementById("container9");
+        var chartDom = document.getElementById("part2_container1");
         let myChart = echarts.getInstanceByDom(chartDom)
         if(myChart!=null){
             myChart.dispose();
@@ -76,7 +76,7 @@ export default {
                     },
                     top:-3,
                     left:'center',
-                    subtext:"数据来源：2018-2021卫生事业发展统计公报",
+                    subtext:"数据来源：国家卫生健康委员会2018-2021《卫生健康事业发展统计公报》",
                     subtextStyle: {
                         fontSize: 10
                     },
@@ -90,7 +90,7 @@ export default {
                     },
                     itemHeight: 8,//图例大小
                     top:'13%',
-                    right: '10%', // 距离右边10%
+                    right: '26%', // 距离右边10%
                     // data:[
                     //     {name:'设老年医学科的二级以上综合医院数量',textStyle:{color:' #0F2650'}},
                     //     {name:'设临终关怀科的医疗卫生机构数量',textStyle:{color:'#0E7CE2'}}
@@ -144,7 +144,7 @@ export default {
                 xAxis: [
                     {
                         type: 'category',
-                        boundaryGap: true,
+                        boundaryGap: false,
                         axisLabel: {
                             formatter: '{value}',
                             fontSize: 10,
@@ -272,7 +272,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container9 {
+#part2_container1 {
   width: 7rem;
   height: 4rem;
   margin: 0rem auto 0;

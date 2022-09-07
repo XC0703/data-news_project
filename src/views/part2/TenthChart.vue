@@ -1,5 +1,5 @@
 <template>
-    <div id="container17"></div>
+    <div id="part2_container9"></div>
 </template>
 
 <script>
@@ -22,7 +22,7 @@ export default {
    methods: {
     // 配置渲染map
     mapChart() {
-        let myChart = echarts.init(document.getElementById("container17"));
+        let myChart = echarts.init(document.getElementById("part2_container9"));
         window.addEventListener("resize", ()=>{
             myChart.resize();
         });
@@ -65,6 +65,7 @@ export default {
                     bottom: '150',
                     itemWidth: 15,
                     itemHeight: 10,
+                    selectedMode:false,
                     textStyle: {
                         color: '#333333',
                         fontSize: 10,
@@ -89,7 +90,7 @@ export default {
                         label: '没有安宁缓和医疗的国家（1级）',
                     }, ],
                     inRange: {
-                        color: ['#B2CAE0', '#D2EAFF', '#8AC6FD', '#45A5F8']
+                        color: ['rgb(115,192,222)', 'rgb(82,154,232)', 'rgb(111,147,207)', 'rgb(33,105,179)','rgb(55,87,132)','rgb(16,50,98)']
                     },
                     outOfRange: {
                         color: ['#999999']
@@ -106,6 +107,7 @@ export default {
                         },
                     },
                     itemStyle: {
+                        areaColor:'rgb(190,219,250)',
                         borderColor: 'rgba(0,63,140,0.2)',
                         shadowColor: 'rgba(0,63,140,0.2)',
                         shadowOffsetY: 20,
@@ -132,7 +134,7 @@ export default {
                         },
                     },
                     itemStyle: {
-                        areaColor: '#B2CAE0',
+                        areaColor:'rgb(190,219,250)',
                         borderColor: '#fff',
                         borderWidth: 1,
                     },
@@ -165,7 +167,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container17 {
+#part2_container9 {
   width: 10rem;
   height: 7rem;
   margin: 0rem auto 0;

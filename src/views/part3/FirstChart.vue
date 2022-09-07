@@ -1,5 +1,5 @@
 <template>
-    <div id="container18"></div>
+    <div id="part3_container0"></div>
 </template>
 
 <script>
@@ -32,14 +32,14 @@ export default {
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(scrollTop)
-        if(scrollTop<18180){
+        if(scrollTop<18048){
             this.isRender=false;
-        }else if(this.isPC==true&&scrollTop>18180&&scrollTop<=19220&&this.isRender==false){
+        }else if(this.isPC==true&&scrollTop>18180&&scrollTop<=19087&&this.isRender==false){
             this.$nextTick(()=>{
                 this.mapChart();
             })
             this.isRender=true;
-        }else if(scrollTop>19220){
+        }else if(scrollTop>19087){
             this.isRender=false;
         }
     },
@@ -53,7 +53,7 @@ export default {
     mapChart() {
         var getxb1 = 2000; //市场上泰康的安宁疗护病房收费标准为：2000元/天/间。
         var getxb2 = 156.06; //安宁患者人均住院费用仅156.06元.
-        var chartDom = document.getElementById("container18");
+        var chartDom = document.getElementById("part3_container0");
         let myChart = echarts.getInstanceByDom(chartDom)
         if(myChart!=null){
             myChart.dispose();
@@ -91,9 +91,9 @@ export default {
                     {
                         name: '医院安宁疗护病房平均价格及部分企业病房价格一览',
                         type: 'pie',
-                        radius: ['45%', '95%'],
+                        radius: ['45%', '110%'],
                         startAngle: 180,
-                        center: ['50%', '75%'],
+                        center: ['50%', '85%'],
                         roseType: 'radius',
                         label: {
                             show: true,
@@ -176,12 +176,12 @@ export default {
                     },
                     {
                         type: 'pie',
-                        radius: ['45%', '110%'],
+                        radius: ['45%', '125%'],
                         startAngle: 180,
                         emphasis:{
                             scale:false
                         },
-                        center: ['50%', '75%'],
+                        center: ['50%', '85%'],
                         roseType: 'radius',
                         data: [
                             {
@@ -271,9 +271,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container18 {
+#part3_container0 {
   width: 7rem;
-  height: 5rem;
+  height: 4rem;
   margin: 0rem auto 0;
 }
 </style>

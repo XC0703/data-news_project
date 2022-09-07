@@ -1,5 +1,5 @@
 <template>
-    <div id="container19">
+    <div id="part3_container1">
         <div class="boxs">
             <div class="box box1">
                 <div class="box__arrow1 iconfont">&#xe775;</div>
@@ -94,7 +94,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#container19 {
+#part3_container1 {
   width: 5rem;
   height: 5rem;
   margin: 0rem auto 0;
