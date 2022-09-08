@@ -1,24 +1,33 @@
 <template>
-    <div class="content">
-        <div class="content__word">
-            <div class="content__word__leftAlign" style="margin-top:1rem">
-                <p>马阿姨在接受安宁疗护的同时签署了生前预嘱，表示在自己病情恶化时不进ICU，不插管、不做过度抢救。马阿姨的家人都尊重她的意愿，</p>
-                <p>一家人如平常那般说说家长里短，谈谈当下时局，平淡、温馨。</p>
-            </div>
-            <div class="content__word__leftAlign">
-                <p>马阿姨平日就是一个生活精致美丽的女人，住院期间病房总是布置得温馨美好，床头桌上摆放着她爱看的小说和杂志，病房里总是轻轻飘荡</p>
-                <p>着她最爱听的音乐，枕下放着那条她最喜欢的丝巾。最后的日子里，无论是清醒还是昏迷，从没有听到过她诉苦、呻吟，她的脸上永远是</p>
-                <p>平静的、安详的，正如她所愿，她把最美丽的样子留给了最爱的人。</p>
-            </div>
-            <div class="content__word__leftAlign">
-                <p>在那个飘着雪花的冬日，马阿姨走了，没有经历太多痛苦，就在那种平静、安详中走向了另一个世界，就像季夏日暮时分的玫瑰，恣意怒放过</p>
-                <p>，然后坦然地与世界告别。</p>
-            </div>
-            <div class="content__word__leftAlign">
-                <p>期待在不久的将来，有更多的临终患者可以温和地走进良夜。</p>
+    <div class="part4_content">
+        <div class="content">
+            <div class="content__word">
+                <div class="content__word__leftAlign" style="margin-top:1rem">
+                    <p>马阿姨在接受安宁疗护的同时签署了生前预嘱，表示在自己病情恶化时不进ICU，不插管、不做过度抢救。马阿姨的家人都尊重她的意愿，一</p>
+                    <p>家人如平常那般说说家长里短，谈谈当下时局，平淡、温馨。</p>
+                </div>
+                <div class="content__word__leftAlign">
+                    <p>马阿姨平日就是一个生活精致美丽的女人，住院期间病房总是布置得温馨美好，床头桌上摆放着她爱看的小说和杂志，病房里总是轻轻飘荡着</p>
+                    <p>她最爱听的音乐，枕下放着那条她最喜欢的丝巾。最后的日子里，无论是清醒还是昏迷，从没有听到过她诉苦、呻吟，她的脸上永远是平静的</p>
+                    <p>、安详的，正如她所愿，她把最美丽的样子留给了最爱的人。</p>
+                </div>
+                <div class="content__word__leftAlign">
+                    <p>在那个飘着雪花的冬日，马阿姨走了，没有经历太多痛苦，就在那种平静、安详中走向了另一个世界，就像季夏日暮时分的玫瑰，恣意怒放过</p>
+                    <p>，然后坦然地与世界告别。</p>
+                </div>
+                <div class="content__word__leftAlign">
+                    <p>期待在不久的将来，有更多的临终患者可以温和地走进良夜。</p>
+                </div>
             </div>
         </div>
-        <div class="content__mask">
+        <div class="mask">
+                <div class="mask__word">
+                    <p>数据收集及整理：崔雨琦 彭思语 刘婧</p>
+                    <p>网页制作：徐聪</p>
+                    <p>美工：谷婷薇</p>
+                    <p>联系邮箱：488548816@qq.com</p>
+                    <p>2022 © 四川大学</p>
+                </div>
         </div>
     </div>
 </template>
@@ -30,18 +39,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.part4_content{
+    width:100%;
+    height:15rem;
+    text-align: center;
+    position: relative;
+}
 .content{
     background-repeat: no-repeat !important;
 	background-size: 100% 100% !important;
-    height: 15rem;
+    height: 9.2rem;
+    width:10.2rem;
     position: relative;
+    margin:0 auto;
+    z-index: 1;
     &__word{
         position: absolute;
         width:100%;
-        height: 8rem;
+        height: 9.2rem;
         left:50%;
         margin-left: -50%;
-        background-color: rgb(220, 220, 220);
+        background-color: rgba(220, 220, 220,0.8);
         &__special{
             width:100%;
             margin-bottom: .6rem;
@@ -88,17 +106,45 @@ export default {
             }
         }
     }
-    &__mask{
-        width: 100%;
-        height: 100vh;
-        @media
-        screen and (orientation:portrait) and (max-device-width:768px) and (max-device-height:1024px),
-        screen and (orientation:landscape) and (max-device-width:1024px) and (max-device-height:768px) {
-            height:7rem
-        }
-        position: absolute;
-        bottom: 0;
-		background: rgba(0, 0, 0, .1);
+}
+.content_bg{
+    width:100%;
+    height: 100vh;
+    @media
+    screen and (orientation:portrait) and (max-device-width:768px) and (max-device-height:1024px),
+    screen and (orientation:landscape) and (max-device-width:1024px) and (max-device-height:768px) {
+        height:7rem
+    }
+    position: absolute;
+    background-color: #fff;
+}
+.mask{
+    width: 100%;
+    height: 100vh;
+    @media
+    screen and (orientation:portrait) and (max-device-width:768px) and (max-device-height:1024px),
+    screen and (orientation:landscape) and (max-device-width:1024px) and (max-device-height:768px) {
+        height:7rem
+    }
+	background: rgba(0, 0, 0, .1);
+    &__word{
+            width: 5rem;
+            height: 2rem;
+            position: absolute;
+            left:50%;
+            margin-left:-2.5rem;
+            margin-top: 1rem;
+            p{
+                width: 100%;
+                height: .3rem;
+                font-size: .15rem;
+                line-height: .2rem;
+                text-align: center;
+                color:#fff
+            }
+            p:nth-child(4){
+                margin-top: 0.8rem;
+            }
     }
 }
 .chartBoxs{

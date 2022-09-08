@@ -204,10 +204,10 @@ export default {
                 cursor: pointer;
             }
             &__leftBtn{
-                left: 3rem;
+                left: 2rem;
             }
             &__rightBtn{
-                right: 3rem;
+                right: 2rem;
             }
         }
     }

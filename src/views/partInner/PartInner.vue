@@ -1,5 +1,8 @@
 <template>
     <div class="innerLayer">
+        <div class="innerLayer__content bgc" v-show="bgc===true">
+            <ContentView />
+        </div>
         <div class="innerLayer__content bg1" v-show="bg1===true">
             <div class="bg11"></div>
         </div>
@@ -20,12 +23,14 @@
 
 <script>
 import FooterView from './FooterView.vue'
+import ContentView from '../../components/ContentView.vue'
 export default {
     name:'PartInner',
-    components:{FooterView},
+    components:{FooterView,ContentView},
     data() {
         return {
-            bg1:true,
+            bgc:true,
+            bg1:false,
             bg2:false,
             bg3:false,
             bg4:false,
@@ -44,31 +49,71 @@ export default {
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(scrollTop);
-        if(scrollTop<=5000){
+        if(scrollTop<=3200){
+            this.bgc=true,
+            this.bg1=false;
+            this.bg2=false;
+            this.bg3=false;
+            this.bg4=false;
+            this.footer=false;
+        }else if(scrollTop<=4676){
+            this.bgc=false,
             this.bg1=true;
             this.bg2=false;
             this.bg3=false;
             this.bg4=false;
             this.footer=false;
-        }else if(scrollTop<=13000){
+        }else if(scrollTop<=7101){
+            this.bgc=true,
+            this.bg1=false;
+            this.bg2=false;
+            this.bg3=false;
+            this.bg4=false;
+            this.footer=false;
+        }else if(scrollTop<=8574){
+            this.bgc=false,
             this.bg1=false;
             this.bg2=true;
             this.bg3=false;
             this.bg4=false;
             this.footer=false;
-        }else if(scrollTop<=18000){
+        }else if(scrollTop<=15300){
+            this.bgc=true,
+            this.bg1=false;
+            this.bg2=false;
+            this.bg3=false;
+            this.bg4=false;
+            this.footer=false;
+        }else if(scrollTop<=16785){
+            this.bgc=false,
             this.bg1=false;
             this.bg2=false;
             this.bg3=true;
             this.bg4=false;
             this.footer=false;
-        }else if(scrollTop<=22340){
+        }else if(scrollTop<=20379){
+            this.bgc=true,
+            this.bg1=false;
+            this.bg2=false;
+            this.bg3=false;
+            this.bg4=false;
+            this.footer=false;
+        }else if(scrollTop<=21909){
+            this.bgc=false,
             this.bg1=false;
             this.bg2=false;
             this.bg3=false;
             this.bg4=true;
             this.footer=false;
+        }else if(scrollTop<=22602){
+            this.bgc=true,
+            this.bg1=false;
+            this.bg2=false;
+            this.bg3=false;
+            this.bg4=false;
+            this.footer=false;
         }else{
+            this.bgc=false,
             this.bg1=false;
             this.bg2=false;
             this.bg3=false;

@@ -1,12 +1,5 @@
 <template>
   <div id="page" style="width:100%; height: 100%;">
-    <div class="footer_word">
-      <p>数据收集及整理：崔雨琦 彭思语 刘婧</p>
-      <p>网页制作：徐聪</p>
-      <p>美工：谷婷薇</p>
-      <p>联系邮箱：488548816@qq.com</p>
-      <p>2022 © 四川大学</p>
-    </div>
     <canvas ref="myCanvas" style="width:100%; height: 100%;"></canvas>
   </div>
 </template>
@@ -107,7 +100,7 @@ export default {
     // 初始化页面参数
     initParams() {
       this.bgImg = new Image();
-      this.bgImg.src = require("../../../public/static/images/contents/part4_element0.jpg");
+      this.bgImg.src = require("../../../public/static/images/contents/part4_element0.png");
       // 绘制不同大小的星星
       for (let i = 0; i < this.starNum; i++) {
         this.stars[i] = new Star();
@@ -156,24 +149,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.footer_word{
-  width: 5rem;
-  height: 2rem;
-  position: absolute;
-  left:50%;
-  margin-left:-2.5rem;
-  margin-top: 1rem;
-  p{
-    width: 100%;
-    height: .3rem;
-    font-size: .15rem;
-    line-height: .2rem;
-    text-align: center;
-    color:#fff
-  }
-  p:nth-child(4){
-    margin-top: 0.8rem;
-  }
-}
 </style>
 
