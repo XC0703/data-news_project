@@ -1,297 +1,129 @@
 <template>
-    <!--时间线-->
-    <div class="timeLine" style="overflow: hidden;">
-        <div class="timeLine__contents">
-            <div class="timeLine__contents__content">
-                <p id="content1">{{timeLineList[0].year}}</p>
-                <p id="content2">{{timeLineList[0].info}}</p>
-            </div>
-        </div>
-        <div class="timeLine__line">
-            <div class="timeLine__line__btns">
-                <div class="timeLine__line__btns__leftBtn btn iconfont" @click="moveLeft">&#xe779;</div>
-                <div class="timeLine__line__btns__rightBtn btn iconfont" @click="moveRight">&#xe775;</div>
-            </div>
-            <div class="ul_box">
-                <ul class="my_timeline" ref="mytimeline">
-                    <li class="my_timeline_item" 
-                        v-for="(item,index) in timeLineList" 
-                        :class="{active: index == timeIndex}"
-                        :key="index"
-                    >
-                        <!--圈圈节点-->
-                        <div 
-                            class="my_timeline_node"
-                            @click="changeActive(index)"
-                        ></div>
-                        <!--线-->
-                        <div class="my_timeline_item_line" v-if="index!=7"></div>
-                        <!--标注-->
-                        <div class="my_timeline_item_content">
-                            {{item.timestamp}}
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+  <div id="part1_container0"></div>
 </template>
 
 <script>
-// import $ from "jquery";
+import $ from "jquery";
+let echarts = require("echarts/lib/echarts");
 
 export default {
-    name: 'FirstChart',
-    data() {
-        return {
-            timeIndex: 0,
-            timeLineList: [{
-                    timestamp: '1960年',
-                    year: '1960',
-                    info: '西塞莉·桑德斯首次系统总结出对临终患者提供全面医疗照护的方案'
-                }, {
-                    timestamp: '1967年',
-                    year: '1967',
-                    info: '西塞莉·桑德斯在英国伦敦创立了世界上第一所临终关怀医院'
-                }, {
-                    timestamp: '1971年',
-                    year: '1971',
-                    info: '第一家位于伦敦的缓和医疗机构在英国谢菲尔德建立'
-                }, {
-                    timestamp: '1976年',
-                    year: '1976',
-                    info: '蒙特医生在加章人蒙特利尔的皇家维多利亚医院建立了全世界第一个驻院缓和医疗'
-                }, {
-                    timestamp: '1980年',
-                    year: '1980',
-                    info: '约瑟芬娜.马尼奥发起创立了第一个世界缓和医疗组织—一国际临终关怀协会'
-                }, {
-                    timestamp: '1987年',
-                    year: '1987',
-                    info: '全世界第一份缓和医疗专业学术期刊《缓和医学在英国正式创刊》'
-                }, {
-                    timestamp: '1989年',
-                    year: '1989',
-                    info: '爱尔兰在都柏林设立了第一个缓和医疗专科医生岗位'
-                }, {
-                    timestamp: '21世纪以来',
-                    year: '21世纪以来',
-                    info: '在世界卫生组织等国际组织的推动下稳步发展，成为全球医疗照顾的基本要素和衡量国家文明程度的窗口'
-            }]
+name: "ThirdChart",
+data() {
+  return {
+      isPC:true,
+      isRender:false,
+  };
+},
+
+mounted() {
+  // 初始化加载
+  this.createListener();
+},
+
+ methods: {
+  //监听窗口滚动
+  windowScrollListener() {
+      // 判断屏幕类型
+      if(window.screen.width>window.screen.height){
+          this.isPC = true;
+      }else{
+          this.isPC = false;
+      }
+      //获取操作元素最顶端到页面顶端的垂直距离
+      var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+      // console.log(scrollTop)
+      if(scrollTop<1600){
+          this.isRender=false;
+      }else if(this.isPC==true&&scrollTop>1600&&scrollTop<=2680&&this.isRender==false){
+          this.$nextTick(()=>{
+              this.mapChart();
+          })
+          this.isRender=true;
+      }else if(scrollTop>2680){
+          this.isRender=false;
+      }
+  },
+  createListener() {
+      this.mapChart();
+      //添加滚动监听事件
+      //在窗口滚动时调用监听窗口滚动方法
+      window.addEventListener('scroll', this.windowScrollListener);
+  },
+  // 配置渲染map
+  mapChart() {
+      var chartDom = document.getElementById("part1_container0");
+      let myChart = echarts.getInstanceByDom(chartDom)
+      if(myChart!=null){
+          myChart.dispose();
+          myChart = echarts.init(chartDom);
+          window.addEventListener("resize", ()=>{
+              myChart.resize();
+          });
+      }else{
+          myChart = echarts.init(chartDom);
+      }
+      function initEcharts(mapData){
+          let option = {
+              series: [
+                {
+                  type: 'tree',
+                  data: [mapData],
+                  top: '1%',
+                  left: '11%',
+                  bottom: '1%',
+                  right: '15%',
+                  symbolSize: 7,
+                  initialTreeDepth:2,
+                  label: {
+                    position: 'left',
+                    verticalAlign: 'middle',
+                    align: 'right',
+                    fontSize: 9,
+                    color:'#333'
+                  },
+                  leaves: {
+                    label: {
+                      position: 'right',
+                      verticalAlign: 'middle',
+                      align: 'left'
+                    },
+                    itemStyle:{
+                      color:'#0F2650'
+                    },
+                  },
+                  itemStyle:{
+                    color:'#0F2650',
+                  },
+                  emphasis: {
+                    focus: 'descendant'
+                  },
+                  expandAndCollapse: true,
+                  animationDuration: 550,
+                  animationDurationUpdate: 750
+                }
+              ]
+          }
+          myChart.setOption(option);
+      }
+      // 展示
+      function showMap() {
+            // myChart.clear();
+            $.getJSON(`/static/data/treeData.json`, data=>{
+              myChart.hideLoading();
+              initEcharts(data)
+            })
         }
-    },
-    methods: {
-        getContent(){
-            var contents = document.querySelectorAll('.timeLine .timeLine__contents .timeLine__contents__content p')
-            return contents;
-        },
-        changeActive(index) {
-            this.getContent()[0].style.opacity = 0;
-            this.getContent()[1].style.opacity = 0;
-            this.timeIndex = index;
-            var that = this;
-            setTimeout(function(){
-            that.getContent()[0].innerHTML=that.timeLineList[that.timeIndex].year
-            that.getContent()[1].innerHTML=that.timeLineList[that.timeIndex].info
-            that.getContent()[0].style.opacity = 1;
-            that.getContent()[1].style.opacity = 1;
-            },500);
-        },
-        moveLeft()  {
-            this.getContent()[0].style.opacity = 0;
-            this.getContent()[1].style.opacity = 0;
-            if(this.timeIndex!=0){
-                this.timeIndex--;
-            }
-            var that = this;
-            setTimeout(function(){
-            that.getContent()[0].innerHTML=that.timeLineList[that.timeIndex].year
-            that.getContent()[1].innerHTML=that.timeLineList[that.timeIndex].info
-            that.getContent()[0].style.opacity = 1;
-            that.getContent()[1].style.opacity = 1;
-            },500);
-        },
-        moveRight() {
-            this.getContent()[0].style.opacity = 0;
-            this.getContent()[1].style.opacity = 0;
-            if(this.timeIndex!=7){
-                this.timeIndex++;
-            }
-            var that = this;
-            setTimeout(function(){
-            that.getContent()[0].innerHTML=that.timeLineList[that.timeIndex].year
-            that.getContent()[1].innerHTML=that.timeLineList[that.timeIndex].info
-            that.getContent()[0].style.opacity = 1;
-            that.getContent()[1].style.opacity = 1;
-            },300);
-        },
-    }
-}
+        this.showMap=showMap;
+        showMap()
+  }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-.timeLine{
-    width: 100%;
-    height: 4rem;
-    position: relative;
-    &__contents{
-        width: 100%;
-        height: 2rem;
-        position: relative;
-        margin-bottom: .5rem;
-        &__content{
-        width: 4rem;
-        height: 2.2rem;
-        position: absolute;
-        left: 50%;
-        margin-left: -2rem;
-        background-color: #fff;
-        box-shadow: 0 .04rem .08rem 0 rgba(0,0,0,0.20);
-        p:nth-child(1){
-            font-size: .4rem;
-            word-wrap:break-word;
-            width: 3rem;
-            height: .4rem;
-            margin-top: .4rem;
-            position: absolute;
-            left:50%;
-            margin-left: -1.5rem;
-            text-align: center;
-            line-height: .4rem;
-            color:#F0CC79;
-            transition: all 0.5s ease;
-        }
-        p:nth-child(2){
-            width: 100%;
-            height: 1.4rem;
-            padding:.1rem;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            text-align: center;
-            font-size: .18rem;
-            color:#666;
-            animation: showIn 1s ease;
-            transition: all 0.2s ease;
-        }
-        }
-        &__content:hover{
-            box-shadow: 0 .08rem .16rem 0 rgba(0,0,0,0.20);
-        }
-    }
-    &__line{
-        width: 100%;
-        height: 1rem;
-        padding:0 .2rem 0 .2rem;
-        position: relative;
-        &__btns{
-            .btn{
-                width: .4rem;
-                height: .4rem;
-                font-size: .4rem;
-                border: .02rem solid #F0CC79;
-                color:#F0CC79;
-                border-radius: 50%;
-                text-align: center;
-                line-height: .4rem;
-                position: absolute;
-                // top:50%;
-                margin-top:-1.6rem;
-                z-index: 99999;
-            }
-            .btn:hover{
-                background-color: #F0CC79;
-                cursor: pointer;
-            }
-            &__leftBtn{
-                left: 2rem;
-            }
-            &__rightBtn{
-                right: 2rem;
-            }
-        }
-    }
-}
-.ul_box {
-    width: 11rem;
-    height: 1rem;
-    overflow: hidden;
-    position: absolute;
-    left:50%;
-    top:50%;
-    margin-top: -.5rem;
-    margin-left: -5.5rem;
-    .my_timeline{
-        display: flex;
-        margin:0.35rem 0 0 .8rem;
-        padding:0 .1rem 0 .1rem
-    }
-}
-.my_timeline_item {
-    width: 2.5rem;
-    flex: left;
-    position: relative;
-}
-.my_timeline_node {
-    box-sizing: border-box;
-    border-radius: 50%;
-    background-color:#0F2650,;
-    width: .28rem; 
-    height: .28rem;
-    cursor: pointer;
-    transition:all .5s ease;
-}
-.my_timeline_item_line {
-    width: 100%;
-    height: .1rem;
-    margin: -.14rem 0 0 .28rem;
-    border-top: .02rem solid #0F2650;
-    border-left: none;
-}
-.my_timeline_item_content {
-    margin: .1rem 0 0 -.1rem;
-    color: #999;
-    font-size:.18rem;
-}
-.my_timeline_item:nth-child(8){
-    .my_timeline_item_content{
-    position: absolute;
-    top:.24rem;
-    left:-.2rem;
-    }
-}
-.my_timeline_item.active{
-    .my_timeline_node{
-        background-color: #fff !important;
-        border: .06rem solid #F0CC79;
-        width: .38rem; 
-        height: .38rem;
-        position: absolute;
-        top:-.04rem
-    }
-    .my_timeline_item_line{
-        margin: .14rem 0 0 .28rem;
-    }
-    .my_timeline_item_content{
-        position: absolute;
-        top:-.4rem;
-        left:0rem;
-    }
-}
-.my_timeline_item:nth-child(8).active{
-    .my_timeline_item_content{
-    left:-.2rem;
-    }
-}
-@keyframes showIn{
-    0%{
-        opacity: 0;
-    }
-    20%{
-        opacity: 0;
-    }
-    100%{
-    opacity: 1;
-    }
+#part1_container0 {
+width: 8rem;
+height: 5rem;
+margin: 0rem auto 0;
 }
 </style>

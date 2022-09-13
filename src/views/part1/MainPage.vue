@@ -5,20 +5,46 @@
         </div> -->
         <div class="content">
             <div class="content__word">
-                <div class="content__word__leftAlign" style="margin-top:.5rem">
-                    <p class="firstLine">“安宁疗护”一词由“Hospice Care”翻译而来，并不意味着放弃治疗，
-                        也不是安乐死。在我国，<b>安宁疗护是“临终关怀”、“缓和医</b></p>
-                    <p><b>疗”、“姑息治疗”等概念的统称</b>，是指为疾病终末期或老年患者在临终前提供身体、
-                        心理、精神等方面的照料和人文关怀等服务，控制痛苦</p>
-                    <p>和不适症状，提高生命质量，帮助患者舒适、安详、有尊严地离世。而安宁疗护在世界范围内的起源，最早可以追溯到1960年。</p>
+                <div class="content__word__special" style="margin-top:0.5rem;margin-bottom:0.8rem;">
+                    <span>定义</span>
                 </div>
-                <div class="chartBoxs" style="height: 4rem;margin-top: .8rem;">
+                <div class="content__word__leftAlign" style="margin-top:.5rem">
+                    <p class="firstLine">H<b>ospice Care </b>最初引入我国时被译为 “临终关怀”，在中国台湾、中国香港等地区也被学者称为“安宁疗护”、“缓和医疗”等。 </p>
+                </div>
+                <div class="content__word__leftAlign" style="margin-top:.5rem">
+                    <p>2017年，国家卫计委印发了《安宁疗护实践指南》《安宁疗护中心基本标准和管理规范》，明确了<b>“安宁疗护”</b>这个名称。自此，我国在政策</p>
+                    <p>层面上将“临终关怀”、“缓和医疗”等概念统称为“安宁疗护”，<b>既包含“缓和医疗”中减轻患者痛苦的医学治疗，也包含了“临终关怀”</b></p>
+                    <p><b>对患者在心理、生理、社会和灵性上的照护和关切，</b>强调医学学科视角下的医疗照护服务体系。</p>
+                </div>
+                <div class="content__word__leftAlign" style="margin-top:.5rem">
+                    <p>具体而言，安宁疗护的主要内容包括<b>疼痛及其他症状控制</b>（如呼吸困难、咳嗽咳痰、咯血等），<b>舒适照护，心理、精神及社会支持等。</b>安宁疗</p>
+                    <p>护为疾病终末期或老年患者在临终前提供身体、心理、精神等方面的照料和人文关怀等服务，控制痛苦和不适症状，提高生命质量，帮助患者</p>
+                    <p>舒适、安详、有尊严地离世。</p>
+                </div>
+                <div class="chartBoxs" style="height: 5rem;margin-top: -0.5rem;">
+                    <div class="chartBox" style="height: 5rem;width: 100%;margin-left: -50% !important;">
+                        <div class="chartBox__chart" style="height:5rem;">
+                            <FirstChart />
+                        </div>
+                        <div class="chartBox__chartTips iconfont" style="left:0.2rem;top:.4rem;">&#xe601;点击某一节点可进行子节点的展开与收起</div>
+                    </div> 
+                </div>
+                <div class="content__word__special" style="margin-top:0.5rem;margin-bottom:0.8rem;">
+                    <span class="specialSpan">国际渊源</span>
+                </div>
+                <div class="content__word__leftAlign" style="margin-top:.5rem">
+                    <p>安宁疗护在世界范围内的起源，最早可以追溯到1960年。</p>
+                </div>
+                <div class="chartBoxs" style="height: 4rem;margin-top: .3rem;">
                     <div class="chartBox" style="height: 4rem;width: 100%;margin-left: -50% !important;">
                         <div class="chartBox__chart" style="height:4rem;">
-                            <FirstChart />
+                            <SecondChart />
                         </div>
                         <div class="chartBox__chartTips iconfont" style="left:0.6rem;bottom:.2rem;">&#xe601;点击两侧圆环及中间实心圆按钮可进行事件切换显示</div>
                     </div> 
+                </div>
+                <div class="content__word__special" style="margin-top:0.5rem;margin-bottom:0.8rem;">
+                    <span class="specialSpan">国内渊源</span>
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:.5rem">
                     <p>而谈及安宁疗护的国内发展，1987年，北京松堂关怀医院的成立拉开了我国安宁疗护发展的序幕。
@@ -26,7 +52,7 @@
                     <p>探索（1987-1994）、进入政策视野（1994-2016）、全国安宁疗护试点持续发展（2017-今）三个阶段。</p>
                 </div>
                 <div class="chartBoxs" style="height: 8.4rem;width:100%;position: relative;margin-top:.3rem">
-                    <SecondChart />
+                    <ThirdChart />
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:.5rem">
                     <p>我国安宁疗护事业历经了数十年的艰难发展，取得了进步。中国死亡质量指数排名由2015年的71名
@@ -39,12 +65,12 @@
                     </div>
                     <div class="chartBox" style="height: 9rem;width: 4.5rem;margin-left: -5rem !important;">
                         <div class="chartBox__chart" style="height:9rem">
-                            <ThirdChart />
+                            <FourthChart />
                         </div>
                     </div> 
                     <div class="chartBox" style="height: 9rem;width: 4.5rem;margin-right: 0.6rem !important;">
                         <div class="chartBox__chart" style="height:9rem">
-                            <FourthChart />
+                            <FifthChart />
                         </div>
                     </div> 
                 </div>
@@ -61,17 +87,18 @@ import FirstChart from './FirstChart.vue';
 import SecondChart from './SecondChart.vue';
 import ThirdChart from './ThirdChart';
 import FourthChart from './FourthChart';
+import FifthChart from './FifthChart';
 import ContentView from '../../components/ContentView.vue'
 export default {
     name:'MainPage',
-    components:{FirstChart,SecondChart,ThirdChart,FourthChart,ContentView},
+    components:{FirstChart,SecondChart,ThirdChart,FourthChart,FifthChart,ContentView},
 }
 </script>
 
 <style lang="scss" scoped>
 .part1_content{
     width:100%;
-    height:30rem;
+    height:39rem;
     text-align: center;
     position: relative;
 }
@@ -92,18 +119,48 @@ export default {
         margin-left: -50%;
         &__special{
             width:100%;
-            margin-bottom: .6rem;
-            color:#333;
-            margin-top:.4rem;
+            color:#0F2650;
+            margin-top:.8rem;
+            position: relative;
+            margin-bottom: 1.3rem;
             span{
                 display: inline-block;
                 font-family: "STKaiti";
                 height:.4rem;
-                width: 100%;
+                width: 2rem;
                 line-height: .4rem;
                 text-align: center;
-                font-size: .15rem;
+                font-size: .16rem;
                 font-weight:bold;
+                position: absolute;
+                left:50%;
+                margin-left: -1rem;
+            }
+            span::before{
+                content:'';
+                display: block;
+                position: absolute;
+                width:.15rem;
+                height: .02rem;
+                left:.65rem;
+                top:.18rem;
+                background: #0F2650;
+            }
+            span::after{
+                content:'';
+                display: block;
+                position: absolute;
+                width:.15rem;
+                height: .02rem;
+                right:.65rem;
+                top:.18rem;
+                background: #0F2650;
+            }
+            .specialSpan::before{
+                left:.48rem;
+            }
+            .specialSpan::after{
+                right:.48rem;
             }
         }
         &__leftAlign{

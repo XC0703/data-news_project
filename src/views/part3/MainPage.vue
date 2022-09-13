@@ -10,27 +10,77 @@
                     </div>
                 </div>
                 <div class="content__word__special">
-                    <span>入不敷出</span>
+                    <span>大多数医院的安宁疗护处于亏损状态，资金压力大</span>
                 </div>
-                <div class="content__word__leftAlign" style="margin-top:1rem;">
-                    <p class="firstLine">据医学界报道，2021年11月30日，开设了1391天后，某中部省会城市的第一家安宁疗护中心悄然谢幕，一同“歇业”的，还有J主任和他</p>
-                    <p>的10名医护团队。10月初，几经内部协商，医院最终把关停安宁疗护中心的消息告知了J主任。对此，他表示理解，认为<b>“关停也是无奈之</b></p>
-                    <p><b>举”。</b></p>
+                <div class="content__word__leftAlign" style="margin-top:0rem;">
+                    <p>据报道，2021年11月30日，某中部省会城市第一家安宁疗护中心在开设了1391天后悄然谢幕，一同“歇业”的，还有J主任和他的10名医护</p>
+                    <p>团队。10月初，医院几经协商，最终把关停安宁疗护中心的消息告知了J主任。对此，他表示理解，认为<b>“关停也是无奈之举”。</b></p>
                 </div>
-                <div class="content__word__leftAlign" style="margin-top:.3rem;">
+                <div class="content__word__leftAlign" style="margin-top:0rem;">
                     <p>在发展安宁疗护政策已经陆续出台情况下，J主任却没能获得“安宁”。“我们之前做过一些转型尝试，比如提出了‘整合安宁疗护模式’，将</p>
                     <p>养老服务和安宁疗护、缓和医疗和普通医疗、医疗服务和殡葬服务相结合，通过对患者和家属的整体照顾，来践行安宁疗护的理念，让这一行</p>
-                    <p>业能够可持续性发展，也基本达到了收支平衡，但现实情况是，<b>医院不可能不考虑经济效益等现实问题。”</b></p>
+                    <p>业能够可持续性发展，但现实情况是，<b>医院不可能不考虑经济效益等现实问题。”</b></p>
                 </div>
-                <div class="content__word__leftAlign" style="margin-top:.3rem;">
-                    <p>入不敷出——具体而言：<b>首先是临床日常的大量工作尚无收费标准</b>。与常规安宁疗护项目相比，患者及其家属对心理关怀、哀伤辅导等精神照</p>
-                    <p>护服务项目同样有较大需求，但因为我国现行医疗机构主要通过具体的治疗措施和用药设置收费标准，上述人工成本很难通过收费得到弥补。</p>
+                <div class="content__word__leftAlign" style="margin-top:0rem;">
+                    <p>目前，<b>开展安宁疗护不赚钱反而亏本在业界并不鲜见。</b>海淀医院院长张福春在接受媒体采访时表示，海淀医院确实是赔钱在做安宁疗护，原因</p>
+                    <p>有两方面：一是床位数的减少，安宁疗护病房由原来收治10～12位患者的肿瘤病房，变成只有6张病床的安宁疗护病房，受到了空间限制；二</p>
+                    <p>是医护人员的劳务成本。计算下来，海淀医院的安宁疗护病房每年亏损300多万元。</p>
                 </div>
-                <div class="content__word__leftAlign" style="margin-top:.3rem;">
-                    <p>其次，医保报销核定标准不足。即使部分试点城市已率先将安宁疗护纳入医保支付范围内，但结算安宁疗护费用往往采用医院预付，再由医保</p>
-                    <p>统筹基金拨付的结算方式。因此，医院服务主体开展相关服务的运营成本仍然较大。现今，各大安宁疗护相关试点城市虽已制定了安宁疗护</p>
-                    <p>费用结算办法，部分城市也将安宁疗护纳入医保范畴，但<b>各地标准并不统一，呈现碎片化发展</b>，部分运营的医疗机构也依旧处于艰难发展状</p>
-                    <p>态。</p>
+                <div class="content__word__leftAlign" style="margin-top:0rem;">
+                    <p>成立于2014年8月的浙江余姚市人民医院舒缓病房一直亏损，医院方曾做过测算，舒缓病房平均每床每天需要的医疗成本为585元，而病人支</p>
+                    <p>付治疗费用以后，医院要亏损100多元。</p>
+                </div>
+                <div class="content__word__leftAlign" style="margin-top:0rem;">
+                    <p>开设在浙江温州马站中心卫生院的安宁疗护病房也在亏损。以肺癌中晚期伴并发症患者为例，其住院费为7000元，经过医保实报实销后只需</p>
+                    <p>自付1000多元。随后，医保会按病种分组（DRGs）付费，给卫生院拨付医保基金3000元到4000元。因此每收治一位患者，卫生院就会“亏</p>
+                    <p>本”1000元到2000元。</p>
+                </div>
+                <div class="content__word__leftAlign" style="margin-top:0rem;">
+                    <p>总体而言，医院安宁疗护的亏损主要是由收费与报销标准尚未确定导致的。<b>首先是收费标准没有全面核定。</b>目前主要通过对具体的治疗措施和</p>
+                    <p>用药设置常规安宁疗护项目的收费标准，但安宁疗护服务提供的<b>大量人工成本尚未、也无法纳入收费范畴。</b>患者可能瘫痪、大便不通、咳痰喘</p>
+                    <p>憋、水肿、腹胀、咯血、便血、呕血、精神焦虑、失眠……处理这些症状需要耗费工作人员大量的护理精力，但超出常规医疗服务项目外的服</p>
+                    <p>务都无法收取费用。尽管安宁疗护是需要爱心和耐心的职业，但如果长期亏损，医院也难以为继。</p>
+                </div>
+                <div class="content__word__leftAlign" style="margin-top:0rem;">
+                    <p><b>其次，医保报销核定标准不足。</b>部分试点城市已率先将安宁疗护纳入医保支付范围内，但结算费用时往往采用由医院预付，再由医保机构按照</p>
+                    <p>DGRs进行拨付基金的方式，拨付标准不一的同时，医院的运营主体也常常处于不同程度的亏损状态中。</p>
+                </div>
+                <div class="content__word__special">
+                    <span>安宁疗护专业医护人员不足，服务开展艰</span>
+                </div>
+                <div class="content__word__leftAlign" style="margin-top:0rem;">
+                    <p>2021年11月30日上午约九点半，那家即将关停的医院安宁疗护中心迎来接“病人转院”的家属，这是位重度脑中风患者，衣食起居无法自理</p>
+                    <p>，在中心住了近3年。老人用模糊的声音传递着——“我不走，我不走。”家属说：收到转院的消息后心里也很不是滋味，“老人在这里住了</p>
+                    <p>这么长时间，<b>后面只能转去养老院，但那里没有专业的医疗人员，只能在生活上管一下他，医疗方面还得再想办法。”</b></p>
+                </div>
+                <div class="content__word__leftAlign" style="margin-top:0rem;">
+                    <p>谈及专业人才稀缺的原因，复旦大学附属肿瘤医院综合治疗科主任，国内从事安宁疗护的先行者之一的成文武主任对此无奈地说：<b>“技术要求</b></p>
+                    <p><b>高、归感低、收入少、压力大是这一行的通病，但我还在坚持，直到退休。”</b></p>
+                </div>
+                <div class="content__word__leftAlign" style="margin-top:0rem;">
+                    <p>据计算，截至2021年底，我国每10万人口拥有的安宁疗护床位为19.96张；每1万常住人口拥有的安宁执业医师仅0.18人，安宁护士仅0.17人</p>
+                    <p>，并且，中国大部分安宁疗护从业人员未曾接受过专业培训。在兼职人文关怀服务时，其<b>缺乏必备的伦理、心理、社会等方面专业知识，</b>导致</p>
+                    <p>服务开展困难。</p>
+                </div>
+                <div class="content__word__leftAlign" style="margin-top:0rem;">
+                    <p><b>从业归属感低，</b>在全国首家临终关怀医院——北京松堂关怀医院中体现得尤为明显。在成立的30多年间，其被迫迁了7次院。院长李伟曾回忆</p>
+                    <p>搬迁到某社区时遭到大多居民阻拦的经历，还有小伙子激昂地说：“这是家死人医院，要搬进我们社区里头，天天死人，我们这辈子也发不了</p>
+                    <p>财了，多晦气啊！”</p>
+                </div>
+                <div class="content__word__leftAlign" style="margin-top:0rem;">
+                    <p>另外，安宁疗护在很多地方还不是一个临床专业，因此医护人员工资待遇低，且专业建设和晋升都受到了制约。面临着<b>巨大的工作压力，愿意</b></p>
+                    <p><b>从事安宁疗护的人员也较少。</b>根据学者Lin Chen等对广西省二、三级公立医院的1833名护士展开的调查，只有505名（占比27.56%）参与护</p>
+                    <p>士表示愿意从事安宁疗护，268名(占比14.6%)护士表示不愿意从事临终关怀服务，1061名(占比57.9%)则表示不确定。而根据学者孟玲等对贵</p>
+                    <p>州省1306名安宁疗护从业人员的调研，有78.3%的人认为临终关怀不仅会使他们身心俱疲，还会产生强烈的失落感和焦虑感，从而不愿参与临</p>
+                    <p>终关怀。</p>
+                </div>
+                <div class="content__word__special">
+                    <span>安宁疗护呈现碎片化样态，可持续发展难</span>
+                </div>
+                <div class="content__word__leftAlign" style="margin-top:0rem;">
+                    <p>现今，各大安宁疗护相关试点城市虽已制定了安宁疗护费用结算办法，但各地标准并不统一，呈现<b>碎片化发展。</b>另外，民办安宁疗护机构和公</p>
+                    <p>办的安宁疗护机构的费用之间也有较大差距。在此背景下，如果国家继续加大安宁疗护扶持力度、过度扩大疗护试点，会导致各试点市(区)的</p>
+                    <p>工作难以协调，为国家统一标准的制定带来困难，影响其后续发展。</p>
                 </div>
                 <div class="part3_element1">
                     <div class="part3_element1__title">
@@ -50,19 +100,6 @@
                         </div>
                     </div> 
                 </div>
-                <div class="content__word__special">
-                    <span>安宁难寻</span>
-                </div>
-                <div class="content__word__leftAlign" style="margin-top:1.3rem;">
-                    <p>2021年11月30日上午约九点半，一家即将关停医院安宁疗护中心迎来当天前来接“病人转院”的家属，这是位重度脑中风患者，衣食起居无</p>
-                    <p>法自理，在中心住了近3年。老人用模糊的声音传递着这一消息，“我不走，我不走。”家属说：“收到转院的消息后心里也很不是滋味老人</p>
-                    <p>在这里住了这么长时间，<b>后面只能转去养老院，但那里没有专业的医疗人员，只能在生活上管一下他，医疗方面还得再想办法。</b>”</p>
-                </div>
-                <div class="content__word__leftAlign" style="margin-top:.3rem;">
-                    <p>据计算，截至2021年底，我国每10万人口拥有的安宁疗护床位为19.96张；每1万常住人口拥有的安宁执业医师仅0.18人，安宁护士仅0.17人</p>
-                    <p>，对比世界卫生组织（WHO）标准还有倍数级的差距。并且，中国大部分安宁疗护从业人员未曾接受过专业培训。在兼职人文关怀服务时，</p>
-                    <p>其缺乏必备的伦理、心理、社会等方面专业知识，导致服务开展困难。</p>
-                </div>
                 <div class="chartBoxs" style="height:5.5rem;margin-top:.3rem">
                     <div class="chartBox" style="height:5.5rem;width:5rem;margin-left: -2.5rem !important;">
                         <div class="chartBox__chartTitle">我国安宁疗护基本医疗机械数</div>
@@ -71,27 +108,6 @@
                             <SecondChart />
                         </div>
                     </div> 
-                </div>
-                <div class="content__word__leftAlign" style="margin-top:.3rem;">
-                    <p>对于有安宁疗护需求的病人来说，<b>各地对患者收治的标准不同也极大阻碍了安宁疗护的开展</b>。如安徽省蚌埠市根据 《蚌埠市安宁疗护病人病</p>
-                    <p>情(生存期)评估单》及 《Karnofsky功能状态评分标准》对患者进行评估，上海市采用卡氏功能评分量表(KPS)和姑息功能量表 (PPs)对患者进</p>
-                    <p>行评估。同样条件的患者，在一些城市可进入安宁疗护服务，在另外一些城市却<b>因收治标准不一，无法接受服务，造成了收治差异化。</b></p>
-                </div>
-                <div class="content__word__special">
-                    <span class="specialSpan">无奈与坚持</span>
-                </div>
-                <div class="content__word__leftAlign" style="margin-top:1.3rem;">
-                    <p>复旦大学附属肿瘤医院综合治疗科主任成文武主任，是国内从事安宁疗护的先行者之一。他对此无奈地说：“收入少、压力大、技术要求高、</p>
-                    <p>归感低是这一行的通病，<b>但我还在坚持，直到退休。</b>”</p>
-                </div>
-                <div class="content__word__leftAlign" style="margin-top:.3rem;">
-                    <p>由于安宁疗护的收入低，工作不被人们所理解，加上在很多地方还不是一个临床专业，医护人员的专业建设和晋升都受到了制约。因此，若医</p>
-                    <p>护人员的心理状况不能得到积极的调节，无疑会对安宁疗护的工作造成影响。</p>
-                </div>
-                <div class="content__word__leftAlign" style="margin-top:.3rem;">
-                    <p>在《贵州省临终关怀现状调查与研究》中，孟玲等人发现，在1306名医护人员中，<b>78.3%</b>的人认为临终关怀不仅会使他们身心俱疲，还会产生</p>
-                    <p><b>强烈的失落感和焦虑感</b>，从而不愿参与临终关怀。</p>
-                    <p></p>
                 </div>
             </div>
         </div>
@@ -114,7 +130,7 @@ export default {
 <style lang="scss" scoped>
 .part3_content{
     width:100%;
-    height:42rem;
+    height:46rem;
     text-align: center;
     position: relative;
 }
@@ -142,40 +158,11 @@ export default {
                 display: inline-block;
                 font-family: "STKaiti";
                 height:.4rem;
-                width: 2rem;
+                width: 10rem;
                 line-height: .4rem;
-                text-align: center;
+                text-align: left;
                 font-size: .16rem;
                 font-weight:bold;
-                position: absolute;
-                left:50%;
-                margin-left: -1rem;
-            }
-            span::before{
-                content:'';
-                display: block;
-                position: absolute;
-                width:.15rem;
-                height: .02rem;
-                left:.5rem;
-                top:.18rem;
-                background: #0F2650;
-            }
-            span::after{
-                content:'';
-                display: block;
-                position: absolute;
-                width:.15rem;
-                height: .02rem;
-                right:.5rem;
-                top:.18rem;
-                background: #0F2650;
-            }
-            .specialSpan::before{
-                left:.4rem;
-            }
-            .specialSpan::after{
-                right:.4rem;
             }
         }
         &__leftAlign{

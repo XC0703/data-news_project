@@ -366,7 +366,7 @@ export default {
         height: 100%;
     }
     span{
-        margin-left:.8rem;
+        margin-left:.1rem;
         color: #666;
     }
 }

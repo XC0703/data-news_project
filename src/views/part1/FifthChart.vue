@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div id="part1_container1"></div>
+        <div id="part1_container2"></div>
     </div>
 </template>
 
@@ -9,7 +9,7 @@ import $ from "jquery";
 let echarts = require("echarts/lib/echarts");
 
 export default {
-    name: "FourthChart",
+    name: "FifthChart",
     data() {
         return {
             flag:false,
@@ -53,7 +53,7 @@ export default {
     },
     // 配置渲染map
     mapChart() {
-        var chartDom = document.getElementById("part1_container1");
+        var chartDom = document.getElementById("part1_container2");
         let myChart = echarts.getInstanceByDom(chartDom)
         if(myChart!=null){
             myChart.dispose();
@@ -68,10 +68,10 @@ export default {
             myChart.resize();
         });
         function initEcharts(newArr){
-            var startIndex = 0;
+            var startIndex = 1;
             var score = [];
             for(let index = 0;index<newArr[startIndex].score.length;index++){
-                if(index!=70){
+                if(index!=52){
                 score.push(newArr[startIndex].score[index])
                 }else{
                     score[index] = {
@@ -84,7 +84,7 @@ export default {
             }
             var option = {
                 title:{
-                    text:'2015年',
+                    text:'2021年',
                     left:"center",
                     textStyle:{
                         fontSize:20,
@@ -219,7 +219,7 @@ export default {
     height: 9rem;
     margin: 0rem auto 0;
     position: relative;
-    #part1_container1 {
+    #part1_container2 {
         width: 4.5rem;
         height: 9rem;
         margin: 0rem auto 0;
