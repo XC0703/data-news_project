@@ -1,280 +1,214 @@
 <template>
-    <div id="part3_container0"></div>
+    <div id="part3_container0">
+        <div class="boxs">
+            <div class="box box1">
+                <div class="box__arrow1 iconfont">&#xe775;</div>
+                <div class="box__arrow2 iconfont">&#xe772;</div>
+            </div>
+            <div class="box box2">
+                <div class="box__arrow1 iconfont">&#xe775;</div>
+                <div class="box__arrow2 iconfont">&#xe772;</div>
+            </div>
+            <div class="icon_top icon"><span>1063所</span><br>安宁疗护机构</div>
+            <div v-show="popUpShow1" class="toolTip" :style="positionStyle1">安宁疗护机构：1063所</div>
+            <div class="icon_right icon"><span>5679人</span><br>注册护士</div>
+            <div v-show="popUpShow2" class="toolTip" :style="positionStyle2">注册护士：5679人</div>
+            <div class="icon_bottom icon"><span>68644张</span><br>核定床位</div>
+            <div v-show="popUpShow3" class="toolTip" :style="positionStyle3">核定床位：68644张</div>
+            <div class="icon_left icon"><span>6075人</span><br>职业医师</div>
+            <div v-show="popUpShow4" class="toolTip" :style="positionStyle4">职业医师：6075人</div>
+            
+        </div>
+    </div>
 </template>
 
 <script>
-
-let echarts = require("echarts/lib/echarts");
-
+import $ from "jquery";
 export default {
   name: "FirstChart",
   data() {
     return {
-        isPC:true,
-        isRender:false,
+        popUpShow1:false,
+        popUpShow2:false,
+        popUpShow3:false,
+        popUpShow4:false,
+        positionStyle1:{top:'0px',left:'0px'},
+        positionStyle2:{top:'0px',left:'0px'},
+        positionStyle3:{top:'0px',left:'0px'},
+        positionStyle4:{top:'0px',left:'0px'},
     };
   },
-
   mounted() {
-    // 初始化加载
-    this.createListener();
+    this.handleHover();
   },
-
-   methods: {
-    //监听窗口滚动
-    windowScrollListener() {
-        // 判断屏幕类型
-        if(window.screen.width>window.screen.height){
-            this.isPC = true;
-        }else{
-            this.isPC = false;
-        }
-        //获取操作元素最顶端到页面顶端的垂直距离
-        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-        // console.log(scrollTop)
-        if(scrollTop<18048){
-            this.isRender=false;
-        }else if(this.isPC==true&&scrollTop>18180&&scrollTop<=19087&&this.isRender==false){
-            this.$nextTick(()=>{
-                this.mapChart();
-            })
-            this.isRender=true;
-        }else if(scrollTop>19087){
-            this.isRender=false;
-        }
-    },
-    createListener() {
-        this.mapChart();
-        //添加滚动监听事件
-        //在窗口滚动时调用监听窗口滚动方法
-        window.addEventListener('scroll', this.windowScrollListener);
-    },
-    // 配置渲染map
-    mapChart() {
-        var getxb1 = 2000; //市场上泰康的安宁疗护病房收费标准为：2000元/天/间。
-        var getxb2 = 156.06; //安宁患者人均住院费用仅156.06元.
-        var chartDom = document.getElementById("part3_container0");
-        let myChart = echarts.getInstanceByDom(chartDom)
-        if(myChart!=null){
-            myChart.dispose();
-            myChart = echarts.init(chartDom);
-            window.addEventListener("resize", ()=>{
-                myChart.resize();
-            });
-        }else{
-            myChart = echarts.init(chartDom);
-        }
-        function initEcharts(){
-            let option = {
-                title:{
-                    text:'医院安宁疗护病房平均价格及部分企业病房价格一览',
-                    left:"center",
-                    subtext:"数据来源：上海市安宁疗护发展研究联盟",
-                    subtextStyle: {
-                        fontSize: 10
-                    },
-                    textStyle:{
-                        fontSize:15
-                    }
-                },
-                tooltip: {
-                    show: true,
-                    formatter:function(params){
-                        if(params.dataIndex==0){
-                            return '在市场上，泰康的安宁疗护病房收费标准为：2000元/天/间'
-                        }else {
-                            return "安宁患者人均住院费用仅156.06元"
-                        }
-                    }
-                },
-                series: [
-                    {
-                        name: '医院安宁疗护病房平均价格及部分企业病房价格一览',
-                        type: 'pie',
-                        radius: ['45%', '110%'],
-                        startAngle: 180,
-                        center: ['50%', '85%'],
-                        roseType: 'radius',
-                        label: {
-                            show: true,
-                            position: 'outer',
-                            alignTo:'none',
-                            bleedMargin:0,
-                            overflow:'break',
-                            fontSize: '10',
-                            color:'#333',
-                            distanceToLabelLine:4,
-                        },
-                        labelLine:{
-                            show:true,
-                            length:40,
-                            length2:20,
-                        },
-                        data: [
-                            {
-                                value: getxb1,
-                                name: "市场上泰康的安宁疗护病房收费标准",
-                                itemStyle: {
-                                    color: new echarts.graphic.LinearGradient(
-                                        0,
-                                        0,
-                                        0,
-                                        1,
-                                        [
-                                            {
-                                                offset: 0,
-                                                color: '#4C8DFA',
-                                            },
-                                            {
-                                                offset: 1,
-                                                color: '#5CCFFF',
-                                            },
-                                        ],
-                                        false
-                                    ),
-                                },
-                            },
-                            {
-                                value: getxb2,
-                                name: "安宁患者人均住院费用",
-                                itemStyle: {
-                                    color: new echarts.graphic.LinearGradient(
-                                        0,
-                                        0,
-                                        0,
-                                        1,
-                                        [
-                                            {
-                                                offset: 0,
-                                                color: '#FFD18B',
-                                            },
-                                            {
-                                                offset: 1,
-                                                color: '#FDAD59',
-                                            },
-                                        ],
-                                        false
-                                    ),
-                                },
-                            },
-                            {
-                                value: getxb1 + getxb2,
-                                name: '',
-                                label: {
-                                    show: false,
-                                },
-                                labelLine: {
-                                    show: false,
-                                },
-                                itemStyle: {
-                                    color: 'transparent',
-                                    borderWidth: 0,
-                                    shadowBlur: 0,
-                                },
-                            },
-                        ],
-                    },
-                    {
-                        type: 'pie',
-                        radius: ['45%', '125%'],
-                        startAngle: 180,
-                        emphasis:{
-                            scale:false
-                        },
-                        center: ['50%', '85%'],
-                        roseType: 'radius',
-                        data: [
-                            {
-                                value: getxb1,
-                                label: {
-                                    show: false,
-                                },
-                                labelLine: {
-                                    show: false,
-                                },
-                                itemStyle: {
-                                    color: new echarts.graphic.LinearGradient(
-                                        0,
-                                        0,
-                                        0,
-                                        1,
-                                        [
-                                            {
-                                                offset: 0,
-                                                color: 'rgba(76,141,250,.3)',
-                                            },
-                                            {
-                                                offset: 1,
-                                                color: 'rgba(92,207,255,.3)',
-                                            },
-                                        ],
-                                        false
-                                    ),
-                                },
-                            },
-                            {
-                                value: getxb2,
-                                label: {
-                                    show: false,
-                                },
-                                labelLine: {
-                                    show: false,
-                                },
-                                itemStyle: {
-                                    color: new echarts.graphic.LinearGradient(
-                                        0,
-                                        0,
-                                        0,
-                                        1,
-                                        [
-                                            {
-                                                offset: 0,
-                                                color: 'rgba(255,209,139,.3)',
-                                            },
-                                            {
-                                                offset: 1,
-                                                color: 'rgba(253,173,89,.3)',
-                                            },
-                                        ],
-                                        false
-                                    ),
-                                },
-                            },
-                            {
-                                value: getxb1 + getxb2,
-                                name: '',
-                                label: {
-                                    show: false,
-                                },
-                                labelLine: {
-                                    show: false,
-                                },
-                                itemStyle: {
-                                    color: 'transparent',
-                                    borderWidth: 0,
-                                    shadowBlur: 0,
-                                    borderColor: 'transparent',
-                                    shadowColor: 'transparent',
-                                },
-                            },
-                        ],
-                        z: -1,
-                    },
-                ],
-            };
-            myChart.setOption(option);
-        }
-        initEcharts()
+  methods:{
+    handleHover(){
+        var that = this;
+        $(".icon_top").hover(function(event){
+                that.popUpShow1=true;
+                const x = event.clientX + 15 + 'px'
+                const y = event.clientY + 5 + 'px'
+                that.positionStyle1 = { top: y, left: x } 
+            },function(event){
+                that.popUpShow1=false;
+                const x = event.pageX + 15 + 'px'
+                const y = event.pageY + 5 + 'px'
+                that.positionStyle1 = { top: y, left: x } 
+        })
+        $(".icon_right").hover(function(event){
+                that.popUpShow2=true;
+                const x = event.clientX + 15 + 'px'
+                const y = event.clientY + 5 + 'px'
+                that.positionStyle2 = { top: y, left: x } 
+            },function(event){
+                that.popUpShow2=false;
+                const x = event.pageX + 15 + 'px'
+                const y = event.pageY + 5 + 'px'
+                that.positionStyle2 = { top: y, left: x } 
+        })
+        $(".icon_bottom").hover(function(event){
+                that.popUpShow3=true;
+                const x = event.clientX + 15 + 'px'
+                const y = event.clientY + 5 + 'px'
+                that.positionStyle3 = { top: y, left: x } 
+            },function(event){
+                that.popUpShow3=false;
+                const x = event.pageX + 15 + 'px'
+                const y = event.pageY + 5 + 'px'
+                that.positionStyle3 = { top: y, left: x } 
+        })
+        $(".icon_left").hover(function(event){
+                that.popUpShow4=true;
+                const x = event.clientX + 15 + 'px'
+                const y = event.clientY + 5 + 'px'
+                that.positionStyle4 = { top: y, left: x } 
+            },function(event){
+                that.popUpShow4=false;
+                const x = event.pageX + 15 + 'px'
+                const y = event.pageY + 5 + 'px'
+                that.positionStyle4 = { top: y, left: x } 
+        })
     }
-    }
+}
 };
 </script>
 
 <style lang="scss" scoped>
 #part3_container0 {
-  width: 7rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   margin: 0rem auto 0;
+}
+.boxs{
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    margin-top:1.3rem;
+    margin-left: 1.3rem;
+}
+.box {
+    width: 1.2rem;
+    height: 1.2rem;
+    background: linear-gradient(0deg, transparent 0.06rem, rgb(15,38,80) 0.06rem) repeat-y,
+                linear-gradient(90deg, transparent 50%, rgb(15,38,80) 0) repeat-x;
+    background-size: 0.01rem 0.12rem,  0.12rem 0.01rem;
+    background-position: 0 0, 0 0;
+    animation: move 0.5s infinite linear;
+    position: absolute;
+    &__arrow1{
+        position: absolute;
+        right: -.08rem;
+        top:-.08rem;
+        color:rgb(15,38,80);
+    }
+    &__arrow2{
+        position: absolute;
+        left:-.07rem;
+        bottom: -.08rem;
+        color:rgb(15,38,80);
+    }
+}
+.box1{
+    right: 0;
+    bottom: 0;
+}
+.box2{
+    transform: rotate(180deg);
+    left: 0;
+    top:0;
+    .box__icon1{
+        background-image: url("../../../public/static/images/contents/part3_element4.png");
+        background-repeat: no-repeat !important;
+	background-size: 100% 100% !important;
+    }
+    .box__icon2{
+        background-image: url("../../../public/static/images/contents/part3_element5.png");
+        background-repeat: no-repeat !important;
+	background-size: 100% 100% !important;
+    }
+}
+.icon{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0,0.1);
+    box-shadow: 0 0 .02rem rgba(15,38,80,0.20);
+    border: rgb(15,38,80) solid  0.01rem;
+    position: absolute;
+    background-repeat: no-repeat !important;
+	background-size: 80% 80% !important;
+    background-position:center center;
+    color:rgb(240,204,121);
+    font-size: .14rem;
+    text-align: center;
+    padding-top: .28rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    span{
+        font-size: .22rem;
+        line-height: .3rem;
+    }
+}
+.icon:hover{
+    box-shadow: 0 0 0.06rem rgba(15,38,80,0.40);
+    span{
+        font-size: .24rem;
+    }
+}
+.icon_top{
+    background-image: url("../../../public/static/images/contents/part3_element2.png");
+    top:-1.1rem;
+    left:0.7rem;
+}
+.icon_right{
+    background-image: url("../../../public/static/images/contents/part3_element3.png");
+    right:-1.1rem;
+    top:0.7rem;
+}
+.icon_bottom{
+    background-image: url("../../../public/static/images/contents/part3_element4.png");
+    bottom:-1.1rem;
+    left:0.7rem;
+}
+.icon_left{
+    background-image: url("../../../public/static/images/contents/part3_element5.png");
+    left:-1.1rem;
+    bottom:0.7rem;
+}
+.toolTip{
+  position: fixed;
+  max-width: 2.2rem;
+  padding: .1rem;
+  border: .01rem solid #666;
+  background: #fff;
+  border-radius: .03rem;
+}
+@keyframes move{
+    from {
+    }
+    to {
+        background-position: 0 0.12rem,0.12rem 0;
+    }
 }
 </style>
 

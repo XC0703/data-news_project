@@ -1,14 +1,14 @@
 <template>
     <div class="part3_content">
+        <div class="part3_element0">
+            <div class="part3_element0__word">
+                <p>当前我国关于安宁疗护服务建设的关注度在不断提升，</p>
+                <p>但在实际运行与推广过程中，</p>
+                <p>其发展还面临着诸多痛点与难点。</p>
+            </div>
+        </div>
         <div class="content">
             <div class="content__word">
-                <div class="part3_element0">
-                    <div class="part3_element0__word">
-                        <p>当前我国关于安宁疗护服务建设的关注度在不断提升，</p>
-                        <p>但在实际运行与推广过程中，</p>
-                        <p>其发展还面临着诸多痛点与难点。</p>
-                    </div>
-                </div>
                 <div class="content__word__special">
                     <span>大多数医院的安宁疗护处于亏损状态，资金压力大</span>
                 </div>
@@ -62,6 +62,15 @@
                     <p>，并且，中国大部分安宁疗护从业人员未曾接受过专业培训。在兼职人文关怀服务时，其<b>缺乏必备的伦理、心理、社会等方面专业知识，</b>导致</p>
                     <p>服务开展困难。</p>
                 </div>
+                <div class="chartBoxs" style="height:5.5rem;margin-top:.3rem">
+                    <div class="chartBox" style="height:5.5rem;width:5rem;margin-left: -2.5rem !important;">
+                        <div class="chartBox__chartTitle">我国安宁疗护基本医疗机械数</div>
+                        <div class="chartBox__chartSubtitle">数据来源：中国生命关怀协会调研部</div>
+                        <div class="chartBox__chart" style="height:5rem;bottom:.2rem;">
+                            <FirstChart />
+                        </div>
+                    </div> 
+                </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
                     <p><b>从业归属感低，</b>在全国首家临终关怀医院——北京松堂关怀医院中体现得尤为明显。在成立的30多年间，其被迫迁了7次院。院长李伟曾回忆</p>
                     <p>搬迁到某社区时遭到大多居民阻拦的经历，还有小伙子激昂地说：“这是家死人医院，要搬进我们社区里头，天天死人，我们这辈子也发不了</p>
@@ -73,6 +82,9 @@
                     <p>士表示愿意从事安宁疗护，268名(占比14.6%)护士表示不愿意从事临终关怀服务，1061名(占比57.9%)则表示不确定。而根据学者孟玲等对贵</p>
                     <p>州省1306名安宁疗护从业人员的调研，有78.3%的人认为临终关怀不仅会使他们身心俱疲，还会产生强烈的失落感和焦虑感，从而不愿参与临</p>
                     <p>终关怀。</p>
+                </div>
+                <div class="chartBoxs" style="height:4rem;margin-top:.3rem">
+                    便利贴
                 </div>
                 <div class="content__word__special">
                     <span>安宁疗护呈现碎片化样态，可持续发展难</span>
@@ -87,29 +99,39 @@
                         部分试点城市安宁疗护服务按床日费用结算标准（单位：元/床日）
                     </div>
                     <div class="part3_element1__subTitle">
-                        数据来源：聊聊安宁疗护那点事.健康界.
+                        数据来源：各市安宁疗护患者按床日付费政策文件
                     </div>
                     <div class="part3_element1__img">
                         <img src="../../../public/static/images/contents/part3_element1.png" alt="">
                     </div>
                 </div>
-                <div class="chartBoxs" style="height:4rem;">
-                    <div class="chartBox" style="height:4rem;width:7rem;margin-left: -3.5rem !important;">
-                        <div class="chartBox__chart" style="height:4rem">
-                            <FirstChart />
-                        </div>
-                    </div> 
-                </div>
-                <div class="chartBoxs" style="height:5.5rem;margin-top:.3rem">
-                    <div class="chartBox" style="height:5.5rem;width:5rem;margin-left: -2.5rem !important;">
-                        <div class="chartBox__chartTitle">我国安宁疗护基本医疗机械数</div>
-                        <div class="chartBox__chartSubtitle">数据来源：中国生命关怀协会调研部</div>
-                        <div class="chartBox__chart" style="height:5rem;bottom:.2rem;">
-                            <SecondChart />
-                        </div>
-                    </div> 
+                <div class="part3_element2">
+                    <div class="part3_element2__title">
+                        部分民办企业安宁疗护服务按床月费用结算标准（单位：元/床月）
+                    </div>
+                    <div class="part3_element2__subTitle">
+                        数据来源：各企业官网
+                    </div>
+                    <div class="part3_element2__img">
+                        <img src="../../../public/static/images/contents/part3_element6.jpg" alt="">
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="content_bg" style="bottom: 36.666665rem;">
+            <ContentView />
+        </div>
+        <div class="content_bg" style="bottom: 29.333332rem;">
+            <ContentView />
+        </div>
+        <div class="content_bg" style="bottom: 21.999999rem;">
+            <ContentView />
+        </div>
+        <div class="content_bg" style="bottom: 14.66666rem;">
+            <ContentView />
+        </div>
+        <div class="content_bg" style="bottom: 7.333333rem;">
+            <ContentView />
         </div>
         <div class="content_bg" style="bottom: 0;">
             <ContentView />
@@ -119,36 +141,35 @@
 
 <script>
 import FirstChart from './FirstChart.vue';
-import SecondChart from './SecondChart.vue';
 import ContentView from '../../components/ContentView.vue'
 export default {
     name: "MainPage",
-    components:{FirstChart,SecondChart,ContentView},
+    components:{ FirstChart, ContentView,},
 }
 </script>
 
 <style lang="scss" scoped>
 .part3_content{
     width:100%;
-    height:46rem;
+    height:50.5rem;
     text-align: center;
     position: relative;
 }
 .content{
     background-repeat: no-repeat !important;
 	background-size: 100% 100% !important;
-    height: 100%;
-    width:10.2rem;
+    height: 44rem;
+    width:100%;
     background-color: rgba(220, 220, 220,0.8);
     position: relative;
     margin:0 auto;
     z-index: 1;
     &__word{
         position: absolute;
-        width:100%;
+        width:10.2rem;
         height: 100%;
         left:50%;
-        margin-left: -50%;
+        margin-left: -5.1rem;
         &__special{
             width:100%;
             color:#0F2650;
@@ -198,23 +219,13 @@ export default {
 }
 .content_bg{
     width:100%;
-    height: 100vh;
-    @media
-    screen and (orientation:portrait) and (max-device-width:768px) and (max-device-height:1024px),
-    screen and (orientation:landscape) and (max-device-width:1024px) and (max-device-height:768px) {
-        height:7rem
-    }
+    height: 7.333333rem;
     position: absolute;
     background-color: #fff;
 }
 .part3_element0{
     position: relative;
-    height: 100vh;
-    @media
-    screen and (orientation:portrait) and (max-device-width:768px) and (max-device-height:1024px),
-    screen and (orientation:landscape) and (max-device-width:1024px) and (max-device-height:768px) {
-        height:7rem
-    }
+    height: 6.5rem;
     width: 100%;
     background-repeat: no-repeat !important;
 	background-size: cover !important;
@@ -271,6 +282,52 @@ export default {
     &__img{
         width: 6.5rem;
         height: 4rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -3.25rem;
+        top:.8rem;
+        box-shadow: 0 .04rem .08rem 0 rgba(0,0,0,0.20);
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.part3_element2{
+    height: 4rem;
+    width: 100%;
+    position: relative;
+    &__title{
+        width: 5rem;
+        height: .3rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -2.5rem;
+        top:.2rem;
+        text-align: center;
+        line-height: .3rem;
+        font-family: serif;
+        color:#000;
+        font-weight: bolder;
+        font-size: .15rem;
+    }
+    &__subTitle{
+        width: 4.5rem;
+        height: .2rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -2.25rem;
+        top:.5rem;
+        text-align: center;
+        line-height: .2rem;
+        font-family: serif;
+        font-size: .14rem;
+        scale: (.7);
+        color:#666
+    }
+    &__img{
+        width: 6.5rem;
+        height: 3rem;
         position: absolute;
         left: 50%;
         margin-left: -3.25rem;

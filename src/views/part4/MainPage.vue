@@ -25,6 +25,12 @@
                 </div>
             </div>
         </div>
+        <div class="content_bg" style="top: 0;">
+            <ContentView />
+        </div>
+        <div class="content_bg" style="top: 2.2rem;">
+            <ContentView />
+        </div>
         <div class="mask">
                 <div class="mask__word">
                     <p>数据收集及整理：崔雨琦 彭思语 刘婧</p>
@@ -38,8 +44,10 @@
 </template>
 
 <script>
+import ContentView from '../../components/ContentView.vue'
 export default {
     name:'MainPage',
+    components:{ ContentView},
 }
 </script>
 
@@ -54,17 +62,17 @@ export default {
     background-repeat: no-repeat !important;
 	background-size: 100% 100% !important;
     height: 9.2rem;
-    width:10.2rem;
+    width:100%;
     position: relative;
     margin:0 auto;
+    background-color: rgba(220, 220, 220,0.8);
     z-index: 1;
     &__word{
         position: absolute;
-        width:100%;
+        width:10.2rem;
         height: 9.2rem;
         left:50%;
-        margin-left: -50%;
-        background-color: rgba(220, 220, 220,0.8);
+        margin-left: -5.1rem;
         &__special{
             width:100%;
             margin-bottom: .6rem;
@@ -114,12 +122,7 @@ export default {
 }
 .content_bg{
     width:100%;
-    height: 100vh;
-    @media
-    screen and (orientation:portrait) and (max-device-width:768px) and (max-device-height:1024px),
-    screen and (orientation:landscape) and (max-device-width:1024px) and (max-device-height:768px) {
-        height:7rem
-    }
+    height: 7rem;
     position: absolute;
     background-color: #fff;
 }

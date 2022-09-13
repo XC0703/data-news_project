@@ -100,6 +100,15 @@
                 </div>
             </div>
         </div>
+        <div class="content_bg" style="bottom:24rem;">
+            <ContentView />
+        </div>
+        <div class="content_bg" style="bottom:16rem;">
+            <ContentView />
+        </div>
+        <div class="content_bg" style="bottom:8rem;">
+            <ContentView />
+        </div>
         <div class="content_bg" style="bottom:0;">
             <ContentView />
         </div>
@@ -157,17 +166,17 @@ export default {
     background-repeat: no-repeat !important;
 	background-size: 100% 100% !important;
     height: 100%;
-    width:10.2rem;
+    width:100%;
     background-color: rgba(220, 220, 220,0.8);
     margin:0 auto;
     position: relative;
     z-index: 1;
     &__word{
         position: absolute;
-        width:100%;
+        width:10.2rem;
         height: 100%;
         left:50%;
-        margin-left: -50%;
+        margin-left: -5.1rem;
         &__special{
             width:100%;
             margin-bottom: .6rem;
@@ -217,12 +226,7 @@ export default {
 }
 .content_bg{
     width:100%;
-    height: 100vh;
-    @media
-    screen and (orientation:portrait) and (max-device-width:768px) and (max-device-height:1024px),
-    screen and (orientation:landscape) and (max-device-width:1024px) and (max-device-height:768px) {
-        height:7rem
-    }
+    height: 8rem;
     position: absolute;
     background-color: #fff;
 }
