@@ -1,11 +1,11 @@
 <template>
     <div class="part2_container5">
         <div class="part2_container5__left">
-            <div class="part2_container5__left__box box1 content1 iconfont">
-                &#xe71b;
-            </div>
-            <div class="part2_container5__left__box box2 iconfont">
+            <div class="part2_container5__left__box box1 iconfont">
                 &#xe99b;&#xe99b;&#xe99b;&#xe99b;&#xe99b;&#xe99b;&#xe99b;&#xe99b;&#xe99b;&#xe99b;
+            </div>
+            <div class="part2_container5__left__box box2 content1 iconfont">
+                &#xe71b;
             </div>
             <div class="part2_container5__left__box box3 content2 iconfont">
                 <div class="box3__icon iconfont"> &#xe62d;</div>
@@ -95,10 +95,10 @@ export default {
                 that.positionStyle1 = { top: y, left: x } 
         })
         $(".content2").hover(function(event){
-                chartBox[1].style.opacity = 1;
+                chartBox[0].style.opacity = 1;
                 chartBox[2].style.opacity = 1;
                 wordBox[1].style.opacity = 1;
-                chartBox[0].style.opacity = 0.2;
+                chartBox[1].style.opacity = 0.2;
                 chartBox[3].style.opacity = 0.2;
                 wordBox[0].style.opacity = 0.2;
                 wordBox[2].style.opacity = 0.2;
@@ -107,10 +107,10 @@ export default {
                 const y = event.clientY + 5 + 'px'
                 that.positionStyle2 = { top: y, left: x } 
             },function(event){
-                chartBox[1].style.opacity = 0.8;
+                chartBox[0].style.opacity = 0.8;
                 chartBox[2].style.opacity = 0.8;
                 wordBox[1].style.opacity = 0.8;
-                chartBox[0].style.opacity = 0.8;
+                chartBox[1].style.opacity = 0.8;
                 chartBox[3].style.opacity = 0.8;
                 wordBox[0].style.opacity = 0.8;
                 wordBox[2].style.opacity = 0.8;
@@ -170,10 +170,10 @@ export default {
             text-align: center;
         }
         .box1{
-            font-size: .6rem;
+            font-size: .4rem;
         }
         .box2{
-            font-size: .4rem;
+            font-size: .6rem;
         }
         .box3{
             display: flex;
@@ -206,14 +206,14 @@ export default {
             text-align: center;
             font-size: .15rem;
         }
-        &__box:nth-child(1){
-            padding-top: .5rem;
+        .content1{
+            padding-top: .8rem;
         }
-        &__box:nth-child(2){
-            padding-top: .32rem;
+        .content2{
+            padding-top: .7rem;
         }
-        &__box:nth-child(3){
-            padding-top: .2rem;
+        .content3{
+            padding-top: .45rem;
         }
     }
 }

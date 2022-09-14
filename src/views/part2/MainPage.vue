@@ -57,7 +57,7 @@
                 <div class="chartBoxs" style="height: 4rem;">
                     <div class="chartTitle">
                         <div class="chartTitle__title">安宁疗护试点分布地图</div>
-                        <div class="chartTitle__subTitle">数据来源：国家卫健委</div>
+                        <div class="chartTitle__subTitle">数据来源：国家卫生健康委员会</div>
                     </div>
                     <div class="chartBox" style="height: 3.5rem;width: 5rem;margin-left: -5rem !important;">
                         <div class="chartBox__chart" style="height:3.5rem">

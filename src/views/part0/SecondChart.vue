@@ -72,7 +72,7 @@ export default {
                 },
                 tooltip: {
                     trigger: 'axis',
-                    formatter:'{b}年{a}：'+'{c}%',
+                    formatter:'{b}年{a}：'+'{c}‰',
                     axisPointer: {
                         lineStyle: {
                             color: {
@@ -129,14 +129,14 @@ export default {
                         type: 'value',
                         min:6,
                         max:7.5,
+                        name:'单位(‰)',
                         axisLabel: {
-                            formatter:'{value}%',
+                            formatter:'{value}',
                             color: '#0F2650',
                         },
                         nameTextStyle: {
-                            color: '#fff',
+                            color: '#0F2650', // 文字颜色
                             fontSize: 12,
-                            lineHeight: 40,
                         },
                         axisLine: {
                             show: true,

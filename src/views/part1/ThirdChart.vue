@@ -12,9 +12,7 @@
             :class="{'selectBtns__btn': true, 'activeBtn': currentIndex === 3}"
             @click="() => handleIndexClick(3)"
         >2017-今：全国安宁疗护试点的持续发展阶段</div>
-        <div class="btnTips iconfont">&#xe601;点击上述某一行可进行阶段的切换</div>
-        <div class="btnTips btnTip2 iconfont">鼠标放入下方时间轴区域可进行滑动</div>
-        <div class="btnTips btnTip3 iconfont">点击每个事件盒子可进行展开与收起</div>
+        <div class="btnTips iconfont">&#xe601;点击上述某一行可进行阶段的切换; 鼠标放入下方时间轴区域可进行滑动; 点击每个事件盒子可进行展开与收起</div>
     </div>
     <div class="outerBox">
         <div id="eventBoxs">
@@ -265,9 +263,10 @@ export default {
 
 <style lang="scss" scoped>
 .selectBtns{
-    width: 3.5rem;
-    height: 1.8rem;
-    margin-left: 1.2rem;
+    width: 6rem;
+    height: 1.2rem;
+    position: relative;
+    margin: 0 auto;
     box-shadow: 0 .04rem .08rem 0 rgba(0,0,0,0.20);
     &__btn{
         width:100%;
@@ -312,16 +311,12 @@ export default {
     .btnTips{
         width:100%;
         height: .3rem;
+        bottom:.05rem;
         line-height: .3rem;
         text-align: left;
-        font-size: .12rem;
+        font-size: .1rem;
         padding-left:.06rem;
-    }
-    .btnTip2{
-        padding-left:.18rem;
-    }
-    .btnTip3{
-        padding-left:.18rem;
+        color:#666;
     }
 }
 .outerBox{

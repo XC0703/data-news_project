@@ -48,31 +48,31 @@ export default {
             timeLineList: [{
                     timestamp: '1960年',
                     year: '1960',
-                    info: '英国护士西西里·桑德斯（Dame Cicely Saunders，1918－2005）首次系统总结出对临终患者提供全面医疗照护的方案'
+                    info: '英国护士西西里·桑德斯(Dame Cicely Saunders, 1918－2005)首次系统总结出对临终患者提供全面医疗照护的方案。'
                 }, {
                     timestamp: '1967年',
                     year: '1967',
-                    info: '桑德斯在伦敦创办了圣克里斯托弗安宁院（St. Christopher Hospice）。这是世界上第一所现代意义的安宁疗护机构'
+                    info: '桑德斯在伦敦创办了圣克里斯托弗安宁院(St. Christopher Hospice)。这是世界上第一所现代意义的安宁疗护机构。'
                 }, {
                     timestamp: '20世纪60—70年代',
                     year: '20世纪60—70年代',
                     info: '桑德斯及其创办的圣克里斯托弗安宁院，在英国以及其他西方发达国家引起了广泛而热烈的响应。'
                 }, {
-                    timestamp: '1971年',
-                    year: '1971',
-                    info: '美国在圣克里斯托弗安宁院的大力帮助下，借鉴英国模式建立了得到美国官方认可的临终关怀院———康奈狄哥临终关怀院。'
+                    timestamp: '1974年',
+                    year: '1974',
+                    info: '1974年耶鲁大学护理学院院长弗洛伦斯·沃尔德(Florence Wald)与两名儿科医生及一名牧师建立了康涅狄格临终关怀中心。'
                 }, {
                     timestamp: '1976年',
                     year: '1976',
-                    info: '蒙特医生在加拿大蒙特利尔的皇家维多利亚医院（Royal Victoria Hospital ）建立了全世界第一个驻院缓和医疗团队。'
+                    info: '蒙特医生在加拿大蒙特利尔的皇家维多利亚医院(Royal Victoria Hospital)建立了全世界第一个驻院缓和医疗团队。'
                 }, {
                     timestamp: '20世纪80年代',
                     year: '20世纪80年代',
-                    info: '英国、美国、加拿大等发达国家将安宁疗护纳入到国家医疗卫生体制与医疗保险体系中，生前预嘱（advance directive）等配套措施也得到法律支持，而以缓解晚期患者疼痛为主要目标的缓和医学（palliative medicine），正式成为医学的一个重要分支。'
+                    info: '英国、美国、加拿大等发达国家将安宁疗护纳入到国家医疗卫生体制与医疗保险体系中，生前预嘱(advance directive)等配套措施也得到法律支持，而以缓解晚期患者疼痛为主要目标的缓和医学(palliative medicine)，正式成为医学的一个重要分支。'
                 }, {
                     timestamp: '1987年',
                     year: '1987',
-                    info: '全世界第一份缓和医疗专业学术期刊《缓和医学》（Palliative Medicine ）在英国正式创刊'
+                    info: '全世界第一份缓和医疗专业学术期刊《缓和医学》(Palliative Medicine)在英国正式创刊。'
                 }, {
                     timestamp: '21世纪以来',
                     year: '21世纪以来',

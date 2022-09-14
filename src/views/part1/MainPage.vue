@@ -18,15 +18,15 @@
                     <p>护为疾病终末期或老年患者在临终前提供身体、心理、精神等方面的照料和人文关怀等服务，控制痛苦和不适症状，提高生命质量，帮助患者</p>
                     <p>舒适、安详、有尊严地离世。</p>
                 </div>
-                <div class="chartBoxs" style="height: 5rem;margin-top: -0.5rem;">
-                    <div class="chartBox" style="height: 5rem;width: 100%;margin-left: -50% !important;">
-                        <div class="chartBox__chart" style="height:5rem;">
+                <div class="chartBoxs" style="height: 7rem;margin-top: -0.5rem;">
+                    <div class="chartBox" style="height: 7rem;width: 100%;margin-left: -50% !important;">
+                        <div class="chartBox__chart" style="height:7rem;">
                             <FirstChart />
                         </div>
-                        <div class="chartBox__chartTips iconfont" style="left:0.2rem;top:.4rem;">&#xe601;点击某一节点可进行子节点的展开与收起</div>
+                        <div class="chartBox__chartTips iconfont" style="height:.2rem;left:0.2rem;top:.4rem;">&#xe601;点击某一节点可进行子节点的展开与收起</div>
                     </div> 
                 </div>
-                <div class="content__word__special" style="margin-top:0.5rem;margin-bottom:0.8rem;">
+                <div class="content__word__special" style="margin-top:0.5rem;margin-bottom:1rem;">
                     <span class="specialSpan">国际渊源</span>
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:.5rem">
@@ -40,7 +40,7 @@
                         <div class="chartBox__chartTips iconfont" style="left:0.6rem;bottom:.2rem;">&#xe601;点击两侧圆环及中间实心圆按钮可进行事件切换显示</div>
                     </div> 
                 </div>
-                <div class="content__word__special" style="margin-top:0.5rem;margin-bottom:0.8rem;">
+                <div class="content__word__special" style="margin-top:0.5rem;margin-bottom:1rem;">
                     <span class="specialSpan">国内渊源</span>
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:.5rem">
@@ -73,16 +73,19 @@
                 </div>
             </div>
         </div>
-        <div class="content_bg" style="bottom: 31.2rem;">
+        <div class="content_bg" style="bottom: 34.1665rem;">
             <ContentView />
         </div>
-        <div class="content_bg" style="bottom: 23.4rem;">
+        <div class="content_bg" style="bottom: 27.3332rem;">
             <ContentView />
         </div>
-        <div class="content_bg" style="bottom: 15.6rem;">
+        <div class="content_bg" style="bottom: 20.4999rem;">
             <ContentView />
         </div>
-        <div class="content_bg" style="bottom: 7.8rem;">
+        <div class="content_bg" style="bottom: 13.666rem;">
+            <ContentView />
+        </div>
+        <div class="content_bg" style="bottom: 6.8333rem;">
             <ContentView />
         </div>
         <div class="content_bg" style="bottom: 0;">
@@ -107,7 +110,7 @@ export default {
 <style lang="scss" scoped>
 .part1_content{
     width:100%;
-    height:39rem;
+    height:41rem;
     text-align: center;
     position: relative;
 }
@@ -205,7 +208,7 @@ export default {
 }
 .content_bg{
     width:100%;
-    height: 7.8rem;
+    height: 6.8333rem;
     position: absolute;
     background-color: #fff;
 }

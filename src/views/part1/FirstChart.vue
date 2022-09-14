@@ -32,14 +32,14 @@ mounted() {
       //获取操作元素最顶端到页面顶端的垂直距离
       var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
       // console.log(scrollTop)
-      if(scrollTop<1600){
+      if(scrollTop<4590){
           this.isRender=false;
-      }else if(this.isPC==true&&scrollTop>1600&&scrollTop<=2680&&this.isRender==false){
+      }else if(this.isPC==true&&scrollTop>4590&&scrollTop<=5810&&this.isRender==false){
           this.$nextTick(()=>{
               this.mapChart();
           })
           this.isRender=true;
-      }else if(scrollTop>2680){
+      }else if(scrollTop>5810){
           this.isRender=false;
       }
   },
@@ -69,17 +69,21 @@ mounted() {
                   type: 'tree',
                   data: [mapData],
                   top: '1%',
-                  left: '11%',
+                  left: '15%',
                   bottom: '1%',
-                  right: '15%',
-                  symbolSize: 7,
-                  initialTreeDepth:2,
+                  right: '20%',
+                  symbolSize: 8,
+                  initialTreeDepth:1,
                   label: {
                     position: 'left',
                     verticalAlign: 'middle',
                     align: 'right',
-                    fontSize: 9,
-                    color:'#333'
+                    fontSize: 12,
+                    color:'#333',
+                    borderColor:'#0F2650',
+                    borderWidth:0.5,
+                    padding:2,
+                    borderRadius: 3,
                   },
                   leaves: {
                     label: {
@@ -91,8 +95,11 @@ mounted() {
                       color:'#0F2650'
                     },
                   },
+                  lineStyle:{
+                    color:'rgba(15,38,80,0.4)',
+                  },
                   itemStyle:{
-                    color:'#0F2650',
+                    color:'#0F2650'
                   },
                   emphasis: {
                     focus: 'descendant'
@@ -122,8 +129,8 @@ mounted() {
 
 <style lang="scss" scoped>
 #part1_container0 {
-width: 8rem;
-height: 5rem;
+width: 8.5rem;
+height: 7rem;
 margin: 0rem auto 0;
 }
 </style>

@@ -56,13 +56,13 @@ export default {
             this.bg3=false;
             this.bg4=false;
             this.footer=false;
-        }else if(scrollTop<=18015){
+        }else if(scrollTop<=18200){
             this.bg1=false;
             this.bg2=false;
             this.bg3=true;
             this.bg4=false;
             this.footer=false;
-        }else if(scrollTop<=23900){
+        }else if(scrollTop<=23550){
             this.bg1=false;
             this.bg2=false;
             this.bg3=false;

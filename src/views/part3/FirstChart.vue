@@ -137,12 +137,12 @@ export default {
     left: 0;
     top:0;
     .box__icon1{
-        background-image: url("../../../public/static/images/contents/part3_element4.png");
+        background-image: url("../../../public/static/images/contents/part3_element3.png");
         background-repeat: no-repeat !important;
 	background-size: 100% 100% !important;
     }
     .box__icon2{
-        background-image: url("../../../public/static/images/contents/part3_element5.png");
+        background-image: url("../../../public/static/images/contents/part3_element4.png");
         background-repeat: no-repeat !important;
 	background-size: 100% 100% !important;
     }
@@ -176,22 +176,22 @@ export default {
     }
 }
 .icon_top{
-    background-image: url("../../../public/static/images/contents/part3_element2.png");
+    background-image: url("../../../public/static/images/contents/part3_element1.png");
     top:-1.1rem;
     left:0.7rem;
 }
 .icon_right{
-    background-image: url("../../../public/static/images/contents/part3_element3.png");
+    background-image: url("../../../public/static/images/contents/part3_element2.png");
     right:-1.1rem;
     top:0.7rem;
 }
 .icon_bottom{
-    background-image: url("../../../public/static/images/contents/part3_element4.png");
+    background-image: url("../../../public/static/images/contents/part3_element3.png");
     bottom:-1.1rem;
     left:0.7rem;
 }
 .icon_left{
-    background-image: url("../../../public/static/images/contents/part3_element5.png");
+    background-image: url("../../../public/static/images/contents/part3_element4.png");
     left:-1.1rem;
     bottom:0.7rem;
 }

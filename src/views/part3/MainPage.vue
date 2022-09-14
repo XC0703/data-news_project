@@ -1,15 +1,11 @@
 <template>
     <div class="part3_content">
-        <div class="part3_element0">
-            <div class="part3_element0__word">
-                <p>当前我国关于安宁疗护服务建设的关注度在不断提升，</p>
-                <p>但在实际运行与推广过程中，</p>
-                <p>其发展还面临着诸多痛点与难点。</p>
-            </div>
-        </div>
         <div class="content">
             <div class="content__word">
-                <div class="content__word__special">
+                <div class="content__word__leftAlign" style="margin-top:.5rem;">
+                    <p class="firstLine">当前我国关于安宁疗护服务建设的关注度在不断提升，但在实际运行与推广过程中，其发展还面临着诸多痛点与难点。</p>
+                </div>
+                <div class="content__word__special" style="margin-top:.2rem;">
                     <span>大多数医院的安宁疗护处于亏损状态，资金压力大</span>
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
@@ -35,6 +31,11 @@
                     <p>自付1000多元。随后，医保会按病种分组（DRGs）付费，给卫生院拨付医保基金3000元到4000元。因此每收治一位患者，卫生院就会“亏</p>
                     <p>本”1000元到2000元。</p>
                 </div>
+                <div class="part3_element0">
+                    <div class="part3_element0__img">
+                        <img src="../../../public/static/images/contents/part3_element0.png" alt="">
+                    </div>
+                </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
                     <p>总体而言，医院安宁疗护的亏损主要是由收费与报销标准尚未确定导致的。<b>首先是收费标准没有全面核定。</b>目前主要通过对具体的治疗措施和</p>
                     <p>用药设置常规安宁疗护项目的收费标准，但安宁疗护服务提供的<b>大量人工成本尚未、也无法纳入收费范畴。</b>患者可能瘫痪、大便不通、咳痰喘</p>
@@ -46,7 +47,7 @@
                     <p>DGRs进行拨付基金的方式，拨付标准不一的同时，医院的运营主体也常常处于不同程度的亏损状态中。</p>
                 </div>
                 <div class="content__word__special">
-                    <span>安宁疗护专业医护人员不足，服务开展艰</span>
+                    <span class="specialSpan">安宁疗护专业医护人员不足，服务开展艰</span>
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
                     <p>2021年11月30日上午约九点半，那家即将关停的医院安宁疗护中心迎来接“病人转院”的家属，这是位重度脑中风患者，衣食起居无法自理</p>
@@ -78,59 +79,69 @@
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
                     <p>另外，安宁疗护在很多地方还不是一个临床专业，因此医护人员工资待遇低，且专业建设和晋升都受到了制约。面临着<b>巨大的工作压力，愿意</b></p>
-                    <p><b>从事安宁疗护的人员也较少。</b>根据学者Lin Chen等对广西省二、三级公立医院的1833名护士展开的调查，只有505名（占比27.56%）参与护</p>
-                    <p>士表示愿意从事安宁疗护，268名(占比14.6%)护士表示不愿意从事临终关怀服务，1061名(占比57.9%)则表示不确定。而根据学者孟玲等对贵</p>
-                    <p>州省1306名安宁疗护从业人员的调研，有78.3%的人认为临终关怀不仅会使他们身心俱疲，还会产生强烈的失落感和焦虑感，从而不愿参与临</p>
-                    <p>终关怀。</p>
+                    <p><b>从事安宁疗护的人员也较少。</b>根据学者Lin Chen等对广西省二、三级公立医院的1833名护士展开的调查，只有505名参与护士表示愿意从事安</p>
+                    <p>宁疗护，268名护士表示不愿意从事临终关怀服务，1061名则表示不确定。而根据学者孟玲等对贵州省1306名安宁疗护从业人员的调研，有</p>
+                    <p>78.3%的人认为临终关怀不仅会使他们身心俱疲，还会产生强烈的失落感和焦虑感，从而不愿参与临终关怀。</p>
                 </div>
-                <div class="chartBoxs" style="height:4rem;margin-top:.3rem">
-                    便利贴
+                <div class="part3_element567">
+                    <div class="part3_element567__content">
+                        <img class="part3_element5" src="../../../public/static/images/contents/part3_element5.png" alt="">
+                        <div v-show="popUpShow1" class="toolTip" :style="positionStyle1">505名(占比27.55%)<br>参与护士表示愿意从事安宁疗护</div>
+                    </div>
+                    <div class="part3_element567__content part3_element6">
+                        <img class="part3_element6" src="../../../public/static/images/contents/part3_element6.png" alt="">
+                        <div v-show="popUpShow2" class="toolTip" :style="positionStyle2">268名(占比14.62%)<br>参与护士表示不愿意从事临终关怀服务</div>
+                    </div>
+                    <div class="part3_element567__content part3_element7">
+                        <img class="part3_element7" src="../../../public/static/images/contents/part3_element7.png" alt="">
+                        <div v-show="popUpShow3" class="toolTip" :style="positionStyle3">1061名(占比57.88%)<br>参与护士则表示不确定</div>
+                    </div>
                 </div>
                 <div class="content__word__special">
-                    <span>安宁疗护呈现碎片化样态，可持续发展难</span>
+                    <span class="specialSpan">安宁疗护呈现碎片化样态，可持续发展难</span>
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
                     <p>现今，各大安宁疗护相关试点城市虽已制定了安宁疗护费用结算办法，但各地标准并不统一，呈现<b>碎片化发展。</b>另外，民办安宁疗护机构和公</p>
                     <p>办的安宁疗护机构的费用之间也有较大差距。在此背景下，如果国家继续加大安宁疗护扶持力度、过度扩大疗护试点，会导致各试点市(区)的</p>
                     <p>工作难以协调，为国家统一标准的制定带来困难，影响其后续发展。</p>
                 </div>
-                <div class="part3_element1">
-                    <div class="part3_element1__title">
+                <div class="part3_element8">
+                    <div class="part3_element8__title">
                         部分试点城市安宁疗护服务按床日费用结算标准（单位：元/床日）
                     </div>
-                    <div class="part3_element1__subTitle">
+                    <div class="part3_element8__subTitle">
                         数据来源：各市安宁疗护患者按床日付费政策文件
                     </div>
-                    <div class="part3_element1__img">
-                        <img src="../../../public/static/images/contents/part3_element1.png" alt="">
+                    <div class="part3_element8__img">
+                        <img src="../../../public/static/images/contents/part3_element8.png" alt="">
                     </div>
                 </div>
-                <div class="part3_element2">
-                    <div class="part3_element2__title">
+                <div class="part3_element9">
+                    <div class="part3_element9__title">
                         部分民办企业安宁疗护服务按床月费用结算标准（单位：元/床月）
                     </div>
-                    <div class="part3_element2__subTitle">
+                    <div class="part3_element9__subTitle">
                         数据来源：各企业官网
                     </div>
-                    <div class="part3_element2__img">
-                        <img src="../../../public/static/images/contents/part3_element6.jpg" alt="">
+                    <div class="part3_element9__img">
+                        <img src="../../../public/static/images/contents/part3_element9.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="content_bg" style="bottom: 36.666665rem;">
+        <div class="content_bg" style="bottom: 38.33335rem;">
             <ContentView />
         </div>
-        <div class="content_bg" style="bottom: 29.333332rem;">
+        <div class="content_bg" style="bottom: 30.66668rem;">
             <ContentView />
         </div>
-        <div class="content_bg" style="bottom: 21.999999rem;">
+        <div class="content_bg" style="bottom: 23.00001rem;">
             <ContentView />
         </div>
-        <div class="content_bg" style="bottom: 14.66666rem;">
+        <div class="content_bg" style="bottom: 15.33334rem;">
             <ContentView />
         </div>
-        <div class="content_bg" style="bottom: 7.333333rem;">
+        <div class="content_bg" style="bottom: 7.66667rem;">
             <ContentView />
         </div>
         <div class="content_bg" style="bottom: 0;">
@@ -140,25 +151,77 @@
 </template>
 
 <script>
+import $ from "jquery";
 import FirstChart from './FirstChart.vue';
 import ContentView from '../../components/ContentView.vue'
 export default {
     name: "MainPage",
-    components:{ FirstChart, ContentView,},
+    components:{ FirstChart, ContentView},
+    data() {
+        return {
+            popUpShow1:false,
+            popUpShow2:false,
+            popUpShow3:false,
+            positionStyle1:{top:'0px',left:'0px'},
+            positionStyle2:{top:'0px',left:'0px'},
+            positionStyle3:{top:'0px',left:'0px'},
+        };
+    },
+    mounted() {
+        this.handleHover();
+    },
+    methods:{
+        handleHover(){
+            var that = this;
+            $(".part3_element5").hover(function(event){
+                    that.popUpShow1=true;
+                    const x = event.clientX + 15 + 'px'
+                    const y = event.clientY + 5 + 'px'
+                    that.positionStyle1 = { top: y, left: x } 
+                },function(event){
+                    that.popUpShow1=false;
+                    const x = event.pageX + 15 + 'px'
+                    const y = event.pageY + 5 + 'px'
+                    that.positionStyle1 = { top: y, left: x } 
+            })
+            $(".part3_element6").hover(function(event){
+                    that.popUpShow2=true;
+                    const x = event.clientX + 15 + 'px'
+                    const y = event.clientY + 5 + 'px'
+                    that.positionStyle2 = { top: y, left: x } 
+                },function(event){
+                    that.popUpShow2=false;
+                    const x = event.pageX + 15 + 'px'
+                    const y = event.pageY + 5 + 'px'
+                    that.positionStyle2 = { top: y, left: x } 
+            })
+            $(".part3_element7").hover(function(event){
+                    that.popUpShow3=true;
+                    const x = event.clientX + 15 + 'px'
+                    const y = event.clientY + 5 + 'px'
+                    that.positionStyle3 = { top: y, left: x } 
+                },function(event){
+                    that.popUpShow3=false;
+                    const x = event.pageX + 15 + 'px'
+                    const y = event.pageY + 5 + 'px'
+                    that.positionStyle3 = { top: y, left: x } 
+            })
+        }
+    },
 }
 </script>
 
 <style lang="scss" scoped>
 .part3_content{
     width:100%;
-    height:50.5rem;
+    height:46rem;
     text-align: center;
     position: relative;
 }
 .content{
     background-repeat: no-repeat !important;
 	background-size: 100% 100% !important;
-    height: 44rem;
+    height: 100%;
     width:100%;
     background-color: rgba(220, 220, 220,0.8);
     position: relative;
@@ -175,15 +238,42 @@ export default {
             color:#0F2650;
             margin-top:.8rem;
             position: relative;
+            margin-bottom: 0.15rem;
             span{
                 display: inline-block;
                 font-family: "STKaiti";
                 height:.4rem;
                 width: 10rem;
                 line-height: .4rem;
-                text-align: left;
+                text-align: center;
                 font-size: .16rem;
                 font-weight:bold;
+            }
+            span::before{
+                content:'';
+                display: block;
+                position: absolute;
+                width:.15rem;
+                height: .02rem;
+                left:3.18rem;
+                top:.18rem;
+                background: #0F2650;
+            }
+            span::after{
+                content:'';
+                display: block;
+                position: absolute;
+                width:.15rem;
+                height: .02rem;
+                right:3.18rem;
+                top:.18rem;
+                background: #0F2650;
+            }
+            .specialSpan::before{
+                left:3.48rem;
+            }
+            .specialSpan::after{
+                right:3.48rem;
             }
         }
         &__leftAlign{
@@ -219,36 +309,47 @@ export default {
 }
 .content_bg{
     width:100%;
-    height: 7.333333rem;
+    height: 7.66667rem;
     position: absolute;
     background-color: #fff;
 }
 .part3_element0{
-    position: relative;
-    height: 6.5rem;
+    height: 3rem;
     width: 100%;
-    background-repeat: no-repeat !important;
-	background-size: cover !important;
-    background:url('../../../public/static/images/contents/part3_element0.jpg');
-    &__word{
-        width: 4.5rem;
-        height: 1.5rem;
+    position: relative;
+    &__img{
+        width: 5.75rem;
+        height: 2.5rem;
         position: absolute;
         left: 50%;
-        margin-left: -2.25rem;
-        top:.4rem;
-        // background-color: #fff;
-        box-shadow: 0 .04rem .08rem 0 rgba(0,0,0,0.20);
-        p{
-            height:.4rem;
-            line-height: .4rem;
-            text-align: center;
-            font-size: .16rem;
+        margin-left: -2.875rem;
+        img{
+            width: 100%;
+            height: 100%;
         }
     }
 }
-.part3_element1{
-    height: 5rem;
+.part3_element567{
+    height: 1.5rem;
+    width: 8rem;
+    margin:0 auto;
+    position: relative;
+    display: flex;
+    &__content{
+        flex:1;
+        img{
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        img:hover{
+            box-shadow: 0 0 0.06rem rgba(15,38,80,0.40);
+        }
+    }
+}
+.part3_element8{
+    height: 5.3rem;
     width: 100%;
     position: relative;
     &__title{
@@ -293,7 +394,7 @@ export default {
         }
     }
 }
-.part3_element2{
+.part3_element9{
     height: 4rem;
     width: 100%;
     position: relative;
@@ -445,5 +546,13 @@ export default {
         color:#666;
         font-size: .12rem;
     }
+}
+.toolTip{
+  position: fixed;
+  max-width: 2.3rem;
+  padding: .05rem;
+  border: .01rem solid #666;
+  background: #fff;
+  border-radius: .03rem;
 }
 </style>

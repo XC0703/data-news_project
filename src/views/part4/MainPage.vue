@@ -32,13 +32,51 @@
             <ContentView />
         </div>
         <div class="mask">
-                <div class="mask__word">
-                    <p>数据收集及整理：崔雨琦 彭思语 刘婧</p>
+            <div class="mask__word">
+                    <p>小组成员分工：</p>
+                    <p>数据收集和数据处理：崔雨琦 彭思语 刘婧</p>
                     <p>网页制作：徐聪</p>
                     <p>美工：谷婷薇</p>
+
+                    <p>数据来源：</p>
+                    <p>中华人民共和国国家卫生和计划生育委员会：《安宁疗护实践指南（试行）》</p>
+                    <p>《第二批全国安宁疗护试点工作基线调查报告》</p>
+                    <p>《中国缓和医疗发展蓝皮书(2019-2020)》</p>
+                    <p>国家统计局年度数据查询</p>
+                    <p>国家卫生健康委员会：《卫生事业发展统计公报》（2018-2021）</p>
+                    <p>《关于开展第二批安宁疗护试点工作的通知》</p>
+                    <p>《安宁疗护中心基本标准（试行）》</p>
+                    <p>上海市卫生健康委员会：《上海市安宁疗护服务机构名单》</p>
+                    <p>李嘉诚基金会「人间有情」全国宁养医疗服务计划：居家安宁疗护服务流程图</p>
+                    <p>企查查</p>
+                    <p>世界安宁缓和医疗联盟：《安宁缓和医疗地图（第二版）》</p>
+                    <p>Economist Intelligence Unit. The 2015 Quality of Death Index.Ranking palliative care across the World.</p>
+                    <p>Cross Country Comparison of Expert Assessments of the Quality of Death and Dying 2021.</p>
+                    <p>Ling M, Wang X, Ma Y, et al. A review of the current state of hospice care in China[J]. Current Oncology Reports, 2020, 22(10): 1-7.</p>
+                    <p>Chen L, Li X H, Pan X, et al. Nurses’ knowledge, attitudes, and willingness to practice hospice care: An analysis of influencing factors[J].Plos one, </p>
+                    <p>2022, 17(2): e0259647.</p>
+                    
+                    <p>参考文献：</p>
+                    <p>[1]方洪鑫,甄橙.安宁疗护的起源与发展初探[J].中华医史杂志,2021,51(04):208-212.</p>
+                    <p>[2]李滨,马怡乐.老龄化社会临终关怀的国际经验比较[J].护理学报,2022,29(11):25-30.DOI:10.16460/j.issn1008-9969.2022.11.025.</p>
+                    <p>[3]刘胜男,李文硕,秦源,李昆.国外缓和医疗的政策经验及启示[J].医学与哲学,2019,40(12):24-27+32.</p>
+                    <p>[4]吴玉苗,奉典旭,徐东浩,周大双,毛懿雯,施永兴.中国安宁疗护服务政策演变与发展[J].医学与哲学,2020,41(14):23-27.</p>
+                    <p>[5]《安宁故事：我们尽力擦拭那些看不见的眼泪（上）》https://mp.weixin.qq.com/s/paISSFJcTtsP3lhKRyii2g</p>
+                    <p>[6] 陈静,王笑蕾.安宁疗护的发展现状与思考[J].护理研究,2018,32(07):1004-1007.</p>
+                    <p>[7]黄子芯,张崇楷,原彰.我国安宁疗护试点发展研究[J].卫生软科学,2022,36(06):22-27.</p>
+                    <p>[8]生前遗嘱推广公众号《从医18年，安宁12载》</p>
+                    <p>[9]李嘉诚基金会「人间有情」全国宁养医疗服务计划《宁养居家探访服务与疾病生活》</p>
+                    <p>[10]《中国安宁疗护发展重要政策回顾》https://mp.weixin.qq.com/s/acxK3yYBs3eKGUS--eXtLg</p>
+                    <p>[11]《无处安放的安宁疗护病床》https://mp.weixin.qq.com/s/dt-C0oj5rue9BQLcR6gjg</p>
+                    <p>[12]《安宁疗护试点扩围，如何做到“生死两相安”》https://mr.mbd.baidu.com/r/MmZHVeotlS?f=cp&u=75d690d239db9491</p>
+                    <p>[13]《聊聊安宁疗护那点事》https://www.cn-healthcare.com/articlewm/20211119/wap-content-1286651.html</p>
+                    <p>[14]《温州小镇的安宁疗护病房：为了那些重回“婴儿状态”的临终老人》https://baijiahao.baidu.com/s?id=1728560524769995254&wfr=spider&for=pc</p>
+                    <p>[15]中华人民共和国国家卫生健康委员会对十二届全国人大五次会议第8274号建议的答复 http://www.nhc.gov.cn/zwgk/jianyi/201801/a93e2760594a40939ba19852a10b61f3.shtml</p>
+
+
                     <p>联系邮箱：488548816@qq.com</p>
                     <p>2022 © 四川大学</p>
-                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -54,7 +92,7 @@ export default {
 <style lang="scss" scoped>
 .part4_content{
     width:100%;
-    height:15rem;
+    height:24.2rem;
     text-align: center;
     position: relative;
 }
@@ -128,30 +166,44 @@ export default {
 }
 .mask{
     width: 100%;
-    height: 100vh;
-    @media
-    screen and (orientation:portrait) and (max-device-width:768px) and (max-device-height:1024px),
-    screen and (orientation:landscape) and (max-device-width:1024px) and (max-device-height:768px) {
-        height:7rem
-    }
+    height: 15rem;
 	background: rgba(0, 0, 0, .1);
     &__word{
-            width: 5rem;
-            height: 2rem;
+            width: 100%;
+            height: 13.5rem;
             position: absolute;
             left:50%;
-            margin-left:-2.5rem;
+            margin-left:-50%;
             margin-top: 1rem;
             p{
                 width: 100%;
                 height: .3rem;
                 font-size: .15rem;
                 line-height: .2rem;
-                text-align: center;
-                color:#fff
+                text-align: left;
+                color:#fff;
+                margin-left: .3rem;
             }
             p:nth-child(4){
-                margin-top: 0.8rem;
+                margin-bottom: 0.5rem;
+            }
+            p:nth-child(7),p:nth-child(8){
+                margin-left: 3.3rem;
+            }
+            p:nth-child(11),p:nth-child(12){
+                margin-left: 1.8rem;
+            }
+            p:nth-child(17),p:nth-child(18),p:nth-child(19),p:nth-child(20),p:nth-child(21){
+                margin-left: 2rem;
+            }
+            p:nth-child(21){
+                margin-bottom: 0.5rem;
+            }
+            p:nth-child(37){
+                margin-bottom: 0.6rem;
+            }
+            p:nth-child(38),p:nth-child(39){
+                text-align: center;
             }
     }
 }
