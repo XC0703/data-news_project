@@ -25,7 +25,7 @@
                             @click="changeActive(index)"
                         ></div>
                         <!--线-->
-                        <div class="my_timeline_item_line" v-if="index!=7"></div>
+                        <div class="my_timeline_item_line" v-if="index!=6"></div>
                         <!--标注-->
                         <div class="my_timeline_item_content">
                             {{item.timestamp}}
@@ -47,11 +47,11 @@ export default {
             timeIndex: 0,
             timeLineList: [{
                     timestamp: '1960年',
-                    year: '1960',
+                    year: '1960年',
                     info: '英国护士西西里·桑德斯(Dame Cicely Saunders, 1918－2005)首次系统总结出对临终患者提供全面医疗照护的方案。'
                 }, {
                     timestamp: '1967年',
-                    year: '1967',
+                    year: '1967年',
                     info: '桑德斯在伦敦创办了圣克里斯托弗安宁院(St. Christopher Hospice)。这是世界上第一所现代意义的安宁疗护机构。'
                 }, {
                     timestamp: '20世纪60—70年代',
@@ -59,19 +59,15 @@ export default {
                     info: '桑德斯及其创办的圣克里斯托弗安宁院，在英国以及其他西方发达国家引起了广泛而热烈的响应。'
                 }, {
                     timestamp: '1974年',
-                    year: '1974',
-                    info: '1974年耶鲁大学护理学院院长弗洛伦斯·沃尔德(Florence Wald)与两名儿科医生及一名牧师建立了康涅狄格临终关怀中心。'
-                }, {
-                    timestamp: '1976年',
-                    year: '1976',
-                    info: '蒙特医生在加拿大蒙特利尔的皇家维多利亚医院(Royal Victoria Hospital)建立了全世界第一个驻院缓和医疗团队。'
+                    year: '1974年',
+                    info: '耶鲁大学护理学院院长弗洛伦斯·沃尔德(Florence Wald)与两名儿科医生及一名牧师建立了康涅狄格临终关怀中心。'
                 }, {
                     timestamp: '20世纪80年代',
                     year: '20世纪80年代',
                     info: '英国、美国、加拿大等发达国家将安宁疗护纳入到国家医疗卫生体制与医疗保险体系中，生前预嘱(advance directive)等配套措施也得到法律支持，而以缓解晚期患者疼痛为主要目标的缓和医学(palliative medicine)，正式成为医学的一个重要分支。'
                 }, {
                     timestamp: '1987年',
-                    year: '1987',
+                    year: '1987年',
                     info: '全世界第一份缓和医疗专业学术期刊《缓和医学》(Palliative Medicine)在英国正式创刊。'
                 }, {
                     timestamp: '21世纪以来',
@@ -114,7 +110,7 @@ export default {
         moveRight() {
             this.getContent()[0].style.opacity = 0;
             this.getContent()[1].style.opacity = 0;
-            if(this.timeIndex!=7){
+            if(this.timeIndex!=6){
                 this.timeIndex++;
             }
             var that = this;
@@ -213,17 +209,15 @@ export default {
     }
 }
 .ul_box {
-    width: 11rem;
+    width: 100%;
     height: 1rem;
     overflow: hidden;
     position: absolute;
-    left:50%;
     top:50%;
     margin-top: -.5rem;
-    margin-left: -5.5rem;
     .my_timeline{
         display: flex;
-        margin:0.35rem 0 0 .8rem;
+        margin:0.35rem 0 0 .4rem;
         padding:0 .1rem 0 .1rem
     }
 }
@@ -249,15 +243,15 @@ export default {
     border-left: none;
 }
 .my_timeline_item_content {
-    margin: .1rem 0 0 -.9rem;
+    margin: .1rem 0 0 -1.1rem;
     color: #999;
     font-size:.18rem;
 }
-.my_timeline_item:nth-child(8){
+.my_timeline_item:nth-child(7){
     .my_timeline_item_content{
     position: absolute;
     top:.24rem;
-    left:0.53rem;
+    left:0.75rem;
     }
 }
 .my_timeline_item.active{
@@ -275,22 +269,22 @@ export default {
     .my_timeline_item_content{
         position: absolute;
         top:-.4rem;
-        left:0.8rem;
+        left:1rem;
     }
 }
 .my_timeline_item:nth-child(3).active{
     .my_timeline_item_content{
-    left:0.3rem;
-    }
-}
-.my_timeline_item:nth-child(6).active{
-    .my_timeline_item_content{
     left:0.5rem;
     }
 }
-.my_timeline_item:nth-child(8).active{
+.my_timeline_item:nth-child(5).active{
     .my_timeline_item_content{
-    left:0.6rem;
+    left:0.7rem;
+    }
+}
+.my_timeline_item:nth-child(7).active{
+    .my_timeline_item_content{
+    left:0.85rem;
     }
 }
 @keyframes showIn{

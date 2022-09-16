@@ -161,7 +161,7 @@ export default {
     &__left{
         height: 100%;
         width:65%;
-        color:rgb(21, 169, 206);
+        color:rgb(33,105,179);
         float: left;
         &__box{
             width:100%;

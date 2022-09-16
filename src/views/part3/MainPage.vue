@@ -13,7 +13,7 @@
                     <p>团队。10月初，医院几经协商，最终把关停安宁疗护中心的消息告知了J主任。对此，他表示理解，认为<b>“关停也是无奈之举”。</b></p>
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
-                    <p>在发展安宁疗护政策已经陆续出台情况下，J主任却没能获得“安宁”。“我们之前做过一些转型尝试，比如提出了‘整合安宁疗护模式’，将</p>
+                    <p>在发展安宁疗护政策已经陆续出台的情况下，J主任却没能获得“安宁”。“我们之前做过一些转型尝试，比如提出了‘整合安宁疗护模式’，将</p>
                     <p>养老服务和安宁疗护、缓和医疗和普通医疗、医疗服务和殡葬服务相结合，通过对患者和家属的整体照顾，来践行安宁疗护的理念，让这一行</p>
                     <p>业能够可持续性发展，但现实情况是，<b>医院不可能不考虑经济效益等现实问题。”</b></p>
                 </div>
@@ -28,8 +28,8 @@
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
                     <p>开设在浙江温州马站中心卫生院的安宁疗护病房也在亏损。以肺癌中晚期伴并发症患者为例，其住院费为7000元，经过医保实报实销后只需</p>
-                    <p>自付1000多元。随后，医保会按病种分组（DRGs）付费，给卫生院拨付医保基金3000元到4000元。因此每收治一位患者，卫生院就会“亏</p>
-                    <p>本”1000元到2000元。</p>
+                    <p>自付1000多元。随后，医保会按病种分组（DRGs）付费，给卫生院拨付医保基金3000元到4000元。因此每收治一位患者，卫生院就会<b>“亏</b></p>
+                    <p><b>本”1000元到2000元</b>。</p>
                 </div>
                 <div class="part3_element0">
                     <div class="part3_element0__img">
@@ -47,7 +47,7 @@
                     <p>DGRs进行拨付基金的方式，拨付标准不一的同时，医院的运营主体也常常处于不同程度的亏损状态中。</p>
                 </div>
                 <div class="content__word__special">
-                    <span class="specialSpan">安宁疗护专业医护人员不足，服务开展艰</span>
+                    <span class="specialSpan">安宁疗护专业医护人员不足，服务开展难</span>
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
                     <p>2021年11月30日上午约九点半，那家即将关停的医院安宁疗护中心迎来接“病人转院”的家属，这是位重度脑中风患者，衣食起居无法自理</p>
@@ -56,16 +56,16 @@
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
                     <p>谈及专业人才稀缺的原因，复旦大学附属肿瘤医院综合治疗科主任，国内从事安宁疗护的先行者之一的成文武主任对此无奈地说：<b>“技术要求</b></p>
-                    <p><b>高、归感低、收入少、压力大是这一行的通病，但我还在坚持，直到退休。”</b></p>
+                    <p><b>高、归属感低、收入少、压力大是这一行的通病，但我还在坚持，直到退休。”</b></p>
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
-                    <p>据计算，截至2021年底，我国每10万人口拥有的安宁疗护床位为19.96张；每1万常住人口拥有的安宁执业医师仅0.18人，安宁护士仅0.17人</p>
+                    <p>据计算，截至2021年底，我国每10万人口拥有的安宁疗护床位为<b>19.96张</b>；每1万常住人口拥有的安宁执业医师仅<b>0.18人</b>，安宁疗护注册护士仅<b>0.17人</b></p>
                     <p>，并且，中国大部分安宁疗护从业人员未曾接受过专业培训。在兼职人文关怀服务时，其<b>缺乏必备的伦理、心理、社会等方面专业知识，</b>导致</p>
                     <p>服务开展困难。</p>
                 </div>
                 <div class="chartBoxs" style="height:5.5rem;margin-top:.3rem">
                     <div class="chartBox" style="height:5.5rem;width:5rem;margin-left: -2.5rem !important;">
-                        <div class="chartBox__chartTitle">我国安宁疗护基本医疗机械数</div>
+                        <div class="chartBox__chartTitle">我国安宁疗护基本医疗资源情况</div>
                         <div class="chartBox__chartSubtitle">数据来源：中国生命关怀协会调研部</div>
                         <div class="chartBox__chart" style="height:5rem;bottom:.2rem;">
                             <FirstChart />
@@ -79,9 +79,9 @@
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
                     <p>另外，安宁疗护在很多地方还不是一个临床专业，因此医护人员工资待遇低，且专业建设和晋升都受到了制约。面临着<b>巨大的工作压力，愿意</b></p>
-                    <p><b>从事安宁疗护的人员也较少。</b>根据学者Lin Chen等对广西省二、三级公立医院的1833名护士展开的调查，只有505名参与护士表示愿意从事安</p>
-                    <p>宁疗护，268名护士表示不愿意从事临终关怀服务，1061名则表示不确定。而根据学者孟玲等对贵州省1306名安宁疗护从业人员的调研，有</p>
-                    <p>78.3%的人认为临终关怀不仅会使他们身心俱疲，还会产生强烈的失落感和焦虑感，从而不愿参与临终关怀。</p>
+                    <p><b>从事安宁疗护的人员也较少。</b>根据学者Lin Chen等对广西省二、三级公立医院的1834名护士展开的调查，只有<b>505名</b>参与护士表示愿意从事安</p>
+                    <p>宁疗护，<b>268名</b>护士表示不愿意从事临终关怀服务，<b>1061名</b>则表示不确定。而根据学者孟玲等对贵州省1306名安宁疗护从业人员的调研，有</p>
+                    <p><b>78.3%</b>的人认为临终关怀不仅会使他们身心俱疲，还会产生强烈的失落感和焦虑感，从而不愿参与临终关怀。</p>
                 </div>
                 <div class="part3_element567">
                     <div class="part3_element567__content">
@@ -102,8 +102,8 @@
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
                     <p>现今，各大安宁疗护相关试点城市虽已制定了安宁疗护费用结算办法，但各地标准并不统一，呈现<b>碎片化发展。</b>另外，民办安宁疗护机构和公</p>
-                    <p>办的安宁疗护机构的费用之间也有较大差距。在此背景下，如果国家继续加大安宁疗护扶持力度、过度扩大疗护试点，会导致各试点市(区)的</p>
-                    <p>工作难以协调，为国家统一标准的制定带来困难，影响其后续发展。</p>
+                    <p>办的安宁疗护机构的费用之间也有一定距离。在此背景下，如果国家继续加大安宁疗护扶持力度、过度扩大疗护试点，会导致各试点市(区)的</p>
+                    <p>工作难以协调，为国家统一标准的制定带来困难，影响安宁疗护的后续发展。</p>
                 </div>
                 <div class="part3_element8">
                     <div class="part3_element8__title">
@@ -474,6 +474,9 @@ export default {
         font-weight: bolder;
         font-size: .18rem;
         -webkit-transform-origin-x: 0;
+        -moz-transform-origin-x: 0;
+        -ms-transform-origin-x: 0;
+        -o-transform-origin-x:0;
         transform: scale(0.50);
     }
     &__chartBtns{

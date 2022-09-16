@@ -16,8 +16,8 @@
                 <div class="content__word__centerAlign">
                     <p>随着中国进入人口老龄化时代，人口死亡率也呈现上升趋势。</p>
                     <p>2021年，中国年末人口总数约为14.126亿，</p>
-                    <p>其中65岁以上老年人口数量约为20059万，占总人口数的14.20%。</p>
-                    <p> 二十年间，我国人口死亡率从2001年的6.43‰，上升至2021年的7.18‰。</p>
+                    <p>其中<b>65岁</b>以上老年人口数量约为<b>20059万</b>，占总人口数的<b>14.20%。</b></p>
+                    <p> 二十年间，我国人口死亡率从2001年的<b>6.43‰</b>，上升至2021年的<b>7.18‰</b>。</p>
                 </div>
                 <div class="chartBoxs" style="height: 4.5rem;">
                     <div class="chartBox" style="height: 4.5rem;width: 7rem;margin-left: -3.5rem !important;">
@@ -47,7 +47,7 @@
                     </div> 
                 </div>
                 <div class="content__word__centerAlign">
-                    <p>尤其是在65岁以后，死亡率增速明显加大，60岁及以上年龄段的老年人群死亡率高达31.83‰。</p>
+                    <p>尤其是在<b>65岁</b>以后，死亡率增速明显加大，<b>60岁</b>及以上年龄段的老年人群死亡率高达<b>31.83‰</b>。</p>
                 </div>
                 <div class="chartBoxs" style="height: 4rem;">
                     <div class="chartBox" style="height: 4rem;width: 7rem;margin-left: -3.5rem !important;">
@@ -67,14 +67,14 @@
                     </div> 
                 </div>
                 <div class="content__word__leftAlign">
-                    <p>根据2002至2018年中国老年健康影响因素跟踪调查（CLHLS）中对1998至2018年间去世老年人亲属的调查（有效样本为12429人）,有高达</p>
+                    <p>根据2002年至2018年中国老年健康影响因素跟踪调查（CLHLS）中对1998至2018年间去世老年人亲属的调查（有效样本为12429人）,有高达</p>
                     <p><b>82.34%</b>的老年人在临终前生活不能完全自理，<b>37.29%</b>的老年人在痛苦状态下离世，<b>在65至79岁和80至89岁中高龄老年群体中，痛苦离世的</b></p>
                     <p><b>老年人均多于安详离世的老年人。</b></p>
                 </div>
                 <div class="chartBoxs" style="height: 5.9rem;">
                     <div class="chartBox" style="height: 5.9rem;width:5rem;margin-left: -2.5rem !important;">
                         <div class="chartBox__chartTitle">最后疾病期间症状和疼痛比例图</div>
-                        <div class="chartBox__chartSubtitle">数据来源：中国缓和医疗发展蓝皮书（2019-2020）</div>
+                        <div class="chartBox__chartSubtitle">数据来源：《中国缓和医疗发展蓝皮书（2019-2020）》</div>
                         <div class="chartBox__chartBtns" style="top:0.5rem;left:0.8rem;">
                             <div 
                                 :class="{'chartBox__chartBtns__chartBtn chartBtn3': true, 'activeBtn1': currentIndex2 === 0}"
@@ -95,7 +95,7 @@
                 <div class="content__word__special">
                     <span>当死亡不可避免</span>
                     <span>当痛苦被迫延续</span>
-                    <span>当安宁疗护拓展了生命的厚度</span>
+                    <span>安宁疗护拓展了生命的厚度</span>
                     <span>呵护生命的最后一程</span>
                 </div>
             </div>
@@ -264,6 +264,9 @@ export default {
         font-weight: bolder;
         font-size: .18rem;
         -webkit-transform-origin-x: 0;
+        -moz-transform-origin-x: 0;
+        -ms-transform-origin-x: 0;
+        -o-transform-origin-x:0;
         transform: scale(0.50);
     }
     &__chartBtns{

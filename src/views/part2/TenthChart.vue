@@ -90,7 +90,7 @@ export default {
                         label: '没有安宁缓和医疗的国家（1级）',
                     }, ],
                     inRange: {
-                        color: ['rgb(115,192,222)', 'rgb(82,154,232)', 'rgb(111,147,207)', 'rgb(33,105,179)','rgb(55,87,132)','rgb(16,50,98)']
+                        color: ['rgb(214,230,246)', 'rgb(82,154,232)', 'rgb(111,147,207)', 'rgb(33,105,179)','rgb(55,87,132)','rgb(16,50,98)']
                     },
                     outOfRange: {
                         color: ['#999999']
@@ -107,7 +107,7 @@ export default {
                         },
                     },
                     itemStyle: {
-                        areaColor:'rgb(190,219,250)',
+                        areaColor:'rgb(214,230,246)',
                         borderColor: 'rgba(0,63,140,0.2)',
                         shadowColor: 'rgba(0,63,140,0.2)',
                         shadowOffsetY: 20,

@@ -1,8 +1,14 @@
 {
     "name": "安宁疗护服务内容",
+    "label":{
+        "fontSize":20
+    },
     "children": [
     {
         "name": "症状控制",
+        "label":{
+            "fontSize":18
+        },
         "children": [
             {"name": "疼痛"},
             {"name": "呼吸困难"},
@@ -21,6 +27,9 @@
     },
     {
         "name": "心理支持和人文关怀",
+        "label":{
+            "fontSize":18
+        },
         "children": [
             {"name": "医患沟通"},
             {"name": "帮助患者应对情绪反应"},
@@ -32,6 +41,9 @@
     },
     {
         "name": "舒适照护",
+        "label":{
+            "fontSize":20
+        },
         "children": [
             {"name": "病室环境管理"},
             {"name": "床单位管理"},

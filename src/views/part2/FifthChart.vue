@@ -86,11 +86,11 @@ export default {
                         distance: 10, //离图标多远					
                         show: true,
                         fontSize: 12,
-                        color: " #15A9CE",
+                        color: " rgb(33,105,179)",
                         fontWeight: 500,
                     },
                     itemStyle: {
-                        color: " #15A9CE"
+                        color: " rgb(33,105,179)"
                     }
                 })
             }
@@ -143,14 +143,14 @@ export default {
                             smooth: true,
                             trailLength: 0,
                             symbol: "arrow",
-                            color: " #15A9CE",
+                            color: " rgb(33,105,179)",
                             symbolSize: 12,
                             period: 4, //特效动画的时间
                             loop: true
                         },
                         lineStyle: {
                             curveness: 0,
-                            color: ' #15A9CE',
+                            color: 'rgb(33,105,179)',
                             opacity: 0.6,
                             width: 1,
                             type: "dashed"

@@ -4,12 +4,10 @@
             <div class="content__word">
                 <div class="content__word__leftAlign" style="margin-top:0.8rem">
                     <p>开头提到的那位马阿姨在确诊肿瘤晚期后，并没有过度消沉，而是在接受安宁疗护的同时签署了生前预嘱，表示在自己病情恶化时不进ICU，</p>
-                    <p>不插管、不做过度抢救。马阿姨的家人都尊重她的意愿，一家人如平常那般说说家长里短，谈谈当下时局，平淡、温馨。</p>
-                </div>
-                <div class="content__word__leftAlign">
-                    <p>马阿姨平日就是一个生活精致美丽的女人，住院期间病房总是布置得温馨美好，床头桌上摆放着她爱看的小说和杂志，病房里总是轻轻飘荡着</p>
-                    <p>她最爱听的音乐，枕下放着那条她最喜欢的丝巾。在一个飘着雪花的冬日，马阿姨走了，没有经历太多痛苦，就在那种平静、安详中走向了另</p>
-                    <p>一个世界，如她所愿，她把最美丽的样子留给了最爱的人。</p>
+                    <p>不插管、不做过度抢救。马阿姨的家人都尊重她的意愿，一家人如平常那般说说家长里短，谈谈当下时局，平淡、温馨。马阿姨平日就是一个</p>
+                    <p>生活精致美丽的女人，住院期间病房总是布置得温馨美好，床头桌上摆放着她爱看的小说和杂志，病房里总是轻轻飘荡着她最爱听的音乐，枕</p>
+                    <p>下放着那条她最喜欢的丝巾。在一个飘着雪花的冬日，马阿姨走了，没有经历太多痛苦，就在那种平静、安详中走向了另一个世界，如她所</p>
+                    <p>愿，她把最美丽的样子留给了最爱的人。</p>
                 </div>
                 <div class="content__word__leftAlign">
                     <p>2022年4月16日，中国安宁疗护事业建设与发展研讨会在北京举行。16年前的这一天，中国生命关怀协会成立；经过16年的努力，中国的安宁</p>
@@ -50,11 +48,7 @@
                     <p>李嘉诚基金会「人间有情」全国宁养医疗服务计划：居家安宁疗护服务流程图</p>
                     <p>企查查</p>
                     <p>世界安宁缓和医疗联盟：《安宁缓和医疗地图（第二版）》</p>
-                    <p>Economist Intelligence Unit. The 2015 Quality of Death Index.Ranking palliative care across the World.</p>
-                    <p>Cross Country Comparison of Expert Assessments of the Quality of Death and Dying 2021.</p>
-                    <p>Ling M, Wang X, Ma Y, et al. A review of the current state of hospice care in China[J]. Current Oncology Reports, 2020, 22(10): 1-7.</p>
-                    <p>Chen L, Li X H, Pan X, et al. Nurses’ knowledge, attitudes, and willingness to practice hospice care: An analysis of influencing factors[J].Plos one, </p>
-                    <p>2022, 17(2): e0259647.</p>
+
                     
                     <p>参考文献：</p>
                     <p>[1]方洪鑫,甄橙.安宁疗护的起源与发展初探[J].中华医史杂志,2021,51(04):208-212.</p>
@@ -72,6 +66,11 @@
                     <p>[13]《聊聊安宁疗护那点事》https://www.cn-healthcare.com/articlewm/20211119/wap-content-1286651.html</p>
                     <p>[14]《温州小镇的安宁疗护病房：为了那些重回“婴儿状态”的临终老人》https://baijiahao.baidu.com/s?id=1728560524769995254&wfr=spider&for=pc</p>
                     <p>[15]中华人民共和国国家卫生健康委员会对十二届全国人大五次会议第8274号建议的答复 http://www.nhc.gov.cn/zwgk/jianyi/201801/a93e2760594a40939ba19852a10b61f3.shtml</p>
+                    <p>[16]Economist Intelligence Unit. The 2015 Quality of Death Index.Ranking palliative care across the World.</p>
+                    <p>[17]Cross Country Comparison of Expert Assessments of the Quality of Death and Dying 2021.</p>
+                    <p>[18]Ling M, Wang X, Ma Y, et al. A review of the current state of hospice care in China[J]. Current Oncology Reports, 2020, 22(10): 1-7.</p>
+                    <p>[19]Chen L, Li X H, Pan X, et al. Nurses' knowledge, attitudes, and willingness to practice hospice care: An analysis of influencing factors[J].Plos one,2022, 17(2): e0259647.</p>
+                    <p></p>
 
 
                     <p>联系邮箱：488548816@qq.com</p>
@@ -178,25 +177,22 @@ export default {
             p{
                 width: 100%;
                 height: .3rem;
-                font-size: .15rem;
+                font-size: .145rem;
                 line-height: .2rem;
                 text-align: left;
                 color:#fff;
-                margin-left: .3rem;
+                margin-left: .6rem;
             }
             p:nth-child(4){
                 margin-bottom: 0.5rem;
             }
             p:nth-child(7),p:nth-child(8){
-                margin-left: 3.3rem;
+                margin-left: 3.5rem;
             }
             p:nth-child(11),p:nth-child(12){
-                margin-left: 1.8rem;
+                margin-left: 2.05rem;
             }
-            p:nth-child(17),p:nth-child(18),p:nth-child(19),p:nth-child(20),p:nth-child(21){
-                margin-left: 2rem;
-            }
-            p:nth-child(21){
+            p:nth-child(16){
                 margin-bottom: 0.5rem;
             }
             p:nth-child(37){

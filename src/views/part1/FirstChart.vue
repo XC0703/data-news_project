@@ -69,9 +69,9 @@ mounted() {
                   type: 'tree',
                   data: [mapData],
                   top: '1%',
-                  left: '15%',
+                  left: '25%',
                   bottom: '1%',
-                  right: '20%',
+                  right: '25%',
                   symbolSize: 8,
                   initialTreeDepth:1,
                   label: {

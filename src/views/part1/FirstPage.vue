@@ -19,6 +19,7 @@ export default {
     text-align: center;
     img{
         margin-top: 4rem;
+        width:9rem;
     }
 }
 </style>

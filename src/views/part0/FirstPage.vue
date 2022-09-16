@@ -199,10 +199,10 @@ export default {
     }
     &__middleBox{
         position: absolute;
-        width:9rem;
-        height:4rem;
+        width:10rem;
+        height:4.5886rem;
         left:50%;
-        margin-left:-4.5rem;
+        margin-left:-5rem;
         margin-top:.5rem;
         font-size: .8rem;
         text-align: center;
@@ -218,7 +218,7 @@ export default {
     &__bottomBox{
         position: absolute;
         width:5.5rem;
-        height:.8rem;
+        height:.7093rem;
         left:50%;
         margin-left:-2.75rem;
         text-align: center;

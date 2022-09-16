@@ -18,7 +18,8 @@ export default {
     position: relative;
     text-align: center;
     img{
-        margin-top: 4rem;
+        margin-top: 3.5rem;
+        width:4rem;
     }
 }
 </style>

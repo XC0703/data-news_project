@@ -168,7 +168,7 @@ export default {
                     textStyle:{
                         fontSize:15
                     },
-                    subtext:"数据来源：中国缓和医疗发展蓝皮书（2019-2020）",
+                    subtext:"数据来源：《中国缓和医疗发展蓝皮书（2019-2020）》",
                     subtextStyle: {
                         fontSize: 10
                     },
