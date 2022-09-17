@@ -33,11 +33,11 @@ export default {
                     x:'center',
                     top:-3,
                     textStyle:{
-                        fontSize:15
+                        fontSize:17
                     },
                     subtext:"数据来源：企查查",
                     subtextStyle: {
-                        fontSize: 10
+                        fontSize: 12
                     },
                 },
                 tooltip: {
@@ -61,7 +61,7 @@ export default {
                     selectedMode:false,
                     textStyle: {
                         color: '#333333',
-                        fontSize: 8,
+                        fontSize: 10,
                     },
                     pieces: [{
                         min:64,
@@ -132,7 +132,7 @@ export default {
                     },
                     labelLayout:{
                         show:false,
-                        fontSize:10,
+                        fontSize:12,
                     },
                     emphasis: {
                         itemStyle:{
@@ -163,8 +163,8 @@ export default {
 
 <style lang="scss" scoped>
 #part2_container7 {
-  width: 6.5rem;
-  height: 5rem;
+  width: 8.6rem;
+  height: 6rem;
   margin: 0rem auto 0;
 }
 </style>

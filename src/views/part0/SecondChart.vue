@@ -30,14 +30,14 @@ export default {
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(scrollTop)
-        if(scrollTop<650){
+        if(scrollTop<530){
             this.isRender=false;
-        }else if(this.isPC==true&&scrollTop>650&&scrollTop<=1650&&this.isRender==false){
+        }else if(this.isPC==true&&scrollTop>530&&scrollTop<=1640&&this.isRender==false){
             this.$nextTick(()=>{
                 this.mapChart();
             })
             this.isRender=true;
-        }else if(scrollTop>1650){
+        }else if(scrollTop>1640){
             this.isRender=false;
         }
     },
@@ -60,13 +60,13 @@ export default {
                     left:'center',
                     subtext:"数据来源：《中国缓和医疗发展蓝皮书（2019-2020）》",
                     subtextStyle: {
-                        fontSize: 10
+                        fontSize: 12
                     },
                 },
                 grid: {
                     top: '10%',
-                    left: '3%',
-                    right: '3%',
+                    left: '5%',
+                    right: '5%',
                     bottom: '3%',
                     containLabel: true,
                 },
@@ -106,7 +106,7 @@ export default {
                         boundaryGap: false,
                         axisLabel: {
                             formatter: '{value}',
-                            fontSize: 10,
+                            fontSize: 12,
                             color: '#0F2650',
                             interval:0,
                             rotate:45,
@@ -208,8 +208,8 @@ export default {
 
 <style lang="scss" scoped>
 #part0_container1 {
-  width: 7rem;
-  height: 4rem;
+  width: 8.6rem;
+  height: 4.4rem;
   margin: 0rem auto 0;
 }
 </style>

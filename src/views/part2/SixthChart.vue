@@ -151,8 +151,8 @@ export default {
 
 <style lang="scss" scoped>
 .part2_container5 {
-    width: 6.5rem;
-    height: 2.5rem;
+    width: 8.4rem;
+    height: 3rem;
     margin: 0rem auto 0;
     box-shadow: 0 .04rem .08rem 0 rgba(0,0,0,0.20);
     opacity: 0.8;
@@ -166,21 +166,21 @@ export default {
         &__box{
             width:100%;
             height:25%;
-            line-height: .625rem;
+            line-height: .75rem;
             text-align: center;
         }
         .box1{
-            font-size: .4rem;
+            font-size: .55rem;
         }
         .box2{
-            font-size: .6rem;
+            font-size: .7rem;
         }
         .box3{
             display: flex;
             &__icon{
                 flex: 1;
                 text-align: center;
-                font-size: .5rem;
+                font-size: .55rem;
             }
         }
         .box4{
@@ -191,7 +191,7 @@ export default {
                 &__ico{
                 flex:1;
                 text-align: center;
-                font-size: .3rem;
+                font-size: .45rem;
             }
             }
         }
@@ -204,16 +204,16 @@ export default {
             width: 100%;
             height: 33.333333%;
             text-align: center;
-            font-size: .15rem;
+            font-size: .18rem;
         }
         .content1{
-            padding-top: .8rem;
+            padding-top: 1.03rem;
         }
         .content2{
-            padding-top: .7rem;
+            padding-top: 0.72rem;
         }
         .content3{
-            padding-top: .45rem;
+            padding-top: .5rem;
         }
     }
 }

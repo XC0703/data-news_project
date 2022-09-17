@@ -32,14 +32,14 @@ export default {
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(scrollTop)
-        if(scrollTop<9870){
+        if(scrollTop<9440){
             this.isRender=false;
-        }else if(this.isPC==true&&scrollTop>9870&&scrollTop<=10995&&this.isRender==false){
+        }else if(this.isPC==true&&scrollTop>9440&&scrollTop<=10550&&this.isRender==false){
             this.$nextTick(()=>{
                 this.mapChart();
             })
             this.isRender=true;
-        }else if(scrollTop>10995){
+        }else if(scrollTop>10550){
             this.isRender=false;
         }
     },
@@ -71,13 +71,13 @@ export default {
                     text: '国家卫生健康委员会临终关怀、安宁疗护相关词条数量变化图',
                     x:'center',
                     textStyle:{
-                        fontSize:15
+                        fontSize:17
                     },
                     top:-3,
                     left:'center',
                     subtext:"数据来源：国家卫生健康委员会",
                     subtextStyle: {
-                        fontSize: 10
+                        fontSize: 12
                     },
                 },
                 grid: {
@@ -125,7 +125,7 @@ export default {
                             interval:0,
                             rotate:45,
                             formatter: '{value}',
-                            fontSize: 10,
+                            fontSize: 12,
                             // margin: 20,
                             color: '#0F2650',
                         },
@@ -151,7 +151,7 @@ export default {
                         name:'单位(条)',
                         nameTextStyle:{
                             color: '#0F2650', // 文字颜色
-                            fontSize:10
+                            fontSize:12
                         },                      
                         axisLabel: {
                             formatter:'{value}',
@@ -244,8 +244,8 @@ export default {
 
 <style lang="scss" scoped>
 #part2_container0 {
-  width: 7rem;
-  height: 4rem;
+  width: 8.6rem;
+  height: 4.6rem;
   margin: 0rem auto 0;
 }
 </style>

@@ -32,14 +32,14 @@ export default {
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(scrollTop)
-        if(scrollTop<14720){
+        if(scrollTop<14380){
             this.isRender=false;
-        }else if(this.isPC==true&&scrollTop>14720&&scrollTop<=15760&&this.isRender==false){
+        }else if(this.isPC==true&&scrollTop>14380&&scrollTop<=15420&&this.isRender==false){
             this.$nextTick(()=>{
                 this.mapChart();
             })
             this.isRender=true;
-        }else if(scrollTop>15760){
+        }else if(scrollTop>15420){
             this.isRender=false;
         }
     },
@@ -68,13 +68,13 @@ export default {
                     text: '各年份安宁疗护企业成立数量',
                     x:'center',
                     textStyle:{
-                        fontSize:15
+                        fontSize:17
                     },
                     top:-3,
                     left:'center',
                     subtext:"数据来源：企查查",
                     subtextStyle: {
-                        fontSize: 10
+                        fontSize: 12
                     },
                 },
                 tooltip: {
@@ -148,7 +148,7 @@ export default {
                     },
                 },
                 yAxis: {
-                    name: "单位：个",
+                    name: "单位(个)",
                     type: "value",
                     //设置Y轴坐标最大、最小值
                     min: 0,
@@ -215,7 +215,7 @@ export default {
                             show: true, //开启显示
                             position: 'top', //在上方显示
                             color: 'black',
-                            fontSize: 10
+                            fontSize: 12
                     },
                     data: [1,1,2,2,1,1,1,3,2,5,5,6,33,58,30,23,9],
                     z: 10,
@@ -245,8 +245,8 @@ export default {
 
 <style lang="scss" scoped>
 #part2_container8 {
-  width: 7rem;
-  height: 4rem;
+  width: 8.6rem;
+  height: 4.6rem;
   margin: 0rem auto 0;
 }
 </style>

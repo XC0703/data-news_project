@@ -32,14 +32,14 @@ export default {
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(scrollTop)
-        if(scrollTop<1120){
+        if(scrollTop<1040){
             this.isRender=false;
-        }else if(this.isPC==true&&scrollTop>1120&&scrollTop<=2120&&this.isRender==false){
+        }else if(this.isPC==true&&scrollTop>1040&&scrollTop<=2160&&this.isRender==false){
             this.$nextTick(()=>{
                 this.mapChart();
             })
             this.isRender=true;
-        }else if(scrollTop>2120){
+        }else if(scrollTop>2160){
             this.isRender=false;
         }
     },
@@ -51,7 +51,7 @@ export default {
     },
     // 配置渲染map
     mapChart() {
-        var data_line = [
+        var data_bar = [
         37.1,0.42,0.01,31.48
         ];
         var chartDom = document.getElementById("part0_container2");
@@ -72,15 +72,15 @@ export default {
                     left:"center",
                     subtext:"数据来源：《中国缓和医疗发展蓝皮书（2019-2020）》",
                     subtextStyle: {
-                        fontSize: 10
+                        fontSize: 12
                     },
                     textStyle:{
-                        fontSize:15
+                        fontSize:17
                     }
                 },
                 grid: {
                     top: '15%',
-                    left: '3%',
+                    left: '5%',
                     right: '5%',
                     bottom: '3%',
                     containLabel: true,
@@ -118,16 +118,16 @@ export default {
                 xAxis: [
                     {
                         type: 'category',
-                        boundaryGap: false,
                         axisLabel: {
                             formatter: '{value}',
                             // fontSize: 14,
                             // margin: 20,
                             color: '#0F2650',
-                            fontSize:10,
+                            fontSize:12,
                             // rotate:30,
                         },
                         axisLine: {
+                            show: true,
                             lineStyle: {
                                 color: '#0F2650',
                             },
@@ -142,17 +142,18 @@ export default {
                 yAxis: [
                     {
                         boundaryGap: false,
+                        name:'单位(‰)',
                         type: 'value',
                         min:0,
                         max:40,
                         axisLabel: {
-                            formatter:'{value}‰',
+                            formatter:'{value}',
                             color: '#0F2650',
                         },
                         nameTextStyle: {
-                            color: '#fff',
+                            color: '#0F2650',
                             fontSize: 12,
-                            lineHeight: 40,
+                            lineHeight: 20,
                         },
                         axisLine: {
                             show: true,
@@ -168,21 +169,11 @@ export default {
                 series: [
                     {
                         name: '死亡率',
-                        type: 'line',
-                        smooth: true,
-                        showSymbol: true,
-                        symbolSize: 3,
+                        type: 'bar',
+                        barWidth: 25,
                         zlevel: 3,
                         itemStyle: {
-                            color: '#0F2650',
-                            borderColor: '#0F2650',
-                        },
-                        lineStyle: {
-                                width: 1,
-                                color: '#0F2650',
-                        },
-                        areaStyle: {
-                                color: new echarts.graphic.LinearGradient(
+                            color: new echarts.graphic.LinearGradient(
                                     0,
                                     0,
                                     0,
@@ -190,17 +181,18 @@ export default {
                                     [
                                         {
                                             offset: 0,
-                                            color: 'rgba(15,38,80,0.2)',
+                                            color: 'rgba(15,38,80,1)',
                                         },
                                         {
                                             offset: 0.8,
-                                            color: 'rgba(15,38,80,0)',
+                                            color: 'rgba(15,38,80,0.7)',
                                         },
                                     ],
                                     false
                                 ),
+                            borderColor: '#0F2650',
                         },
-                        data: data_line,
+                        data: data_bar,
                     },
                 ],
             };
@@ -214,8 +206,8 @@ export default {
 
 <style lang="scss" scoped>
 #part0_container2 {
-  width: 7rem;
-  height: 4rem;
+  width: 8.6rem;
+  height: 4.4rem;
   margin: 0rem auto 0;
 }
 </style>

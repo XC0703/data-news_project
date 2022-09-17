@@ -31,11 +31,11 @@ export default {
                     x:'center',
                     top:-3,
                     textStyle:{
-                        fontSize:15
+                        fontSize:17
                     },
                     subtext:"数据来源：上海市卫生健康委员会《上海市安宁疗护服务机构名单》",
                     subtextStyle: {
-                        fontSize: 10
+                        fontSize: 12
                     },
                 },
                 tooltip:{
@@ -54,7 +54,7 @@ export default {
                     type: 'treemap',
                     roam:false,
                     nodeClick:false,
-                    bottom:0,
+                    bottom:20,
                     breadcrumb:{
                         show:false
                     },
@@ -72,11 +72,11 @@ export default {
                         },
                         rich: {
                             association: {
-                                fontSize: 16,
+                                fontSize: 17,
                                 color: '#fff',
                             },
                             peoNum: {
-                                fontSize: 25,
+                                fontSize: 26,
                                 color: '#fff',
                                 fontFamily: 'liquidCrystal',
                             },
@@ -114,8 +114,8 @@ export default {
 
 <style lang="scss" scoped>
 #part2_container6 {
-  width: 6rem;
-  height: 3.5rem;
+  width: 6.8rem;
+  height: 4rem;
   margin: 0rem auto 0;
 }
 </style>

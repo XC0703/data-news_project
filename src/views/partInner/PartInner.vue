@@ -44,25 +44,25 @@ export default {
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(scrollTop);
-        if(scrollTop<=4770){
+        if(scrollTop<=5100){
             this.bg1=true;
             this.bg2=false;
             this.bg3=false;
             this.bg4=false;
             this.footer=false;
-        }else if(scrollTop<=9960){
+        }else if(scrollTop<=9800){
             this.bg1=false;
             this.bg2=true;
             this.bg3=false;
             this.bg4=false;
             this.footer=false;
-        }else if(scrollTop<=18200){
+        }else if(scrollTop<=18000){
             this.bg1=false;
             this.bg2=false;
             this.bg3=true;
             this.bg4=false;
             this.footer=false;
-        }else if(scrollTop<=23550){
+        }else if(scrollTop<=22000){
             this.bg1=false;
             this.bg2=false;
             this.bg3=false;

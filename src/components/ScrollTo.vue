@@ -41,13 +41,13 @@ export default {
           //获取操作元素最顶端到页面顶端的垂直距离
           var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
           // console.log(scrollTop)
-          if(scrollTop<3560){
+          if(scrollTop<3630){
             this.partIndex = 0;
-          }else if(scrollTop<7620){
+          }else if(scrollTop<8320){
             this.partIndex = 1;
-          }else if(scrollTop<15760){
+          }else if(scrollTop<16210){
             this.partIndex = 2;
-          }else if(scrollTop<21040){
+          }else if(scrollTop<20800){
             this.partIndex = 3;
           }else{
             this.partIndex = 4;
@@ -146,6 +146,6 @@ export default {
   color: #cccccc;
 }
 .activePart a{
-  color:  #60A5F0 !important;
+  color:  rgb(33,105,179) !important;
 }
 </style>

@@ -32,14 +32,14 @@ mounted() {
       //获取操作元素最顶端到页面顶端的垂直距离
       var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
       // console.log(scrollTop)
-      if(scrollTop<4590){
+      if(scrollTop<4500){
           this.isRender=false;
-      }else if(this.isPC==true&&scrollTop>4590&&scrollTop<=5810&&this.isRender==false){
+      }else if(this.isPC==true&&scrollTop>4500&&scrollTop<=5715&&this.isRender==false){
           this.$nextTick(()=>{
               this.mapChart();
           })
           this.isRender=true;
-      }else if(scrollTop>5810){
+      }else if(scrollTop>5715){
           this.isRender=false;
       }
   },

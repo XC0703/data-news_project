@@ -85,7 +85,7 @@ export default {
                         position: data[i].direction ? data[i].direction : "bottom",
                         distance: 10, //离图标多远					
                         show: true,
-                        fontSize: 12,
+                        fontSize: 14,
                         color: " rgb(33,105,179)",
                         fontWeight: 500,
                     },
@@ -103,10 +103,10 @@ export default {
         function initEcharts(){
             let option = {
                 grid: {
-                    top: '20%',
-                    left: '3%',
-                    right: '3%',
-                    bottom: '3%',
+                    top: '14%',
+                    left: '0%',
+                    right: '5%',
+                    bottom: '0%',
                 },
                 xAxis: {
                     show: false,
@@ -228,7 +228,7 @@ export default {
 
 <style lang="scss" scoped>
 #part2_container4 {
-  width: 6.5rem;
+  width: 8.4rem;
   height: 4rem;
   margin: 0rem auto 0;
 }

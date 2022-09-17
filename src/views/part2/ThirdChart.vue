@@ -111,7 +111,7 @@ export default {
                     },
                     labelLayout:{
                         show:false,
-                        fontSize:10,
+                        fontSize:12,
                     },
                     emphasis: {
                         itemStyle:{

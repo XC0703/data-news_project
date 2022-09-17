@@ -32,13 +32,13 @@ export default {
                     text: '各国安宁缓和医疗发展情况',
                     x:'center',
                     textStyle:{
-                        fontSize:15
+                        fontSize:17
                     },
                     top:5,
                     left:'center',
                     subtext:"数据来源：世界安宁缓和医疗联盟",
                     subtextStyle: {
-                        fontSize: 10
+                        fontSize: 12
                     },
                 },
                 tooltip: {
@@ -68,7 +68,7 @@ export default {
                     selectedMode:false,
                     textStyle: {
                         color: '#333333',
-                        fontSize: 10,
+                        fontSize: 12,
                     },
                     pieces: [{
                         value:5,
@@ -125,7 +125,7 @@ export default {
                     },
                     labelLayout:{
                         show:false,
-                        fontSize:10,
+                        fontSize:12,
                     },
                     emphasis: {
                         itemStyle:{

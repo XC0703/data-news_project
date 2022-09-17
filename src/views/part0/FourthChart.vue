@@ -32,14 +32,14 @@ export default {
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(scrollTop)
-        if(scrollTop<1600){
+        if(scrollTop<1560){
             this.isRender=false;
-        }else if(this.isPC==true&&scrollTop>1600&&scrollTop<=2680&&this.isRender==false){
+        }else if(this.isPC==true&&scrollTop>1560&&scrollTop<=2730&&this.isRender==false){
             this.$nextTick(()=>{
                 this.mapChart();
             })
             this.isRender=true;
-        }else if(scrollTop>2680){
+        }else if(scrollTop>2730){
             this.isRender=false;
         }
     },
@@ -166,11 +166,11 @@ export default {
                     text: '各类疾病在死亡原因中的构成比',
                     x:'center',
                     textStyle:{
-                        fontSize:15
+                        fontSize:17
                     },
                     subtext:"数据来源：《中国缓和医疗发展蓝皮书（2019-2020）》",
                     subtextStyle: {
-                        fontSize: 10
+                        fontSize: 12
                     },
                 },
                 color:['#0F2650','#063F76','#246EAB',' #5095CE',' #73C0DE','#F3C450','#5095CE','#F1C27F','#FF9500'],
@@ -184,8 +184,8 @@ export default {
                 series : [
                     {
                         type:'pie',
-                        radius : [30, 280],
-                        center : ['50%', '70%'],
+                        radius : [30, 300],
+                        center : ['50%', '75%'],
                         roseType : 'area',
                         data:data_pie,
                         // labelLayout:{
@@ -210,7 +210,7 @@ export default {
 
 <style lang="scss" scoped>
 #part0_container3 {
-  width: 7rem;
+  width: 8rem;
   height: 5rem;
   margin: 0rem auto 0;
 }

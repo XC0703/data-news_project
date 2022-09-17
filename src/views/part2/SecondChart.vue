@@ -32,14 +32,14 @@ export default {
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(scrollTop)
-        if(scrollTop<10476){
+        if(scrollTop<10050){
             this.isRender=false;
-        }else if(this.isPC==true&&scrollTop>10476&&scrollTop<=11520&&this.isRender==false){
+        }else if(this.isPC==true&&scrollTop>10050&&scrollTop<=11090&&this.isRender==false){
             this.$nextTick(()=>{
                 this.mapChart();
             })
             this.isRender=true;
-        }else if(scrollTop>11520){
+        }else if(scrollTop>11090){
             this.isRender=false;
         }
     },
@@ -72,23 +72,23 @@ export default {
                     text: '老年医学、临终关怀机构数量变化图',
                     x:'center',
                     textStyle:{
-                        fontSize:15
+                        fontSize:17
                     },
                     top:-3,
                     left:'center',
                     subtext:"数据来源：国家卫生健康委员会2018-2021《卫生健康事业发展统计公报》",
                     subtextStyle: {
-                        fontSize: 10
+                        fontSize: 12
                     },
                 },
                 legend: {
                     // 如果series有name属性，则legend可以不用写data值
                     // data:['新增粉丝','新增游客'],
                     textStyle:{
-                        fontSize: 8,
+                        fontSize: 10,
                         color:'#0F2650'
                     },
-                    itemHeight: 8,//图例大小
+                    itemHeight: 10,//图例大小
                     top:'13%',
                     right: '26%', // 距离右边10%
                     // data:[
@@ -147,7 +147,7 @@ export default {
                         boundaryGap: false,
                         axisLabel: {
                             formatter: '{value}',
-                            fontSize: 10,
+                            fontSize: 12,
                             // margin: 20,
                             color: '#0F2650',
                         },
@@ -175,7 +175,7 @@ export default {
                         name:'单位(所)',
                         nameTextStyle:{
                             color: '#0F2650', // 文字颜色
-                            fontSize:10
+                            fontSize:12
                         },   
                         axisLine: {
                             show: true,
@@ -273,8 +273,8 @@ export default {
 
 <style lang="scss" scoped>
 #part2_container1 {
-  width: 7rem;
-  height: 4rem;
+  width: 8.6rem;
+  height: 4.6rem;
   margin: 0rem auto 0;
 }
 </style>

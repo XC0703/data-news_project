@@ -394,14 +394,14 @@ export default {
         transition: all 1s ease;
         // 时间盒子样式
         .time{
-            width: 1rem;
+            width: 1.2rem;
             height: .3rem;
             position: absolute;
             margin-top: 0.04rem;
             color: rgb(84, 84, 85);
             text-align: center;
             line-height: .3rem;
-            font-size: .18rem;
+            font-size: .2rem;
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             cursor: pointer;
         }
@@ -484,7 +484,7 @@ export default {
     .leftBox{
         .time{
             right:0rem;
-            margin-right: 2.2rem;
+            margin-right: 2rem;
         }
         .content{
             left: 0rem;
@@ -497,7 +497,7 @@ export default {
     // 右边事件盒子
     .rightBox{
         .time{
-            margin-left: 2.2rem;
+            margin-left: 2rem;
         }
     }
     // 加载到的事件盒子

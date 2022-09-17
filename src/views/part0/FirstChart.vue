@@ -29,15 +29,16 @@ export default {
         }
         //获取操作元素最顶端到页面顶端的垂直距离
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-        if(scrollTop<650){
+        // console.log(scrollTop);
+        if(scrollTop<530){
             this.isRender=false;
-        }else if(this.isPC==true&&scrollTop>650&&scrollTop<=1650&&this.isRender==false){
+        }else if(this.isPC==true&&scrollTop>530&&scrollTop<=1640&&this.isRender==false){
             // this.$nextTick(()=>{ }) 将回调函数中的操作放到下一次DOM更新之后执行
             this.$nextTick(()=>{
                 this.mapChart();
             })
             this.isRender=true;
-        }else if(scrollTop>1650){
+        }else if(scrollTop>1640){
             this.isRender=false;
         }
     },
@@ -67,11 +68,11 @@ export default {
                     left:'center',
                     subtext:"数据来源：国家统计局 http://www.stats.gov.cn/",
                     subtextStyle: {
-                        fontSize: 10
+                        fontSize: 12
                     },
                 },
                 // 通过这里直接设置颜色
-                color: ["#0E7CE2",'#151A38',"#ffc72b"],
+                color: ["#0E7CE2",'rgba(15,38,80)',"#ffc72b"],
                 // emphasis: {
                 // itemStyle: {
                 //     color: "white",//柱条颜色，设置为柱图颜色则取消高亮
@@ -128,7 +129,7 @@ export default {
                     color: '#4c9bfd',
                     interval:0,
                     rotate:45,
-                    fontSize: 10,
+                    fontSize: 12,
                 },
                 axisLine: {
                     show: false // 去除轴线
@@ -143,7 +144,7 @@ export default {
                 name:'单位(万人)',
                 nameTextStyle:{
                     color: '#4c9bfd', // 文字颜色
-                    fontSize:10
+                    fontSize:12
                 },
                 axisTick: {
                     show: true,  // 去除刻度
@@ -151,7 +152,7 @@ export default {
                 axisLabel: {
                     // show:false,
                     color: '#4c9bfd', // 文字颜色
-                    fontSize:10
+                    fontSize:12
                 },
                 splitLine: {
                     show:false,
@@ -167,12 +168,12 @@ export default {
                 interval: 5,
                 nameTextStyle:{
                     color: '#4c9bfd', // 文字颜色
-                    fontSize:10
+                    fontSize:12
                 },
                 axisLabel: {
                     formatter:'{value}%',
                     color: '#4c9bfd', // 文字颜色
-                    fontSize:10
+                    fontSize:12
                 },
                 axisTick: {
                     show: true,  // 去除刻度
@@ -227,8 +228,8 @@ export default {
 
 <style lang="scss" scoped>
 #part0_container0 {
-  width: 7rem;
-  height: 4rem;
+  width: 8.6rem;
+  height: 4.4rem;
   margin: 0rem auto 0;
 }
 </style>

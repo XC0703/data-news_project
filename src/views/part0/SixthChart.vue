@@ -269,7 +269,7 @@ methods: {
 
 <style lang="scss" scoped>
 #part0_container5 {
-  width: 4rem;
+  width: 4.5rem;
   height: 5rem;
   margin: 0 auto;
 }
