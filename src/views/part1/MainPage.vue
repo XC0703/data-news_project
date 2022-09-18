@@ -24,14 +24,15 @@
                         <div class="chartBox__chart" style="height:7rem;">
                             <FirstChart />
                         </div>
-                        <div class="chartBox__chartTips iconfont" style="height:.2rem;left:0.4rem;top:.6rem;">&#xe601;点击某一节点可进行子节点的展开与收起</div>
+                        <div class="chartBox__chartTips iconfont" style="height:.2rem;left:0.6rem;top:1.7rem;">&#xe601;点击某一节点可进行子节点的展开与收起</div>
                     </div> 
                 </div>
                 <div class="content__word__special" style="margin-top:0.3rem;margin-bottom:0.8rem;">
                     <span class="specialSpan">国际渊源</span>
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:.1rem">
-                    <p>安宁疗护在世界范围内的起源，最早可以追溯到1960年。</p>
+                    <p>安宁疗护在世界范围内的起源，最早可以追溯到1960年。世界范围内普遍认为，现代缓和医疗由英国护士西西里.桑德斯（Cicely </p>
+                    <p>Saunders）于上世纪六十年代创始，她被称为现代缓和医疗之母。</p>
                 </div>
                 <div class="chartBoxs" style="height: 4rem;margin-top: .3rem;">
                     <div class="chartBox" style="height: 4rem;width: 100%;margin-left: -50% !important;">

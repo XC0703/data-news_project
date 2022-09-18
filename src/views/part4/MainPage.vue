@@ -5,9 +5,12 @@
                 <div class="content__word__leftAlign" style="margin-top:0.5rem">
                     <p>开头提到的那位马阿姨在确诊肿瘤晚期后，并没有过度消沉，而是在接受安宁疗护的同时签署了生前预嘱，表示在自己病情恶</p>
                     <p>化时不进ICU，不插管、不做过度抢救。马阿姨的家人都尊重她的意愿，一家人如平常那般说说家长里短，谈谈当下时局，平</p>
-                    <p>淡、温馨。马阿姨平日就是一个生活精致美丽的女人，住院期间病房总是布置得温馨美好，床头桌上摆放着她爱看的小说和杂</p>
-                    <p>志，病房里总是轻轻飘荡着她最爱听的音乐，枕下放着那条她最喜欢的丝巾。在一个飘着雪花的冬日，马阿姨走了，没有经历</p>
-                    <p>太多痛苦，就在那种平静、安详中走向了另一个世界，如她所愿，她把最美丽的样子留给了最爱的人。</p>
+                    <p>淡、温馨。</p>
+                </div>
+                <div class="content__word__leftAlign">
+                    <p>马阿姨平日就是一个生活精致美丽的女人，住院期间病房总是布置得温馨美好，床头桌上摆放着她爱看的小说和杂志，病房里</p>
+                    <p>总是轻轻飘荡着她最爱听的音乐，枕下放着那条她最喜欢的丝巾。在一个飘着雪花的冬日，马阿姨走了，没有经历太多痛苦，</p>
+                    <p>就在那种平静、安详中走向了另一个世界，如她所愿，她把最美丽的样子留给了最爱的人。</p>
                 </div>
                 <div class="content__word__leftAlign">
                     <p>2022年4月16日，中国安宁疗护事业建设与发展研讨会在北京举行。16年前的这一天，中国生命关怀协会成立；经过16年的努力</p>
@@ -15,9 +18,9 @@
                     <p>的春天。</p>
                 </div>
                 <div class="content__word__leftAlign">
-                    <p>《第二批全国安宁疗护试点工作基线调查报告》指出，我国87个试点地区中，30个试点地区出台安宁疗护政策文件；22个试点</p>
-                    <p>地区将安宁疗护纳入区域卫生发展规划；13个试点地区将安宁疗护纳入社区卫生服务发展规划；10个试点地区制定安宁疗护发</p>
-                    <p>展规划；37个试点地区制定安宁疗护试点实施方案；14个试点地区制定安宁疗护服务财政补助政策。</p>
+                    <p>《第二批全国安宁疗护试点工作基线调查报告》指出，我国<b>87个</b>试点地区中，<b>30个</b>试点地区出台安宁疗护政策文件；<b>22个</b>试点</p>
+                    <p>地区将安宁疗护纳入区域卫生发展规划；<b>13个</b>试点地区将安宁疗护纳入社区卫生服务发展规划；<b>10个</b>试点地区制定安宁疗护发</p>
+                    <p>展规划；<b>37个</b>试点地区制定安宁疗护试点实施方案；<b>14个</b>试点地区制定安宁疗护服务财政补助政策。</p>
                 </div>
                 <div class="content__word__leftAlign">
                     <p>期待在不久的将来，有更多的临终患者可以温和地走进那个良夜。</p>
@@ -35,39 +38,37 @@
                     <p>美工：谷婷薇</p>
 
                     <p>数据来源：</p>
-                    <p>中华人民共和国国家卫生和计划生育委员会：《安宁疗护实践指南（试行）》</p>
-                    <p>《第二批全国安宁疗护试点工作基线调查报告》</p>
-                    <p>《中国缓和医疗发展蓝皮书(2019-2020)》</p>
-                    <p>国家统计局年度数据查询</p>
-                    <p>国家卫生健康委员会：《卫生事业发展统计公报》（2018-2021）</p>
-                    <p>《关于开展第二批安宁疗护试点工作的通知》</p>
-                    <p>《安宁疗护中心基本标准（试行）》</p>
-                    <p>上海市卫生健康委员会：《上海市安宁疗护服务机构名单》</p>
-                    <p>李嘉诚基金会「人间有情」全国宁养医疗服务计划：居家安宁疗护服务流程图</p>
-                    <p>企查查</p>
-                    <p>世界安宁缓和医疗联盟：《安宁缓和医疗地图（第二版）》</p>
+                    <p>[1]中华人民共和国国家卫生健康委员会.《安宁疗护实践指南（试行）》[S] 2019-12-05</p>
+                    <p>[2]中华人民共和国国家卫生健康委员会.《关于开展第二批安宁疗护试点工作的通知》[R] 2019-12-05</p>
+                    <p>[3]中华人民共和国国家卫生健康委员会.《卫生事业发展统计公报》[R]2018-2021</p>
+                    <p>[4]上海市卫生健康委员会.《上海市安宁疗护服务机构名单》[R] 2022-07-14</p>
+                    <p>[5]中国生命关怀协会.《第二批全国安宁疗护试点工作基线调查报告》[R]2022-4-16</p>
+                    <p>[6]北京生前语嘱推广协会著，陈小鲁，罗裕平编．中国缓和医疗发展蓝皮书[M]，中国人口出版社，2021：1-273</p>
+                    <p>[7]中华人民共和国国家统计局.中国统计年鉴[J]北京：中国国家统计出版社2021</p>
+                    <p>[8]李嘉诚基金会「人间有情」全国宁养医疗服务计划——宁养之窗. https://www.hospice.com.cn/</p>
+                    <p>[9]世界安宁缓和医疗联盟. https://www.thewhpca.org/</p>
+                    <p>[10]企查查-企业工商信息查询系统.https://www.qcc.com/</p>
 
-                    
                     <p>参考文献：</p>
                     <p>[1]方洪鑫,甄橙.安宁疗护的起源与发展初探[J].中华医史杂志,2021,51(04):208-212.</p>
                     <p>[2]李滨,马怡乐.老龄化社会临终关怀的国际经验比较[J].护理学报,2022,29(11):25-30.DOI:10.16460/j.issn1008-9969.2022.11.025.</p>
                     <p>[3]刘胜男,李文硕,秦源,李昆.国外缓和医疗的政策经验及启示[J].医学与哲学,2019,40(12):24-27+32.</p>
                     <p>[4]吴玉苗,奉典旭,徐东浩,周大双,毛懿雯,施永兴.中国安宁疗护服务政策演变与发展[J].医学与哲学,2020,41(14):23-27.</p>
-                    <p>[5]《安宁故事：我们尽力擦拭那些看不见的眼泪（上）》https://mp.weixin.qq.com/s/paISSFJcTtsP3lhKRyii2g</p>
-                    <p>[6] 陈静,王笑蕾.安宁疗护的发展现状与思考[J].护理研究,2018,32(07):1004-1007.</p>
-                    <p>[7]黄子芯,张崇楷,原彰.我国安宁疗护试点发展研究[J].卫生软科学,2022,36(06):22-27.</p>
-                    <p>[8]生前遗嘱推广公众号《从医18年，安宁12载》</p>
-                    <p>[9]李嘉诚基金会「人间有情」全国宁养医疗服务计划《宁养居家探访服务与疾病生活》</p>
-                    <p>[10]《中国安宁疗护发展重要政策回顾》https://mp.weixin.qq.com/s/acxK3yYBs3eKGUS--eXtLg</p>
-                    <p>[11]《无处安放的安宁疗护病床》https://mp.weixin.qq.com/s/dt-C0oj5rue9BQLcR6gjg</p>
-                    <p>[12]《安宁疗护试点扩围，如何做到“生死两相安”》https://mr.mbd.baidu.com/r/MmZHVeotlS?f=cp&u=75d690d239db9491</p>
-                    <p>[13]《聊聊安宁疗护那点事》https://www.cn-healthcare.com/articlewm/20211119/wap-content-1286651.html</p>
-                    <p>[14]《温州小镇的安宁疗护病房：为了那些重回“婴儿状态”的临终老人》https://baijiahao.baidu.com/s?id=1728560524769995254&wfr=spider&for=pc</p>
-                    <p>[15]中华人民共和国国家卫生健康委员会对十二届全国人大五次会议第8274号建议的答复 http://www.nhc.gov.cn/zwgk/jianyi/201801/a93e2760594a40939ba19852a10b61f3.shtml</p>
-                    <p>[16]Economist Intelligence Unit. The 2015 Quality of Death Index.Ranking palliative care across the World.</p>
-                    <p>[17]Cross Country Comparison of Expert Assessments of the Quality of Death and Dying 2021.</p>
-                    <p>[18]Ling M, Wang X, Ma Y, et al. A review of the current state of hospice care in China[J]. Current Oncology Reports, 2020, 22(10): 1-7.</p>
-                    <p>[19]Chen L, Li X H, Pan X, et al. Nurses' knowledge, attitudes, and willingness to practice hospice care: An analysis of influencing factors[J].Plos one,2022, 17(2): e0259647.</p>
+                    <p>[5] 陈静,王笑蕾.安宁疗护的发展现状与思考[J].护理研究,2018,32(07):1004-1007.</p>
+                    <p>[6]黄子芯,张崇楷,原彰.我国安宁疗护试点发展研究[J].卫生软科学,2022,36(06):22-27.</p>
+                    <p>[7]Economist Intelligence Unit. The 2015 Quality of Death Index.Ranking palliative care across the World.</p>
+                    <p>[8]Cross Country Comparison of Expert Assessments of the Quality of Death and Dying 2021.</p>
+                    <p>[9]Ling M, Wang X, Ma Y, et al. A review of the current state of hospice care in China[J]. Current Oncology Reports, 2020, 22(10): 1-7.</p>
+                    <p>[10]Chen L, Li X H, Pan X, et al. Nurses' knowledge, attitudes, and willingness to practice hospice care: An analysis of influencing factors[J].Plos one,2022, 17(2): e0259647.</p>
+                    <p>[11]青海省人民医院老年病科安宁疗护小组. 安宁故事：我们尽力擦拭那些看不见的眼泪（上)[Z]. 生前预嘱推广,2020-02-18</p>
+                    <p>[12]郭艳汝. 从医18年，安宁12载[Z]. 生前预嘱推广,2022-01-30</p>
+                    <p>[13]中国安宁疗护发展重要政策回顾[Z]. 安宁视界,2021-03-24</p>
+                    <p>[14]聊聊安宁疗护那点[Z]. 健康界,2021-11-19</p>
+                    <p>[15]李聪.温州小镇的安宁疗护病房：为了那些重回“婴儿状态”的临终老人[N]. 新京报,2022-03-29</p>
+                    <p>[16]中华人民共和国国家卫生健康委员会对十二届全国人大五次会议第8274号建议的答复[Z]. 中华人民共和国国家卫生健康委员会,2018-01-03</p>
+                    <p>[17]李嘉诚基金会「人间有情」全国宁养医疗服务计划《宁养居家探访服务与疾病生活》</p>
+                    <p>[18] 汪航、凌骏《无处安放的安宁疗护病床》[Z]医学界2021-11-30</p>
+                    <p>[19]《安宁疗护试点扩围，如何做到“生死两相安”》[N]第一财经.2022-03-31.</p>
                     <p></p>
 
 
@@ -126,7 +127,7 @@ export default {
         }
         &__leftAlign{
             width: 100%;
-            margin-bottom: .3rem;
+            margin-bottom: .35rem;
             p{
                 width: 10rem;
                 height:.32rem;
@@ -184,19 +185,13 @@ export default {
             p:nth-child(4){
                 margin-bottom: 0.5rem;
             }
-            p:nth-child(7),p:nth-child(8){
-                margin-left: 3.5rem;
-            }
-            p:nth-child(11),p:nth-child(12){
-                margin-left: 2.05rem;
-            }
-            p:nth-child(16){
+            p:nth-child(15){
                 margin-bottom: 0.5rem;
             }
-            p:nth-child(37){
+            p:nth-child(36){
                 margin-bottom: 0.6rem;
             }
-            p:nth-child(38),p:nth-child(39){
+            p:nth-child(37),p:nth-child(38){
                 margin-left: 0;
                 text-align: center;
             }

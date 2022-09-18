@@ -9,8 +9,8 @@
                     <span>大多数医院的安宁疗护处于亏损状态，资金压力大</span>
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
-                    <p>据报道，2021年11月30日，某中部省会城市第一家安宁疗护中心在开设了1391天后悄然谢幕，一同“歇业”的，还有J主任和他的10</p>
-                    <p style="width:10.13rem;">名医护团队。10月初，医院几经协商，最终把关停安宁疗护中心的消息告知了J主任。对此，他表示理解，认为<b>“关停也是无奈之举”。</b></p>
+                    <p>2021年11月30日，某中部省会城市第一家安宁疗护中心在开设了1391天后悄然谢幕，一同“歇业”的，还有J主任和他的10名医护</p>
+                    <p>团队。10月初，医院几经协商，最终把关停安宁疗护中心的消息告知了J主任。对此，他表示理解，认为<b>“关停也是无奈之举”。</b></p>
                 </div>
                 <div class="content__word__leftAlign" style="margin-top:0rem;">
                     <p>在发展安宁疗护政策已经陆续出台的情况下，J主任却没能获得“安宁”。“我们之前做过一些转型尝试，比如提出了‘整合安宁疗护</p>
@@ -81,7 +81,7 @@
                     <p>另外，安宁疗护在很多地方还不是一个临床专业，因此医护人员工资待遇低，且专业建设和晋升都受到了制约。面临着<b>巨大的工作压</b></p>
                     <p><b>力，愿意从事安宁疗护的人员也较少。</b>根据学者Lin Chen等对广西省二、三级公立医院的1834名护士展开的调查，只有<b>505名</b>参与护</p>
                     <p>士表示愿意从事安宁疗护，<b>268名</b>护士表示不愿意从事临终关怀服务，<b>1061名</b>则表示不确定。而根据学者孟玲等对贵州省1306名安宁</p>
-                    <p style="width:10.05rem;"><b>疗护从业人员的调研，有78.3%</b>的人认为临终关怀不仅会使他们身心俱疲，还会产生强烈的失落感和焦虑感，从而不愿参与临终关怀。</p>
+                    <p style="width:10.05rem;">疗护从业人员的调研，有<b>78.3%</b>的人认为临终关怀不仅会使他们身心俱疲，还会产生强烈的失落感和焦虑感，从而不愿参与临终关怀。</p>
                 </div>
                 <div class="part3_element567">
                     <div class="part3_element567__content">
@@ -349,7 +349,7 @@ export default {
     }
 }
 .part3_element8{
-    height: 5.3rem;
+    height: 5.72rem;
     width: 100%;
     position: relative;
     &__title{
@@ -382,11 +382,11 @@ export default {
         transform: scale(0.50);
     }
     &__img{
-        width:7.767rem;
-        height: 4.8rem;
+        width:7.5rem;
+        height: 5.279rem;
         position: absolute;
         left: 50%;
-        margin-left: -3.8835rem;
+        margin-left: -3.75rem;
         top:.5rem;
         box-shadow: 0 .04rem .08rem 0 rgba(0,0,0,0.20);
         img{
@@ -396,7 +396,7 @@ export default {
     }
 }
 .part3_element9{
-    height: 4rem;
+    height: 3rem;
     width: 100%;
     position: relative;
     &__title{
@@ -429,11 +429,11 @@ export default {
         transform: scale(0.50);
     }
     &__img{
-        width: 6.5rem;
-        height: 3rem;
+        width: 7.5rem;
+        height: 2.429rem;
         position: absolute;
         left: 50%;
-        margin-left: -3.25rem;
+        margin-left: -3.75rem;
         top:.8rem;
         box-shadow: 0 .04rem .08rem 0 rgba(0,0,0,0.20);
         img{

@@ -17,7 +17,8 @@
     <div class="outerBox">
         <div id="eventBoxs">
             <div 
-                :class="{'eventBox': true, 'leftBox': index%2===0,'lastBox':index%listCount==0,'rightBox': index%2===1}"
+                :class="{'eventBox': true, 'eventBox19': index+startIndex===18,'eventBox23': index+startIndex===22, 'eventBox25': index+startIndex===24, 
+                        'leftBox': index%2===0,'lastBox':index%listCount==0,'rightBox': index%2===1}"
                 v-for="index in listCount"
                 :key="index"
             >
@@ -478,6 +479,25 @@ export default {
             height: 0rem;
             border: .09rem solid transparent;
             border-right: .07rem solid rgb(84, 84, 85);
+        }
+    }
+    // 特殊处理盒子
+    .eventBox19,.eventBox23{
+        height:1.3rem;
+        .node_line{
+            height: 1.3rem;
+            .line{
+                height: 1.3rem;
+            }
+        }
+    }
+    .eventBox25{
+        height:2rem;
+        .node_line{
+            height: 2rem;
+            .line{
+                height: 2rem;
+            }
         }
     }
     // 左边的事件盒子

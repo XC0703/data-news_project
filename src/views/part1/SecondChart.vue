@@ -229,7 +229,7 @@ export default {
 .my_timeline_node {
     box-sizing: border-box;
     border-radius: 50%;
-    background-color:#0F2650,;
+    background-color:#0F2650;
     width: .28rem; 
     height: .28rem;
     cursor: pointer;
@@ -244,7 +244,7 @@ export default {
 }
 .my_timeline_item_content {
     margin: .1rem 0 0 -1.1rem;
-    color: #999;
+    color: #444;
     font-size:.18rem;
 }
 .my_timeline_item:nth-child(7){

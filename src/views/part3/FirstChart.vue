@@ -138,7 +138,8 @@ export default {
         background-repeat: no-repeat !important;
         background-size: 80% 80% !important;
         background-position:center center;
-        color:rgb(255,193,42);
+        color:rgb(255,192,0);
+        text-shadow: 0.02rem 0.02rem #666;
         cursor: pointer;
         transition: all 0.5s ease;
         &__word{
