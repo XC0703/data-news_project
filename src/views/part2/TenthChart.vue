@@ -155,7 +155,8 @@ export default {
         }
         //展示地图
         function showMap() {
-            $.getJSON(`/static/map/mapData/worldMapData.json`, data=>{
+            const url = process.env.NODE_ENV === 'production' ? '/data-news_project/static/map/mapData/worldMapData.json' : '/static/map/mapData/worldMapData.json'
+            $.getJSON(url, data=>{
                 // console.log(convertDataFormat(data))
                 initEcharts(convertDataFormat(data));
             })

@@ -54,9 +54,10 @@ methods: {
             '排除意外和事故的离世者.严重头痛':'rgb(159,197,233)',
             '排除意外和事故的离世者.颈部疼痛':'rgb(0,108,237)',
             '排除意外和事故的离世者.吞咽液体疼痛':'rgb(40,92,135)',
-        }
+        };
+        const url = process.env.NODE_ENV === 'production' ? '/data-news_project/static/data/circlePackingData.json' : '/static/data/circlePackingData.json';
         $.when(
-            $.get(`/static/data/circlePackingData.json`),
+            $.get(url),
             $.getScript(
                 'https://fastly.jsdelivr.net/npm/d3-hierarchy@2.0.0/dist/d3-hierarchy.min.js'
             )

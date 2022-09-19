@@ -114,8 +114,9 @@ mounted() {
       }
       // 展示
       function showMap() {
+        const url = process.env.NODE_ENV === 'production' ? '/data-news_project/static/data/treeData.json' : '/static/data/treeData.json';
             // myChart.clear();
-            $.getJSON(`/static/data/treeData.json`, data=>{
+            $.getJSON(url, data=>{
               myChart.hideLoading();
               initEcharts(data)
             })

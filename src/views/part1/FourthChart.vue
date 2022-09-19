@@ -186,8 +186,9 @@ export default {
         }
         //展示
         function showMap() {
+            const url = process.env.NODE_ENV === 'production' ? '/data-news_project/static/data/rankingData.json' : '/static/data/rankingData.json';
             // myChart.clear();
-            $.getJSON(`/static/data/rankingData.json`, data=>{
+            $.getJSON(url, data=>{
                 var newArr=[{
                     year:"2015",
                     country:[],

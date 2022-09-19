@@ -151,7 +151,8 @@ export default {
         }
         //展示地图
         function showMap() {
-            $.getJSON(`/static/data/chinaMapData2.json`, data=>{
+            const url = process.env.NODE_ENV === 'production' ? '/data-news_project/static/data/chinaMapData2.json' : '/static/data/chinaMapData2.json';
+            $.getJSON(url, data=>{
                 initEcharts(data);
             })
         }
