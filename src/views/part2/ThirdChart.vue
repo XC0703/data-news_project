@@ -42,7 +42,7 @@ export default {
                         if(params.value){ 
                         return params.name + ' : ' + params.value+'<br />'+params.data.content; 
                         }else if(params.name==='台湾'){ 
-                            return '暂无数据'; 
+                            return '台湾 : 暂无数据'; 
                         }else{ 
                         return params.name + ' : 0'; 
                         } 
