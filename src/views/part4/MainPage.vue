@@ -48,6 +48,7 @@
                     <p>[8]李嘉诚基金会「人间有情」全国宁养医疗服务计划——宁养之窗. https://www.hospice.com.cn/</p>
                     <p>[9]世界安宁缓和医疗联盟. https://www.thewhpca.org/</p>
                     <p>[10]企查查-企业工商信息查询系统.https://www.qcc.com/</p>
+                    <p>[11]国家卫生健康委统计信息中心编著．中国死因监测数据集 . 2019[M]，中国科学技术出版社，2020年，第10页</p>
 
                     <p>参考文献：</p>
                     <p>[1]方洪鑫,甄橙.安宁疗护的起源与发展初探[J].中华医史杂志,2021,51(04):208-212.</p>
@@ -185,13 +186,13 @@ export default {
             p:nth-child(4){
                 margin-bottom: 0.5rem;
             }
-            p:nth-child(15){
+            p:nth-child(16){
                 margin-bottom: 0.5rem;
             }
-            p:nth-child(36){
+            p:nth-child(37){
                 margin-bottom: 0.6rem;
             }
-            p:nth-child(37),p:nth-child(38){
+            p:nth-child(38),p:nth-child(39){
                 margin-left: 0;
                 text-align: center;
             }

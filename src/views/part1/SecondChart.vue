@@ -25,7 +25,7 @@
                             @click="changeActive(index)"
                         ></div>
                         <!--线-->
-                        <div class="my_timeline_item_line" v-if="index!=6"></div>
+                        <div class="my_timeline_item_line" v-if="index!=7"></div>
                         <!--标注-->
                         <div class="my_timeline_item_content">
                             {{item.timestamp}}
@@ -46,8 +46,8 @@ export default {
         return {
             timeIndex: 0,
             timeLineList: [{
-                    timestamp: '1960年',
-                    year: '1960年',
+                    timestamp: '1963年',
+                    year: '1963年',
                     info: '英国护士西西里·桑德斯(Dame Cicely Saunders, 1918－2005)首次系统总结出对临终患者提供全面医疗照护的方案。'
                 }, {
                     timestamp: '1967年',
@@ -62,6 +62,10 @@ export default {
                     year: '1974年',
                     info: '耶鲁大学护理学院院长弗洛伦斯·沃尔德(Florence Wald)与两名儿科医生及一名牧师建立了康涅狄格临终关怀中心。'
                 }, {
+                    timestamp: '1976年',
+                    year: '1976年',
+                    info: '巴尔弗尔·蒙特（Balfour Mount）医生在加拿大的皇家维多利亚医院（Royal Victoria Hospital）建立了全世界第一个驻院缓和医疗团队。'
+                },{
                     timestamp: '20世纪80年代',
                     year: '20世纪80年代',
                     info: '英国、美国、加拿大等发达国家将安宁疗护纳入到国家医疗卫生体制与医疗保险体系中，生前预嘱(advance directive)等配套措施也得到法律支持，而以缓解晚期患者疼痛为主要目标的缓和医学(palliative medicine)，正式成为医学的一个重要分支。'
@@ -110,7 +114,7 @@ export default {
         moveRight() {
             this.getContent()[0].style.opacity = 0;
             this.getContent()[1].style.opacity = 0;
-            if(this.timeIndex!=6){
+            if(this.timeIndex!=7){
                 this.timeIndex++;
             }
             var that = this;
@@ -243,7 +247,7 @@ export default {
     border-left: none;
 }
 .my_timeline_item_content {
-    margin: .1rem 0 0 -1.1rem;
+    margin: .1rem 0 0 -0.9rem;
     color: #444;
     font-size:.18rem;
 }
@@ -269,22 +273,22 @@ export default {
     .my_timeline_item_content{
         position: absolute;
         top:-.4rem;
-        left:1rem;
+        left:0.8rem;
     }
 }
 .my_timeline_item:nth-child(3).active{
     .my_timeline_item_content{
+    left:0.28rem;
+    }
+}
+.my_timeline_item:nth-child(6).active{
+    .my_timeline_item_content{
     left:0.5rem;
     }
 }
-.my_timeline_item:nth-child(5).active{
+.my_timeline_item:nth-child(8).active{
     .my_timeline_item_content{
-    left:0.7rem;
-    }
-}
-.my_timeline_item:nth-child(7).active{
-    .my_timeline_item_content{
-    left:0.85rem;
+    left:0.6rem;
     }
 }
 @keyframes showIn{

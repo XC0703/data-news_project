@@ -44,8 +44,10 @@ export default {
                 tooltip: {
                     show: true,
                     formatter: function (params) { 
-                        // console.log(params)
-                        if(params.value){ 
+                        if(params.name==''){
+                            return '克什米尔地区'+ ' : 暂无数据'; 
+                        }
+                        if(params.value+1){ 
                         return params.name + ' : ' + params.data.level; 
                         }else{ 
                         return params.name + ' : 暂无数据'; 
@@ -88,9 +90,12 @@ export default {
                     }, {
                         value: 0,
                         label: '没有安宁缓和医疗的国家（1级）',
+                    }, {
+                        value: 'undefined',
+                        label: '暂无数据的国家',
                     }, ],
                     inRange: {
-                        color: ['rgb(214,230,246)', 'rgb(82,154,232)', 'rgb(111,147,207)', 'rgb(33,105,179)','rgb(55,87,132)','rgb(16,50,98)']
+                        color: ['#fff','rgb(214,230,246)', 'rgb(82,154,232)', 'rgb(111,147,207)', 'rgb(33,105,179)','rgb(55,87,132)','rgb(16,50,98)']
                     },
                     outOfRange: {
                         color: ['#999999']
@@ -107,7 +112,7 @@ export default {
                         },
                     },
                     itemStyle: {
-                        areaColor:'rgb(214,230,246)',
+                        areaColor:'#fff',
                         borderColor: 'rgba(0,63,140,0.2)',
                         shadowColor: 'rgba(0,63,140,0.2)',
                         shadowOffsetY: 20,
@@ -155,7 +160,7 @@ export default {
         }
         //展示地图
         function showMap() {
-            const url = process.env.NODE_ENV === 'production' ? '/data-news_project/static/map/mapData/worldMapData.json' : '/static/map/mapData/worldMapData.json'
+            const url = process.env.NODE_ENV === 'production' ? '/data-news_project/static/data/worldMapData.json' : '/static/data/worldMapData.json'
             $.getJSON(url, data=>{
                 // console.log(convertDataFormat(data))
                 initEcharts(convertDataFormat(data));

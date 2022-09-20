@@ -21,15 +21,15 @@
                 </div>
                 <div class="chartBoxs" style="height: 5rem;">
                     <div class="chartBox" style="height: 5rem;width: 8.6rem;margin-left: -4.3rem !important;">
-                        <div class="chartBox__chartBtns" style="left:2.6rem;">
+                        <div class="chartBox__chartBtns" style="width:5rem;left:1.8rem;">
                             <div 
                                 :class="{'chartBox__chartBtns__chartBtn chartBtn1': true, 'activeBtn1': currentIndex1 === 0}"
                                 @click="() => handleIndexClick1(0)"
-                            >人口老龄化折线图</div>
+                            >人口老龄化柱形图-折线图</div>
                             <div 
                                 :class="{'chartBox__chartBtns__chartBtn chartBtn2': true, 'activeBtn2': currentIndex1 === 1}"
                                 @click="() => handleIndexClick1(1)"
-                            >死亡率折线图</div>
+                            >2000-2021死亡率年际变化图</div>
                             <!-- <div
                                 :class="{'chartBox__chartBtns__chartBtn': true, 'activeBtn': currentIndex1 === item.index}"
                                 v-for="item in categories1"
@@ -298,10 +298,11 @@ export default {
             border-radius: 50%;
             position: absolute;
             left:0.15rem;
-            top:.084rem
+            top:.08rem
         }
         .chartBtn2::before{
-            left:0.26rem;
+            left:0rem;
+            top:0.074rem;
         }
         .chartBtn3::before{
             left:0.35rem;

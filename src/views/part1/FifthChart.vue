@@ -160,6 +160,13 @@ export default {
                         color:'#0F2650',
                         valueAnimation: true,
                         fontFamily: 'monospace',
+                        formatter: function (v) {
+                            if(typeof(v.data)==='number'){
+                                return v.data.toFixed(1); 
+                            }else{
+                                return v.data.value.toFixed(1); 
+                            }
+                        }
                     },
                     data: score
                 }],

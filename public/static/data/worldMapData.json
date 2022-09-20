@@ -551,7 +551,7 @@
                 "name":"奥地利",
                 "value":4,"level":"4A级"
             },{
-                "name":"捷克共和国",
+                "name":"捷克",
                 "value":4,"level":"4A级"
             },{
                 "name":"格鲁吉亚",
@@ -643,6 +643,9 @@
                 "value":5,"level":"4B级"
             },{
                 "name":"以色列",
+                "value":5,"level":"4B级"
+            },{
+                "name":"意大利",
                 "value":5,"level":"4B级"
             },{
                 "name":"列支敦士登",

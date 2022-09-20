@@ -58,7 +58,7 @@ export default {
                 title:{
                     top:-13,
                     left:'center',
-                    subtext:"数据来源：《中国缓和医疗发展蓝皮书（2019-2020）》",
+                    subtext:"数据来源：国家统计局 http://www.stats.gov.cn/",
                     subtextStyle: {
                         fontSize: 12
                     },

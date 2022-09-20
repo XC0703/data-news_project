@@ -48,8 +48,10 @@ export default {
                                 +'<br />'+params.data.content[6]+','+params.data.content[7]+','+params.data.content[8]+','+params.data.content[9]+','+params.data.content[10]+','+params.data.content[11]
                                 +'<br />'+params.data.content[12]+','+params.data.content[13]+','+params.data.content[14]+','+params.data.content[15]+','+params.data.content[16];
                             } 
+                        }else if(params.name==='台湾'){ 
+                            return '暂无数据'; 
                         }else{ 
-                        return params.name + ' : 0'; 
+                            return params.name + ' : 0'; 
                         } 
                     } 
                 },

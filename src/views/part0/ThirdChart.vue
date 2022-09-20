@@ -52,7 +52,7 @@ export default {
     // 配置渲染map
     mapChart() {
         var data_bar = [
-        37.1,0.42,0.01,31.48
+        0.24,0.03,0.02,0.02,0.03,0.03,0.04,0.06,0.09,0.13,0.21,0.34,0.54,2.94
         ];
         var chartDom = document.getElementById("part0_container2");
         let myChart = echarts.getInstanceByDom(chartDom)
@@ -68,9 +68,9 @@ export default {
         function initEcharts(){
             let option = {
                 title:{
-                    text:'中国不同年龄段人口死亡率折线图',
+                    text:'中国不同年龄段人口死亡率图',
                     left:"center",
-                    subtext:"数据来源：《中国缓和医疗发展蓝皮书（2019-2020）》",
+                    subtext:"数据来源：中国疾病预防控制中心,《中国死因监测数据集2019》",
                     subtextStyle: {
                         fontSize: 12
                     },
@@ -87,7 +87,13 @@ export default {
                 },
                 tooltip: {
                     trigger: 'axis',
-                    formatter:'{b}年{a}：'+'{c}‰',
+                    formatter:function(params){
+                        if(params[0].name=='60~'){
+                            return '60岁以上年龄段人口死亡率为'+params[0].value+'%'
+                        }else{
+                            return params[0].name+'岁年龄段人口死亡率为'+params[0].value+'%'
+                        }
+                    },
                     axisPointer: {
                         lineStyle: {
                             color: {
@@ -123,8 +129,9 @@ export default {
                             // fontSize: 14,
                             // margin: 20,
                             color: '#0F2650',
-                            fontSize:12,
+                            fontSize:11,
                             // rotate:30,
+                            interval: 0
                         },
                         axisLine: {
                             show: true,
@@ -136,16 +143,16 @@ export default {
                             show: true,
                             alignWithLabel:true
                         },
-                        data: ['1岁以内婴儿', '1-4岁儿童', '5~39岁青少年和壮年','60岁以上老人'],
+                        data: ['0~1', '1~5', '5~10','10~15','15~20','20~25', '25~30','30~35','35~40','40~45','45~50','50~55','55~60','60~'],
                     },
                 ],
                 yAxis: [
                     {
                         boundaryGap: false,
-                        name:'单位(‰)',
+                        name:'单位(百分之)',
                         type: 'value',
                         min:0,
-                        max:40,
+                        max:3,
                         axisLabel: {
                             formatter:'{value}',
                             color: '#0F2650',
@@ -170,7 +177,7 @@ export default {
                     {
                         name: '死亡率',
                         type: 'bar',
-                        barWidth: 25,
+                        barWidth: 10,
                         zlevel: 3,
                         itemStyle: {
                             color: new echarts.graphic.LinearGradient(
