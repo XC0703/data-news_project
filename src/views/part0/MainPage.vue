@@ -46,8 +46,9 @@
                         <div class="chartBox__chartTips iconfont">&#xe601;点击圆环按钮可进行两图切换显示</div>
                     </div> 
                 </div>
-                <div class="content__word__centerAlign">
-                    <p>尤其是在<b>65岁</b>以后，死亡率增速明显加大，<b>60岁</b>及以上年龄段的老年人群死亡率高达<b>31.83‰</b>。</p>
+                <div class="content__word__leftAlign">
+                    <p>根据中国疾病预防控制中心发布的《中国死因监测数据集（2019）》，我国各年龄段死亡率总体呈现勺形。其中，60岁以后人口死亡</p>
+                    <p>率显著提高。</p>
                 </div>
                 <div class="chartBoxs" style="height: 4.5rem;">
                     <div class="chartBox" style="height: 4.5rem;width: 8.6rem;margin-left: -4.3rem !important;">
