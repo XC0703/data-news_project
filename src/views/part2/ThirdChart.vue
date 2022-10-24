@@ -31,7 +31,7 @@ export default {
                 title : {
                     x:'center',
                     top:-3,
-                    text:'2015年',
+                    text:'2017年',
                     textStyle:{
                         fontSize:20
                     },
